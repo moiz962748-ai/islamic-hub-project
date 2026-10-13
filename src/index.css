@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-card: #171717;
+  --color-card-foreground: #fafafa;
+  --color-text-main: #fafafa;
+  --color-text-muted: #a3a3a3;
+  --color-primary: #ffffff;
+  --color-primary-foreground: #000000;
+  --color-primary-hover: #e5e5e5;
+  --color-secondary: #262626;
+  --color-secondary-hover: #404040;
+  --color-border-main: #262626;
+  --color-surface: #171717;
+  --color-slate-950: #000000;
+  --color-slate-900: #171717;
+  --color-slate-800: #262626;
+  --color-slate-700: #404040;
+}
+
+:root {
+  --background: #000000;
+  --card: #171717;
+  --surface: #171717;
+  --card-foreground: #fafafa;
+  --text: #fafafa;
+  --text-main: #fafafa;
+  --text-muted: #a3a3a3;
+  --text-subtle: #737373;
+  --primary: #ffffff;
+  --primary-foreground: #000000;
+  --primary-hover: #e5e5e5;
+  --primary-light: rgba(255, 255, 255, 0.08);
+  --primary-border: rgba(255, 255, 255, 0.2);
+  --secondary: #262626;
+  --secondary-hover: #404040;
+  --border: #262626;
+  color-scheme: dark;
+}
+
+html {
+  background-color: #000000;
+  color: #fafafa;
+  color-scheme: dark;
+}
+
+body {
+  background-color: #000000;
+  color: #fafafa;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Ultra-Minimalist Monochromatic Global Utility Styles */
+.bg-theme-bg {
+  background-color: var(--background);
+}
+
+.bg-theme-card {
+  background-color: var(--card);
+}
+
+.text-theme-main {
+  color: var(--text);
+}
+
+.text-theme-muted {
+  color: var(--text-muted);
+}
+
+.text-theme-primary {
+  color: var(--primary);
+}
+
+.border-theme {
+  border-color: var(--border);
+}
+
+.bg-theme-primary {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+}
+
+.hover\:bg-theme-primary-hover:hover {
+  background-color: var(--primary-hover);
+}

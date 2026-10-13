@@ -1,0 +1,6 @@
+{
+  "name": "IslamHub Global Navigation",
+  "description": "High-performance, SEO-first Islamic platform featuring Ramadan timetables, Zakat calculators, Daily Duas, and Sacred Quranic Ayats directory with thematic Tafsir commentaries.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

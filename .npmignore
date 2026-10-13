@@ -1,0 +1,7 @@
+# Next.js standard build / package ignore
+server.js
+server.ts
+vite.config.ts
+node_modules/
+dist/
+build/
