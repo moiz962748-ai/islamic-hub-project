@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     'Comprehensive Islamic platform providing accurate worldwide prayer times, universal Zakat calculators, authentic audio Duas, and verified worship guides.',
   alternates: {
-    canonical: 'https://islamhub.example.com/',
+    canonical: 'https://islam-hub-project.vercel.app/',
   },
 };
 

@@ -182,8 +182,8 @@ export default function HomePage() {
     "@graph": [
       {
         "@type": "WebSite",
-        "@id": "https://islamhub.com/#website",
-        "url": "https://islamhub.com/",
+        "@id": "https://islam-hub-project.vercel.app/#website",
+        "url": "https://islam-hub-project.vercel.app/",
         "name": "IslamHub",
         "description": "High-performance, SEO-first Islamic platform featuring Ramadan timetables, Zakat calculators, Daily Duas, and Sacred Quranic Ayats directory with thematic Tafsir commentary.",
         "publisher": {
@@ -191,7 +191,7 @@ export default function HomePage() {
           "name": "IslamHub Global Navigation",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://islamhub.com/logo.png"
+            "url": "https://islam-hub-project.vercel.app/logo.png"
           }
         },
         "sameAs": [
@@ -200,7 +200,55 @@ export default function HomePage() {
         ]
       },
       {
+        "@type": "Article",
+        "@id": "https://islam-hub-project.vercel.app/#article",
+        "isPartOf": {
+          "@type": "WebPage",
+          "@id": "https://islam-hub-project.vercel.app/"
+        },
+        "headline": "IslamHub — Next-Gen Islamic Utility for Prayer, Wealth & Sacred Knowledge",
+        "description": "Comprehensive Islamic platform providing authentic prayer times, Zakat calculations, verified prophetic Duas with audio, and step-by-step worship guides.",
+        "image": [
+          "https://images.unsplash.com/photo-1542044801-38d5bfedb9a6?auto=format&fit=crop&q=80"
+        ],
+        "inLanguage": "en",
+        "datePublished": "2026-01-15T08:00:00+00:00",
+        "dateModified": "2026-02-28T12:00:00+00:00",
+        "author": {
+          "@type": "Organization",
+          "name": "IslamHub Scholarly Board",
+          "url": "https://islam-hub-project.vercel.app/about/scholarly-board/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "IslamHub",
+          "url": "https://islam-hub-project.vercel.app/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://islam-hub-project.vercel.app/logo.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://islam-hub-project.vercel.app/"
+        }
+      },
+      {
+        "@type": "VideoObject",
+        "@id": "https://islam-hub-project.vercel.app/#video",
+        "name": "How to Calculate Zakat Accurately — Visual Video Explainer",
+        "description": "A comprehensive visual walkthrough and tutorial demonstrating how to calculate Zakat accurately for cash, gold, silver, investments, and business assets.",
+        "thumbnailUrl": [
+          "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&q=80"
+        ],
+        "uploadDate": "2026-01-20T10:00:00+00:00",
+        "duration": "PT5M30S",
+        "contentUrl": "https://islam-hub-project.vercel.app/videos/zakat-explainer.mp4",
+        "embedUrl": "https://www.youtube.com/embed/placeholder"
+      },
+      {
         "@type": "FAQPage",
+        "@id": "https://islam-hub-project.vercel.app/#faq",
         "mainEntity": faqs.map(faq => {
           const { question, answer } = faq;
           return {
