@@ -177,7 +177,7 @@ export default function HomePage() {
     }
   ];
 
-  const jsonLd = {
+  const websiteAndArticleSchema = {
     "@context": "https://schema.org",
     "@graph": [
       {
@@ -245,28 +245,27 @@ export default function HomePage() {
         "duration": "PT5M30S",
         "contentUrl": "https://islam-hub-project.vercel.app/videos/zakat-explainer.mp4",
         "embedUrl": "https://www.youtube.com/embed/placeholder"
-      },
-      {
-        "@type": "FAQPage",
-        "@id": "https://islam-hub-project.vercel.app/#faq",
-        "mainEntity": faqs.map(faq => {
-          const { question, answer } = faq;
-          return {
-            "@type": "Question",
-            "name": question,
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": answer
-            }
-          };
-        })
       }
     ]
   };
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <div className="w-full flex flex-col bg-black min-h-screen text-neutral-50 font-sans selection:bg-white selection:text-black">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteAndArticleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero Section */}
       <section className="pt-16 pb-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-black">
