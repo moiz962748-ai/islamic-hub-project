@@ -112,22 +112,21 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
                     "url": "https://islamhub.com/logo.png"
                   }
                 },
-                "image": {
-                  "@type": "ImageObject",
-                  "url": "https://islamhub.com/images/article-hero.jpg",
-                  "caption": `Guide on ${titleString}`,
-                  "creditText": "IslamHub Research"
-                }
+                "image": [
+                  "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80"
+                ]
               },
               {
                 "@type": "VideoObject",
                 "@id": `${currentUrl}#video`,
                 "name": `Video Explainer: Zakat on ${titleString}`,
                 "description": `A detailed walkthrough of how to calculate Zakat accurately for this asset type.`,
-                "thumbnailUrl": "https://islamhub.com/images/video-thumb.jpg",
-                "uploadDate": "2026-03-05T08:00:00+08:00",
-                "contentUrl": "https://islamhub.com/videos/explainer.mp4",
-                "embedUrl": "https://youtube.com/embed/example",
+                "thumbnailUrl": [
+                  "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80"
+                ],
+                "uploadDate": "2026-03-05T08:00:00+00:00",
+                "contentUrl": `https://islamhub.com/videos/zakat/${params.slug}.mp4`,
+                "embedUrl": "https://www.youtube.com/embed/placeholder",
                 "duration": "PT5M30S"
               },
               {

@@ -414,7 +414,7 @@ export default function SingleAyatPage({
   const currentSlug = params?.slug?.toLowerCase().replace(/\/$/, '') || 'ayat-al-kursi';
   const ayat = resolveAyat(currentSlug);
 
-  const canonicalUrl = `https://yourdomain.com/ayats/${ayat.slug}/`;
+  const canonicalUrl = `https://islamhub.com/ayats/${ayat.slug}/`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -425,18 +425,44 @@ export default function SingleAyatPage({
         "url": canonicalUrl,
         "headline": `${ayat.titleEnglish} (${ayat.titleUrdu}) - Surah ${ayat.surahNameEnglish} [${ayat.surahNumber}:${ayat.ayahNumber}]`,
         "description": ayat.tldr,
+        "image": [
+          "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&q=80"
+        ],
+        "datePublished": "2026-01-15T08:00:00+00:00",
+        "dateModified": "2026-02-28T12:00:00+00:00",
         "articleSection": "Sacred Quranic Verses & Authentic Exegesis",
         "inLanguage": ["ar", "en", "ur"],
         "author": {
           "@type": "Organization",
           "name": "Scholarly Quranic Advisory Board & Certified Huffaz",
-          "url": "https://yourdomain.com/about/scholarly-board/"
+          "url": "https://islamhub.com/about/scholarly-board/"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Sacred Quranic Directory",
-          "url": "https://yourdomain.com/"
+          "url": "https://islamhub.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://islamhub.com/logo.png"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": canonicalUrl
         }
+      },
+      {
+        "@type": "VideoObject",
+        "@id": `${canonicalUrl}#video`,
+        "name": `${ayat.titleEnglish} (${ayat.titleUrdu}) - Tajweed & Pronunciation Recitation`,
+        "description": `Word-by-word visual and auditory Tajweed recitation masterclass for ${ayat.titleEnglish}.`,
+        "thumbnailUrl": [
+          "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&q=80"
+        ],
+        "uploadDate": "2026-01-20T10:00:00+00:00",
+        "duration": "PT5M30S",
+        "contentUrl": `https://islamhub.com/videos/ayats/${ayat.slug}.mp4`,
+        "embedUrl": `https://www.youtube.com/embed/placeholder`
       },
       {
         "@type": "BreadcrumbList",
@@ -446,13 +472,13 @@ export default function SingleAyatPage({
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://yourdomain.com/"
+            "item": "https://islamhub.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Sacred Ayats Hub",
-            "item": "https://yourdomain.com/ayats/"
+            "item": "https://islamhub.com/ayats/"
           },
           {
             "@type": "ListItem",

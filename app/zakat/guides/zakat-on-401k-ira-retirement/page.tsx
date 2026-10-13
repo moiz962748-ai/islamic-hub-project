@@ -56,13 +56,41 @@ export default function Zakat401kPage() {
           __html: JSON.stringify([
             {
               "@context": "https://schema.org",
-              "@type": "TechArticle",
+              "@type": "Article",
               "headline": "How to Calculate Zakat on 401(k), IRA & Pension Funds (2026)",
               "description": "Zakat on retirement accounts is calculated on the net accessible value. You only pay Zakat on the vested balance minus early withdrawal penalties and taxes.",
+              "image": [
+                "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80"
+              ],
+              "datePublished": "2026-01-15T08:00:00+00:00",
+              "dateModified": "2026-02-28T12:00:00+00:00",
               "author": {
                 "@type": "Organization",
-                "name": "IslamHub Shariah Board"
+                "name": "IslamHub Shariah Board",
+                "url": "https://islamhub.com/about/scholarly-board/"
+              },
+              "publisher": {
+                "@type": "Organization",
+                "name": "IslamHub",
+                "url": "https://islamhub.com",
+                "logo": {
+                  "@type": "ImageObject",
+                  "url": "https://islamhub.com/logo.png"
+                }
               }
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "VideoObject",
+              "name": "How to Calculate Zakat on 401(k) and IRA (Video Guide)",
+              "description": "Step-by-step visual explainer on calculating Zakat for retirement, pension, and 401k funds.",
+              "thumbnailUrl": [
+                "https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?auto=format&fit=crop&q=80"
+              ],
+              "uploadDate": "2026-01-15T08:00:00+00:00",
+              "duration": "PT6M10S",
+              "contentUrl": "https://islamhub.com/videos/zakat/401k-ira.mp4",
+              "embedUrl": "https://www.youtube.com/embed/placeholder"
             },
             {
               "@context": "https://schema.org",

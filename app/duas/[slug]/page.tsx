@@ -477,7 +477,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "TechArticle",
+        "@type": "Article",
         "@id": `${canonicalUrl}#article`,
         "isPartOf": {
           "@type": "WebPage",
@@ -485,20 +485,24 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
         },
         "headline": `${dua.titleEnglish} in Arabic, Transliteration & Translations`,
         "description": dua.tldr,
+        "image": [
+          "https://images.unsplash.com/photo-1542044801-38d5bfedb9a6?auto=format&fit=crop&q=80"
+        ],
         "inLanguage": "en",
         "datePublished": "2026-01-15T08:00:00+00:00",
         "dateModified": "2026-02-28T12:00:00+00:00",
         "author": {
           "@type": "Organization",
           "name": "Fiqh & Shariah Advisory Council",
-          "url": "https://yourdomain.com/about/scholarly-board/"
+          "url": "https://islamhub.com/about/scholarly-board/"
         },
         "publisher": {
           "@type": "Organization",
           "name": "Daily Duas & Islamic Knowledge Hub",
+          "url": "https://islamhub.com/",
           "logo": {
             "@type": "ImageObject",
-            "url": "https://yourdomain.com/logo.png"
+            "url": "https://islamhub.com/logo.png"
           }
         },
         "mainEntityOfPage": {
@@ -514,13 +518,13 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
             "@type": "ListItem",
             "position": 1,
             "name": "Home",
-            "item": "https://yourdomain.com/"
+            "item": "https://islamhub.com/"
           },
           {
             "@type": "ListItem",
             "position": 2,
             "name": "Daily Duas Hub",
-            "item": "https://yourdomain.com/duas/"
+            "item": "https://islamhub.com/duas/"
           },
           {
             "@type": "ListItem",
@@ -549,7 +553,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
         "name": `${dua.titleEnglish} - Tajweed Audio Recitation`,
         "description": `Clear phonetic audio recitation of ${dua.titleEnglish} with accurate Tajweed articulation and slow pacing for learners.`,
         "duration": "PT1M45S",
-        "contentUrl": `https://yourdomain.com/audio/duas/${dua.slug}.mp3`,
+        "contentUrl": `https://islamhub.com/audio/duas/${dua.slug}.mp3`,
         "encodingFormat": "audio/mpeg"
       },
       {
@@ -557,10 +561,13 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
         "@id": `${canonicalUrl}#video`,
         "name": `${dua.titleEnglish} - Pronunciation & Tajweed Masterclass`,
         "description": `Video tutorial demonstrating word-by-word Arabic articulation and Tajweed rules for ${dua.titleEnglish}.`,
-        "thumbnailUrl": "https://images.unsplash.com/photo-1542044801-38d5bfedb9a6?auto=format&fit=crop&q=80",
+        "thumbnailUrl": [
+          "https://images.unsplash.com/photo-1542044801-38d5bfedb9a6?auto=format&fit=crop&q=80"
+        ],
         "uploadDate": "2026-01-20T10:00:00+00:00",
         "duration": "PT4M15S",
-        "embedUrl": `https://yourdomain.com/embed/duas/${dua.slug}`
+        "contentUrl": `https://islamhub.com/videos/duas/${dua.slug}.mp4`,
+        "embedUrl": `https://www.youtube.com/embed/placeholder`
       },
       {
         "@type": "FAQPage",

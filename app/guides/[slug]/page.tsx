@@ -103,7 +103,7 @@ export default function GuideDynamicPage({ params }: PageProps) {
     );
   }
 
-  const canonicalUrl = `https://islamhub.example.com/guides/${guide.slug}`;
+  const canonicalUrl = `https://islamhub.com/guides/${guide.slug}`;
 
   // Structured Data Schema for Google Search, AI Overviews, and Rich Results
   const jsonLd = {
@@ -115,13 +115,43 @@ export default function GuideDynamicPage({ params }: PageProps) {
         url: canonicalUrl,
         headline: guide.title,
         description: guide.description,
+        image: [
+          'https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&q=80'
+        ],
+        datePublished: '2026-01-15T08:00:00+00:00',
+        dateModified: '2026-02-28T12:00:00+00:00',
         inLanguage: ['en', 'ar'],
-        mainEntityOfPage: canonicalUrl,
+        author: {
+          '@type': 'Organization',
+          name: 'IslamHub Islamic Research & Scholarly Board',
+          url: 'https://islamhub.com/about/scholarly-board/',
+        },
         publisher: {
           '@type': 'Organization',
           name: 'IslamHub Islamic Research & Scholarly Board',
-          url: 'https://islamhub.example.com',
+          url: 'https://islamhub.com',
+          logo: {
+            '@type': 'ImageObject',
+            url: 'https://islamhub.com/logo.png',
+          },
         },
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': canonicalUrl,
+        },
+      },
+      {
+        '@type': 'VideoObject',
+        '@id': `${canonicalUrl}#video`,
+        name: `${guide.title} - Step-by-Step Practical Demonstration`,
+        description: `Complete instructional video demonstrating how to perform ${guide.title} with proper Sunni Fiqh posture and rulings.`,
+        thumbnailUrl: [
+          'https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&q=80'
+        ],
+        uploadDate: '2026-01-15T08:00:00+00:00',
+        duration: 'PT8M20S',
+        contentUrl: `https://islamhub.com/videos/guides/${guide.slug}.mp4`,
+        embedUrl: 'https://www.youtube.com/embed/placeholder',
       },
       {
         '@type': 'HowTo',
