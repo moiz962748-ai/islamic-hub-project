@@ -11,3 +11,4 @@ coverage/
 server.js
 server.ts
 vite.config.ts
+*.tsbuildinfo
