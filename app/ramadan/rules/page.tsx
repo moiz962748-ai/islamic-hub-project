@@ -75,7 +75,7 @@ const jsonLd = {
 
 export default function FastingRulesPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -86,21 +86,21 @@ export default function FastingRulesPage() {
         {/* 1. METADATA & E-E-A-T TRUST HEADER */}
         <header className="space-y-6">
           <nav className="flex items-center text-sm font-medium text-slate-400 space-x-2">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
-            <Link href="/ramadan" className="hover:text-emerald-400 transition-colors">Ramadan</Link>
+            <Link href="/ramadan" className="hover:text-white transition-colors">Ramadan</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
             <span className="text-slate-200">Rules & Guidelines</span>
           </nav>
 
-          <Link href="/about/scholarly-board/" className="flex items-center space-x-2 w-fit bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3 py-1.5 hover:bg-emerald-400/20 transition-colors group">
-            <ShieldCheck className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-            <span className="text-emerald-400 text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh & Shariah Advisory Council</span>
+          <Link href="/about/scholarly-board/" className="flex items-center space-x-2 w-fit bg-neutral-800 border border-neutral-800 rounded-full px-3 py-1.5 hover:bg-neutral-800 transition-colors group">
+            <ShieldCheck className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+            <span className="text-white text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh & Shariah Advisory Council</span>
           </Link>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
             Fasting Rules & Guidelines: <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
               Fiqh Rulings, Exemptions & Medical Advice
             </span>
           </h1>
@@ -113,19 +113,19 @@ export default function FastingRulesPage() {
         </header>
 
         {/* 2. AEO DIRECT ANSWER BOX */}
-        <section className="w-full bg-emerald-950/20 border-2 border-emerald-500/40 rounded-2xl p-6 md:p-8 shadow-lg relative overflow-hidden">
+        <section className="w-full bg-neutral-900 border-2 border-neutral-800 rounded-2xl p-6 md:p-8 shadow-lg relative overflow-hidden">
           <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
-            <CheckCircle2 className="w-48 h-48 text-emerald-400" />
+            <CheckCircle2 className="w-48 h-48 text-white" />
           </div>
           
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center relative z-10">
-            <Info className="w-6 h-6 mr-3 text-emerald-400" />
+            <Info className="w-6 h-6 mr-3 text-white" />
             Core Fasting Conditions (At a Glance)
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
             <div className="space-y-3">
-              <h3 className="text-emerald-400 font-semibold uppercase tracking-wider text-sm flex items-center">
+              <h3 className="text-white font-semibold uppercase tracking-wider text-sm flex items-center">
                 <CheckCircle2 className="w-4 h-4 mr-2" /> Essential Pillars (Arkan)
               </h3>
               <ul className="space-y-2 text-slate-300 text-sm">
@@ -170,8 +170,8 @@ export default function FastingRulesPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent z-10" />
               
               <button className="z-20 relative flex flex-col items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-2xl animate-pulse" />
-                <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-emerald-400 opacity-90 drop-shadow-2xl mb-4" />
+                <div className="absolute inset-0 bg-neutral-800 rounded-full blur-2xl animate-pulse" />
+                <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-white opacity-90 drop-shadow-2xl mb-4" />
                 <span className="text-white font-semibold tracking-wide drop-shadow-md text-center px-4">Watch: Essential Fiqh Rulings of Sawm</span>
               </button>
             </div>
@@ -181,21 +181,21 @@ export default function FastingRulesPage() {
               <h3 className="text-2xl font-bold text-white mb-6">Key Fiqh Principles</h3>
               <ul className="space-y-5">
                 <li className="flex items-start text-sm">
-                  <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                  <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                   <div>
                     <strong className="text-slate-200 text-base block mb-1">School Differences (Madhahib)</strong>
                     <span className="text-slate-400 leading-relaxed">While core principles are universal, minor rulings (like the validity of inhalers or ear drops) vary across Hanafi, Shafi'i, Maliki, and Hanbali consensus. Follow your local scholar's guidance consistently.</span>
                   </div>
                 </li>
                 <li className="flex items-start text-sm">
-                  <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                  <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                   <div>
                     <strong className="text-slate-200 text-base block mb-1">Exemption Obligations</strong>
                     <span className="text-slate-400 leading-relaxed">Temporary exemptions (travel, sickness) require making up the fasts (Qadha). Permanent exemptions (chronic illness, old age) require paying compensation (Fidya).</span>
                   </div>
                 </li>
                 <li className="flex items-start text-sm">
-                  <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                  <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                   <div>
                     <strong className="text-slate-200 text-base block mb-1">Accidental vs. Deliberate Actions</strong>
                     <span className="text-slate-400 leading-relaxed">Prophetic tradition dictates that forgetting you are fasting and eating does not break the fast. However, deliberate nullification without valid excuse requires severe expiation (Kaffarah).</span>
@@ -213,77 +213,77 @@ export default function FastingRulesPage() {
             
             {/* SILO 1: INVALIDATORS & NULLIFIERS */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Ban className="w-4 h-4 mr-2 text-rose-400" /> Invalidators & Nullifiers
               </h3>
-              <Link href="/ramadan/rules/nullifiers/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Actions That Nullify Fasting (Mufattirat)</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/nullifiers/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Actions That Nullify Fasting (Mufattirat)</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/accidental-nullification/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Unintentional vs. Deliberate Fast Breaking</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/accidental-nullification/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Unintentional vs. Deliberate Fast Breaking</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/kaffarah-qadha/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Kaffarah & Qadha: Major Expiation Rules</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/kaffarah-qadha/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Kaffarah & Qadha: Major Expiation Rules</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
             {/* SILO 2: MEDICAL & HEALTHCARE FIQH */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
-                <Stethoscope className="w-4 h-4 mr-2 text-teal-400" /> Medical & Healthcare
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+                <Stethoscope className="w-4 h-4 mr-2 text-white" /> Medical & Healthcare
               </h3>
-              <Link href="/ramadan/rules/medical-inhalers-drops/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Inhalers, Eye/Ear Drops & Nasal Sprays</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/medical-inhalers-drops/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Inhalers, Eye/Ear Drops & Nasal Sprays</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/injections-iv/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Injections, Vaccines & IV Fluids Rulings</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/injections-iv/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Injections, Vaccines & IV Fluids Rulings</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/blood-tests-cupping/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Blood Tests, Cupping & Donating Blood</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/blood-tests-cupping/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Blood Tests, Cupping & Donating Blood</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
             {/* SILO 3: EXEMPTIONS & SPECIAL CASES */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Baby className="w-4 h-4 mr-2 text-sky-400" /> Exemptions & Cases
               </h3>
-              <Link href="/ramadan/rules/pregnancy-breastfeeding/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Fasting Rules for Pregnant & Breastfeeding Women</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/pregnancy-breastfeeding/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Fasting Rules for Pregnant & Breastfeeding Women</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/travelers-safar/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Travelers' Exemption & Distance Rules (Safar)</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/travelers-safar/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Travelers' Exemption & Distance Rules (Safar)</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/elderly-chronic-illness/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Elderly, Chronic Illness & Fidya Calculations</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/elderly-chronic-illness/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Elderly, Chronic Illness & Fidya Calculations</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
             {/* SILO 4: DAILY HYGIENE & CONTEMPORARY FIQH */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Info className="w-4 h-4 mr-2 text-indigo-400" /> Daily Hygiene
               </h3>
-              <Link href="/ramadan/rules/toothpaste-miswak/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Using Toothpaste, Miswak & Mouthwash</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/toothpaste-miswak/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Using Toothpaste, Miswak & Mouthwash</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/swallowing-saliva/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Swallowing Saliva, Phlegm & Mucus</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/swallowing-saliva/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Swallowing Saliva, Phlegm & Mucus</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/cosmetics-perfume/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Cosmetics, Perfume & Personal Care Rulings</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/ramadan/rules/cosmetics-perfume/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Cosmetics, Perfume & Personal Care Rulings</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
@@ -295,45 +295,45 @@ export default function FastingRulesPage() {
           <h2 className="text-2xl font-bold text-white mb-6">Rules by Demographic</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/50 transition-colors relative overflow-hidden group">
+            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-600 transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
                 <Globe className="w-24 h-24 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-3 relative z-10 flex items-center">
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10 flex items-center">
                 For Travelers
               </h3>
               <ul className="text-slate-300 text-sm leading-relaxed space-y-2 relative z-10">
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Distance thresholds (Safar)</li>
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> When to legally break the fast</li>
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Obligations for making up days (Qadha)</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Distance thresholds (Safar)</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> When to legally break the fast</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Obligations for making up days (Qadha)</li>
               </ul>
             </div>
 
-            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/50 transition-colors relative overflow-hidden group">
+            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-600 transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
                 <Stethoscope className="w-24 h-24 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-3 relative z-10 flex items-center">
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10 flex items-center">
                 For Patients & Elderly
               </h3>
               <ul className="text-slate-300 text-sm leading-relaxed space-y-2 relative z-10">
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Chronic vs. temporary illness</li>
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Fidya rates and compensation</li>
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Following expert medical advice</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Chronic vs. temporary illness</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Fidya rates and compensation</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Following expert medical advice</li>
               </ul>
             </div>
 
-            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-emerald-500/50 transition-colors relative overflow-hidden group">
+            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-600 transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
                 <Baby className="w-24 h-24 text-white" />
               </div>
-              <h3 className="text-xl font-bold text-emerald-400 mb-3 relative z-10 flex items-center">
+              <h3 className="text-xl font-bold text-white mb-3 relative z-10 flex items-center">
                 For Women
               </h3>
               <ul className="text-slate-300 text-sm leading-relaxed space-y-2 relative z-10">
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Rules regarding menses (Hayd)</li>
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Post-natal bleeding (Nifas) exceptions</li>
-                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-emerald-500 mr-2 mt-0.5 shrink-0"/> Pregnancy and nursing safety rulings</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Rules regarding menses (Hayd)</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Post-natal bleeding (Nifas) exceptions</li>
+                <li className="flex items-start"><CheckCircle2 className="w-4 h-4 text-white mr-2 mt-0.5 shrink-0"/> Pregnancy and nursing safety rulings</li>
               </ul>
             </div>
 
@@ -360,18 +360,18 @@ export default function FastingRulesPage() {
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors">
                   <td className="p-4 text-slate-200 font-medium">Blood Tests & IVs (Non-Nutritional)</td>
-                  <td className="p-4 text-emerald-400 text-sm">Does not break the fast</td>
-                  <td className="p-4 text-emerald-400 text-sm">Does not break the fast</td>
+                  <td className="p-4 text-white text-sm">Does not break the fast</td>
+                  <td className="p-4 text-white text-sm">Does not break the fast</td>
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors">
                   <td className="p-4 text-slate-200 font-medium">Cupping (Hijama) / Donating Blood</td>
                   <td className="p-4 text-amber-400 text-sm">Allowed, but disliked (Makruh) if it causes extreme weakness</td>
-                  <td className="p-4 text-emerald-400 text-sm">Does not break the fast</td>
+                  <td className="p-4 text-white text-sm">Does not break the fast</td>
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors">
                   <td className="p-4 text-slate-200 font-medium">Accidental Swallowing (Forgetting fast)</td>
-                  <td className="p-4 text-emerald-400 text-sm">Does not break the fast</td>
-                  <td className="p-4 text-emerald-400 text-sm">Does not break the fast</td>
+                  <td className="p-4 text-white text-sm">Does not break the fast</td>
+                  <td className="p-4 text-white text-sm">Does not break the fast</td>
                 </tr>
               </tbody>
             </table>
@@ -384,15 +384,15 @@ export default function FastingRulesPage() {
         {/* 6. AEO FAQS & JSON-LD SCHEMA */}
         <section className="bg-slate-900/30 border border-slate-800 rounded-3xl p-8 lg:p-10">
           <div className="flex items-center space-x-3 mb-8">
-            <HelpCircle className="w-6 h-6 text-emerald-400" />
+            <HelpCircle className="w-6 h-6 text-white" />
             <h2 className="text-2xl md:text-3xl font-bold text-white">Frequently Asked Questions</h2>
           </div>
           
           <div className="max-w-4xl space-y-3">
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Does using an asthma inhaler break the fast?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 According to the majority of contemporary scholars across Hanafi, Shafi'i, Maliki, and Hanbali schools, using an asthma inhaler breaks the fast because physical particles enter the stomach via the throat. Those who must use it are exempt and must pay Fidya or make up the fast later.
@@ -400,9 +400,9 @@ export default function FastingRulesPage() {
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Is brushing teeth allowed while fasting?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 Brushing teeth with toothpaste is permissible but generally disliked (makruh) due to the risk of swallowing. Using a Miswak is highly encouraged. If any paste or water is swallowed, the fast is nullified.
@@ -410,9 +410,9 @@ export default function FastingRulesPage() {
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Does swallowing saliva break the fast?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 Swallowing your own natural saliva does not break the fast, as it is unavoidable. However, swallowing mucus that has entered the mouth, or gathering saliva deliberately to swallow, is disliked or prohibited depending on the school of thought.
@@ -420,9 +420,9 @@ export default function FastingRulesPage() {
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 What happens if I miss fasts due to chronic illness?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 If a chronic illness prevents you from fasting and there is no hope for recovery to make up the fasts, you are exempt. Instead, you must pay Fidya, which is feeding one person in need for each missed day.

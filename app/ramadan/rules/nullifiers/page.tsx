@@ -109,7 +109,7 @@ const jsonLd = {
 
 export default function NullifiersPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       {/* PHASE 4: TECHNICAL & AI CRAWLABILITY (JSON-LD) */}
       <script
         type="application/ld+json"
@@ -121,18 +121,18 @@ export default function NullifiersPage() {
         {/* PHASE 1: ABOVE-THE-FOLD RESOLUTION */}
         <header className="space-y-6">
           <nav className="flex items-center text-sm font-medium text-slate-400 space-x-2">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
-            <Link href="/ramadan" className="hover:text-emerald-400 transition-colors">Ramadan</Link>
+            <Link href="/ramadan" className="hover:text-white transition-colors">Ramadan</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
-            <Link href="/ramadan/rules" className="hover:text-emerald-400 transition-colors hidden sm:block">Rules & Guidelines</Link>
+            <Link href="/ramadan/rules" className="hover:text-white transition-colors hidden sm:block">Rules & Guidelines</Link>
             <ChevronRight className="w-4 h-4 text-slate-600 hidden sm:block" />
             <span className="text-slate-200">Nullifiers</span>
           </nav>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
             Actions That Nullify Fasting (Mufattirat): <br className="hidden lg:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
               Fiqh Rulings & Exceptions
             </span>
           </h1>
@@ -140,29 +140,29 @@ export default function NullifiersPage() {
           {/* Article Metadata Bar */}
           <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 border-y border-slate-800/60 py-4">
             <div className="flex items-center">
-              <Clock className="w-4 h-4 mr-2 text-emerald-400" />
+              <Clock className="w-4 h-4 mr-2 text-white" />
               <span>6 Min Read</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700"></div>
             <div className="flex items-center">
-              <Calendar className="w-4 h-4 mr-2 text-emerald-400" />
+              <Calendar className="w-4 h-4 mr-2 text-white" />
               <span>Updated: Ramadan 1447 / 2026</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700"></div>
-            <Link href="/about/scholarly-board/" className="flex items-center space-x-1.5 bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3 py-1 hover:bg-emerald-400/20 transition-colors group">
-              <ShieldCheck className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-              <span className="text-emerald-400 text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh Board</span>
+            <Link href="/about/scholarly-board/" className="flex items-center space-x-1.5 bg-neutral-800 border border-neutral-800 rounded-full px-3 py-1 hover:bg-neutral-800 transition-colors group">
+              <ShieldCheck className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+              <span className="text-white text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh Board</span>
             </Link>
           </div>
 
           {/* AEO Direct Answer / TL;DR Box */}
-          <div className="w-full bg-emerald-950/20 border-l-4 border-emerald-500 rounded-r-xl p-6 md:p-8 shadow-sm">
+          <div className="w-full bg-neutral-900 border-l-4 border-white rounded-r-xl p-6 md:p-8 shadow-sm">
             <h2 className="text-xl font-bold text-white mb-3 flex items-center">
-              <Info className="w-6 h-6 mr-3 text-emerald-400" />
+              <Info className="w-6 h-6 mr-3 text-white" />
               Quick Summary (TL;DR)
             </h2>
             <p className="text-slate-300 leading-relaxed">
-              Fasting is invalidated (Mufattirat) by <strong className="text-emerald-400">deliberate eating, drinking, or marital relations</strong> from dawn until sunset. <strong className="text-white">Unintentional acts</strong> (like eating out of forgetfulness) do not break the fast. Medical necessities like <strong className="text-white">non-nutritional injections or eye drops</strong> are excused by majority consensus. Deliberate invalidation requires making up the day (Qadha), and in severe cases, Kaffarah (expiation).
+              Fasting is invalidated (Mufattirat) by <strong className="text-white">deliberate eating, drinking, or marital relations</strong> from dawn until sunset. <strong className="text-white">Unintentional acts</strong> (like eating out of forgetfulness) do not break the fast. Medical necessities like <strong className="text-white">non-nutritional injections or eye drops</strong> are excused by majority consensus. Deliberate invalidation requires making up the day (Qadha), and in severe cases, Kaffarah (expiation).
             </p>
           </div>
         </header>
@@ -199,9 +199,9 @@ export default function NullifiersPage() {
                 </div>
               </li>
               <li className="flex items-start bg-slate-900/40 p-4 rounded-xl border border-slate-800">
-                <CheckCircle2 className="w-6 h-6 text-emerald-400 mr-4 shrink-0 mt-0.5" />
+                <CheckCircle2 className="w-6 h-6 text-white mr-4 shrink-0 mt-0.5" />
                 <div>
-                  <strong className="text-emerald-400 text-lg block mb-1">Unintentional Acts (Excused)</strong>
+                  <strong className="text-white text-lg block mb-1">Unintentional Acts (Excused)</strong>
                   <span className="text-slate-400">Eating or drinking out of pure forgetfulness does not break the fast. The Prophet (PBUH) stated that whoever does this should complete their fast, as Allah has fed them.</span>
                 </div>
               </li>
@@ -231,26 +231,26 @@ export default function NullifiersPage() {
                 <tbody className="divide-y divide-slate-800/50">
                   <tr className="hover:bg-slate-800/40 transition-colors">
                     <td className="p-4 text-slate-200 font-medium">Eye, Ear, or Nose Drops</td>
-                    <td className="p-4 text-emerald-400 font-medium">No*</td>
+                    <td className="p-4 text-white font-medium">No*</td>
                     <td className="p-4 text-slate-400">-</td>
                     <td className="p-4 text-slate-400">-</td>
                   </tr>
                   <tr className="hover:bg-slate-800/40 transition-colors">
                     <td className="p-4 text-slate-200 font-medium">Non-Nutritional Injections (Vaccines, Penicillin)</td>
-                    <td className="p-4 text-emerald-400 font-medium">No</td>
+                    <td className="p-4 text-white font-medium">No</td>
                     <td className="p-4 text-slate-400">-</td>
                     <td className="p-4 text-slate-400">-</td>
                   </tr>
                   <tr className="hover:bg-slate-800/40 transition-colors">
                     <td className="p-4 text-slate-200 font-medium">Nutritional IV Drips</td>
                     <td className="p-4 text-rose-400 font-medium">Yes</td>
-                    <td className="p-4 text-emerald-400 font-medium">Yes</td>
+                    <td className="p-4 text-white font-medium">Yes</td>
                     <td className="p-4 text-slate-400">No</td>
                   </tr>
                   <tr className="hover:bg-slate-800/40 transition-colors">
                     <td className="p-4 text-slate-200 font-medium">Deliberate Vomiting</td>
                     <td className="p-4 text-rose-400 font-medium">Yes</td>
-                    <td className="p-4 text-emerald-400 font-medium">Yes</td>
+                    <td className="p-4 text-white font-medium">Yes</td>
                     <td className="p-4 text-slate-400">No</td>
                   </tr>
                 </tbody>
@@ -272,8 +272,8 @@ export default function NullifiersPage() {
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10" />
             
             <button className="z-20 relative flex flex-col items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-              <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-2xl animate-pulse" />
-              <PlayCircle className="w-16 h-16 text-emerald-400 opacity-90 drop-shadow-2xl mb-3" />
+              <div className="absolute inset-0 bg-neutral-800 rounded-full blur-2xl animate-pulse" />
+              <PlayCircle className="w-16 h-16 text-white opacity-90 drop-shadow-2xl mb-3" />
               <span className="text-white font-semibold tracking-wide text-sm drop-shadow-md text-center px-4">Watch: Visual Guide to Actions That Break Your Fast</span>
             </button>
           </div>
@@ -283,19 +283,19 @@ export default function NullifiersPage() {
             <h3 className="text-2xl font-bold text-white mb-6">Key Video Takeaways</h3>
             <ul className="space-y-4">
               <li className="flex items-start text-sm">
-                <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                 <span className="text-slate-300 leading-relaxed">
                   <strong className="text-slate-100">Deliberate Acts:</strong> Eating or drinking intentionally invalidates the fast and obligates you to make up the day (Qadha).
                 </span>
               </li>
               <li className="flex items-start text-sm">
-                <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                 <span className="text-slate-300 leading-relaxed">
                   <strong className="text-slate-100">Accidental Consumption:</strong> Eating or drinking out of forgetfulness does NOT break the fast; continue fasting immediately upon remembering.
                 </span>
               </li>
               <li className="flex items-start text-sm">
-                <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                 <span className="text-slate-300 leading-relaxed">
                   <strong className="text-slate-100">Medical Items:</strong> Non-nutritional injections (like vaccines) and eye/ear drops are excused according to majority consensus.
                 </span>
@@ -308,7 +308,7 @@ export default function NullifiersPage() {
         
         {/* Link UP (Parent Hub) */}
         <div className="pt-8 pb-4 border-t border-slate-800">
-          <Link href="/ramadan/rules/" className="inline-flex items-center text-slate-400 hover:text-emerald-400 transition-colors font-medium">
+          <Link href="/ramadan/rules/" className="inline-flex items-center text-slate-400 hover:text-white transition-colors font-medium">
             <ArrowLeft className="w-4 h-4 mr-2" />
             Back to All Fasting Rules & Guidelines
           </Link>
@@ -318,17 +318,17 @@ export default function NullifiersPage() {
         <section className="bg-slate-900/30 border border-slate-800 rounded-3xl p-6 md:p-8">
           <h3 className="text-xl font-bold text-white mb-6">Related Guides in This Series</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link href="/ramadan/rules/accidental-nullification/" className="bg-slate-950 border border-slate-800/80 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group flex flex-col">
-              <h4 className="text-slate-200 font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-sm">Unintentional vs. Deliberate Fast Breaking</h4>
-              <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto pt-4">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+            <Link href="/ramadan/rules/accidental-nullification/" className="bg-slate-950 border border-slate-800/80 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group flex flex-col">
+              <h4 className="text-slate-200 font-semibold mb-2 group-hover:text-white transition-colors text-sm">Unintentional vs. Deliberate Fast Breaking</h4>
+              <div className="text-white text-xs font-semibold flex items-center mt-auto pt-4">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
             </Link>
-            <Link href="/ramadan/rules/kaffarah-qadha/" className="bg-slate-950 border border-slate-800/80 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group flex flex-col">
-              <h4 className="text-slate-200 font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-sm">Kaffarah & Qadha: Major Expiation Rules</h4>
-              <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto pt-4">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+            <Link href="/ramadan/rules/kaffarah-qadha/" className="bg-slate-950 border border-slate-800/80 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group flex flex-col">
+              <h4 className="text-slate-200 font-semibold mb-2 group-hover:text-white transition-colors text-sm">Kaffarah & Qadha: Major Expiation Rules</h4>
+              <div className="text-white text-xs font-semibold flex items-center mt-auto pt-4">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
             </Link>
-            <Link href="/ramadan/rules/medical-inhalers-drops/" className="bg-slate-950 border border-slate-800/80 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group flex flex-col">
-              <h4 className="text-slate-200 font-semibold mb-2 group-hover:text-emerald-400 transition-colors text-sm">Inhalers, Eye/Ear Drops & Nasal Sprays</h4>
-              <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto pt-4">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+            <Link href="/ramadan/rules/medical-inhalers-drops/" className="bg-slate-950 border border-slate-800/80 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group flex flex-col">
+              <h4 className="text-slate-200 font-semibold mb-2 group-hover:text-white transition-colors text-sm">Inhalers, Eye/Ear Drops & Nasal Sprays</h4>
+              <div className="text-white text-xs font-semibold flex items-center mt-auto pt-4">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
             </Link>
           </div>
         </section>
@@ -340,16 +340,16 @@ export default function NullifiersPage() {
               <FileText className="w-5 h-5 mr-2 text-slate-400" /> References & Citations
             </h4>
             <ul className="space-y-3 text-sm text-slate-400 mb-6 flex-1">
-              <li className="flex items-start"><ExternalLink className="w-4 h-4 mr-2 shrink-0 mt-0.5 text-emerald-500/50" /> Rulings based on the International Islamic Fiqh Academy resolutions.</li>
-              <li className="flex items-start"><ExternalLink className="w-4 h-4 mr-2 shrink-0 mt-0.5 text-emerald-500/50" /> Consensus derived from major classical texts (Hanafi, Shafi'i, Maliki, Hanbali).</li>
+              <li className="flex items-start"><ExternalLink className="w-4 h-4 mr-2 shrink-0 mt-0.5 text-white" /> Rulings based on the International Islamic Fiqh Academy resolutions.</li>
+              <li className="flex items-start"><ExternalLink className="w-4 h-4 mr-2 shrink-0 mt-0.5 text-white" /> Consensus derived from major classical texts (Hanafi, Shafi'i, Maliki, Hanbali).</li>
             </ul>
           </div>
           
-          <div className="bg-emerald-900/10 border border-emerald-500/20 rounded-2xl p-6 flex flex-col justify-center items-center text-center">
-            <Download className="w-8 h-8 text-emerald-400 mb-3" />
+          <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 flex flex-col justify-center items-center text-center">
+            <Download className="w-8 h-8 text-white mb-3" />
             <h4 className="text-white font-bold mb-2">Offline Reading Material</h4>
             <p className="text-sm text-slate-400 mb-5">Get a complete PDF summary of fasting nullifiers to keep on your device.</p>
-            <button className="bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold py-2.5 px-6 rounded-lg transition-colors flex items-center text-sm w-full sm:w-auto justify-center">
+            <button className="bg-white text-black hover:bg-neutral-800 text-slate-950 font-bold py-2.5 px-6 rounded-lg transition-colors flex items-center text-sm w-full sm:w-auto justify-center">
               Download Printable Fiqh Summary (PDF)
             </button>
           </div>
@@ -358,15 +358,15 @@ export default function NullifiersPage() {
         {/* AEO FAQ Accordion */}
         <section className="bg-slate-900/30 border border-slate-800 rounded-3xl p-8 lg:p-10">
           <div className="flex items-center space-x-3 mb-8">
-            <Info className="w-6 h-6 text-emerald-400" />
+            <Info className="w-6 h-6 text-white" />
             <h2 className="text-2xl font-bold text-white">Frequently Asked Questions</h2>
           </div>
           
           <div className="max-w-4xl space-y-3">
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Does eating out of forgetfulness break the fast?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 No. According to authentic Hadith, if someone eats or drinks out of pure forgetfulness, they should continue to complete their fast without any penalty. It is considered that Allah provided for them.
@@ -374,9 +374,9 @@ export default function NullifiersPage() {
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Do eye drops invalidate the fast?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 According to the majority of contemporary scholars and Fiqh councils, eye drops do not invalidate the fast because the eye is not considered a primary natural passageway to the stomach, and the amount absorbed is negligible.

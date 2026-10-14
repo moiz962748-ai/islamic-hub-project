@@ -46,7 +46,7 @@ export default function NisabThresholdRulesPage() {
   const SILVER_GRAMS = 612.36;
 
   return (
-    <main className="min-h-screen bg-slate-950 font-sans selection:bg-emerald-500/30 text-slate-300">
+    <main className="min-h-screen bg-slate-950 font-sans selection:bg-white selection:text-black text-slate-300">
       
       {/* Self-referencing Canonical Tag & JSON-LD Schema (Template C Requirement) */}
       <link rel="canonical" href="https://islamhub.com/zakat/nisab-threshold/" />
@@ -146,9 +146,9 @@ export default function NisabThresholdRulesPage() {
         
         {/* Phase 1: Above-the-Fold (E-E-A-T & High-Density AEO) */}
         <nav className="flex items-center text-xs text-slate-400 mb-4" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
-          <Link href="/zakat" className="hover:text-emerald-400 transition-colors">Zakat</Link>
+          <Link href="/zakat" className="hover:text-white transition-colors">Zakat</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
           <span className="text-slate-300">Nisab Thresholds & Rules</span>
         </nav>
@@ -158,9 +158,9 @@ export default function NisabThresholdRulesPage() {
             Gold & Silver Nisab Rates Today (2026 Guidance)
           </h1>
           
-          <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-emerald-500 rounded-r-xl p-6 sm:p-8 shadow-lg mb-6">
+          <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-white rounded-r-xl p-6 sm:p-8 shadow-lg mb-6">
             <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-              <Info className="w-6 h-6 text-emerald-400" />
+              <Info className="w-6 h-6 text-white" />
               Nisab Definition & Baseline Rule
             </h2>
             <p className="text-slate-300 leading-relaxed mb-6">
@@ -180,14 +180,14 @@ export default function NisabThresholdRulesPage() {
               </div>
               <div className="bg-slate-950/50 border border-slate-800 rounded-lg p-4 flex flex-col justify-center">
                 <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Obligation Standard</span>
-                <span className="text-xl font-bold text-emerald-400">2.5% Rate</span>
+                <span className="text-xl font-bold text-white">2.5% Rate</span>
                 <span className="text-sm text-slate-500">Per Lunar Year (Hawl)</span>
               </div>
             </div>
           </div>
 
           <div className="inline-flex items-center gap-3 bg-slate-900/60 border border-slate-800 rounded-full px-4 py-2">
-            <ShieldCheck className="w-5 h-5 text-emerald-400" />
+            <ShieldCheck className="w-5 h-5 text-white" />
             <span className="text-sm font-medium text-slate-300">
               Reviewed by Shariah Compliance & Fiqh Researchers
             </span>
@@ -205,21 +205,21 @@ export default function NisabThresholdRulesPage() {
               <nav className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
                 <h3 className="text-white font-bold mb-4 uppercase tracking-wider text-xs">Table of Contents</h3>
                 <ul className="space-y-3 text-sm font-medium">
-                  <li><a href="#nisab-rates" className="text-slate-400 hover:text-emerald-400 transition-colors block">Live Nisab Rates</a></li>
-                  <li><a href="#fiqh-consensus" className="text-slate-400 hover:text-emerald-400 transition-colors block">Fiqh Consensus</a></li>
-                  <li><a href="#8-categories" className="text-slate-400 hover:text-emerald-400 transition-colors block">8 Recipient Categories</a></li>
-                  <li><a href="#how-to-distribute" className="text-slate-400 hover:text-emerald-400 transition-colors block">How to Distribute</a></li>
-                  <li><a href="#faqs" className="text-slate-400 hover:text-emerald-400 transition-colors block">Frequently Asked Questions</a></li>
+                  <li><a href="#nisab-rates" className="text-slate-400 hover:text-white transition-colors block">Live Nisab Rates</a></li>
+                  <li><a href="#fiqh-consensus" className="text-slate-400 hover:text-white transition-colors block">Fiqh Consensus</a></li>
+                  <li><a href="#8-categories" className="text-slate-400 hover:text-white transition-colors block">8 Recipient Categories</a></li>
+                  <li><a href="#how-to-distribute" className="text-slate-400 hover:text-white transition-colors block">How to Distribute</a></li>
+                  <li><a href="#faqs" className="text-slate-400 hover:text-white transition-colors block">Frequently Asked Questions</a></li>
                 </ul>
               </nav>
 
-              <div className="bg-gradient-to-br from-emerald-900/40 to-slate-900 border border-emerald-500/30 rounded-xl p-5 text-center">
-                <Calculator className="w-10 h-10 text-emerald-400 mx-auto mb-3" />
+              <div className="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-xl p-5 text-center">
+                <Calculator className="w-10 h-10 text-white mx-auto mb-3" />
                 <h4 className="text-white font-bold mb-2">Ready to Calculate?</h4>
                 <p className="text-xs text-slate-400 mb-4 leading-relaxed">
                   Use our universal Zakat engine to process your assets instantly.
                 </p>
-                <Link href="/zakat-calculator" className="block w-full bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">
+                <Link href="/zakat-calculator" className="block w-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm font-bold py-2.5 rounded-lg transition-colors">
                   Quick Calculate
                 </Link>
               </div>
@@ -233,7 +233,7 @@ export default function NisabThresholdRulesPage() {
             {/* Live Nisab HTML Data Table */}
             <section id="nisab-rates" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <Scale className="w-6 h-6 text-emerald-400" />
+                <Scale className="w-6 h-6 text-white" />
                 Live Nisab Equivalency Rates
               </h2>
               
@@ -244,7 +244,7 @@ export default function NisabThresholdRulesPage() {
                     onClick={() => setCurrency(curr)}
                     className={`px-4 py-1.5 rounded-lg text-sm font-medium transition-colors border ${
                       currency === curr 
-                        ? 'bg-emerald-600 border-emerald-500 text-white' 
+                        ? 'bg-white text-black border-neutral-800 text-white' 
                         : 'bg-slate-900 border-slate-800 text-slate-400 hover:bg-slate-800'
                     }`}
                   >
@@ -260,7 +260,7 @@ export default function NisabThresholdRulesPage() {
                       <th className="p-4 text-sm font-semibold text-slate-300">Metal & Purity</th>
                       <th className="p-4 text-sm font-semibold text-slate-300">Nisab Weight (Grams)</th>
                       <th className="p-4 text-sm font-semibold text-slate-300">Nisab Weight (Tola)</th>
-                      <th className="p-4 text-sm font-semibold text-emerald-400">Live Spot Valuation</th>
+                      <th className="p-4 text-sm font-semibold text-white">Live Spot Valuation</th>
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-slate-800">
@@ -291,11 +291,11 @@ export default function NisabThresholdRulesPage() {
             {/* Fiqh Consensus & Citations */}
             <section id="fiqh-consensus" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <BookOpen className="w-6 h-6 text-emerald-400" />
+                <BookOpen className="w-6 h-6 text-white" />
                 Fiqh Consensus & Citations
               </h2>
               
-              <div className="bg-slate-900/80 border-l-4 border-emerald-500 p-6 sm:p-8 rounded-r-xl shadow-inner relative overflow-hidden">
+              <div className="bg-slate-900/80 border-l-4 border-white p-6 sm:p-8 rounded-r-xl shadow-inner relative overflow-hidden">
                 <div className="absolute top-0 right-0 p-4 opacity-10">
                   <BookOpen className="w-24 h-24" />
                 </div>
@@ -308,7 +308,7 @@ export default function NisabThresholdRulesPage() {
                 <p className="text-base text-slate-200 leading-relaxed font-medium mb-4">
                   "Take, [O, Muhammad], from their wealth a charity by which you purify them and cause them increase..."
                 </p>
-                <div className="inline-flex items-center gap-2 bg-slate-950 px-3 py-1.5 rounded text-xs font-semibold text-emerald-400 border border-emerald-500/20">
+                <div className="inline-flex items-center gap-2 bg-slate-950 px-3 py-1.5 rounded text-xs font-semibold text-white border border-neutral-800">
                   Surah At-Tawbah (9:103)
                 </div>
               </div>
@@ -317,7 +317,7 @@ export default function NisabThresholdRulesPage() {
             {/* The 8 Eligible Recipient Categories */}
             <section id="8-categories" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <Users className="w-6 h-6 text-emerald-400" />
+                <Users className="w-6 h-6 text-white" />
                 The 8 Eligible Recipient Categories
               </h2>
               <p className="text-sm text-slate-400 mb-8 leading-relaxed">
@@ -337,9 +337,9 @@ export default function NisabThresholdRulesPage() {
                 ].map((category, idx) => {
                   const Icon = category.icon;
                   return (
-                    <div key={idx} className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 transition-colors flex flex-col items-center text-center">
+                    <div key={idx} className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 transition-colors flex flex-col items-center text-center">
                       <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-3">
-                        <Icon className="w-5 h-5 text-emerald-400" />
+                        <Icon className="w-5 h-5 text-white" />
                       </div>
                       <h3 className="text-sm font-bold text-white mb-1">{category.title}</h3>
                       <p className="text-xs text-slate-400">{category.subtitle}</p>
@@ -352,13 +352,13 @@ export default function NisabThresholdRulesPage() {
             {/* How to Distribute (3-Step Diagram) */}
             <section id="how-to-distribute" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <Globe className="w-6 h-6 text-emerald-400" />
+                <Globe className="w-6 h-6 text-white" />
                 How to Distribute Zakat
               </h2>
               
               <div className="flex flex-col md:flex-row items-center gap-4 justify-between bg-slate-900/40 p-6 rounded-2xl border border-slate-800">
                 <div className="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-5 text-center relative z-10 w-full md:w-auto">
-                  <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">1</div>
+                  <div className="w-8 h-8 rounded-full bg-white text-black font-semibold font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">1</div>
                   <h4 className="font-bold text-white mt-2 mb-1">Check Nisab</h4>
                   <p className="text-xs text-slate-400">Ensure a Hawl has passed.</p>
                 </div>
@@ -366,7 +366,7 @@ export default function NisabThresholdRulesPage() {
                 <ArrowRight className="w-6 h-6 text-slate-600 hidden md:block shrink-0" />
                 
                 <div className="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-5 text-center relative z-10 w-full md:w-auto">
-                  <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">2</div>
+                  <div className="w-8 h-8 rounded-full bg-white text-black font-semibold font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">2</div>
                   <h4 className="font-bold text-white mt-2 mb-1">Evaluate Wealth</h4>
                   <p className="text-xs text-slate-400">Total liquid assets at 2.5%.</p>
                 </div>
@@ -374,7 +374,7 @@ export default function NisabThresholdRulesPage() {
                 <ArrowRight className="w-6 h-6 text-slate-600 hidden md:block shrink-0" />
                 
                 <div className="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-5 text-center relative z-10 w-full md:w-auto">
-                  <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">3</div>
+                  <div className="w-8 h-8 rounded-full bg-white text-black font-semibold font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">3</div>
                   <h4 className="font-bold text-white mt-2 mb-1">Pay Locally</h4>
                   <p className="text-xs text-slate-400">Distribute to the 8 categories.</p>
                 </div>
@@ -383,7 +383,7 @@ export default function NisabThresholdRulesPage() {
               {/* Video Facade */}
               <div className="mt-8 aspect-[21/9] w-full rounded-2xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-                <button className="z-20 w-16 h-16 rounded-full bg-emerald-500/90 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                <button className="z-20 w-16 h-16 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                   <PlayCircle className="w-8 h-8 fill-slate-950 text-white" />
                 </button>
                 <div className="absolute top-4 right-4 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
@@ -399,21 +399,21 @@ export default function NisabThresholdRulesPage() {
             <section>
               <h2 className="text-xl font-bold text-white mb-6">Asset Specific Calculators</h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                <Link href="/zakat/gold-silver" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+                <Link href="/zakat/gold-silver" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
                   <Coins className="w-8 h-8 text-amber-500/70 group-hover:text-amber-400 transition-colors" />
                   <div>
                     <span className="block text-sm font-bold text-slate-200 group-hover:text-white">Gold Tool</span>
                     <span className="text-xs text-slate-500">Calculate jewelry & bullion</span>
                   </div>
                 </Link>
-                <Link href="/zakat/stocks-investments" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+                <Link href="/zakat/stocks-investments" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
                   <TrendingUp className="w-8 h-8 text-blue-500/70 group-hover:text-blue-400 transition-colors" />
                   <div>
                     <span className="block text-sm font-bold text-slate-200 group-hover:text-white">Stocks</span>
                     <span className="text-xs text-slate-500">Equities & retirement funds</span>
                   </div>
                 </Link>
-                <Link href="/zakat/crypto" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+                <Link href="/zakat/crypto" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
                   <Globe className="w-8 h-8 text-cyan-500/70 group-hover:text-cyan-400 transition-colors" />
                   <div>
                     <span className="block text-sm font-bold text-slate-200 group-hover:text-white">Crypto Tool</span>
@@ -426,7 +426,7 @@ export default function NisabThresholdRulesPage() {
             {/* Frequently Asked Questions (Accordion) */}
             <section id="faqs" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <FileText className="w-6 h-6 text-emerald-400" />
+                <FileText className="w-6 h-6 text-white" />
                 Frequently Asked Questions
               </h2>
               <div className="space-y-3">
@@ -455,7 +455,7 @@ export default function NisabThresholdRulesPage() {
                     >
                       <span className="font-semibold text-slate-200">{faq.q}</span>
                       {openFaq === idx ? (
-                        <Minus className="w-5 h-5 text-emerald-400 shrink-0" />
+                        <Minus className="w-5 h-5 text-white shrink-0" />
                       ) : (
                         <Plus className="w-5 h-5 text-slate-500 shrink-0" />
                       )}

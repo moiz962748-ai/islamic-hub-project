@@ -83,7 +83,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
   const currentUrl = `https://islamhub.com/zakat/guides/${params.slug}/`;
 
   return (
-    <main className="min-h-screen bg-slate-950 font-sans selection:bg-emerald-500/30 print:bg-white print:text-black">
+    <main className="min-h-screen bg-slate-950 font-sans selection:bg-white selection:text-black print:bg-white print:text-black">
       <link rel="canonical" href={currentUrl} />
       
       {/* ADVANCED JSON-LD SCHEMA GRAPH ENGINE */}
@@ -207,16 +207,16 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
         {/* 1. HERO & METADATA BAR SECTION */}
         <div className="mb-8 print:mb-4">
           <nav className="flex items-center text-xs text-slate-400 mb-6 print:hidden" aria-label="Breadcrumb">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3 h-3 mx-1" />
-            <Link href="/zakat/" className="hover:text-emerald-400 transition-colors">Zakat</Link>
+            <Link href="/zakat/" className="hover:text-white transition-colors">Zakat</Link>
             <ChevronRight className="w-3 h-3 mx-1" />
-            <Link href="/zakat/guides/" className="hover:text-emerald-400 transition-colors">Knowledge Base</Link>
+            <Link href="/zakat/guides/" className="hover:text-white transition-colors">Knowledge Base</Link>
             <ChevronRight className="w-3 h-3 mx-1" />
             <span className="text-slate-300 truncate max-w-xs">{titleString}</span>
           </nav>
 
-          <div className="inline-block bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 text-xs rounded-full font-medium mb-4 print:border-emerald-700 print:text-emerald-800">
+          <div className="inline-block bg-neutral-800 text-white border border-neutral-800 px-3 py-1 text-xs rounded-full font-medium mb-4 print:border-neutral-800 print:text-neutral-300">
             Fiqh Guide & Ruling
           </div>
 
@@ -225,7 +225,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
           </h1>
 
           <div className="flex flex-wrap items-center gap-x-6 gap-y-3 mt-6 text-sm text-slate-400 print:text-slate-700">
-            <div className="flex items-center gap-1.5 text-emerald-400 print:text-emerald-700 font-medium">
+            <div className="flex items-center gap-1.5 text-white print:text-neutral-300 font-medium">
               <CheckCircle2 className="w-4 h-4" />
               Scholarly Review: Fiqh Advisory Board
             </div>
@@ -244,7 +244,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
 
         {/* 2. HERO UTILITY & ACTION BAR */}
         <div className="flex flex-wrap items-center gap-3 mb-10 pb-6 border-b border-slate-800/80 print:hidden">
-          <button className="flex items-center gap-2 px-4 py-2 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors shadow-lg shadow-emerald-900/20">
+          <button className="flex items-center gap-2 px-4 py-2 bg-white hover:bg-neutral-200 text-black font-semibold text-sm font-medium rounded-lg transition-colors shadow-lg shadow-neutral-950/50">
             <Download className="w-4 h-4" />
             Download PDF Guide
           </button>
@@ -260,7 +260,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
             className="flex items-center gap-2 px-4 py-2 bg-slate-900 hover:bg-slate-800 text-slate-300 text-sm font-medium rounded-lg border border-slate-800 transition-colors w-32 justify-center"
           >
             {copied ? (
-              <><Check className="w-4 h-4 text-emerald-400" /> Copied!</>
+              <><Check className="w-4 h-4 text-white" /> Copied!</>
             ) : (
               <><Share2 className="w-4 h-4" /> Copy Link</>
             )}
@@ -299,10 +299,10 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
           <div className="lg:col-span-3">
             
             {/* 3. AEO "DIRECT ANSWER" BANNER BOX */}
-            <div className="bg-emerald-950/30 border border-emerald-500/30 rounded-2xl p-6 mb-8 print:border-emerald-700 print:bg-emerald-50">
+            <div className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 mb-8 print:border-neutral-800 print:bg-neutral-100">
               <div className="flex items-center gap-2 mb-3">
-                <Info className="w-5 h-5 text-emerald-400 print:text-emerald-700" />
-                <h2 className="text-emerald-400 print:text-emerald-800 font-semibold text-lg">Direct Ruling (TL;DR Summary)</h2>
+                <Info className="w-5 h-5 text-white print:text-neutral-300" />
+                <h2 className="text-white print:text-neutral-300 font-semibold text-lg">Direct Ruling (TL;DR Summary)</h2>
               </div>
               <p className="text-slate-200 print:text-slate-800 text-base leading-relaxed">
                 Zakat is strictly obligated on this asset class once its net accessible value exceeds the <strong className="text-white print:text-black">Nisab threshold</strong> (87.48g of gold or 612.36g of silver). The wealth must be held in your full ownership for a complete <strong className="text-white print:text-black">1-year Hawl</strong> (lunar year). If these conditions are met, a <strong className="text-white print:text-black">2.5% rate</strong> is due on the total accumulated net value on your Zakat anniversary date.
@@ -317,7 +317,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
               </p>
               
               {/* EDITORIAL CALLOUT CARDS: Quranic / Hadith Proof Block */}
-              <div className="border-l-4 border-emerald-500 bg-slate-900/80 print:bg-slate-100 p-5 rounded-r-xl italic text-slate-200 print:text-slate-700 my-8">
+              <div className="border-l-4 border-white bg-slate-900/80 print:bg-slate-100 p-5 rounded-r-xl italic text-slate-200 print:text-slate-700 my-8">
                 <p className="text-right font-arabic text-xl leading-loose mb-3 text-slate-100 print:text-black" dir="rtl">
                   "خُذْ مِنْ أَمْوَالِهِمْ صَدَقَةً تُطَهِّرُهُمْ وَتُزَكِّيهِم بِهَا"
                 </p>
@@ -337,19 +337,19 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
                 <figcaption className="text-lg font-bold text-white print:text-black mb-6">Calculation Process Flowchart</figcaption>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                   <div className="bg-slate-950 print:bg-white border border-slate-800 print:border-slate-300 rounded-xl p-5 relative">
-                    <div className="bg-emerald-500 text-slate-950 font-bold text-xs px-2 py-1 rounded-full inline-block mb-3">01</div>
+                    <div className="bg-white text-black font-bold text-xs px-2 py-1 rounded-full inline-block mb-3">01</div>
                     <h4 className="text-white print:text-black font-bold mb-2">Assess Gross Value</h4>
                     <p className="text-sm text-slate-400 print:text-slate-600">Determine the current market value of your held assets on your Zakat date.</p>
                   </div>
                   <div className="bg-slate-950 print:bg-white border border-slate-800 print:border-slate-300 rounded-xl p-5 relative">
-                    <div className="bg-emerald-500 text-slate-950 font-bold text-xs px-2 py-1 rounded-full inline-block mb-3">02</div>
+                    <div className="bg-white text-black font-bold text-xs px-2 py-1 rounded-full inline-block mb-3">02</div>
                     <h4 className="text-white print:text-black font-bold mb-2">Deduct Liabilities</h4>
                     <p className="text-sm text-slate-400 print:text-slate-600">Subtract immediate, short-term debts due within the current lunar year.</p>
                   </div>
-                  <div className="bg-emerald-900/20 print:bg-emerald-50 border border-emerald-500/50 print:border-emerald-500 rounded-xl p-5 relative">
-                    <div className="bg-emerald-500 text-slate-950 font-bold text-xs px-2 py-1 rounded-full inline-block mb-3">03</div>
+                  <div className="bg-neutral-900 print:bg-neutral-100 border border-neutral-800 print:border-neutral-800 rounded-xl p-5 relative">
+                    <div className="bg-white text-black font-bold text-xs px-2 py-1 rounded-full inline-block mb-3">03</div>
                     <h4 className="text-white print:text-black font-bold mb-2">Apply 2.5% Rate</h4>
-                    <p className="text-sm text-emerald-200 print:text-emerald-800">If the net total is above Nisab, multiply the net zakatable amount by 2.5%.</p>
+                    <p className="text-sm text-white print:text-neutral-300">If the net total is above Nisab, multiply the net zakatable amount by 2.5%.</p>
                   </div>
                 </div>
               </figure>
@@ -360,7 +360,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
                 <div className="text-white print:text-black flex flex-col gap-2">
                   <div className="flex justify-between border-b border-slate-800 print:border-slate-300 pb-2">
                     <span>Gross Asset Value</span>
-                    <span className="text-emerald-400 print:text-emerald-700">$X,XXX.XX</span>
+                    <span className="text-white print:text-neutral-300">$X,XXX.XX</span>
                   </div>
                   <div className="flex justify-between border-b border-slate-800 print:border-slate-300 pb-2">
                     <span>- Deductible Debts</span>
@@ -370,7 +370,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
                     <span>= Net Zakatable Wealth</span>
                     <span className="text-white print:text-black">$X,XXX.XX</span>
                   </div>
-                  <div className="flex justify-between pt-2 text-emerald-400 print:text-emerald-700 font-bold">
+                  <div className="flex justify-between pt-2 text-white print:text-neutral-300 font-bold">
                     <span>x 2.5% Zakat Due</span>
                     <span>$XXX.XX</span>
                   </div>
@@ -405,7 +405,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/20 to-transparent"></div>
                 
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <div className="w-16 h-16 bg-emerald-500/90 rounded-full flex items-center justify-center text-white shadow-xl shadow-emerald-900/50 transform group-hover:scale-110 transition-transform mb-4">
+                  <div className="w-16 h-16 bg-neutral-800 rounded-full flex items-center justify-center text-white shadow-xl shadow-neutral-950/50 transform group-hover:scale-110 transition-transform mb-4">
                     <Play className="w-8 h-8 ml-1 fill-current" />
                   </div>
                   <span className="bg-black/60 text-white px-3 py-1 text-sm font-medium rounded-full backdrop-blur-md">
@@ -414,7 +414,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
                 </div>
                 
                 <div className="absolute top-4 left-4">
-                  <span className="bg-emerald-600 text-white text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Guide</span>
+                  <span className="bg-white text-black font-semibold text-xs font-bold px-2 py-1 rounded uppercase tracking-wider">Guide</span>
                 </div>
                 <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end">
                   <div>
@@ -438,7 +438,7 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
                     >
                       <span className="font-semibold text-white print:text-black pr-4">{faq.question}</span>
                       {openFaq === idx ? (
-                        <Minus className="w-5 h-5 text-emerald-400 print:text-emerald-700 flex-shrink-0" />
+                        <Minus className="w-5 h-5 text-white print:text-neutral-300 flex-shrink-0" />
                       ) : (
                         <Plus className="w-5 h-5 text-slate-400 flex-shrink-0" />
                       )}
@@ -474,26 +474,26 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
               {/* CARD 1: Table of Contents */}
               <div className="bg-slate-950 border border-slate-800 rounded-2xl p-5">
                 <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-                  <List className="w-4 h-4 text-emerald-400" />
+                  <List className="w-4 h-4 text-white" />
                   On This Page
                 </h3>
                 <ul className="space-y-3 text-sm text-slate-400 font-medium">
-                  <li><a href="#section-1" onClick={(e) => scrollToSection('section-1', e)} className="hover:text-emerald-400 transition-colors block">Fiqh Foundations</a></li>
-                  <li><a href="#section-2" onClick={(e) => scrollToSection('section-2', e)} className="hover:text-emerald-400 transition-colors block">How to Calculate</a></li>
-                  <li><a href="#section-3" onClick={(e) => scrollToSection('section-3', e)} className="hover:text-emerald-400 transition-colors block">Schools of Thought</a></li>
-                  <li><a href="#section-4" onClick={(e) => scrollToSection('section-4', e)} className="hover:text-emerald-400 transition-colors block">Expert Video Walkthrough</a></li>
-                  <li><a href="#section-5" onClick={(e) => scrollToSection('section-5', e)} className="hover:text-emerald-400 transition-colors block">Frequently Asked Questions</a></li>
+                  <li><a href="#section-1" onClick={(e) => scrollToSection('section-1', e)} className="hover:text-white transition-colors block">Fiqh Foundations</a></li>
+                  <li><a href="#section-2" onClick={(e) => scrollToSection('section-2', e)} className="hover:text-white transition-colors block">How to Calculate</a></li>
+                  <li><a href="#section-3" onClick={(e) => scrollToSection('section-3', e)} className="hover:text-white transition-colors block">Schools of Thought</a></li>
+                  <li><a href="#section-4" onClick={(e) => scrollToSection('section-4', e)} className="hover:text-white transition-colors block">Expert Video Walkthrough</a></li>
+                  <li><a href="#section-5" onClick={(e) => scrollToSection('section-5', e)} className="hover:text-white transition-colors block">Frequently Asked Questions</a></li>
                 </ul>
               </div>
 
               {/* CARD 2: Zakat Calculators Hub */}
               <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-lg">
                 <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-                  <Calculator className="w-4 h-4 text-emerald-400" />
+                  <Calculator className="w-4 h-4 text-white" />
                   Zakat Calculators
                 </h3>
                 <div className="flex flex-col gap-2">
-                  <Link href="/zakat-calculator/" className="flex items-center justify-between w-full p-2.5 bg-emerald-600/10 hover:bg-emerald-600/20 text-emerald-400 text-sm font-medium rounded-lg transition-colors border border-emerald-500/20">
+                  <Link href="/zakat-calculator/" className="flex items-center justify-between w-full p-2.5 bg-neutral-800 hover:bg-neutral-800 text-white text-sm font-medium rounded-lg transition-colors border border-neutral-800">
                     Universal Calculator <ArrowRight className="w-3.5 h-3.5" />
                   </Link>
                   <Link href="/zakat/gold-silver/" className="flex items-center justify-between w-full p-2.5 hover:bg-slate-800 text-slate-300 text-sm rounded-lg transition-colors">
@@ -512,41 +512,41 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
               <div className="bg-slate-900/80 border border-slate-800 rounded-2xl p-5 shadow-lg space-y-3">
                 <h3 className="text-sm font-semibold text-white tracking-wider uppercase">Nisab & Eligibility</h3>
                 <div className="space-y-2 text-xs text-slate-300">
-                  <a href="/zakat/guides/gold-vs-silver-nisab-threshold-guide/" className="block hover:text-emerald-400 transition-colors py-1 border-b border-slate-800/60">
+                  <a href="/zakat/guides/gold-vs-silver-nisab-threshold-guide/" className="block hover:text-white transition-colors py-1 border-b border-slate-800/60">
                     • Live Gold vs. Silver Nisab Threshold Rates
                   </a>
-                  <a href="/zakat/guides/who-is-eligible-for-zakat-8-categories/" className="block hover:text-emerald-400 transition-colors py-1 border-b border-slate-800/60">
+                  <a href="/zakat/guides/who-is-eligible-for-zakat-8-categories/" className="block hover:text-white transition-colors py-1 border-b border-slate-800/60">
                     • Who is Eligible? The 8 Asnaf Categories
                   </a>
-                  <a href="/zakat/guides/exempt-assets-personal-residence/" className="block hover:text-emerald-400 transition-colors py-1">
+                  <a href="/zakat/guides/exempt-assets-personal-residence/" className="block hover:text-white transition-colors py-1">
                     • Exempt Personal Assets & Residence Guide
                   </a>
                 </div>
               </div>
 
               {/* CARD 4: Related Contextual Articles */}
-              <div className="bg-slate-900/80 border border-emerald-500/30 rounded-2xl p-5 shadow-xl">
+              <div className="bg-slate-900/80 border border-neutral-800 rounded-2xl p-5 shadow-xl">
                 <h3 className="text-sm font-bold text-white uppercase tracking-wider mb-4 flex items-center gap-2">
-                  <BookOpen className="w-4 h-4 text-emerald-400" />
+                  <BookOpen className="w-4 h-4 text-white" />
                   Related Deep Dives
                 </h3>
                 <div className="space-y-4">
                   <Link href="/zakat/guides/zakat-on-cash-benchmarks/" className="block group">
-                    <h4 className="text-sm font-medium text-emerald-400 group-hover:text-emerald-300 leading-tight mb-1">Zakat Thresholds on Cash Benchmarks</h4>
+                    <h4 className="text-sm font-medium text-white group-hover:text-white leading-tight mb-1">Zakat Thresholds on Cash Benchmarks</h4>
                     <div className="flex items-center text-[11px] text-slate-500 uppercase font-semibold tracking-wider">
                       <Clock className="w-3 h-3 mr-1" /> 4 min read
                     </div>
                   </Link>
                   <div className="h-px bg-slate-800/50 w-full"></div>
                   <Link href="/zakat/guides/how-to-calculate-zakat-modern-wealth/" className="block group">
-                    <h4 className="text-sm font-medium text-emerald-400 group-hover:text-emerald-300 leading-tight mb-1">How to Calculate Zakat on Modern Wealth</h4>
+                    <h4 className="text-sm font-medium text-white group-hover:text-white leading-tight mb-1">How to Calculate Zakat on Modern Wealth</h4>
                     <div className="flex items-center text-[11px] text-slate-500 uppercase font-semibold tracking-wider">
                       <Clock className="w-3 h-3 mr-1" /> 10 min read
                     </div>
                   </Link>
                   <div className="h-px bg-slate-800/50 w-full"></div>
                   <Link href="/zakat/guides/what-is-zakat-definition-and-rules/" className="block group">
-                    <h4 className="text-sm font-medium text-emerald-400 group-hover:text-emerald-300 leading-tight mb-1">What is Zakat in Islam? Purpose & Pillars</h4>
+                    <h4 className="text-sm font-medium text-white group-hover:text-white leading-tight mb-1">What is Zakat in Islam? Purpose & Pillars</h4>
                     <div className="flex items-center text-[11px] text-slate-500 uppercase font-semibold tracking-wider">
                       <Clock className="w-3 h-3 mr-1" /> 5 min read
                     </div>
@@ -563,25 +563,25 @@ export default function GuideArticlePage({ params }: { params: { slug: string } 
         <div className="mt-16 pt-10 border-t border-slate-800/80 print:hidden">
           <h2 className="text-2xl font-bold text-white mb-6">Continue Exploring</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <Link href="/zakat/guides/zakat-on-debts-and-mortgages/" className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-emerald-500/50 transition-all group flex flex-col h-full">
-              <span className="text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2 block">Category B</span>
-              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Zakat Rulings on Personal Debts, Mortgages & Loans</h3>
+            <Link href="/zakat/guides/zakat-on-debts-and-mortgages/" className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-neutral-600 transition-all group flex flex-col h-full">
+              <span className="text-xs font-bold text-white uppercase tracking-wider mb-2 block">Category B</span>
+              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-white transition-colors">Zakat Rulings on Personal Debts, Mortgages & Loans</h3>
               <p className="text-sm text-slate-400 mb-4 line-clamp-2 mt-auto">Understand exactly which debts can be deducted from your total zakatable wealth before paying.</p>
               <div className="flex items-center text-xs text-slate-500 font-semibold uppercase tracking-wider border-t border-slate-800 pt-4 mt-auto">
                 <Clock className="w-3.5 h-3.5 mr-1.5" /> 7 Min Read
               </div>
             </Link>
-            <Link href="/zakat/guides/zakat-on-business-inventory/" className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-emerald-500/50 transition-all group flex flex-col h-full">
-              <span className="text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2 block">Category D</span>
-              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Valuing Wholesale Inventory & Retail Stock</h3>
+            <Link href="/zakat/guides/zakat-on-business-inventory/" className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-neutral-600 transition-all group flex flex-col h-full">
+              <span className="text-xs font-bold text-white uppercase tracking-wider mb-2 block">Category D</span>
+              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-white transition-colors">Valuing Wholesale Inventory & Retail Stock</h3>
               <p className="text-sm text-slate-400 mb-4 line-clamp-2 mt-auto">Rules for calculating Zakat on raw materials, finished goods, and cash in hand for businesses.</p>
               <div className="flex items-center text-xs text-slate-500 font-semibold uppercase tracking-wider border-t border-slate-800 pt-4 mt-auto">
                 <Clock className="w-3.5 h-3.5 mr-1.5" /> 6 Min Read
               </div>
             </Link>
-            <Link href="/zakat/guides/who-is-eligible-for-zakat-8-categories/" className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-emerald-500/50 transition-all group flex flex-col h-full">
-              <span className="text-xs font-bold text-emerald-500 uppercase tracking-wider mb-2 block">Category A</span>
-              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-emerald-400 transition-colors">Who is Eligible for Zakat? The 8 Quranic Categories</h3>
+            <Link href="/zakat/guides/who-is-eligible-for-zakat-8-categories/" className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 hover:border-neutral-600 transition-all group flex flex-col h-full">
+              <span className="text-xs font-bold text-white uppercase tracking-wider mb-2 block">Category A</span>
+              <h3 className="text-lg font-bold text-white mb-2 group-hover:text-white transition-colors">Who is Eligible for Zakat? The 8 Quranic Categories</h3>
               <p className="text-sm text-slate-400 mb-4 line-clamp-2 mt-auto">Learn about the 8 specific groups of people eligible to receive Zakat (Asnaf) based on the Quran.</p>
               <div className="flex items-center text-xs text-slate-500 font-semibold uppercase tracking-wider border-t border-slate-800 pt-4 mt-auto">
                 <Clock className="w-3.5 h-3.5 mr-1.5" /> 5 Min Read

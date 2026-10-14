@@ -62,19 +62,19 @@ const THEMES: Record<ThemeId, CalendarTheme> = {
     id: "emerald-gold",
     name: "Emerald Gold Executive",
     tagline: "Dark slate with deep emerald gradients & metallic gold trim",
-    cardBg: "bg-slate-900 border-emerald-500/30",
-    headerBg: "bg-gradient-to-r from-emerald-950 via-slate-900 to-emerald-950 border-b border-amber-500/30",
+    cardBg: "bg-slate-900 border-neutral-800",
+    headerBg: "bg-gradient-to-r from-neutral-900 via-slate-900 to-neutral-950 border-b border-amber-500/30",
     accentBorder: "border-amber-400/40",
     textPrimary: "text-slate-100",
-    textSecondary: "text-emerald-400",
+    textSecondary: "text-white",
     gregorianColor: "text-white font-bold",
     hijriColor: "text-amber-400 font-semibold",
     dayHeaderColor: "text-amber-400 font-semibold",
     eventBadgeBg: "bg-amber-400/15 border-amber-400/30",
     eventBadgeText: "text-amber-300",
-    cellHover: "hover:bg-emerald-900/30",
-    todayBorder: "ring-2 ring-amber-400 bg-emerald-950/50",
-    previewColor: "#10b981"
+    cellHover: "hover:bg-neutral-800",
+    todayBorder: "ring-2 ring-amber-400 bg-neutral-900",
+    previewColor: "#a3a3a3"
   },
   "makkah-minimalist": {
     id: "makkah-minimalist",
@@ -86,12 +86,12 @@ const THEMES: Record<ThemeId, CalendarTheme> = {
     textPrimary: "text-slate-900",
     textSecondary: "text-slate-600",
     gregorianColor: "text-slate-900 font-bold",
-    hijriColor: "text-emerald-700 font-semibold",
+    hijriColor: "text-neutral-300 font-semibold",
     dayHeaderColor: "text-slate-700 font-bold",
-    eventBadgeBg: "bg-emerald-100 border-emerald-300",
-    eventBadgeText: "text-emerald-800",
+    eventBadgeBg: "bg-slate-200 border-neutral-800",
+    eventBadgeText: "text-neutral-800",
     cellHover: "hover:bg-slate-200/80",
-    todayBorder: "ring-2 ring-emerald-600 bg-emerald-50",
+    todayBorder: "ring-2 ring-slate-800 bg-slate-100",
     previewColor: "#0f172a"
   },
   "royal-sapphire": {
@@ -170,37 +170,37 @@ const THEMES: Record<ThemeId, CalendarTheme> = {
     id: "persian-turquoise",
     name: "Persian Turquoise",
     tagline: "Vibrant turquoise & gold geometric pattern layout",
-    cardBg: "bg-slate-900 border-teal-500/30",
-    headerBg: "bg-gradient-to-r from-teal-950 via-slate-900 to-teal-950 border-b border-teal-400/30",
-    accentBorder: "border-teal-400/40",
-    textPrimary: "text-teal-50",
-    textSecondary: "text-teal-300",
+    cardBg: "bg-slate-900 border-neutral-800",
+    headerBg: "bg-gradient-to-r from-neutral-900 via-slate-900 to-neutral-950 border-b border-neutral-800",
+    accentBorder: "border-neutral-800",
+    textPrimary: "text-neutral-50",
+    textSecondary: "text-white",
     gregorianColor: "text-white font-bold",
     hijriColor: "text-amber-300 font-semibold",
-    dayHeaderColor: "text-teal-300 font-semibold",
-    eventBadgeBg: "bg-teal-500/20 border-teal-400/40",
-    eventBadgeText: "text-teal-200",
-    cellHover: "hover:bg-teal-950/50",
-    todayBorder: "ring-2 ring-teal-400 bg-teal-950/40",
+    dayHeaderColor: "text-white font-semibold",
+    eventBadgeBg: "bg-neutral-800 border-neutral-800",
+    eventBadgeText: "text-white",
+    cellHover: "hover:bg-neutral-800",
+    todayBorder: "ring-2 ring-white/40 bg-neutral-900",
     previewColor: "#0d9488"
   },
   "sage-sanctuary": {
     id: "sage-sanctuary",
     name: "Sage & Olive Sanctuary",
     tagline: "Calming botanical sage green with muted gold highlights",
-    cardBg: "bg-[#14221a] border-emerald-600/30",
-    headerBg: "bg-[#0d1812] border-b border-emerald-600/30",
-    accentBorder: "border-emerald-500/40",
-    textPrimary: "text-emerald-50",
-    textSecondary: "text-emerald-300",
+    cardBg: "bg-[#14221a] border-neutral-800",
+    headerBg: "bg-[#0d1812] border-b border-neutral-800",
+    accentBorder: "border-neutral-800",
+    textPrimary: "text-neutral-50",
+    textSecondary: "text-white",
     gregorianColor: "text-white font-bold",
     hijriColor: "text-yellow-200 font-semibold",
-    dayHeaderColor: "text-emerald-300 font-semibold",
-    eventBadgeBg: "bg-emerald-600/25 border-emerald-500/30",
-    eventBadgeText: "text-emerald-200",
-    cellHover: "hover:bg-emerald-900/40",
-    todayBorder: "ring-2 ring-emerald-400 bg-emerald-950/60",
-    previewColor: "#059669"
+    dayHeaderColor: "text-white font-semibold",
+    eventBadgeBg: "bg-neutral-800 border-neutral-800",
+    eventBadgeText: "text-white",
+    cellHover: "hover:bg-neutral-800",
+    todayBorder: "ring-2 ring-white/40 bg-neutral-900",
+    previewColor: "#71717a"
   },
   "modern-monochrome": {
     id: "modern-monochrome",
@@ -224,18 +224,18 @@ const THEMES: Record<ThemeId, CalendarTheme> = {
     id: "celestial-glass",
     name: "Celestial Emerald Glass",
     tagline: "Translucent glassmorphism with emerald neon glow borders",
-    cardBg: "bg-slate-900/80 backdrop-blur-xl border-emerald-400/40 shadow-2xl shadow-emerald-950/50",
-    headerBg: "bg-emerald-950/60 border-b border-emerald-400/30",
-    accentBorder: "border-emerald-400",
-    textPrimary: "text-emerald-50",
-    textSecondary: "text-emerald-300",
+    cardBg: "bg-slate-900/80 backdrop-blur-xl border-neutral-800 shadow-2xl shadow-neutral-950/50",
+    headerBg: "bg-neutral-900 border-b border-neutral-800",
+    accentBorder: "border-neutral-800",
+    textPrimary: "text-neutral-50",
+    textSecondary: "text-white",
     gregorianColor: "text-white font-bold",
-    hijriColor: "text-emerald-300 font-semibold",
-    dayHeaderColor: "text-emerald-400 font-semibold",
-    eventBadgeBg: "bg-emerald-500/30 border-emerald-400/50",
-    eventBadgeText: "text-emerald-200",
-    cellHover: "hover:bg-emerald-900/30",
-    todayBorder: "ring-2 ring-emerald-400 bg-emerald-950/80 shadow-lg shadow-emerald-500/20",
+    hijriColor: "text-white font-semibold",
+    dayHeaderColor: "text-white font-semibold",
+    eventBadgeBg: "bg-neutral-800 border-neutral-800",
+    eventBadgeText: "text-white",
+    cellHover: "hover:bg-neutral-800",
+    todayBorder: "ring-2 ring-white/40 bg-neutral-900 shadow-lg shadow-neutral-950/50",
     previewColor: "#34d399"
   }
 };
@@ -411,7 +411,7 @@ function getHijriDateFor2026(
 export default function IslamicCalendarPage() {
   const [hasMounted, setHasMounted] = useState(false);
   const [currentMonth, setCurrentMonth] = useState(1); // Default to February 2026 (Ramadan starts)
-  const [selectedTheme, setSelectedTheme] = useState<ThemeId>("emerald-gold");
+  const [selectedTheme, setSelectedTheme] = useState<ThemeId>("modern-monochrome");
   const [hijriOffset, setHijriOffset] = useState<number>(0);
   const [activeFaq, setActiveFaq] = useState<number | null>(null);
   const [isExporting, setIsExporting] = useState(false);
@@ -490,7 +490,7 @@ export default function IslamicCalendarPage() {
       ctx.fillRect(40, 40, width - 80, 150);
 
       // Outer Card Frame
-      ctx.strokeStyle = selectedTheme === "makkah-minimalist" ? "#cbd5e1" : "#10b981";
+      ctx.strokeStyle = selectedTheme === "makkah-minimalist" ? "#cbd5e1" : "#ffffff";
       ctx.lineWidth = 4;
       ctx.strokeRect(40, 40, width - 80, height - 80);
 
@@ -500,7 +500,7 @@ export default function IslamicCalendarPage() {
       ctx.fillText(`IslamHub • ${GREGORIAN_MONTHS[currentMonth]} 2026`, 70, 105);
 
       ctx.font = "24px sans-serif";
-      ctx.fillStyle = "#34d399";
+      ctx.fillStyle = "#e2e8f0";
       ctx.fillText(`${hijriMonthSpanSummary} • Umm al-Qura Standard`, 70, 150);
 
       ctx.fillStyle = "#94a3b8";
@@ -555,9 +555,9 @@ export default function IslamicCalendarPage() {
 
           // Highlight event day
           if (hasEvent) {
-            ctx.fillStyle = selectedTheme === "makkah-minimalist" ? "#d1fae5" : "rgba(16, 185, 129, 0.25)";
+            ctx.fillStyle = selectedTheme === "makkah-minimalist" ? "#f1f5f9" : "rgba(255, 255, 255, 0.15)";
             ctx.fillRect(cellX, cellY, colWidth - 10, cellHeight - 10);
-            ctx.strokeStyle = "#10b981";
+            ctx.strokeStyle = "#ffffff";
             ctx.lineWidth = 2;
             ctx.strokeRect(cellX, cellY, colWidth - 10, cellHeight - 10);
           }
@@ -568,13 +568,13 @@ export default function IslamicCalendarPage() {
           ctx.fillText(`${dayCounter}`, cellX + 15, cellY + 40);
 
           // Hijri day & month
-          ctx.fillStyle = selectedTheme === "makkah-minimalist" ? "#047857" : "#fbbf24";
+          ctx.fillStyle = selectedTheme === "makkah-minimalist" ? "#475569" : "#fbbf24";
           ctx.font = "bold 20px sans-serif";
           ctx.fillText(`${hDate.hijriDay} ${hDate.hijriMonthName.split(" ")[0]}`, cellX + 15, cellY + 75);
 
           // Event tag if present
           if (hasEvent) {
-            ctx.fillStyle = "#10b981";
+            ctx.fillStyle = "#ffffff";
             ctx.font = "bold 15px sans-serif";
             const shortTitle = hasEvent.title.length > 18 ? hasEvent.title.slice(0, 16) + "…" : hasEvent.title;
             ctx.fillText(`★ ${shortTitle}`, cellX + 10, cellY + 105);
@@ -613,7 +613,7 @@ export default function IslamicCalendarPage() {
   };
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-emerald-500 selection:text-white pb-20">
+    <main className="min-h-screen bg-slate-950 text-slate-100 selection:bg-white selection:text-black selection:text-white pb-20">
       {/* Global CSS for Print Mode */}
       <style
         dangerouslySetInnerHTML={{
@@ -646,18 +646,18 @@ export default function IslamicCalendarPage() {
         <nav aria-label="Breadcrumb" className="mb-4">
           <ol className="flex items-center space-x-2 text-sm text-slate-400">
             <li>
-              <Link href="/" className="hover:text-emerald-400 transition-colors">
+              <Link href="/" className="hover:text-white transition-colors">
                 Home
               </Link>
             </li>
             <li className="text-slate-600">/</li>
             <li>
-              <Link href="/tools/" className="hover:text-emerald-400 transition-colors">
+              <Link href="/tools/" className="hover:text-white transition-colors">
                 Islamic Tools
               </Link>
             </li>
             <li className="text-slate-600">/</li>
-            <li className="text-emerald-400 font-medium" aria-current="page">
+            <li className="text-white font-medium" aria-current="page">
               Islamic Calendar 2026
             </li>
           </ol>
@@ -667,7 +667,7 @@ export default function IslamicCalendarPage() {
         <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 mb-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold bg-neutral-800 text-white border border-neutral-800">
                 <Moon className="w-3.5 h-3.5" /> 1447 – 1448 AH Dual Calendar
               </span>
               <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-amber-500/10 text-amber-400 border border-amber-500/20">
@@ -690,13 +690,13 @@ export default function IslamicCalendarPage() {
               className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-800 hover:border-slate-700 transition font-medium text-sm"
               title="Print A4 / Letter Calendar"
             >
-              <Printer className="w-4 h-4 text-emerald-400" />
+              <Printer className="w-4 h-4 text-white" />
               <span>Print A4</span>
             </button>
             <button
               onClick={handleDownloadPNG}
               disabled={isExporting}
-              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-medium text-sm shadow-lg shadow-emerald-950/40 transition disabled:opacity-50"
+              className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-white hover:bg-neutral-200 text-black font-semibold font-medium text-sm shadow-lg shadow-neutral-950/50 transition disabled:opacity-50"
               title="Save high-resolution image"
             >
               <Download className="w-4 h-4" />
@@ -708,12 +708,12 @@ export default function IslamicCalendarPage() {
         {/* E-E-A-T Verification Badge Strip */}
         <div className="mt-6 p-3.5 rounded-xl bg-slate-900/60 border border-slate-800/80 flex flex-wrap items-center gap-4 text-xs text-slate-300">
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
             <span className="font-semibold text-white">Umm al-Qura Astronomical Calculation Standard</span>
           </div>
           <span className="text-slate-600 hidden sm:inline">•</span>
           <div className="flex items-center gap-2">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+            <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
             <span>Verified 1447–1448 AH Key Islamic Dates</span>
           </div>
           <span className="text-slate-600 hidden sm:inline">•</span>
@@ -732,7 +732,7 @@ export default function IslamicCalendarPage() {
             {/* Theme Selector Strip */}
             <div className="space-y-2">
               <div className="flex items-center gap-2">
-                <Layers className="w-4 h-4 text-emerald-400" />
+                <Layers className="w-4 h-4 text-white" />
                 <span className="text-xs font-bold uppercase tracking-wider text-slate-400">
                   Select Theme Design (10 Styles)
                 </span>
@@ -747,7 +747,7 @@ export default function IslamicCalendarPage() {
                       onClick={() => setSelectedTheme(tId)}
                       className={`px-3 py-1.5 rounded-lg text-xs font-medium whitespace-nowrap transition flex items-center gap-2 border ${
                         isSelected
-                          ? "bg-emerald-500/20 text-emerald-300 border-emerald-400 ring-1 ring-emerald-400/40"
+                          ? "bg-neutral-800 text-white border-neutral-800 ring-1 ring-white/40"
                           : "bg-slate-950/60 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-slate-200"
                       }`}
                     >
@@ -805,7 +805,7 @@ export default function IslamicCalendarPage() {
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
                 <span>{GREGORIAN_MONTHS[currentMonth]} 2026</span>
-                <span className="text-sm sm:text-base font-medium px-3 py-0.5 rounded-full bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+                <span className="text-sm sm:text-base font-medium px-3 py-0.5 rounded-full bg-neutral-800 text-white border border-neutral-800">
                   {hijriMonthSpanSummary}
                 </span>
               </h2>
@@ -825,7 +825,7 @@ export default function IslamicCalendarPage() {
             <select
               value={currentMonth}
               onChange={(e) => setCurrentMonth(Number(e.target.value))}
-              className="bg-slate-900 border border-slate-800 text-slate-200 text-sm rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+              className="bg-slate-900 border border-slate-800 text-slate-200 text-sm rounded-lg px-3 py-1.5 focus:outline-none focus:ring-2 focus:ring-white"
             >
               {GREGORIAN_MONTHS.map((m, idx) => (
                 <option key={m} value={idx}>
@@ -846,7 +846,7 @@ export default function IslamicCalendarPage() {
             <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
               <div>
                 <div className="flex items-center gap-2">
-                  <Moon className="w-5 h-5 text-emerald-400" />
+                  <Moon className="w-5 h-5 text-white" />
                   <span className="text-lg font-bold tracking-tight text-white">
                     IslamHub • 2026 Islamic Dual Calendar
                   </span>
@@ -856,7 +856,7 @@ export default function IslamicCalendarPage() {
                 </p>
               </div>
               <div className="text-left sm:text-right">
-                <span className="text-xs font-mono px-2.5 py-1 rounded bg-black/40 border border-white/10 text-emerald-400">
+                <span className="text-xs font-mono px-2.5 py-1 rounded bg-black/40 border border-white/10 text-white">
                   islamhub.com/tools/islamic-calendar-2026
                 </span>
               </div>
@@ -868,7 +868,7 @@ export default function IslamicCalendarPage() {
             {["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map((dayName, idx) => (
               <div
                 key={dayName}
-                className={idx === 5 ? "text-emerald-400 font-extrabold" : theme.dayHeaderColor}
+                className={idx === 5 ? "text-white font-extrabold" : theme.dayHeaderColor}
               >
                 {dayName}
                 {idx === 5 && <span className="hidden sm:inline text-[10px] ml-1 opacity-70">(Jumu&apos;ah)</span>}
@@ -899,7 +899,7 @@ export default function IslamicCalendarPage() {
                 <div
                   key={`day-${day}`}
                   className={`min-h-[95px] sm:min-h-[115px] p-2 sm:p-3 border-b border-r border-white/5 transition flex flex-col justify-between relative ${theme.cellHover} ${
-                    eventMatch ? "bg-emerald-500/10" : ""
+                    eventMatch ? "bg-neutral-800" : ""
                   }`}
                 >
                   {/* Top Row: Gregorian & Hijri Number */}
@@ -930,7 +930,7 @@ export default function IslamicCalendarPage() {
                         </span>
                       </div>
                     ) : isFriday ? (
-                      <span className="text-[10px] text-emerald-400 font-medium opacity-80">
+                      <span className="text-[10px] text-white font-medium opacity-80">
                         Jumu&apos;ah
                       </span>
                     ) : null}
@@ -956,7 +956,7 @@ export default function IslamicCalendarPage() {
                       <span className="font-bold text-white block">{evt.title}</span>
                       <span className="text-slate-400 text-[11px]">{evt.significance}</span>
                     </div>
-                    <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-medium shrink-0 ml-2">
+                    <span className="px-2 py-0.5 rounded bg-neutral-800 text-white font-medium shrink-0 ml-2">
                       {evt.gregorianDateStr}
                     </span>
                   </div>
@@ -971,8 +971,8 @@ export default function IslamicCalendarPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 no-print">
         {/* Direct Answer Summary Box */}
         <div className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-slate-900 to-slate-950 border border-slate-800 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 right-0 w-80 h-80 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />
-          <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm uppercase tracking-wider mb-3">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-neutral-800 rounded-full blur-3xl pointer-events-none" />
+          <div className="flex items-center gap-2 text-white font-bold text-sm uppercase tracking-wider mb-3">
             <Info className="w-4 h-4" /> Comprehensive Date Conversion Mechanics
           </div>
           <h2 className="text-2xl sm:text-3xl font-bold text-white mb-4">
@@ -998,7 +998,7 @@ export default function IslamicCalendarPage() {
             </div>
             <div className="p-3.5 rounded-xl bg-slate-950/70 border border-slate-800">
               <span className="text-slate-400 text-xs block mb-1">Baseline Standard</span>
-              <span className="text-emerald-400 font-bold text-lg">Umm al-Qura</span>
+              <span className="text-white font-bold text-lg">Umm al-Qura</span>
               <p className="text-xs text-slate-500 mt-1">Calculated for Makkah al-Mukarramah with manual &plusmn;2 day local override.</p>
             </div>
           </div>
@@ -1011,8 +1011,8 @@ export default function IslamicCalendarPage() {
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {/* Step 1 */}
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-emerald-500/30 shadow-lg relative">
-              <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm mb-4 border border-emerald-500/40">
+            <div className="p-5 rounded-2xl bg-slate-900/90 border border-neutral-800 shadow-lg relative">
+              <div className="w-8 h-8 rounded-full bg-neutral-800 text-white font-bold flex items-center justify-center text-sm mb-4 border border-neutral-800">
                 1
               </div>
               <h3 className="text-base font-bold text-white mb-2">
@@ -1024,8 +1024,8 @@ export default function IslamicCalendarPage() {
             </div>
 
             {/* Step 2 */}
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-emerald-500/30 shadow-lg relative">
-              <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm mb-4 border border-emerald-500/40">
+            <div className="p-5 rounded-2xl bg-slate-900/90 border border-neutral-800 shadow-lg relative">
+              <div className="w-8 h-8 rounded-full bg-neutral-800 text-white font-bold flex items-center justify-center text-sm mb-4 border border-neutral-800">
                 2
               </div>
               <h3 className="text-base font-bold text-white mb-2">
@@ -1037,8 +1037,8 @@ export default function IslamicCalendarPage() {
             </div>
 
             {/* Step 3 */}
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-emerald-500/30 shadow-lg relative">
-              <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm mb-4 border border-emerald-500/40">
+            <div className="p-5 rounded-2xl bg-slate-900/90 border border-neutral-800 shadow-lg relative">
+              <div className="w-8 h-8 rounded-full bg-neutral-800 text-white font-bold flex items-center justify-center text-sm mb-4 border border-neutral-800">
                 3
               </div>
               <h3 className="text-base font-bold text-white mb-2">
@@ -1050,8 +1050,8 @@ export default function IslamicCalendarPage() {
             </div>
 
             {/* Step 4 */}
-            <div className="p-5 rounded-2xl bg-slate-900/90 border border-emerald-500/30 shadow-lg relative">
-              <div className="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-sm mb-4 border border-emerald-500/40">
+            <div className="p-5 rounded-2xl bg-slate-900/90 border border-neutral-800 shadow-lg relative">
+              <div className="w-8 h-8 rounded-full bg-neutral-800 text-white font-bold flex items-center justify-center text-sm mb-4 border border-neutral-800">
                 4
               </div>
               <h3 className="text-base font-bold text-white mb-2">
@@ -1070,7 +1070,7 @@ export default function IslamicCalendarPage() {
         <div className="p-6 sm:p-8 rounded-3xl bg-slate-900/60 border border-slate-800 shadow-xl">
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-6">
             <div>
-              <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+              <span className="text-xs font-bold uppercase tracking-wider text-white">
                 Astronomical Estimates
               </span>
               <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-1">
@@ -1100,7 +1100,7 @@ export default function IslamicCalendarPage() {
                       <Star className="w-4 h-4 text-amber-400 shrink-0" />
                       <span>{event.title}</span>
                     </td>
-                    <td className="px-4 py-4 text-emerald-400 font-medium">
+                    <td className="px-4 py-4 text-white font-medium">
                       {event.gregorianDateStr}
                     </td>
                     <td className="px-4 py-4 text-amber-300 font-mono">
@@ -1120,14 +1120,14 @@ export default function IslamicCalendarPage() {
             {/* Left Card: Quranic Reference */}
             <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col justify-between">
               <div>
-                <div className="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-3 border border-emerald-500/20">
+                <div className="bg-neutral-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-3 border border-neutral-800">
                   📖 Quranic Reference
                 </div>
                 <blockquote className="text-slate-300 text-sm leading-relaxed italic">
                   &ldquo;Indeed, the number of months with Allah is twelve [lunar] months in the register of Allah from the day He created the heavens and the earth; of these, four are sacred. That is the correct religion...&rdquo;
                 </blockquote>
               </div>
-              <span className="text-xs text-emerald-400 font-medium mt-4 block">
+              <span className="text-xs text-white font-medium mt-4 block">
                 — Surah At-Tawbah (9:36)
               </span>
             </div>
@@ -1135,14 +1135,14 @@ export default function IslamicCalendarPage() {
             {/* Right Card: Sahih Reference */}
             <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col justify-between">
               <div>
-                <div className="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-3 border border-emerald-500/20">
+                <div className="bg-neutral-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-3 border border-neutral-800">
                   📖 Sahih Reference
                 </div>
                 <blockquote className="text-slate-300 text-sm leading-relaxed italic">
                   &ldquo;Observe fast on sighting the crescent and terminate it on sighting it. If the sky is overcast, complete thirty days of Sha&apos;ban.&rdquo;
                 </blockquote>
               </div>
-              <span className="text-xs text-emerald-400 font-medium mt-4 block">
+              <span className="text-xs text-white font-medium mt-4 block">
                 — Sahih Muslim 1081
               </span>
             </div>
@@ -1153,7 +1153,7 @@ export default function IslamicCalendarPage() {
       {/* SECTION 5: FREQUENTLY ASKED QUESTIONS */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 no-print">
         <div className="text-center mb-10">
-          <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+          <span className="text-xs font-bold uppercase tracking-wider text-white">
             Frequently Asked Questions
           </span>
           <h2 className="text-2xl sm:text-3xl font-extrabold text-white mt-2">
@@ -1188,11 +1188,11 @@ export default function IslamicCalendarPage() {
               >
                 <button
                   onClick={() => setActiveFaq(isOpen ? null : idx)}
-                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-white hover:text-emerald-300 transition"
+                  className="w-full p-5 text-left flex items-center justify-between gap-4 font-semibold text-white hover:text-white transition"
                 >
                   <span className="text-base">{item.q}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-emerald-400 shrink-0 transition-transform duration-200 ${
+                    className={`w-5 h-5 text-white shrink-0 transition-transform duration-200 ${
                       isOpen ? "rotate-180" : ""
                     }`}
                   />
@@ -1328,7 +1328,7 @@ export default function IslamicCalendarPage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20 pt-10 border-t border-slate-900 no-print">
         <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 mb-8">
           <div>
-            <span className="text-xs font-bold uppercase tracking-wider text-emerald-400">
+            <span className="text-xs font-bold uppercase tracking-wider text-white">
               Navigation Silo
             </span>
             <h3 className="text-xl font-bold text-white mt-1">
@@ -1337,7 +1337,7 @@ export default function IslamicCalendarPage() {
           </div>
           <Link
             href="/tools/"
-            className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-400 hover:text-emerald-300 transition"
+            className="inline-flex items-center gap-2 text-sm font-semibold text-white hover:text-white transition"
           >
             ← Back to All Islamic Tools Hub
           </Link>
@@ -1346,10 +1346,10 @@ export default function IslamicCalendarPage() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           <Link
             href="/prayer-times"
-            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition group"
+            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition group"
           >
-            <Clock className="w-6 h-6 text-emerald-400 mb-3 group-hover:scale-110 transition" />
-            <h4 className="font-bold text-white group-hover:text-emerald-300 transition">
+            <Clock className="w-6 h-6 text-white mb-3 group-hover:scale-110 transition" />
+            <h4 className="font-bold text-white group-hover:text-white transition">
               Global Prayer Times
             </h4>
             <p className="text-xs text-slate-400 mt-1">
@@ -1359,10 +1359,10 @@ export default function IslamicCalendarPage() {
 
           <Link
             href="/tools/qibla-finder"
-            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition group"
+            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition group"
           >
-            <Compass className="w-6 h-6 text-emerald-400 mb-3 group-hover:scale-110 transition" />
-            <h4 className="font-bold text-white group-hover:text-emerald-300 transition">
+            <Compass className="w-6 h-6 text-white mb-3 group-hover:scale-110 transition" />
+            <h4 className="font-bold text-white group-hover:text-white transition">
               Online Qibla Finder
             </h4>
             <p className="text-xs text-slate-400 mt-1">
@@ -1372,10 +1372,10 @@ export default function IslamicCalendarPage() {
 
           <Link
             href="/tools/tasbeeh-counter"
-            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition group"
+            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition group"
           >
-            <Sparkles className="w-6 h-6 text-emerald-400 mb-3 group-hover:scale-110 transition" />
-            <h4 className="font-bold text-white group-hover:text-emerald-300 transition">
+            <Sparkles className="w-6 h-6 text-white mb-3 group-hover:scale-110 transition" />
+            <h4 className="font-bold text-white group-hover:text-white transition">
               Digital Tasbeeh Counter
             </h4>
             <p className="text-xs text-slate-400 mt-1">
@@ -1385,10 +1385,10 @@ export default function IslamicCalendarPage() {
 
           <Link
             href="/ayats/"
-            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition group"
+            className="p-5 rounded-2xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition group"
           >
-            <Bookmark className="w-6 h-6 text-emerald-400 mb-3 group-hover:scale-110 transition" />
-            <h4 className="font-bold text-white group-hover:text-emerald-300 transition">
+            <Bookmark className="w-6 h-6 text-white mb-3 group-hover:scale-110 transition" />
+            <h4 className="font-bold text-white group-hover:text-white transition">
               Sacred Ayats Directory
             </h4>
             <p className="text-xs text-slate-400 mt-1">

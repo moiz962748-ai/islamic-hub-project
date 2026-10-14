@@ -263,7 +263,7 @@ export default function AyatsClientFilter() {
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
             placeholder="Search by English topic, Urdu name (e.g. 'Kursi', 'Shifa', 'Rizq'), or Surah name..."
-            className="w-full pl-12 pr-4 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-sm sm:text-base"
+            className="w-full pl-12 pr-4 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all text-sm sm:text-base"
           />
           {searchQuery && (
             <button 
@@ -285,7 +285,7 @@ export default function AyatsClientFilter() {
                 onClick={() => setSelectedCategory(tab.id)}
                 className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
                   isActive
-                    ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20 font-bold'
+                    ? 'bg-white text-black shadow-md shadow-neutral-950/50 font-bold'
                     : 'bg-slate-950/70 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800'
                 }`}
               >
@@ -296,7 +296,7 @@ export default function AyatsClientFilter() {
         </div>
 
         <div className="flex items-center justify-between text-xs text-slate-400 px-1">
-          <span>Showing <strong className="text-emerald-400">{filteredAyats.length}</strong> authenticated sacred verses</span>
+          <span>Showing <strong className="text-white">{filteredAyats.length}</strong> authenticated sacred verses</span>
           {searchQuery && <span>Filtered by keyword "{searchQuery}"</span>}
         </div>
       </div>
@@ -311,7 +311,7 @@ export default function AyatsClientFilter() {
           </p>
           <button
             onClick={() => { setSearchQuery(''); setSelectedCategory('all'); }}
-            className="px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg text-sm font-bold transition-colors"
+            className="px-4 py-2 bg-white text-black hover:bg-neutral-800 text-slate-950 rounded-lg text-sm font-bold transition-colors"
           >
             Reset Filters
           </button>
@@ -322,12 +322,12 @@ export default function AyatsClientFilter() {
             <Link
               key={ayat.id}
               href={ayat.slug}
-              className="group bg-slate-900/60 border border-slate-800/90 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20 relative overflow-hidden"
+              className="group bg-slate-900/60 border border-slate-800/90 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50 relative overflow-hidden"
             >
               <div className="space-y-4">
                 {/* Header with badges */}
                 <div className="flex items-center justify-between gap-2">
-                  <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                  <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-neutral-800 border border-neutral-800 px-2.5 py-0.5 rounded-full">
                     {ayat.categoryLabel}
                   </span>
                   <span className="text-[11px] font-medium text-slate-300 bg-slate-800/80 px-2.5 py-0.5 rounded-full border border-slate-700">
@@ -338,15 +338,15 @@ export default function AyatsClientFilter() {
                 {/* Multilingual Titles */}
                 <div>
                   <div className="flex items-baseline justify-between gap-2 mb-1">
-                    <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                    <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                       {ayat.titleEnglish}
                     </h3>
                   </div>
-                  <div className="text-xs font-semibold text-emerald-400/90 mb-2 font-urdu">
+                  <div className="text-xs font-semibold text-white mb-2 font-urdu">
                     {ayat.titleUrdu}
                   </div>
                   <div 
-                    className="text-right text-xl font-arabic text-emerald-200/90 py-2 border-y border-slate-800/60 my-2 leading-relaxed" 
+                    className="text-right text-xl font-arabic text-white py-2 border-y border-slate-800/60 my-2 leading-relaxed" 
                     dir="rtl"
                   >
                     {ayat.titleArabic}
@@ -362,10 +362,10 @@ export default function AyatsClientFilter() {
               {/* Card Footer: Source & Link Indicator */}
               <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
                 <span className="text-slate-400 flex items-center gap-1.5 truncate max-w-[200px]">
-                  <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                  <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                   <span className="truncate">{ayat.source}</span>
                 </span>
-                <span className="text-emerald-400 font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform shrink-0">
+                <span className="text-white font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform shrink-0">
                   View Ayat <ArrowUpRight className="w-3.5 h-3.5" />
                 </span>
               </div>

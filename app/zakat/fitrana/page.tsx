@@ -87,7 +87,7 @@ export default function FitranaPage() {
   const totalFitrana = householdCount * ratePerPerson;
 
   return (
-    <main className="min-h-screen bg-slate-950 font-sans selection:bg-emerald-500/30 text-slate-300">
+    <main className="min-h-screen bg-slate-950 font-sans selection:bg-white selection:text-black text-slate-300">
       <link rel="canonical" href="https://islamhub.com/zakat/fitrana/" />
       
       <script
@@ -172,9 +172,9 @@ export default function FitranaPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Phase 1: Above-the-Fold */}
         <nav className="flex items-center text-xs text-slate-400 mb-4" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
-          <Link href="/zakat" className="hover:text-emerald-400 transition-colors">Zakat</Link>
+          <Link href="/zakat" className="hover:text-white transition-colors">Zakat</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
           <span className="text-slate-300">Fitrana / Zakat al-Fitr Calculator</span>
         </nav>
@@ -184,9 +184,9 @@ export default function FitranaPage() {
             Fitrana / Zakat al-Fitr Calculator (2026)
           </h1>
           
-          <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-emerald-500 rounded-r-xl p-6 sm:p-8 shadow-lg mb-6 max-w-4xl">
+          <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-white rounded-r-xl p-6 sm:p-8 shadow-lg mb-6 max-w-4xl">
             <h2 className="text-xl font-bold text-white mb-3 flex items-center gap-2">
-              <Info className="w-6 h-6 text-emerald-400" />
+              <Info className="w-6 h-6 text-white" />
               What is Zakat al-Fitr?
             </h2>
             <p className="text-slate-300 leading-relaxed">
@@ -195,7 +195,7 @@ export default function FitranaPage() {
           </div>
 
           <div className="inline-flex items-center gap-3 bg-slate-900/60 border border-slate-800 rounded-full px-4 py-2">
-            <ShieldCheck className="w-5 h-5 text-emerald-400" />
+            <ShieldCheck className="w-5 h-5 text-white" />
             <span className="text-sm font-medium text-slate-300">
               Verified Ramadan Fiqh & Commodity Rates | Reviewed by Islamic Scholars
             </span>
@@ -216,7 +216,7 @@ export default function FitranaPage() {
                     onClick={() => setCurrency(curr)}
                     className={`px-4 py-2 rounded-lg text-sm font-bold transition-colors border ${
                       currency === curr 
-                        ? 'bg-emerald-600 border-emerald-500 text-white' 
+                        ? 'bg-white text-black border-neutral-800 text-white' 
                         : 'bg-slate-950 border-slate-800 text-slate-400 hover:bg-slate-800'
                     }`}
                   >
@@ -228,8 +228,8 @@ export default function FitranaPage() {
 
             <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="bg-emerald-500/20 p-2 rounded-lg">
-                  <Users className="w-5 h-5 text-emerald-400" />
+                <div className="bg-neutral-800 p-2 rounded-lg">
+                  <Users className="w-5 h-5 text-white" />
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-white">2. Household Members</h3>
@@ -249,13 +249,13 @@ export default function FitranaPage() {
                     min="1"
                     value={householdCount}
                     onChange={handleHouseholdChange}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-center text-xl font-bold text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500"
+                    className="w-full bg-slate-950 border border-slate-800 rounded-lg p-3 text-center text-xl font-bold text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white"
                   />
                   <span className="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-slate-500 font-medium">People</span>
                 </div>
                 <button 
                   onClick={() => setHouseholdCount(householdCount + 1)}
-                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-emerald-600 text-white hover:bg-emerald-500 transition-colors text-xl font-bold"
+                  className="w-12 h-12 flex items-center justify-center rounded-lg bg-white text-black font-semibold hover:bg-neutral-800 transition-colors text-xl font-bold"
                 >
                   +
                 </button>
@@ -275,12 +275,12 @@ export default function FitranaPage() {
                       onClick={() => setSelectedCommodity(key)}
                       className={`w-full text-left p-4 rounded-xl border transition-all flex items-center justify-between ${
                         selectedCommodity === key 
-                          ? 'bg-emerald-900/20 border-emerald-500 ring-1 ring-emerald-500/50' 
+                          ? 'bg-neutral-900 border-neutral-800 ring-1 ring-white/40' 
                           : 'bg-slate-950 border-slate-800 hover:border-slate-700'
                       }`}
                     >
                       <div className="flex items-center gap-4">
-                        <div className={`p-2 rounded-lg ${selectedCommodity === key ? 'bg-emerald-500/20 text-emerald-400' : 'bg-slate-900 text-slate-400'}`}>
+                        <div className={`p-2 rounded-lg ${selectedCommodity === key ? 'bg-neutral-800 text-white' : 'bg-slate-900 text-slate-400'}`}>
                           <Icon className="w-5 h-5" />
                         </div>
                         <div>
@@ -289,7 +289,7 @@ export default function FitranaPage() {
                         </div>
                       </div>
                       <div className="text-right">
-                        <span className="text-emerald-400 font-bold block">{sym} {comm.rates[currency].toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                        <span className="text-white font-bold block">{sym} {comm.rates[currency].toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                         <span className="text-[10px] text-slate-500 uppercase tracking-wide">Per Person</span>
                       </div>
                     </button>
@@ -308,7 +308,7 @@ export default function FitranaPage() {
                     value={customPriceStr}
                     onChange={handleCustomPriceChange}
                     placeholder={`Override rate per person`}
-                    className="w-full bg-slate-950 border border-slate-800 rounded-lg py-3 pl-10 pr-4 text-white focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-colors"
+                    className="w-full bg-slate-950 border border-slate-800 rounded-lg py-3 pl-10 pr-4 text-white focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors"
                   />
                 </div>
                 <p className="text-xs text-slate-500 mt-2">Enter the exact local market price for 1 Sa' of your chosen staple if it differs from the estimates above.</p>
@@ -320,7 +320,7 @@ export default function FitranaPage() {
           <div className="lg:col-span-4">
             <div className="bg-slate-900 border border-slate-800 rounded-2xl p-6 sticky top-28 shadow-xl">
               <div className="flex items-center gap-2 mb-6">
-                <Calculator className="w-5 h-5 text-emerald-400" />
+                <Calculator className="w-5 h-5 text-white" />
                 <h3 className="text-lg font-bold text-white">Fitrana Summary</h3>
               </div>
 
@@ -335,10 +335,10 @@ export default function FitranaPage() {
                 </div>
               </div>
 
-              <div className="bg-slate-950 border border-emerald-500/30 rounded-xl p-5 mb-6 text-center">
-                <span className="text-xs text-emerald-400/80 font-bold uppercase tracking-wider block mb-1">Total Payable Fitrana</span>
+              <div className="bg-slate-950 border border-neutral-800 rounded-xl p-5 mb-6 text-center">
+                <span className="text-xs text-white font-bold uppercase tracking-wider block mb-1">Total Payable Fitrana</span>
                 <span className="text-3xl sm:text-4xl font-extrabold text-white flex justify-center items-baseline gap-1">
-                  <span className="text-lg text-emerald-500">{sym}</span>
+                  <span className="text-lg text-white">{sym}</span>
                   {totalFitrana.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                 </span>
                 <span className="text-xs text-slate-500 block mt-1">{currency}</span>
@@ -377,7 +377,7 @@ export default function FitranaPage() {
               <tbody className="divide-y divide-slate-800">
                 <tr className="hover:bg-slate-800/30 transition-colors">
                   <td className="p-4 text-sm font-bold text-white flex items-center gap-2">
-                    <Wheat className="w-4 h-4 text-emerald-400" /> Wheat Flour (Half Sa' exception)
+                    <Wheat className="w-4 h-4 text-white" /> Wheat Flour (Half Sa' exception)
                   </td>
                   <td className="p-4 text-sm text-slate-300">~1.75 kg - 2.0 kg</td>
                   <td className="p-4 text-sm font-medium text-slate-300">$3 - $5</td>
@@ -385,7 +385,7 @@ export default function FitranaPage() {
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors bg-slate-900/30">
                   <td className="p-4 text-sm font-bold text-white flex items-center gap-2">
-                    <Wheat className="w-4 h-4 text-emerald-400" /> Barley / Oats
+                    <Wheat className="w-4 h-4 text-white" /> Barley / Oats
                   </td>
                   <td className="p-4 text-sm text-slate-300">1 Sa' (Approx. 2.5kg - 3kg)</td>
                   <td className="p-4 text-sm font-medium text-slate-300">$5 - $8</td>
@@ -393,7 +393,7 @@ export default function FitranaPage() {
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors">
                   <td className="p-4 text-sm font-bold text-white flex items-center gap-2">
-                    <Coins className="w-4 h-4 text-emerald-400" /> Dates / Raisins
+                    <Coins className="w-4 h-4 text-white" /> Dates / Raisins
                   </td>
                   <td className="p-4 text-sm text-slate-300">1 Sa' (Approx. 2.5kg - 3kg)</td>
                   <td className="p-4 text-sm font-medium text-slate-300">$10 - $20</td>
@@ -401,7 +401,7 @@ export default function FitranaPage() {
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors bg-slate-900/30">
                   <td className="p-4 text-sm font-bold text-white flex items-center gap-2">
-                    <Briefcase className="w-4 h-4 text-emerald-400" /> Cash Equivalent Value
+                    <Briefcase className="w-4 h-4 text-white" /> Cash Equivalent Value
                   </td>
                   <td className="p-4 text-sm text-slate-300">Value of 1 Sa'</td>
                   <td className="p-4 text-sm font-medium text-slate-300">Variable based on local market</td>
@@ -416,7 +416,7 @@ export default function FitranaPage() {
         <section className="mb-12">
           <div className="aspect-[21/9] w-full max-w-4xl rounded-2xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center mx-auto">
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-            <button className="z-20 w-16 h-16 rounded-full bg-emerald-500/90 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+            <button className="z-20 w-16 h-16 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
               <PlayCircle className="w-8 h-8 fill-slate-950 text-white" />
             </button>
             <div className="absolute top-4 right-4 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
@@ -432,27 +432,27 @@ export default function FitranaPage() {
         <section className="mb-12">
           <h2 className="text-xl font-bold text-white mb-6">Explore Zakat Calculators & Guides</h2>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
-            <Link href="/zakat-calculator" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
-              <Calculator className="w-6 h-6 text-emerald-500/70 group-hover:text-emerald-400" />
+            <Link href="/zakat-calculator" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
+              <Calculator className="w-6 h-6 text-white group-hover:text-white" />
               <span className="text-xs font-bold text-slate-300 group-hover:text-white">Main Engine</span>
             </Link>
-            <Link href="/zakat/gold-silver" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
+            <Link href="/zakat/gold-silver" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
               <Coins className="w-6 h-6 text-amber-500/70 group-hover:text-amber-400" />
               <span className="text-xs font-bold text-slate-300 group-hover:text-white">Gold & Silver</span>
             </Link>
-            <Link href="/zakat/stocks-investments" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
+            <Link href="/zakat/stocks-investments" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
               <TrendingUp className="w-6 h-6 text-blue-500/70 group-hover:text-blue-400" />
               <span className="text-xs font-bold text-slate-300 group-hover:text-white">Stocks</span>
             </Link>
-            <Link href="/zakat/crypto" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
+            <Link href="/zakat/crypto" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
               <Globe className="w-6 h-6 text-cyan-500/70 group-hover:text-cyan-400" />
               <span className="text-xs font-bold text-slate-300 group-hover:text-white">Crypto</span>
             </Link>
-            <Link href="/zakat/business" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
+            <Link href="/zakat/business" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
               <Briefcase className="w-6 h-6 text-indigo-500/70 group-hover:text-indigo-400" />
               <span className="text-xs font-bold text-slate-300 group-hover:text-white">Business</span>
             </Link>
-            <Link href="/zakat/rules-eligibility" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
+            <Link href="/zakat/rules-eligibility" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center text-center gap-2 transition-colors group">
               <BookOpen className="w-6 h-6 text-rose-500/70 group-hover:text-rose-400" />
               <span className="text-xs font-bold text-slate-300 group-hover:text-white">Rules Guide</span>
             </Link>
@@ -462,7 +462,7 @@ export default function FitranaPage() {
         {/* Phase 4: Fitrana FAQ Accordion */}
         <section className="scroll-mt-28">
           <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-            <FileText className="w-6 h-6 text-emerald-400" />
+            <FileText className="w-6 h-6 text-white" />
             Fitrana Frequently Asked Questions
           </h2>
           <div className="space-y-3 max-w-4xl">
@@ -491,7 +491,7 @@ export default function FitranaPage() {
                 >
                   <span className="font-semibold text-slate-200">{faq.q}</span>
                   {openFaq === idx ? (
-                    <Minus className="w-5 h-5 text-emerald-400 shrink-0" />
+                    <Minus className="w-5 h-5 text-white shrink-0" />
                   ) : (
                     <Plus className="w-5 h-5 text-slate-500 shrink-0" />
                   )}

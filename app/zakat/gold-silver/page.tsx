@@ -409,7 +409,7 @@ export default function GoldSilverCalculatorPage() {
                   
                   <div className="flex items-center gap-2 mt-5">
                     {isEligible ? (
-                      <div className="px-3 py-1 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                      <div className="px-3 py-1 rounded bg-neutral-800 text-white text-xs font-bold border border-neutral-800">
                         ELIGIBLE FOR ZAKAT
                       </div>
                     ) : (
@@ -450,19 +450,19 @@ export default function GoldSilverCalculatorPage() {
 
         {/* Horizontal Sibling Silo Links Bar (Phase 3 & 5) */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <Link href="/zakat-calculator/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
-            <Calculator className="w-8 h-8 text-emerald-500/70 group-hover:text-emerald-400 transition-colors" />
+          <Link href="/zakat-calculator/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+            <Calculator className="w-8 h-8 text-white group-hover:text-white transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Universal Calc</span>
           </Link>
-          <Link href="/zakat/stocks-investments/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/stocks-investments/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <TrendingUp className="w-8 h-8 text-blue-500/70 group-hover:text-blue-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Stocks & Wealth</span>
           </Link>
-          <Link href="/zakat/business/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/business/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <Briefcase className="w-8 h-8 text-indigo-500/70 group-hover:text-indigo-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Business Zakat</span>
           </Link>
-          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <Heart className="w-8 h-8 text-rose-500/70 group-hover:text-rose-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Fitrana (Al-Fitr)</span>
           </Link>

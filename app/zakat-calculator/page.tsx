@@ -202,9 +202,9 @@ export default function ZakatCalculatorPage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
         {/* Phase 1: Above-the-Fold (E-E-A-T & AEO) */}
         <nav className="flex items-center text-xs text-slate-400 mb-4" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
-          <Link href="/zakat" className="hover:text-emerald-400 transition-colors">Zakat</Link>
+          <Link href="/zakat" className="hover:text-white transition-colors">Zakat</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
           <span className="text-slate-300">Universal Zakat Calculator</span>
         </nav>
@@ -214,20 +214,20 @@ export default function ZakatCalculatorPage() {
             Universal Zakat Calculator (2026)
           </h1>
           
-          <div className="inline-flex items-center gap-2 bg-emerald-900/30 border border-emerald-800/50 rounded-full px-3 py-1.5 mb-6">
-            <CheckCircle2 className="w-4 h-4 text-emerald-400" />
-            <span className="text-xs font-medium text-emerald-100">
+          <div className="inline-flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded-full px-3 py-1.5 mb-6">
+            <CheckCircle2 className="w-4 h-4 text-white" />
+            <span className="text-xs font-medium text-white">
               Shariah-Vetted Formula | Verified by Islamic Jurisprudence Researchers
             </span>
           </div>
 
-          <div className="bg-slate-900/60 border-l-4 border-emerald-500 rounded-r-xl p-5 sm:p-6 shadow-sm backdrop-blur-sm max-w-4xl">
+          <div className="bg-slate-900/60 border-l-4 border-white rounded-r-xl p-5 sm:p-6 shadow-sm backdrop-blur-sm max-w-4xl">
             <h2 className="text-lg font-bold text-white mb-2 flex items-center gap-2">
-              <Info className="w-5 h-5 text-emerald-400" />
+              <Info className="w-5 h-5 text-white" />
               Direct Answer
             </h2>
             <p className="text-slate-300 text-sm leading-relaxed">
-              Zakat is obligatory at a strict rate of <strong className="text-emerald-400 font-semibold">2.5%</strong> on surplus wealth held for a full lunar year. The current mandatory Nisab threshold is evaluated against <strong className="text-white font-semibold">87.48 grams of Gold</strong> or <strong className="text-white font-semibold">612.36 grams of Silver</strong>, whichever provides the greater benefit to the poor in your local currency.
+              Zakat is obligatory at a strict rate of <strong className="text-white font-semibold">2.5%</strong> on surplus wealth held for a full lunar year. The current mandatory Nisab threshold is evaluated against <strong className="text-white font-semibold">87.48 grams of Gold</strong> or <strong className="text-white font-semibold">612.36 grams of Silver</strong>, whichever provides the greater benefit to the poor in your local currency.
             </p>
           </div>
         </header>
@@ -248,7 +248,7 @@ export default function ZakatCalculatorPage() {
                     onClick={() => setCurrency(curr)}
                     className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
                       currency === curr 
-                        ? 'bg-emerald-600 border-emerald-500 text-white' 
+                        ? 'bg-white text-black border-neutral-800 text-white' 
                         : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
                     }`}
                   >
@@ -261,7 +261,7 @@ export default function ZakatCalculatorPage() {
             {/* Cash & Bank Balances */}
             <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 sm:p-6 space-y-4">
               <h3 className="text-white font-semibold flex items-center gap-2 border-b border-slate-800 pb-3">
-                <Calculator className="w-5 h-5 text-emerald-400" /> Cash & Bank Balances
+                <Calculator className="w-5 h-5 text-white" /> Cash & Bank Balances
               </h3>
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
@@ -271,7 +271,7 @@ export default function ZakatCalculatorPage() {
                     <input 
                       type="number" min="0" placeholder="0.00"
                       value={cashOnHand} onChange={e => setCashOnHand(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition-colors placeholder:text-slate-700" 
+                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors placeholder:text-slate-700" 
                     />
                   </div>
                 </div>
@@ -282,7 +282,7 @@ export default function ZakatCalculatorPage() {
                     <input 
                       type="number" min="0" placeholder="0.00"
                       value={bankBalance} onChange={e => setBankBalance(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition-colors placeholder:text-slate-700" 
+                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors placeholder:text-slate-700" 
                     />
                   </div>
                 </div>
@@ -502,7 +502,7 @@ export default function ZakatCalculatorPage() {
                   
                   <div className="flex items-center gap-2 mt-4">
                     {isEligible ? (
-                      <div className="px-3 py-1 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                      <div className="px-3 py-1 rounded bg-neutral-800 text-white text-xs font-bold border border-neutral-800">
                         ELIGIBLE FOR ZAKAT
                       </div>
                     ) : (
@@ -513,13 +513,13 @@ export default function ZakatCalculatorPage() {
                   </div>
                 </div>
 
-                <div className="p-6 bg-gradient-to-br from-emerald-900/40 to-slate-900">
-                  <h3 className="text-sm font-semibold text-emerald-300 uppercase tracking-wider mb-2">2.5% Zakat Payable</h3>
-                  <div className={`text-4xl font-extrabold ${isEligible ? 'text-emerald-400' : 'text-slate-500'}`}>
+                <div className="p-6 bg-gradient-to-br from-neutral-900 to-neutral-950">
+                  <h3 className="text-sm font-semibold text-white uppercase tracking-wider mb-2">2.5% Zakat Payable</h3>
+                  <div className={`text-4xl font-extrabold ${isEligible ? 'text-white' : 'text-slate-500'}`}>
                     {sym} {zakatPayable.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </div>
                   {isEligible && (
-                    <p className="text-xs text-emerald-200/70 mt-3 leading-relaxed">
+                    <p className="text-xs text-white mt-3 leading-relaxed">
                       This is the required 2.5% charitable obligation based on your net Zakat-able assets held for a full lunar year.
                     </p>
                   )}
@@ -542,19 +542,19 @@ export default function ZakatCalculatorPage() {
 
         {/* Horizontal Sibling Silo Links Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <Link href="/zakat/gold-silver/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/gold-silver/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <Coins className="w-8 h-8 text-amber-500/70 group-hover:text-amber-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Gold & Silver</span>
           </Link>
-          <Link href="/zakat/stocks-investments/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/stocks-investments/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <TrendingUp className="w-8 h-8 text-blue-500/70 group-hover:text-blue-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Stocks & Wealth</span>
           </Link>
-          <Link href="/zakat/business/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/business/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <Briefcase className="w-8 h-8 text-indigo-500/70 group-hover:text-indigo-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Business Zakat</span>
           </Link>
-          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <Heart className="w-8 h-8 text-rose-500/70 group-hover:text-rose-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Fitrana (Al-Fitr)</span>
           </Link>
@@ -591,7 +591,7 @@ export default function ZakatCalculatorPage() {
                     <td className="p-4 text-xs text-slate-500">AAOIFI Shariah Standard No. 35</td>
                   </tr>
                   <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Briefcase className="w-4 h-4 text-emerald-500"/> Business Inventory</td>
+                    <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Briefcase className="w-4 h-4 text-white"/> Business Inventory</td>
                     <td className="p-4 text-sm text-slate-400">Value of raw materials and finished goods intended for sale.</td>
                     <td className="p-4 text-xs text-slate-500">Sunan Abi Dawud 1562</td>
                   </tr>
@@ -604,7 +604,7 @@ export default function ZakatCalculatorPage() {
             <h2 className="text-xl font-bold text-white mb-6">Video Guide</h2>
             <div className="aspect-[4/3] w-full rounded-xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center">
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-              <button className="z-20 w-16 h-16 rounded-full bg-emerald-500/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+              <button className="z-20 w-16 h-16 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                 <PlayCircle className="w-8 h-8 fill-slate-950 text-slate-950" />
               </button>
               <div className="absolute top-3 right-3 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
@@ -647,7 +647,7 @@ export default function ZakatCalculatorPage() {
                 >
                   <span className="font-semibold text-slate-200">{faq.q}</span>
                   {openFaq === idx ? (
-                    <Minus className="w-5 h-5 text-emerald-400 shrink-0" />
+                    <Minus className="w-5 h-5 text-white shrink-0" />
                   ) : (
                     <Plus className="w-5 h-5 text-slate-500 shrink-0" />
                   )}

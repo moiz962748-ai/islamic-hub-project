@@ -94,7 +94,7 @@ const regionDirectory = [
 
 export default function RamadanTimingsPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -105,21 +105,21 @@ export default function RamadanTimingsPage() {
         {/* 1. HEADER & E-E-A-T TRUST */}
         <header className="space-y-6">
           <nav className="flex items-center text-sm font-medium text-slate-400 space-x-2">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
-            <Link href="/ramadan" className="hover:text-emerald-400 transition-colors">Ramadan</Link>
+            <Link href="/ramadan" className="hover:text-white transition-colors">Ramadan</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
             <span className="text-slate-200">Timings</span>
           </nav>
 
-          <Link href="/about/scholarly-board/" className="flex items-center space-x-2 w-fit bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3 py-1.5 hover:bg-emerald-400/20 transition-colors">
-            <ShieldCheck className="w-4 h-4 text-emerald-400" />
-            <span className="text-emerald-400 text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh & Astronomical Board</span>
+          <Link href="/about/scholarly-board/" className="flex items-center space-x-2 w-fit bg-neutral-800 border border-neutral-800 rounded-full px-3 py-1.5 hover:bg-neutral-800 transition-colors">
+            <ShieldCheck className="w-4 h-4 text-white" />
+            <span className="text-white text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh & Astronomical Board</span>
           </Link>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
             Suhoor & Iftar Timings 2026: <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
               Worldwide Prayer Schedules & Directory
             </span>
           </h1>
@@ -135,7 +135,7 @@ export default function RamadanTimingsPage() {
         <section className="space-y-6">
           <div className="flex items-center justify-between border-b border-slate-800 pb-4">
              <h2 className="text-2xl font-bold text-white flex items-center">
-               <Globe className="w-6 h-6 mr-3 text-emerald-400"/> 
+               <Globe className="w-6 h-6 mr-3 text-white"/> 
                Today's Global Snapshot
              </h2>
              <span className="text-sm font-medium text-slate-500 hidden sm:block">Real-time Preview</span>
@@ -151,7 +151,7 @@ export default function RamadanTimingsPage() {
                       {cityData.city}
                     </h3>
                   </div>
-                  <MapPin className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 transition-colors" />
+                  <MapPin className="w-5 h-5 text-slate-500 group-hover:text-white transition-colors" />
                 </div>
                 
                 <div className="grid grid-cols-2 gap-4 mb-6">
@@ -173,7 +173,7 @@ export default function RamadanTimingsPage() {
 
                 <Link 
                   href={`/ramadan/timings/${cityData.country}/${cityData.city.toLowerCase().replace(/ /g, '-')}/`} 
-                  className="w-full flex items-center justify-center py-3 px-4 bg-slate-800/50 hover:bg-emerald-600/20 text-emerald-400 text-sm font-semibold rounded-xl border border-transparent hover:border-emerald-500/30 transition-all"
+                  className="w-full flex items-center justify-center py-3 px-4 bg-slate-800/50 hover:bg-neutral-800 text-white text-sm font-semibold rounded-xl border border-transparent hover:border-neutral-600 transition-all"
                 >
                   View Full 30-Day Schedule <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
@@ -189,16 +189,16 @@ export default function RamadanTimingsPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-8 gap-y-12">
             {regionDirectory.map((region) => (
               <div key={region.code} className="flex flex-col">
-                <Link href={`/ramadan/timings/${region.code}/`} className="inline-flex items-center text-lg font-bold text-white mb-4 hover:text-emerald-400 transition-colors group">
+                <Link href={`/ramadan/timings/${region.code}/`} className="inline-flex items-center text-lg font-bold text-white mb-4 hover:text-white transition-colors group">
                   {region.country}
-                  <ChevronRight className="w-5 h-5 ml-1 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-1 transition-all" />
+                  <ChevronRight className="w-5 h-5 ml-1 text-slate-500 group-hover:text-white group-hover:translate-x-1 transition-all" />
                 </Link>
                 <ul className="space-y-3 border-l-2 border-slate-800/80 pl-4 flex-1">
                   {region.cities.map((city) => (
                     <li key={city}>
                       <Link 
                         href={`/ramadan/timings/${region.code}/${city.toLowerCase().replace(/ /g, '-')}/`}
-                        className="text-slate-400 hover:text-emerald-300 text-sm font-medium transition-colors inline-block"
+                        className="text-slate-400 hover:text-white text-sm font-medium transition-colors inline-block"
                       >
                         {city} Timetable
                       </Link>
@@ -207,7 +207,7 @@ export default function RamadanTimingsPage() {
                   <li>
                     <Link 
                       href={`/ramadan/timings/${region.code}/`}
-                      className="text-emerald-500/80 hover:text-emerald-400 text-sm font-medium italic transition-colors inline-block mt-2"
+                      className="text-white hover:text-white text-sm font-medium italic transition-colors inline-block mt-2"
                     >
                       View all {region.country} cities →
                     </Link>
@@ -223,10 +223,10 @@ export default function RamadanTimingsPage() {
           
           {/* AEO Direct Answer Boxes Stacked Cleanly */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="bg-emerald-950/20 border-l-4 border-emerald-500 rounded-r-2xl p-6 flex flex-col justify-center">
+            <div className="bg-neutral-900 border-l-4 border-white rounded-r-2xl p-6 flex flex-col justify-center">
               <div className="flex items-start gap-4">
-                <div className="mt-1 bg-emerald-500/20 p-2 rounded-lg shrink-0">
-                  <AlertCircle className="w-6 h-6 text-emerald-400" />
+                <div className="mt-1 bg-neutral-800 p-2 rounded-lg shrink-0">
+                  <AlertCircle className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-white mb-2">Imsak vs. Fajr (Suhoor End)</h2>
@@ -240,7 +240,7 @@ export default function RamadanTimingsPage() {
             <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 flex flex-col justify-center">
               <div className="flex items-start gap-4">
                 <div className="mt-1 bg-slate-800 p-2 rounded-lg shrink-0">
-                  <Globe className="w-6 h-6 text-emerald-400" />
+                  <Globe className="w-6 h-6 text-white" />
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-white mb-2">Prompt Iftar Rulings</h2>
@@ -256,7 +256,7 @@ export default function RamadanTimingsPage() {
           <div className="bg-slate-900/60 border border-slate-800 rounded-3xl p-8">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8 border-b border-slate-800 pb-6">
               <div className="flex items-center space-x-3">
-                <Compass className="w-6 h-6 text-emerald-400 shrink-0" />
+                <Compass className="w-6 h-6 text-white shrink-0" />
                 <h2 className="text-2xl font-bold text-white">How Prayer & Fasting Timings Are Calculated Globally</h2>
               </div>
             </div>
@@ -270,8 +270,8 @@ export default function RamadanTimingsPage() {
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent z-10" />
                   
                   <button className="z-20 relative flex flex-col items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-                    <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-xl animate-pulse" />
-                    <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-emerald-400 opacity-90 drop-shadow-2xl mb-4" />
+                    <div className="absolute inset-0 bg-neutral-800 rounded-full blur-xl animate-pulse" />
+                    <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-white opacity-90 drop-shadow-2xl mb-4" />
                     <span className="text-white font-semibold tracking-wide drop-shadow-md">Watch Methodology Guide (3:15)</span>
                   </button>
                 </div>
@@ -281,15 +281,15 @@ export default function RamadanTimingsPage() {
                   <h3 className="text-xl font-bold text-white mb-6">Key Methodology Takeaways</h3>
                   <ul className="space-y-4">
                     <li className="flex items-start text-sm">
-                      <span className="text-emerald-400 mr-3 font-bold mt-0.5">•</span>
+                      <span className="text-white mr-3 font-bold mt-0.5">•</span>
                       <span className="text-slate-300 leading-relaxed"><strong>Method Angles:</strong> Comparing ISNA (15°), MWL (18°), and Umm al-Qura standards.</span>
                     </li>
                     <li className="flex items-start text-sm">
-                      <span className="text-emerald-400 mr-3 font-bold mt-0.5">•</span>
+                      <span className="text-white mr-3 font-bold mt-0.5">•</span>
                       <span className="text-slate-300 leading-relaxed"><strong>Imsak vs. Fajr:</strong> Why a 10-minute safety buffer is observed in regional timetables.</span>
                     </li>
                     <li className="flex items-start text-sm">
-                      <span className="text-emerald-400 mr-3 font-bold mt-0.5">•</span>
+                      <span className="text-white mr-3 font-bold mt-0.5">•</span>
                       <span className="text-slate-300 leading-relaxed"><strong>High Latitudes:</strong> How fasting durations are calculated in extreme northern regions.</span>
                     </li>
                   </ul>
@@ -304,7 +304,7 @@ export default function RamadanTimingsPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div className="bg-slate-950 rounded-xl p-5 border border-slate-800 flex flex-col gap-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-emerald-400 font-bold bg-emerald-950/40 px-3 py-1 rounded-full text-xs shrink-0">15.0° Angle</span>
+                  <span className="text-white font-bold bg-neutral-900 px-3 py-1 rounded-full text-xs shrink-0">15.0° Angle</span>
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">ISNA</h4>
@@ -314,7 +314,7 @@ export default function RamadanTimingsPage() {
 
               <div className="bg-slate-950 rounded-xl p-5 border border-slate-800 flex flex-col gap-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-emerald-400 font-bold bg-emerald-950/40 px-3 py-1 rounded-full text-xs shrink-0">18.0° Angle</span>
+                  <span className="text-white font-bold bg-neutral-900 px-3 py-1 rounded-full text-xs shrink-0">18.0° Angle</span>
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">MWL</h4>
@@ -324,7 +324,7 @@ export default function RamadanTimingsPage() {
 
               <div className="bg-slate-950 rounded-xl p-5 border border-slate-800 flex flex-col gap-3">
                 <div className="flex items-center justify-between">
-                  <span className="text-emerald-400 font-bold bg-emerald-950/40 px-3 py-1 rounded-full text-xs shrink-0">18.5° Angle</span>
+                  <span className="text-white font-bold bg-neutral-900 px-3 py-1 rounded-full text-xs shrink-0">18.5° Angle</span>
                 </div>
                 <div>
                   <h4 className="text-white font-semibold mb-1">Umm al-Qura</h4>
@@ -345,15 +345,15 @@ export default function RamadanTimingsPage() {
         {/* 5. FAQS & JSON-LD SCHEMA */}
         <section className="bg-slate-900/30 border border-slate-800 rounded-3xl p-8 lg:p-10">
           <div className="flex items-center space-x-3 mb-8">
-            <HelpCircle className="w-6 h-6 text-emerald-400" />
+            <HelpCircle className="w-6 h-6 text-white" />
             <h2 className="text-2xl md:text-3xl font-bold text-white">Timings FAQ</h2>
           </div>
           
           <div className="max-w-4xl space-y-2">
             <details className="group border-b border-slate-800/80 bg-slate-900/40 rounded-lg open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Why do different mosques in the same city have different Fajr times?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base">
                 Discrepancies arise because mosques may subscribe to different calculation methodologies (e.g., ISNA's 15 degrees vs. MWL's 18 degrees). Both are historically and scholastically valid. It is highly recommended to pick the timetable of your local community mosque and stick with it consistently.
@@ -361,9 +361,9 @@ export default function RamadanTimingsPage() {
             </details>
 
             <details className="group border-b border-slate-800/80 bg-slate-900/40 rounded-lg open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 How do I fast when traveling across time zones?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base">
                 When traveling, you fast according to the local times of the place you are physically present in. If you depart after Fajr and fly west, your day is extended; you break fast when the sun sets at your current physical location in the air or upon landing.
@@ -371,9 +371,9 @@ export default function RamadanTimingsPage() {
             </details>
 
             <details className="group border-b border-slate-800/80 bg-slate-900/40 rounded-lg open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Can I sync these timings to my mobile device?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base">
                 Yes, our dynamic schedule links can be used to manually track or export timings. We also recommend standardizing your mobile app (like Athan or MuslimPro) to the exact same calculation angle you see here to avoid confusion.

@@ -45,10 +45,10 @@ export function AyatQuickActions({ titleArabic }: { titleArabic: string }) {
             alert('Arabic Quranic text successfully copied to clipboard!');
           }
         }}
-        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-colors shadow-sm"
+        className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium bg-neutral-800 hover:bg-neutral-800 text-white border border-neutral-800 transition-colors shadow-sm"
         title="Copy the pure Arabic text"
       >
-        <Copy className="w-3.5 h-3.5 text-emerald-400" />
+        <Copy className="w-3.5 h-3.5 text-white" />
         <span>Copy Arabic</span>
       </button>
     </div>
@@ -76,7 +76,7 @@ export function AyatVideoFacade({ titleEnglish }: { titleEnglish: string }) {
 
       {/* Play Icon Badge */}
       <div className="absolute inset-0 flex items-center justify-center">
-        <div className="w-16 h-16 rounded-full bg-emerald-500/90 group-hover:bg-emerald-400 flex items-center justify-center shadow-lg shadow-emerald-950/80 transition-transform group-hover:scale-110">
+        <div className="w-16 h-16 rounded-full bg-neutral-800 group-hover:bg-neutral-800 flex items-center justify-center shadow-lg shadow-neutral-950/50 transition-transform group-hover:scale-110">
           <Play className="w-7 h-7 text-slate-950 fill-slate-950 ml-1" />
         </div>
       </div>
@@ -84,7 +84,7 @@ export function AyatVideoFacade({ titleEnglish }: { titleEnglish: string }) {
       {/* Video Metadata Overlay */}
       <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-xs text-slate-300 bg-slate-900/80 backdrop-blur-sm px-3 py-1.5 rounded-lg border border-slate-800">
         <span className="font-semibold text-white truncate max-w-[200px] sm:max-w-xs">{titleEnglish} Tajweed Recitation</span>
-        <span className="text-emerald-400 font-mono">5:30 • Full HD</span>
+        <span className="text-white font-mono">5:30 • Full HD</span>
       </div>
     </div>
   );

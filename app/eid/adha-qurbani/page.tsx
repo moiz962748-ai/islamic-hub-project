@@ -70,7 +70,7 @@ const jsonLd = {
 
 export default function EidAlAdhaPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -81,21 +81,21 @@ export default function EidAlAdhaPage() {
         {/* 1. METADATA & E-E-A-T TRUST HEADER */}
         <header className="space-y-6">
           <nav className="flex items-center text-sm font-medium text-slate-400 space-x-2">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
-            <Link href="/eid" className="hover:text-emerald-400 transition-colors">Eid</Link>
+            <Link href="/eid" className="hover:text-white transition-colors">Eid</Link>
             <ChevronRight className="w-4 h-4 text-slate-600" />
             <span className="text-slate-200">Eid Al-Adha & Qurbani</span>
           </nav>
 
-          <Link href="/about/scholarly-board/" className="flex items-center space-x-2 w-fit bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3 py-1.5 hover:bg-emerald-400/20 transition-colors group">
-            <ShieldCheck className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-            <span className="text-emerald-400 text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh & Shariah Advisory Council</span>
+          <Link href="/about/scholarly-board/" className="flex items-center space-x-2 w-fit bg-neutral-800 border border-neutral-800 rounded-full px-3 py-1.5 hover:bg-neutral-800 transition-colors group">
+            <ShieldCheck className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+            <span className="text-white text-xs font-semibold tracking-wide uppercase">Reviewed by Fiqh & Shariah Advisory Council</span>
           </Link>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
             Eid Al-Adha & Qurbani Guide: <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-teal-200">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
               Udhiyah Rulings, Animal Rules & Dhul Hijjah
             </span>
           </h1>
@@ -108,10 +108,10 @@ export default function EidAlAdhaPage() {
         </header>
 
         {/* 2. AEO DIRECT ANSWER & MEAT DISTRIBUTION MATRIX */}
-        <section className="w-full bg-slate-900/40 border border-emerald-500/50 rounded-2xl p-6 md:p-8 shadow-[0_0_15px_rgba(16,185,129,0.1)] relative overflow-hidden flex flex-col">
+        <section className="w-full bg-slate-900/40 border border-neutral-800 rounded-2xl p-6 md:p-8 shadow-[0_0_15px_rgba(16,185,129,0.1)] relative overflow-hidden flex flex-col">
           <div className="flex items-center space-x-3 mb-6">
-            <div className="bg-emerald-950 p-2 rounded-lg">
-              <Info className="w-6 h-6 text-emerald-400" />
+            <div className="bg-neutral-900 p-2 rounded-lg">
+              <Info className="w-6 h-6 text-white" />
             </div>
             <h2 className="text-2xl font-bold text-white">Core Qurbani (Udhiyah) Obligations</h2>
           </div>
@@ -119,7 +119,7 @@ export default function EidAlAdhaPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-slate-950/50 border border-slate-800 rounded-xl p-5">
               <div className="flex items-center mb-3">
-                <Users className="w-5 h-5 text-emerald-400 mr-2" />
+                <Users className="w-5 h-5 text-white mr-2" />
                 <h3 className="text-lg font-bold text-slate-100">Who is Obligated</h3>
               </div>
               <p className="text-sm text-slate-300">
@@ -129,7 +129,7 @@ export default function EidAlAdhaPage() {
 
             <div className="bg-slate-950/50 border border-slate-800 rounded-xl p-5">
               <div className="flex items-center mb-3">
-                <Heart className="w-5 h-5 text-emerald-400 mr-2" />
+                <Heart className="w-5 h-5 text-white mr-2" />
                 <h3 className="text-lg font-bold text-slate-100">The 1/3 Distribution Rule</h3>
               </div>
               <p className="text-sm text-slate-300">
@@ -139,7 +139,7 @@ export default function EidAlAdhaPage() {
 
             <div className="bg-slate-950/50 border border-slate-800 rounded-xl p-5">
               <div className="flex items-center mb-3">
-                <Scissors className="w-5 h-5 text-emerald-400 mr-2" />
+                <Scissors className="w-5 h-5 text-white mr-2" />
                 <h3 className="text-lg font-bold text-slate-100">Cutting Hair & Nails</h3>
               </div>
               <p className="text-sm text-slate-300">
@@ -159,8 +159,8 @@ export default function EidAlAdhaPage() {
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent z-10" />
               
               <button className="z-20 relative flex flex-col items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-                <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-2xl animate-pulse" />
-                <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-emerald-400 opacity-90 drop-shadow-2xl mb-4" />
+                <div className="absolute inset-0 bg-neutral-800 rounded-full blur-2xl animate-pulse" />
+                <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-white opacity-90 drop-shadow-2xl mb-4" />
                 <span className="text-white font-semibold tracking-wide drop-shadow-md text-center px-4">Watch: Essential Rulings of Qurbani</span>
               </button>
             </div>
@@ -170,21 +170,21 @@ export default function EidAlAdhaPage() {
               <h3 className="text-2xl font-bold text-white mb-6">Key Qurbani Rules</h3>
               <ul className="space-y-5">
                 <li className="flex items-start text-sm">
-                  <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                  <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                   <div>
                     <strong className="text-slate-200 text-base block mb-1">Animal Eligibility</strong>
                     <span className="text-slate-400 leading-relaxed">Age thresholds must be met: Sheep/Goats (1 year), Cattle/Cows (2 years), Camels (5 years). The animal must be healthy and free of obvious defects (blindness, extreme lameness, emaciation).</span>
                   </div>
                 </li>
                 <li className="flex items-start text-sm">
-                  <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                  <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                   <div>
                     <strong className="text-slate-200 text-base block mb-1">Slaughter Window</strong>
                     <span className="text-slate-400 leading-relaxed">The sacrifice is only valid if performed <em>after</em> the Eid prayer on the 10th of Dhul Hijjah, ending at sunset on the 13th of Dhul Hijjah (the Days of Tashreeq).</span>
                   </div>
                 </li>
                 <li className="flex items-start text-sm">
-                  <span className="text-emerald-400 mr-3 font-bold mt-0.5 text-lg">•</span>
+                  <span className="text-white mr-3 font-bold mt-0.5 text-lg">•</span>
                   <div>
                     <strong className="text-slate-200 text-base block mb-1">Shares Allocation</strong>
                     <span className="text-slate-400 leading-relaxed">Small animals (sheep or goats) count as 1 share (covering one person/household). Large animals (cows or camels) can be divided into up to 7 distinct shares.</span>
@@ -202,77 +202,77 @@ export default function EidAlAdhaPage() {
             
             {/* SILO 1: DHUL HIJJAH & FASTING */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Calendar className="w-4 h-4 mr-2 text-indigo-400" /> Dhul Hijjah & Fasting
               </h3>
-              <Link href="/eid/adha-qurbani/first-10-days/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Virtues of the First 10 Days of Dhul Hijjah</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/first-10-days/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Virtues of the First 10 Days of Dhul Hijjah</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/day-of-arafah/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Fasting the Day of Arafah: Expiation Rulings</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/day-of-arafah/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Fasting the Day of Arafah: Expiation Rulings</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/takbirat-tashreeq/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Takbirat al-Tashreeq Recitation Rules</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/takbirat-tashreeq/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Takbirat al-Tashreeq Recitation Rules</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
             {/* SILO 2: QURBANI OBLIGATIONS & ELIGIBILITY */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <ShieldAlert className="w-4 h-4 mr-2 text-rose-400" /> Obligations & Eligibility
               </h3>
-              <Link href="/eid/adha-qurbani/obligations-nisab/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Who Must Perform Qurbani? Nisab Thresholds</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/obligations-nisab/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Who Must Perform Qurbani? Nisab Thresholds</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/animal-defects/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Animal Selection Criteria & Disqualifying Defects</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/animal-defects/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Animal Selection Criteria & Disqualifying Defects</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/shares-rules/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Qurbani Shares: Rules for Families & Joint Households</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/shares-rules/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Qurbani Shares: Rules for Families & Joint Households</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
             {/* SILO 3: SLAUGHTER & FIQH PROCEDURES */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
-                <Leaf className="w-4 h-4 mr-2 text-emerald-500" /> Slaughter & Procedures
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+                <Leaf className="w-4 h-4 mr-2 text-white" /> Slaughter & Procedures
               </h3>
-              <Link href="/eid/adha-qurbani/slaughter-guidelines/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Humane Islamic Slaughter (Halal Zabiha) Guidelines</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/slaughter-guidelines/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Humane Islamic Slaughter (Halal Zabiha) Guidelines</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/overseas-qurbani/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Appointing an Agent (Wakalah) for Overseas Qurbani</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/overseas-qurbani/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Appointing an Agent (Wakalah) for Overseas Qurbani</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/distribution-rules/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Distribution & Sale of Qurbani Meat, Hides & Offal</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/distribution-rules/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Distribution & Sale of Qurbani Meat, Hides & Offal</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
             {/* SILO 4: EID PRAYER & SUNNAHS */}
             <div className="flex flex-col gap-4">
-              <h3 className="text-emerald-400 font-bold uppercase tracking-wider text-xs flex items-center mb-2">
-                <Clock className="w-4 h-4 mr-2 text-teal-400" /> Eid Prayer & Sunnahs
+              <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
+                <Clock className="w-4 h-4 mr-2 text-white" /> Eid Prayer & Sunnahs
               </h3>
-              <Link href="/eid/adha-qurbani/eid-prayer-guide/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Eid Al-Adha Prayer Step-by-Step Guide</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/eid-prayer-guide/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Eid Al-Adha Prayer Step-by-Step Guide</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/fasting-before-prayer/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Fasting Before Eid Al-Adha Prayer (Sunnah Rules)</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/fasting-before-prayer/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Fasting Before Eid Al-Adha Prayer (Sunnah Rules)</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/eid/adha-qurbani/days-tashreeq/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
-                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-emerald-400 transition-colors text-sm flex-1">Days of Tashreeq Rules & Restrictions</h4>
-                <div className="text-emerald-500/80 text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
+              <Link href="/eid/adha-qurbani/days-tashreeq/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+                <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Days of Tashreeq Rules & Restrictions</h4>
+                <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
             </div>
 
@@ -282,15 +282,15 @@ export default function EidAlAdhaPage() {
         {/* 5. AEO FAQS & JSON-LD SCHEMA */}
         <section className="bg-slate-900/30 border border-slate-800 rounded-3xl p-8 lg:p-10">
           <div className="flex items-center space-x-3 mb-8">
-            <HelpCircle className="w-6 h-6 text-emerald-400" />
+            <HelpCircle className="w-6 h-6 text-white" />
             <h2 className="text-2xl md:text-3xl font-bold text-white">Frequently Asked Questions</h2>
           </div>
           
           <div className="max-w-4xl space-y-3">
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Can you perform Qurbani on behalf of deceased relatives?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 Yes, performing Qurbani on behalf of the deceased is permissible and acts as Sadaqah Jariyah for them. However, it should not replace the primary Qurbani obligation for living, eligible family members.
@@ -298,9 +298,9 @@ export default function EidAlAdhaPage() {
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Is buying meat from the grocery store the same as performing the sacrifice?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 No. The act of sacrificing (Udhiyah/Qurbani) is an independent act of worship. Simply buying meat from a butcher or store does not fulfill this specific religious obligation.
@@ -308,9 +308,9 @@ export default function EidAlAdhaPage() {
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 What is the rule about cutting hair and nails before Qurbani?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base border-t border-slate-800/50 pt-4 mt-2">
                 It is highly recommended (Sunnah/Wajib depending on the school of thought) for the one intending to offer Qurbani to refrain from cutting their hair, nails, or skin from the 1st of Dhul Hijjah until their animal is sacrificed.

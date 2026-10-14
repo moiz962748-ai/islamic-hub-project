@@ -238,7 +238,7 @@ export default function BusinessZakatCalculatorPage() {
             {/* Trade Goods & Inventory Input Card */}
             <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 sm:p-6">
               <h3 className="text-white font-semibold flex items-center gap-2 border-b border-slate-800 pb-4 mb-4">
-                <Package className="w-5 h-5 text-emerald-400" /> Trade Goods & Inventory
+                <Package className="w-5 h-5 text-white" /> Trade Goods & Inventory
               </h3>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div>
@@ -249,7 +249,7 @@ export default function BusinessZakatCalculatorPage() {
                     <input 
                       type="number" min="0" placeholder="0"
                       value={rawMaterials} onChange={e => setRawMaterials(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition-colors" 
+                      className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors" 
                     />
                   </div>
                 </div>
@@ -261,7 +261,7 @@ export default function BusinessZakatCalculatorPage() {
                     <input 
                       type="number" min="0" placeholder="0"
                       value={wip} onChange={e => setWip(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition-colors" 
+                      className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors" 
                     />
                   </div>
                 </div>
@@ -273,7 +273,7 @@ export default function BusinessZakatCalculatorPage() {
                     <input 
                       type="number" min="0" placeholder="0"
                       value={finishedGoods} onChange={e => setFinishedGoods(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition-colors" 
+                      className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors" 
                     />
                   </div>
                 </div>
@@ -352,7 +352,7 @@ export default function BusinessZakatCalculatorPage() {
                   
                   <div className="flex items-center gap-2 mt-5">
                     {isEligible ? (
-                      <div className="px-3 py-1 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                      <div className="px-3 py-1 rounded bg-neutral-800 text-white text-xs font-bold border border-neutral-800">
                         ELIGIBLE FOR ZAKAT
                       </div>
                     ) : (
@@ -393,19 +393,19 @@ export default function BusinessZakatCalculatorPage() {
 
         {/* Phase 3 & 5: Horizontal Sibling Silo Links Bar */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-16">
-          <Link href="/zakat-calculator/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
-            <Calculator className="w-8 h-8 text-emerald-500/70 group-hover:text-emerald-400 transition-colors" />
+          <Link href="/zakat-calculator/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+            <Calculator className="w-8 h-8 text-white group-hover:text-white transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Universal Calc</span>
           </Link>
-          <Link href="/zakat/gold-silver/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/gold-silver/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <Coins className="w-8 h-8 text-amber-500/70 group-hover:text-amber-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Gold & Silver</span>
           </Link>
-          <Link href="/zakat/stocks-investments/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/stocks-investments/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <TrendingUp className="w-8 h-8 text-blue-500/70 group-hover:text-blue-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Stocks & Wealth</span>
           </Link>
-          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
             <Heart className="w-8 h-8 text-rose-500/70 group-hover:text-rose-400 transition-colors" />
             <span className="text-sm font-medium text-slate-300 group-hover:text-white">Fitrana (Al-Fitr)</span>
           </Link>
@@ -427,7 +427,7 @@ export default function BusinessZakatCalculatorPage() {
                 </thead>
                 <tbody className="divide-y divide-slate-800">
                   <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-bold text-emerald-400">Trade Inventory (Raw & Finished)</td>
+                    <td className="p-4 text-sm font-bold text-white">Trade Inventory (Raw & Finished)</td>
                     <td className="p-4 text-sm text-slate-300">Taxable at wholesale value</td>
                     <td className="p-4 text-sm text-slate-400">Urud al-Tijarah rule</td>
                   </tr>

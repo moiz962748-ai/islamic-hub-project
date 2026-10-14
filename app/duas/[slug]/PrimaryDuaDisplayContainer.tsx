@@ -138,7 +138,7 @@ https://yourdomain.com/duas/${dua.slug}
     if (selectedLang === 'ur') {
       return (
         <div className="space-y-1.5">
-          <p dir="rtl" className="text-right text-emerald-300 font-urdu text-sm sm:text-base leading-relaxed">
+          <p dir="rtl" className="text-right text-white font-urdu text-sm sm:text-base leading-relaxed">
             {dua.translationUrduNastaliq}
           </p>
           <p className="text-[11px] sm:text-xs text-slate-400 italic">
@@ -184,7 +184,7 @@ https://yourdomain.com/duas/${dua.slug}
   return (
     <section 
       aria-labelledby="primary-dua-display-heading"
-      className="print-clean bg-slate-900/80 backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-emerald-500/30 shadow-xl relative overflow-hidden"
+      className="print-clean bg-slate-900/80 backdrop-blur-md rounded-2xl p-4 sm:p-5 border border-neutral-800 shadow-xl relative overflow-hidden"
     >
       <h2 id="primary-dua-display-heading" className="sr-only">
         {dua.titleEnglish} Arabic Text and Translations
@@ -198,9 +198,9 @@ https://yourdomain.com/duas/${dua.slug}
           
           {/* Translation display box - compact in height */}
           <div className="bg-slate-950/60 p-3 sm:p-3.5 rounded-xl border border-slate-800/90 flex-1 flex flex-col justify-center min-h-[90px]">
-            <div className="flex items-center justify-between text-[11px] font-semibold text-emerald-400 mb-1.5 pb-1 border-b border-slate-800/70">
+            <div className="flex items-center justify-between text-[11px] font-semibold text-white mb-1.5 pb-1 border-b border-slate-800/70">
               <span className="flex items-center gap-1.5">
-                <Globe className="w-3 h-3 text-emerald-400" />
+                <Globe className="w-3 h-3 text-white" />
                 <span>
                   {LANGUAGE_OPTIONS.find(l => l.code === selectedLang)?.label} Translation
                 </span>
@@ -222,7 +222,7 @@ https://yourdomain.com/duas/${dua.slug}
               <span className="text-[10px] font-bold uppercase tracking-wider text-slate-400">
                 Language:
               </span>
-              <span className="text-[10px] text-emerald-400/80 font-medium">
+              <span className="text-[10px] text-white font-medium">
                 {LANGUAGE_OPTIONS.find(l => l.code === selectedLang)?.label}
               </span>
             </div>
@@ -237,7 +237,7 @@ https://yourdomain.com/duas/${dua.slug}
                     onClick={() => setSelectedLang(lang.code)}
                     className={`py-1 px-1 rounded-md text-[11px] sm:text-xs font-semibold transition-all text-center border ${
                       isActive
-                        ? 'bg-emerald-500 text-slate-950 border-emerald-400 shadow-sm shadow-emerald-500/25 font-bold'
+                        ? 'bg-white text-black border-neutral-800 shadow-sm shadow-neutral-950/50 font-bold'
                         : 'bg-slate-800/80 hover:bg-slate-700/90 text-slate-300 border-slate-700/70 hover:text-white'
                     }`}
                     title={`View ${lang.label} Translation`}
@@ -256,13 +256,13 @@ https://yourdomain.com/duas/${dua.slug}
           
           <div className="flex items-center justify-between gap-2 pb-2 mb-1 border-b border-slate-800/80">
             <div className="flex items-center gap-1.5">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-              <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400">
+              <span className="w-2 h-2 rounded-full bg-white text-black animate-pulse" />
+              <span className="text-[11px] font-bold uppercase tracking-wider text-white">
                 Arabic Text with Tashkeel
               </span>
             </div>
             {isPlaying && (
-              <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 animate-pulse">
+              <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-neutral-800 text-white border border-neutral-800 animate-pulse">
                 Playing Tajweed
               </span>
             )}
@@ -273,7 +273,7 @@ https://yourdomain.com/duas/${dua.slug}
             <p 
               dir="rtl" 
               lang="ar"
-              className="font-arabic text-2xl sm:text-3xl md:text-[2rem] text-emerald-300 leading-snug sm:leading-relaxed text-right arabic-print selection:bg-emerald-400 selection:text-slate-950 w-full"
+              className="font-arabic text-2xl sm:text-3xl md:text-[2rem] text-white leading-snug sm:leading-relaxed text-right arabic-print selection:bg-white selection:text-black selection:text-slate-950 w-full"
             >
               {dua.titleArabic}
             </p>
@@ -297,8 +297,8 @@ https://yourdomain.com/duas/${dua.slug}
           onClick={handleToggleAudio}
           className={`inline-flex items-center justify-center gap-1.5 px-2.5 py-1.5 rounded-lg text-xs font-semibold transition-all shadow-sm ${
             isPlaying
-              ? 'bg-emerald-400 hover:bg-emerald-300 text-slate-950 ring-2 ring-emerald-300'
-              : 'bg-emerald-500/15 hover:bg-emerald-500/25 text-emerald-300 border border-emerald-500/30'
+              ? 'bg-white hover:bg-neutral-200 text-black font-semibold ring-2 ring-white/40'
+              : 'bg-neutral-800 hover:bg-neutral-800 text-white border border-neutral-800'
           }`}
           title="Play authentic Tajweed audio recitation"
         >
@@ -309,7 +309,7 @@ https://yourdomain.com/duas/${dua.slug}
             </>
           ) : (
             <>
-              <Volume2 className="w-3.5 h-3.5 text-emerald-400" />
+              <Volume2 className="w-3.5 h-3.5 text-white" />
               <span>Play Audio ({dua.audioDuration})</span>
             </>
           )}
@@ -324,8 +324,8 @@ https://yourdomain.com/duas/${dua.slug}
         >
           {copied ? (
             <>
-              <Check className="w-3.5 h-3.5 text-emerald-400" />
-              <span className="text-emerald-300 font-bold">Copied!</span>
+              <Check className="w-3.5 h-3.5 text-white" />
+              <span className="text-white font-bold">Copied!</span>
             </>
           ) : (
             <>

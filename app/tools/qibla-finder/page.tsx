@@ -421,7 +421,7 @@ export default function QiblaFinderPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-6 sm:py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 py-6 sm:py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       {/* Schema Injection & Canonical */}
       <script
         type="application/ld+json"
@@ -434,15 +434,15 @@ export default function QiblaFinderPage() {
         {/* SECTION 1: HEADER & BREADCRUMBS */}
         <header className="space-y-3">
           <nav aria-label="Breadcrumbs" className="flex items-center text-xs font-medium text-slate-400 space-x-2 flex-wrap gap-y-1">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-            <Link href="/tools/" className="hover:text-emerald-400 transition-colors">Islamic Tools</Link>
+            <Link href="/tools/" className="hover:text-white transition-colors">Islamic Tools</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
             <span className="text-slate-200 font-semibold">Online Qibla Finder</span>
           </nav>
 
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-semibold tracking-wide uppercase">
+            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-neutral-800 border border-neutral-800 text-white text-[11px] font-semibold tracking-wide uppercase">
               <Sparkles className="w-3 h-3" />
               <span>Interactive Islamic Utility • Great Circle Geodesy</span>
             </div>
@@ -453,18 +453,18 @@ export default function QiblaFinderPage() {
 
             {/* E-E-A-T Verification Badge Strip */}
             <div className="flex flex-wrap items-center gap-2 pt-0.5 text-xs text-slate-400">
-              <div className="flex items-center space-x-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-2.5 py-0.5 text-emerald-400 font-semibold text-[11px]">
+              <div className="flex items-center space-x-1.5 bg-neutral-800 border border-neutral-800 rounded-full px-2.5 py-0.5 text-white font-semibold text-[11px]">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Great Circle Geodesy</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
               <div className="flex items-center space-x-1.5 text-slate-300 text-[11px]">
-                <MapPin className="w-3 h-3 text-emerald-400" />
+                <MapPin className="w-3 h-3 text-white" />
                 <span>Kaaba Coordinates (21.4225° N, 39.8262° E)</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
               <div className="flex items-center space-x-1.5 text-slate-400 text-[11px]">
-                <Lock className="w-3 h-3 text-emerald-400" />
+                <Lock className="w-3 h-3 text-white" />
                 <span>Zero Location Tracking • 100% Client-Side</span>
               </div>
             </div>
@@ -472,7 +472,7 @@ export default function QiblaFinderPage() {
 
           {/* 2-Sentence TL;DR Direct Answer Summary Card */}
           <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 sm:p-4 backdrop-blur-sm text-xs sm:text-sm text-slate-300 leading-relaxed">
-            <span className="font-semibold text-emerald-400 mr-1.5">Direct Overview:</span>
+            <span className="font-semibold text-white mr-1.5">Direct Overview:</span>
             The Qibla represents the exact direction toward the sacred Kaaba in Makkah (21.4225° N, 39.8262° E), calculated across the Earth's curvature using Great Circle Geodesy (spherical forward azimuth). Facing this singular point unifies millions of Muslims worldwide in shared spiritual devotion across every daily prayer.
           </div>
         </header>
@@ -485,7 +485,7 @@ export default function QiblaFinderPage() {
           {/* Subtle Ambient Background Radial Glow */}
           <div
             className={`absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 rounded-full blur-2xl pointer-events-none transition-all duration-300 ${
-              isAligned ? 'bg-emerald-500/20' : 'bg-emerald-500/5'
+              isAligned ? 'bg-neutral-800' : 'bg-neutral-800'
             }`}
           />
 
@@ -494,7 +494,7 @@ export default function QiblaFinderPage() {
             {/* Top Bar: Location Status & GPS Detect Button */}
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 bg-slate-950/80 border border-slate-800 rounded-xl p-2.5">
               <div className="flex items-center gap-2 min-w-0">
-                <MapPin className="w-4 h-4 text-emerald-400 shrink-0" />
+                <MapPin className="w-4 h-4 text-white shrink-0" />
                 <div className="truncate">
                   <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">
                     Current Location
@@ -510,7 +510,7 @@ export default function QiblaFinderPage() {
                   type="button"
                   onClick={handleDetectLocation}
                   disabled={isLocating}
-                  className="px-3 py-1.5 rounded-lg bg-emerald-500/10 hover:bg-emerald-500/20 border border-emerald-500/30 text-emerald-400 hover:text-emerald-300 transition-colors flex items-center gap-1.5 text-xs font-bold disabled:opacity-50"
+                  className="px-3 py-1.5 rounded-lg bg-neutral-800 hover:bg-neutral-800 border border-neutral-800 text-white hover:text-white transition-colors flex items-center gap-1.5 text-xs font-bold disabled:opacity-50"
                   title="Detect coordinates via browser GPS"
                 >
                   <Locate className={`w-3.5 h-3.5 ${isLocating ? 'animate-spin' : ''}`} />
@@ -535,7 +535,7 @@ export default function QiblaFinderPage() {
                   id="city-select"
                   onChange={(e) => handleSelectCity(e.target.value)}
                   defaultValue=""
-                  className="w-full appearance-none bg-slate-950/90 border border-slate-800 hover:border-slate-700 text-slate-200 px-3 py-1.5 rounded-xl text-xs font-medium focus:outline-none focus:border-emerald-500 transition-colors pr-8 cursor-pointer"
+                  className="w-full appearance-none bg-slate-950/90 border border-slate-800 hover:border-slate-700 text-slate-200 px-3 py-1.5 rounded-xl text-xs font-medium focus:outline-none focus:border-white transition-colors pr-8 cursor-pointer"
                 >
                   <option value="" disabled>Manual City Select...</option>
                   {CITY_PRESETS.map((c) => (
@@ -552,7 +552,7 @@ export default function QiblaFinderPage() {
                 <button
                   type="button"
                   onClick={requestCompassPermission}
-                  className="w-full py-1.5 px-3 rounded-xl bg-emerald-500 text-slate-950 text-xs font-bold hover:bg-emerald-400 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-emerald-500/20"
+                  className="w-full py-1.5 px-3 rounded-xl bg-white text-black text-xs font-bold hover:bg-neutral-800 transition-all flex items-center justify-center gap-1.5 shadow-md shadow-neutral-950/50"
                 >
                   <Compass className="w-3.5 h-3.5" />
                   <span>Enable Compass Sensors</span>
@@ -560,7 +560,7 @@ export default function QiblaFinderPage() {
               ) : (
                 <div className="flex items-center justify-between px-3 py-1.5 rounded-xl bg-slate-950/60 border border-slate-800 text-[11px] text-slate-400">
                   <span>Sensor Mode:</span>
-                  <span className={hasCompassSupport ? "text-emerald-400 font-bold" : "text-amber-400 font-medium"}>
+                  <span className={hasCompassSupport ? "text-white font-bold" : "text-amber-400 font-medium"}>
                     {hasCompassSupport ? "Active Magnetometer" : "Manual Degree Mode"}
                   </span>
                 </div>
@@ -575,7 +575,7 @@ export default function QiblaFinderPage() {
                 <div
                   className={`absolute inset-0 rounded-full border-2 transition-transform duration-100 ease-out flex items-center justify-center ${
                     isAligned
-                      ? 'border-emerald-400 shadow-lg shadow-emerald-500/40 ring-4 ring-emerald-500/20'
+                      ? 'border-neutral-800 shadow-lg shadow-neutral-950/50 ring-4 ring-white/40'
                       : 'border-slate-800 shadow-2xl bg-slate-950/60'
                   }`}
                   style={{
@@ -620,12 +620,12 @@ export default function QiblaFinderPage() {
                 <div
                   className={`relative z-10 w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 flex flex-col items-center justify-center p-2 text-center transition-colors duration-200 backdrop-blur-sm ${
                     isAligned
-                      ? 'bg-emerald-950/80 border-emerald-400 text-white shadow-lg shadow-emerald-500/30'
+                      ? 'bg-neutral-900 border-neutral-800 text-white shadow-lg shadow-neutral-950/50'
                       : 'bg-slate-900/90 border-slate-700 text-slate-200'
                   }`}
                 >
                   {/* Fixed Center Pointer Needle (Pointing directly ahead) */}
-                  <div className="w-0 h-0 border-x-4 border-x-transparent border-b-8 border-b-emerald-400 mb-1" />
+                  <div className="w-0 h-0 border-x-4 border-x-transparent border-b-8 border-b-white mb-1" />
 
                   <div className="text-[10px] uppercase font-bold tracking-wider text-slate-400">
                     Heading
@@ -633,7 +633,7 @@ export default function QiblaFinderPage() {
                   <div className="font-mono text-2xl sm:text-3xl font-extrabold tracking-tight text-white tabular-nums">
                     {hasMounted ? deviceHeading : 0}°
                   </div>
-                  <div className="text-[10px] font-semibold text-emerald-400 font-mono">
+                  <div className="text-[10px] font-semibold text-white font-mono">
                     Qibla: {qiblaBearing}°
                   </div>
                 </div>
@@ -642,22 +642,22 @@ export default function QiblaFinderPage() {
               {/* Dynamic Guidance Status Pill */}
               <div className="mt-3 text-center">
                 {isAligned ? (
-                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-emerald-500/20 border border-emerald-400 text-emerald-300 font-bold text-xs animate-pulse shadow-md shadow-emerald-500/20">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+                  <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-neutral-800 border border-neutral-800 text-white font-bold text-xs animate-pulse shadow-md shadow-neutral-950/50">
+                    <CheckCircle2 className="w-4 h-4 text-white" />
                     <span>Exact Alignment! Facing the Kaaba</span>
                   </div>
                 ) : (
                   <div className="inline-flex items-center gap-1.5 px-3.5 py-1 rounded-full bg-slate-950 border border-slate-800 text-slate-300 font-semibold text-xs">
-                    <RotateCw className="w-3.5 h-3.5 text-emerald-400" />
+                    <RotateCw className="w-3.5 h-3.5 text-white" />
                     <span>
                       {hasCompassSupport ? (
                         offset > 0 ? (
-                          <>Turn right <strong className="text-emerald-400">{Math.abs(offset)}°</strong></>
+                          <>Turn right <strong className="text-white">{Math.abs(offset)}°</strong></>
                         ) : (
-                          <>Turn left <strong className="text-emerald-400">{Math.abs(offset)}°</strong></>
+                          <>Turn left <strong className="text-white">{Math.abs(offset)}°</strong></>
                         )
                       ) : (
-                        <>Face <strong className="text-emerald-400 font-mono">{qiblaBearing}°</strong> ({distanceKm.toLocaleString()} km)</>
+                        <>Face <strong className="text-white font-mono">{qiblaBearing}°</strong> ({distanceKm.toLocaleString()} km)</>
                       )}
                     </span>
                   </div>
@@ -680,7 +680,7 @@ export default function QiblaFinderPage() {
                 <span className="text-[10px] text-slate-400 uppercase font-bold tracking-wider block">
                   True Bearing (Azimuth)
                 </span>
-                <span className="text-sm font-extrabold text-emerald-400 font-mono">
+                <span className="text-sm font-extrabold text-white font-mono">
                   {qiblaBearing}° from North
                 </span>
               </div>
@@ -696,7 +696,7 @@ export default function QiblaFinderPage() {
           <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-5">
             <div className="space-y-1 border-b border-slate-800 pb-3">
               <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                <Sliders className="w-5 h-5 text-emerald-400" />
+                <Sliders className="w-5 h-5 text-white" />
                 <span>How to Find Qibla Direction Accurately</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-400">
@@ -706,8 +706,8 @@ export default function QiblaFinderPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Step 1 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   1
                 </div>
                 <div className="space-y-1">
@@ -719,8 +719,8 @@ export default function QiblaFinderPage() {
               </div>
 
               {/* Step 2 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   2
                 </div>
                 <div className="space-y-1">
@@ -732,8 +732,8 @@ export default function QiblaFinderPage() {
               </div>
 
               {/* Step 3 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   3
                 </div>
                 <div className="space-y-1">
@@ -745,8 +745,8 @@ export default function QiblaFinderPage() {
               </div>
 
               {/* Step 4 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   4
                 </div>
                 <div className="space-y-1">
@@ -763,7 +763,7 @@ export default function QiblaFinderPage() {
           <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-5">
             <div className="space-y-1 border-b border-slate-800 pb-3">
               <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                <Globe className="w-5 h-5 text-emerald-400" />
+                <Globe className="w-5 h-5 text-white" />
                 <span>Importance of Facing the Qibla in Daily Prayer</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-400">
@@ -776,7 +776,7 @@ export default function QiblaFinderPage() {
               {/* Left Column: Sacred Direction Breakdown */}
               <div className="space-y-3">
                 <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
                   <span>Sacred Direction Breakdown</span>
                 </h3>
 
@@ -807,7 +807,7 @@ export default function QiblaFinderPage() {
               {/* Right Column: Essential Accuracy Rules */}
               <div className="space-y-3">
                 <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
                   <span>Essential Accuracy Rules</span>
                 </h3>
 
@@ -841,14 +841,14 @@ export default function QiblaFinderPage() {
               {/* Card 1: Quranic Command */}
               <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-4 shadow-sm flex flex-col justify-between h-full">
                 <div>
-                  <div className="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-emerald-500/20">
+                  <div className="bg-neutral-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-neutral-800">
                     📖 Quranic Command
                   </div>
                   <p className="text-slate-300 text-sm italic leading-relaxed">
                     "Turn then your face toward al-Masjid al-Haram. And wherever you [believers] are, turn your faces toward it [in prayer]."
                   </p>
                 </div>
-                <span className="text-emerald-400 font-medium text-xs mt-3 block not-italic">
+                <span className="text-white font-medium text-xs mt-3 block not-italic">
                   — Surah Al-Baqarah (2:144)
                 </span>
               </div>
@@ -856,14 +856,14 @@ export default function QiblaFinderPage() {
               {/* Card 2: Sahih Reference */}
               <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-4 shadow-sm flex flex-col justify-between h-full">
                 <div>
-                  <div className="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-emerald-500/20">
+                  <div className="bg-neutral-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-neutral-800">
                     📖 Sahih Reference
                   </div>
                   <p className="text-slate-300 text-sm italic leading-relaxed">
                     "When you stand up to pray, perform ablution thoroughly, then face the Qibla and say Allahu Akbar."
                   </p>
                 </div>
-                <span className="text-emerald-400 font-medium text-xs mt-3 block not-italic">
+                <span className="text-white font-medium text-xs mt-3 block not-italic">
                   — Sahih al-Bukhari 6251
                 </span>
               </div>
@@ -874,7 +874,7 @@ export default function QiblaFinderPage() {
         {/* SECTION 5: DEMO VIDEO FACADE & FREQUENTLY ASKED QUESTIONS */}
         <section aria-label="Calibration Video Demonstration" className="bg-slate-900/50 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-4">
           <div className="space-y-1 border-b border-slate-800 pb-3">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-semibold">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-neutral-800 border border-neutral-800 text-white text-[11px] font-semibold">
               <Video className="w-3 h-3" />
               <span>Sensor Calibration Tutorial</span>
             </div>
@@ -894,20 +894,20 @@ export default function QiblaFinderPage() {
                 className="group relative w-full h-full cursor-pointer select-none flex items-center justify-center bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-950"
               >
                 {/* Background Artwork */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-900/20 via-slate-950/70 to-slate-950" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-900 via-neutral-950 to-black" />
 
                 {/* Decorative Compass Outline Graphic */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
-                  <div className="w-56 h-56 rounded-full border-4 border-dashed border-emerald-500/40 animate-[spin_80s_linear_infinite]" />
+                  <div className="w-56 h-56 rounded-full border-4 border-dashed border-neutral-800 animate-[spin_80s_linear_infinite]" />
                 </div>
 
                 {/* Center Content & Play Button */}
                 <div className="relative z-10 flex flex-col items-center justify-center space-y-3 p-4 text-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-500 group-hover:bg-emerald-400 text-slate-950 flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-all duration-200">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-black group-hover:bg-neutral-800 text-slate-950 flex items-center justify-center shadow-lg shadow-neutral-950/50 group-hover:scale-110 transition-all duration-200">
                     <Play className="w-7 h-7 sm:w-9 sm:h-9 fill-slate-950 ml-1" />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-sm sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                    <p className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
                       Watch Calibration Walkthrough (2:10 min)
                     </p>
                     <p className="text-[11px] text-slate-400">
@@ -918,7 +918,7 @@ export default function QiblaFinderPage() {
 
                 {/* Bottom badge */}
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-slate-400 z-10">
-                  <span className="bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800 text-emerald-400 font-mono">
+                  <span className="bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800 text-white font-mono">
                     HD Sensor Guide
                   </span>
                   <span className="bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800 font-mono">
@@ -942,7 +942,7 @@ export default function QiblaFinderPage() {
         <section className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-5">
           <div className="space-y-1 border-b border-slate-800 pb-3">
             <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-              <HelpCircle className="w-5 h-5 text-emerald-400" />
+              <HelpCircle className="w-5 h-5 text-white" />
               <span>Frequently Asked Questions</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
@@ -961,11 +961,11 @@ export default function QiblaFinderPage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                    className="w-full text-left p-3.5 sm:p-4 flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-white hover:text-emerald-300 transition-colors"
+                    className="w-full text-left p-3.5 sm:p-4 flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-white hover:text-white transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`w-4 h-4 text-emerald-400 shrink-0 transition-transform duration-200 ${
+                      className={`w-4 h-4 text-white shrink-0 transition-transform duration-200 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -987,7 +987,7 @@ export default function QiblaFinderPage() {
           <div className="flex items-center justify-between">
             <Link
               href="/tools/"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+              className="inline-flex items-center gap-1.5 text-xs font-bold text-white hover:text-white transition-colors"
             >
               <span>← Back to All Islamic Tools Hub</span>
             </Link>
@@ -996,11 +996,11 @@ export default function QiblaFinderPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3">
             <Link
               href="/tools/prayer-times"
-              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition-all group"
+              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition-all group"
             >
-              <span className="text-xs font-bold text-white group-hover:text-emerald-300 flex items-center justify-between">
+              <span className="text-xs font-bold text-white group-hover:text-white flex items-center justify-between">
                 <span>Daily Prayer Times</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-white transition-transform group-hover:translate-x-0.5" />
               </span>
               <p className="text-[11px] text-slate-400 mt-1">
                 Fajr, Dhuhr, Asr, Maghrib, and Isha timings.
@@ -1009,11 +1009,11 @@ export default function QiblaFinderPage() {
 
             <Link
               href="/tools/tasbeeh-counter"
-              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition-all group"
+              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition-all group"
             >
-              <span className="text-xs font-bold text-white group-hover:text-emerald-300 flex items-center justify-between">
+              <span className="text-xs font-bold text-white group-hover:text-white flex items-center justify-between">
                 <span>Digital Tasbeeh Counter</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-white transition-transform group-hover:translate-x-0.5" />
               </span>
               <p className="text-[11px] text-slate-400 mt-1">
                 Interactive dhikr counter with haptic feedback.
@@ -1022,11 +1022,11 @@ export default function QiblaFinderPage() {
 
             <Link
               href="/guides/namaz-guide"
-              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition-all group"
+              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition-all group"
             >
-              <span className="text-xs font-bold text-white group-hover:text-emerald-300 flex items-center justify-between">
+              <span className="text-xs font-bold text-white group-hover:text-white flex items-center justify-between">
                 <span>Namaz Guide &amp; Salah</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-white transition-transform group-hover:translate-x-0.5" />
               </span>
               <p className="text-[11px] text-slate-400 mt-1">
                 Step-by-step guidance on prayers and sunnahs.
@@ -1035,11 +1035,11 @@ export default function QiblaFinderPage() {
 
             <Link
               href="/ayats/"
-              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-emerald-500/40 transition-all group"
+              className="p-3.5 rounded-xl bg-slate-900/60 hover:bg-slate-900 border border-slate-800 hover:border-neutral-600 transition-all group"
             >
-              <span className="text-xs font-bold text-white group-hover:text-emerald-300 flex items-center justify-between">
+              <span className="text-xs font-bold text-white group-hover:text-white flex items-center justify-between">
                 <span>Sacred Ayats Directory</span>
-                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-emerald-400 transition-transform group-hover:translate-x-0.5" />
+                <ArrowRight className="w-3.5 h-3.5 text-slate-500 group-hover:text-white transition-transform group-hover:translate-x-0.5" />
               </span>
               <p className="text-[11px] text-slate-400 mt-1">
                 Quranic verses with thematic commentary and audio.

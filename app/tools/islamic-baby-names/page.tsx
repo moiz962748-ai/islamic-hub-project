@@ -647,7 +647,7 @@ export default function IslamicBabyNamesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-6 sm:py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 py-6 sm:py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       {/* Schema Injection & Canonical Tag */}
       <script
         type="application/ld+json"
@@ -721,15 +721,15 @@ export default function IslamicBabyNamesPage() {
         {/* SECTION 1: HEADER & BREADCRUMBS */}
         <header className="space-y-4 no-print">
           <nav aria-label="Breadcrumbs" className="flex items-center text-xs font-medium text-slate-400 space-x-2 flex-wrap gap-y-1">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-            <Link href="/tools/" className="hover:text-emerald-400 transition-colors">Islamic Tools</Link>
+            <Link href="/tools/" className="hover:text-white transition-colors">Islamic Tools</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
             <span className="text-slate-200 font-semibold">Islamic Baby Names</span>
           </nav>
 
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-neutral-800 border border-neutral-800 text-white text-xs font-semibold tracking-wide uppercase">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Interactive Discovery Engine • Instant PDF Export</span>
             </div>
@@ -740,18 +740,18 @@ export default function IslamicBabyNamesPage() {
 
             {/* E-E-A-T Trust Badge Strip */}
             <div className="flex flex-wrap items-center gap-2.5 pt-1 text-xs text-slate-400">
-              <div className="flex items-center space-x-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3 py-1 text-emerald-400 font-semibold text-xs">
+              <div className="flex items-center space-x-1.5 bg-neutral-800 border border-neutral-800 rounded-full px-3 py-1 text-white font-semibold text-xs">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Verified Arabic Etymology • Authentic Quranic References • Scholarly Approved Meanings</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
               <div className="flex items-center space-x-1.5 bg-slate-900/80 border border-slate-800 rounded-full px-3 py-1 text-slate-300 text-xs">
-                <Lock className="w-3.5 h-3.5 text-emerald-400" />
+                <Lock className="w-3.5 h-3.5 text-white" />
                 <span>100% Client-Side Privacy: No Personal Data Stored</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
               <div className="flex items-center space-x-1.5 text-slate-400 text-xs">
-                <Award className="w-3.5 h-3.5 text-emerald-400" />
+                <Award className="w-3.5 h-3.5 text-white" />
                 <span>Scholarly Verified Definitions</span>
               </div>
             </div>
@@ -759,7 +759,7 @@ export default function IslamicBabyNamesPage() {
 
           {/* Direct Answer Summary Card */}
           <div className="bg-slate-900/60 border border-slate-800 rounded-2xl p-4 sm:p-5 backdrop-blur-sm text-xs sm:text-sm text-slate-300 leading-relaxed shadow-lg">
-            <span className="font-semibold text-emerald-400 mr-1.5">Direct Overview:</span>
+            <span className="font-semibold text-white mr-1.5">Direct Overview:</span>
             Naming a child is one of the earliest spiritual gifts and parental duties in Islam. The Prophet Muhammad (ﷺ) advised parents to bestow noble, beautiful names with wholesome meanings that reflect devotion to Allah, moral fortitude, and Islamic heritage. Use our interactive finder to search authentic Arabic names, explore concise meanings, save bookmarks, or export/print your custom list.
           </div>
 
@@ -785,7 +785,7 @@ export default function IslamicBabyNamesPage() {
 
         {/* SECTION 2: EXPANDED DIRECT OVERVIEW TEXT BLOCK */}
         <section className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 sm:p-6 backdrop-blur-sm shadow-xl no-print space-y-3">
-          <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+          <div className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider">
             <BookOpenCheck className="w-4 h-4" />
             <span>Islamic Jurisprudence &amp; Sunnah Naming Traditions</span>
           </div>
@@ -801,7 +801,7 @@ export default function IslamicBabyNamesPage() {
         <section className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-6 shadow-xl no-print">
           <div className="space-y-2 border-b border-slate-800 pb-4">
             <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-              <Sliders className="w-5 h-5 text-emerald-400" />
+              <Sliders className="w-5 h-5 text-white" />
               <span>How to Choose an Authentic Islamic Name for Your Baby</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
@@ -811,8 +811,8 @@ export default function IslamicBabyNamesPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {/* Step 1 */}
-            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                 1
               </div>
               <div className="space-y-1">
@@ -820,14 +820,14 @@ export default function IslamicBabyNamesPage() {
                   Prioritize Names of Devotion &amp; Servitude
                 </h3>
                 <p className="text-xs text-slate-300 leading-relaxed">
-                  Select names that express servitude to Allah with prefixes like <strong className="text-emerald-400">&apos;Abdullah</strong> and <strong className="text-emerald-400">&apos;Abdur-Rahman</strong>, or signify righteous virtues such as patience (Sabr), gratitude (Shukr), and purity.
+                  Select names that express servitude to Allah with prefixes like <strong className="text-white">&apos;Abdullah</strong> and <strong className="text-white">&apos;Abdur-Rahman</strong>, or signify righteous virtues such as patience (Sabr), gratitude (Shukr), and purity.
                 </p>
               </div>
             </div>
 
             {/* Step 2 */}
-            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                 2
               </div>
               <div className="space-y-1">
@@ -841,8 +841,8 @@ export default function IslamicBabyNamesPage() {
             </div>
 
             {/* Step 3 */}
-            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                 3
               </div>
               <div className="space-y-1">
@@ -856,8 +856,8 @@ export default function IslamicBabyNamesPage() {
             </div>
 
             {/* Step 4 */}
-            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+            <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-950/80 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                 4
               </div>
               <div className="space-y-1">
@@ -874,7 +874,7 @@ export default function IslamicBabyNamesPage() {
 
         {/* SECTION 4: VISUAL ASSET PLACEHOLDER WITH ALT TEXT & CAPTION */}
         <figure className="no-print bg-slate-900/60 border border-slate-800 rounded-2xl overflow-hidden backdrop-blur-sm shadow-xl space-y-0">
-          <div className="relative w-full aspect-[21/9] sm:aspect-[24/9] bg-gradient-to-br from-slate-900 via-emerald-950/40 to-slate-900 flex items-center justify-center overflow-hidden border-b border-slate-800/80">
+          <div className="relative w-full aspect-[21/9] sm:aspect-[24/9] bg-gradient-to-br from-slate-900 via-neutral-900 to-slate-900 flex items-center justify-center overflow-hidden border-b border-slate-800/80">
             <img
               src="https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1600&q=80"
               alt="Artistic Islamic calligraphy and architectural illumination representing authentic baby names with pious Quranic and Prophetic meanings"
@@ -883,8 +883,8 @@ export default function IslamicBabyNamesPage() {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent" />
             <div className="absolute bottom-3 left-4 sm:bottom-4 sm:left-6 flex items-center gap-2">
-              <div className="px-2.5 py-1 rounded-md bg-slate-950/80 border border-emerald-500/30 text-emerald-300 text-[11px] font-semibold backdrop-blur-md flex items-center gap-1.5">
-                <ImageIcon className="w-3.5 h-3.5 text-emerald-400" />
+              <div className="px-2.5 py-1 rounded-md bg-slate-950/80 border border-neutral-800 text-white text-[11px] font-semibold backdrop-blur-md flex items-center gap-1.5">
+                <ImageIcon className="w-3.5 h-3.5 text-white" />
                 <span>Islamic Etymology &amp; Calligraphy Heritage</span>
               </div>
             </div>
@@ -915,7 +915,7 @@ export default function IslamicBabyNamesPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Search by name, Arabic, or meaning..."
-                className="w-full pl-10 pr-9 py-2.5 bg-slate-950/90 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 transition-all shadow-inner"
+                className="w-full pl-10 pr-9 py-2.5 bg-slate-950/90 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 text-xs sm:text-sm focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-all shadow-inner"
               />
               {searchQuery && (
                 <button
@@ -935,7 +935,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setGenderFilter("all")}
                 className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all ${
                   genderFilter === "all"
-                    ? "bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20"
+                    ? "bg-white text-black font-bold shadow-md shadow-neutral-950/50"
                     : "text-slate-400 hover:text-white hover:bg-slate-800/50"
                 }`}
               >
@@ -946,7 +946,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setGenderFilter("boy")}
                 className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all flex items-center justify-center gap-1 ${
                   genderFilter === "boy"
-                    ? "bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20"
+                    ? "bg-white text-black font-bold shadow-md shadow-neutral-950/50"
                     : "text-slate-400 hover:text-white hover:bg-slate-800/50"
                 }`}
               >
@@ -958,7 +958,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setGenderFilter("girl")}
                 className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all flex items-center justify-center gap-1 ${
                   genderFilter === "girl"
-                    ? "bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20"
+                    ? "bg-white text-black font-bold shadow-md shadow-neutral-950/50"
                     : "text-slate-400 hover:text-white hover:bg-slate-800/50"
                 }`}
               >
@@ -970,7 +970,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setGenderFilter("unisex")}
                 className={`flex-1 py-2 text-xs font-semibold rounded-lg transition-all flex items-center justify-center gap-1 ${
                   genderFilter === "unisex"
-                    ? "bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20"
+                    ? "bg-white text-black font-bold shadow-md shadow-neutral-950/50"
                     : "text-slate-400 hover:text-white hover:bg-slate-800/50"
                 }`}
               >
@@ -984,10 +984,10 @@ export default function IslamicBabyNamesPage() {
               <button
                 type="button"
                 onClick={handlePrint}
-                className="w-full flex items-center justify-center gap-2 py-2.5 px-3 bg-slate-950/90 hover:bg-slate-800/90 border border-slate-700/80 hover:border-emerald-500/50 text-slate-200 hover:text-white rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-inner group"
+                className="w-full flex items-center justify-center gap-2 py-2.5 px-3 bg-slate-950/90 hover:bg-slate-800/90 border border-slate-700/80 hover:border-neutral-600 text-slate-200 hover:text-white rounded-xl text-xs sm:text-sm font-semibold transition-all shadow-inner group"
                 title="Print current list or save as PDF"
               >
-                <Printer className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
+                <Printer className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
                 <span>Print / Save as PDF</span>
               </button>
             </div>
@@ -1003,7 +1003,7 @@ export default function IslamicBabyNamesPage() {
                 <button
                   type="button"
                   onClick={() => setSelectedLetter("")}
-                  className="text-[11px] text-emerald-400 hover:text-emerald-300 font-semibold"
+                  className="text-[11px] text-white hover:text-white font-semibold"
                 >
                   Clear Letter Filter ({selectedLetter})
                 </button>
@@ -1016,7 +1016,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setSelectedLetter("")}
                 className={`px-2.5 py-1 text-xs font-bold rounded-lg border transition-all ${
                   selectedLetter === ""
-                    ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-sm"
+                    ? "bg-white text-black border-neutral-800 shadow-sm"
                     : "bg-slate-950/80 text-slate-400 border-slate-800 hover:border-slate-700 hover:text-white"
                 }`}
               >
@@ -1035,9 +1035,9 @@ export default function IslamicBabyNamesPage() {
                     disabled={!hasNamesStartingWith}
                     className={`w-7 h-7 sm:w-8 sm:h-8 text-xs font-bold rounded-lg border flex items-center justify-center transition-all ${
                       isSelected
-                        ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-md shadow-emerald-500/20"
+                        ? "bg-white text-black border-neutral-800 shadow-md shadow-neutral-950/50"
                         : hasNamesStartingWith
-                        ? "bg-slate-950/80 text-slate-300 border-slate-800 hover:border-emerald-500/50 hover:text-emerald-300"
+                        ? "bg-slate-950/80 text-slate-300 border-slate-800 hover:border-neutral-600 hover:text-white"
                         : "bg-slate-950/30 text-slate-600 border-slate-900 cursor-not-allowed"
                     }`}
                   >
@@ -1059,7 +1059,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setCategoryFilter("all")}
                 className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
                   categoryFilter === "all"
-                    ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/50"
+                    ? "bg-neutral-800 text-white border-neutral-800"
                     : "bg-slate-950/70 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800"
                 }`}
               >
@@ -1082,7 +1082,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setCategoryFilter("prophetic")}
                 className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
                   categoryFilter === "prophetic"
-                    ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/50"
+                    ? "bg-neutral-800 text-white border-neutral-800"
                     : "bg-slate-950/70 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800"
                 }`}
               >
@@ -1093,7 +1093,7 @@ export default function IslamicBabyNamesPage() {
                 onClick={() => setCategoryFilter("quranic")}
                 className={`px-3 py-1 rounded-full text-xs font-semibold border transition-all ${
                   categoryFilter === "quranic"
-                    ? "bg-teal-500/20 text-teal-300 border-teal-500/50"
+                    ? "bg-neutral-800 text-white border-neutral-800"
                     : "bg-slate-950/70 text-slate-400 border-slate-800 hover:text-white hover:bg-slate-800"
                 }`}
               >
@@ -1135,7 +1135,7 @@ export default function IslamicBabyNamesPage() {
                 {ISLAMIC_NAMES_DATABASE.length} names
               </span>
               {hasActiveFilters && (
-                <span className="text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded-md border border-emerald-500/20">
+                <span className="text-white bg-neutral-800 px-2 py-0.5 rounded-md border border-neutral-800">
                   Filters applied
                 </span>
               )}
@@ -1168,7 +1168,7 @@ export default function IslamicBabyNamesPage() {
               <button
                 type="button"
                 onClick={handleResetFilters}
-                className="inline-flex items-center gap-1.5 px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-md shadow-emerald-500/20"
+                className="inline-flex items-center gap-1.5 px-4 py-2 bg-white text-black hover:bg-neutral-800 text-slate-950 font-bold text-xs rounded-xl transition-all shadow-md shadow-neutral-950/50"
               >
                 <RotateCcw className="w-3.5 h-3.5" />
                 <span>Clear All Filters</span>
@@ -1185,13 +1185,13 @@ export default function IslamicBabyNamesPage() {
                   return (
                     <div
                       key={item.id}
-                      className="name-card group bg-slate-950/70 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-3 sm:p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:shadow-emerald-950/20 backdrop-blur-sm relative"
+                      className="name-card group bg-slate-950/70 border border-slate-800 hover:border-neutral-600 rounded-2xl p-3 sm:p-4 flex flex-col justify-between transition-all duration-200 hover:shadow-xl hover:shadow-neutral-950/50 backdrop-blur-sm relative"
                     >
                       {/* Header Row: English Name + Transliteration alongside Arabic Calligraphy */}
                       <div className="space-y-2.5 sm:space-y-3">
                         <div className="flex items-start justify-between gap-2">
                           <div>
-                            <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                            <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-white transition-colors">
                               {item.name}
                             </h3>
                             {item.transliteration && (
@@ -1203,7 +1203,7 @@ export default function IslamicBabyNamesPage() {
 
                           {/* Arabic Calligraphy */}
                           <div
-                            className="font-serif text-xl sm:text-2xl text-emerald-400 font-bold leading-none select-all shrink-0 pt-0.5 text-right"
+                            className="font-serif text-xl sm:text-2xl text-white font-bold leading-none select-all shrink-0 pt-0.5 text-right"
                             dir="rtl"
                           >
                             {item.arabic}
@@ -1218,7 +1218,7 @@ export default function IslamicBabyNamesPage() {
                                 ? "bg-blue-500/10 text-blue-400 border-blue-500/20"
                                 : item.gender === "girl"
                                 ? "bg-rose-500/10 text-rose-400 border-rose-500/20"
-                                : "bg-teal-500/10 text-teal-400 border-teal-500/20"
+                                : "bg-neutral-800 text-white border-neutral-800"
                             }`}
                           >
                             {item.gender === "boy" ? "👦 Boy" : item.gender === "girl" ? "👧 Girl" : "⚖️ Unisex"}
@@ -1242,7 +1242,7 @@ export default function IslamicBabyNamesPage() {
                           onClick={() => handleCopyName(item)}
                           className={`inline-flex items-center gap-1 p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-all text-xs font-semibold ${
                             isCopied
-                              ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"
+                              ? "bg-neutral-800 text-white border-neutral-800"
                               : "bg-slate-900 text-slate-300 border-slate-800 hover:text-white hover:border-slate-700"
                           }`}
                           title="Copy name and meaning"
@@ -1250,7 +1250,7 @@ export default function IslamicBabyNamesPage() {
                         >
                           {isCopied ? (
                             <>
-                              <Check className="w-3.5 h-3.5 text-emerald-400" />
+                              <Check className="w-3.5 h-3.5 text-white" />
                               <span className="hidden sm:inline">Copied</span>
                             </>
                           ) : (
@@ -1267,7 +1267,7 @@ export default function IslamicBabyNamesPage() {
                           onClick={() => handleShareName(item)}
                           className={`inline-flex items-center gap-1 p-1.5 sm:px-2.5 sm:py-1.5 rounded-lg border transition-all text-xs font-semibold ${
                             isShared
-                              ? "bg-emerald-500/20 text-emerald-300 border-emerald-500/40"
+                              ? "bg-neutral-800 text-white border-neutral-800"
                               : "bg-slate-900 text-slate-300 border-slate-800 hover:text-white hover:border-slate-700"
                           }`}
                           title="Share name details"
@@ -1275,7 +1275,7 @@ export default function IslamicBabyNamesPage() {
                         >
                           {isShared ? (
                             <>
-                              <Check className="w-3.5 h-3.5 text-emerald-400" />
+                              <Check className="w-3.5 h-3.5 text-white" />
                               <span className="hidden sm:inline">Shared</span>
                             </>
                           ) : (
@@ -1355,7 +1355,7 @@ export default function IslamicBabyNamesPage() {
                           onClick={() => setCurrentPage(pageNum)}
                           className={`w-8 h-8 text-xs font-bold rounded-lg border transition-all ${
                             isCurrent
-                              ? "bg-emerald-500 text-slate-950 border-emerald-400 shadow-md shadow-emerald-500/20"
+                              ? "bg-white text-black border-neutral-800 shadow-md shadow-neutral-950/50"
                               : "bg-slate-950/80 text-slate-300 border-slate-800 hover:border-slate-700 hover:text-white"
                           }`}
                         >
@@ -1383,7 +1383,7 @@ export default function IslamicBabyNamesPage() {
         {/* SECTION 6: DEEP TOPICAL READING BLOCK (300+ WORDS, 3 SUB-CARDS) */}
         <section className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-6 shadow-xl no-print">
           <div className="space-y-2 border-b border-slate-800 pb-4">
-            <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <div className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider">
               <Award className="w-4 h-4" />
               <span>Classical Islamic Lexicography &amp; Taxonomy</span>
             </div>
@@ -1399,7 +1399,7 @@ export default function IslamicBabyNamesPage() {
             {/* Sub-Card 1: Asma-ul-Husna & Servitude */}
             <div className="bg-slate-950/80 border border-slate-800/90 rounded-xl p-5 space-y-3 flex flex-col justify-between">
               <div className="space-y-2">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-bold flex items-center justify-center text-xs">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-bold flex items-center justify-center text-xs">
                   01
                 </div>
                 <h3 className="text-sm font-bold text-white">
@@ -1409,7 +1409,7 @@ export default function IslamicBabyNamesPage() {
                   The highest tier in Islamic naming encompasses names formed by coupling the prefix <em>&apos;Abd</em> (Servant of) with one of Allah&apos;s Ninety-Nine Beautiful Names (<em>Al-Asma-ul-Husna</em>), such as <strong>&apos;Abdullah</strong>, <strong>&apos;Abdur-Rahman</strong>, <strong>&apos;Abdul-Malik</strong>, and <strong>&apos;Abdul-Karim</strong>. These names embody humility, perpetual gratitude, and conscious servitude before the Divine Majesty.
                 </p>
               </div>
-              <div className="text-[11px] text-emerald-400/90 font-mono pt-2 border-t border-slate-900">
+              <div className="text-[11px] text-white font-mono pt-2 border-t border-slate-900">
                 Category: Highest Sunnah Priority
               </div>
             </div>
@@ -1435,7 +1435,7 @@ export default function IslamicBabyNamesPage() {
             {/* Sub-Card 3: Soft Quranic Nouns & Virtues */}
             <div className="bg-slate-950/80 border border-slate-800/90 rounded-xl p-5 space-y-3 flex flex-col justify-between">
               <div className="space-y-2">
-                <div className="w-8 h-8 rounded-lg bg-teal-500/10 border border-teal-500/20 text-teal-400 font-bold flex items-center justify-center text-xs">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-bold flex items-center justify-center text-xs">
                   03
                 </div>
                 <h3 className="text-sm font-bold text-white">
@@ -1445,7 +1445,7 @@ export default function IslamicBabyNamesPage() {
                   Linguistic expressions and natural wonders praised in the Quran, such as <strong>Noor</strong> (Divine Light), <strong>Aya</strong> (Miraculous Sign), <strong>Jannat</strong> (Gardens of Paradise), <strong>Tasneem</strong> (Celestial Fountain), <strong>Rayyan</strong> (Gate of Fasting), and <strong>Sidra</strong> (Sacred Lote Tree). These names reflect refined beauty, spiritual tranquility, and literary elegance.
                 </p>
               </div>
-              <div className="text-[11px] text-teal-400/90 font-mono pt-2 border-t border-slate-900">
+              <div className="text-[11px] text-white font-mono pt-2 border-t border-slate-900">
                 Category: Classical Quranic Nouns
               </div>
             </div>
@@ -1456,7 +1456,7 @@ export default function IslamicBabyNamesPage() {
         <section className="space-y-4 no-print">
           <div className="space-y-1 border-b border-slate-800 pb-3">
             <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-              <BookOpen className="w-5 h-5 text-emerald-400" />
+              <BookOpen className="w-5 h-5 text-white" />
               <span>Authentic Hadith Foundations on Child Naming</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
@@ -1468,17 +1468,17 @@ export default function IslamicBabyNamesPage() {
             {/* Hadith 1: Sunan Abi Dawud 4948 */}
             <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-5 sm:p-6 space-y-4 backdrop-blur-sm">
               <div className="flex items-center justify-between gap-2 border-b border-slate-800 pb-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                <span className="text-xs font-bold uppercase tracking-wider text-white bg-neutral-800 px-2.5 py-0.5 rounded-full border border-neutral-800">
                   Sunan Abi Dawud 4948
                 </span>
                 <span className="text-[11px] text-slate-400 font-mono">Grade: Hasan / Sahih</span>
               </div>
 
-              <div className="font-serif text-lg text-emerald-300 leading-relaxed" dir="rtl">
+              <div className="font-serif text-lg text-white leading-relaxed" dir="rtl">
                 إِنَّكُمْ تُدْعَوْنَ يَوْمَ الْقِيَامَةِ بِأَسْمَائِكُمْ وَأَسْمَاءِ آبَائِكُمْ فَأَحْسِنُوا أَسْمَاءَكُمْ
               </div>
 
-              <blockquote className="text-xs sm:text-sm text-slate-300 italic border-l-2 border-emerald-500 pl-3 leading-relaxed">
+              <blockquote className="text-xs sm:text-sm text-slate-300 italic border-l-2 border-neutral-800 pl-3 leading-relaxed">
                 &quot;On the Day of Resurrection you will be called by your names and the names of your fathers, so have good names.&quot;
               </blockquote>
 
@@ -1490,17 +1490,17 @@ export default function IslamicBabyNamesPage() {
             {/* Hadith 2: Sahih Muslim 2132 */}
             <div className="bg-slate-900/60 border border-slate-800/90 rounded-2xl p-5 sm:p-6 space-y-4 backdrop-blur-sm">
               <div className="flex items-center justify-between gap-2 border-b border-slate-800 pb-3">
-                <span className="text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-2.5 py-0.5 rounded-full border border-emerald-500/20">
+                <span className="text-xs font-bold uppercase tracking-wider text-white bg-neutral-800 px-2.5 py-0.5 rounded-full border border-neutral-800">
                   Sahih Muslim 2132
                 </span>
                 <span className="text-[11px] text-slate-400 font-mono">Grade: Sahih (Authentic)</span>
               </div>
 
-              <div className="font-serif text-lg text-emerald-300 leading-relaxed" dir="rtl">
+              <div className="font-serif text-lg text-white leading-relaxed" dir="rtl">
                 أَحَبُّ الأَسْمَاءِ إِلَى اللَّهِ عَبْدُ اللَّهِ وَعَبْدُ الرَّحْمَنِ
               </div>
 
-              <blockquote className="text-xs sm:text-sm text-slate-300 italic border-l-2 border-emerald-500 pl-3 leading-relaxed">
+              <blockquote className="text-xs sm:text-sm text-slate-300 italic border-l-2 border-neutral-800 pl-3 leading-relaxed">
                 &quot;The most beloved of names to Allah the Almighty are &apos;Abdullah and &apos;Abdur-Rahman.&quot;
               </blockquote>
 
@@ -1515,7 +1515,7 @@ export default function IslamicBabyNamesPage() {
         <section className="bg-slate-900/60 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-5 shadow-xl no-print">
           <div className="space-y-1 border-b border-slate-800 pb-3">
             <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-              <HelpCircle className="w-5 h-5 text-emerald-400" />
+              <HelpCircle className="w-5 h-5 text-white" />
               <span>Frequently Asked Questions About Islamic Baby Names</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
@@ -1534,12 +1534,12 @@ export default function IslamicBabyNamesPage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                    className="w-full text-left p-4 flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-white hover:text-emerald-300 transition-colors"
+                    className="w-full text-left p-4 flex items-center justify-between gap-3 text-xs sm:text-sm font-bold text-white hover:text-white transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
                       className={`w-4 h-4 text-slate-400 shrink-0 transition-transform duration-200 ${
-                        isOpen ? "-rotate-180 text-emerald-400" : ""
+                        isOpen ? "-rotate-180 text-white" : ""
                       }`}
                     />
                   </button>
@@ -1559,7 +1559,7 @@ export default function IslamicBabyNamesPage() {
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
             <div>
               <h2 className="text-xl font-bold text-white flex items-center gap-2">
-                <Compass className="w-5 h-5 text-emerald-400" />
+                <Compass className="w-5 h-5 text-white" />
                 <span>Explore Sibling Islamic Digital Utilities</span>
               </h2>
               <p className="text-xs text-slate-400 mt-0.5">
@@ -1568,7 +1568,7 @@ export default function IslamicBabyNamesPage() {
             </div>
             <Link
               href="/tools/"
-              className="inline-flex items-center gap-1 text-xs font-bold text-emerald-400 hover:text-emerald-300 self-start sm:self-auto transition-colors"
+              className="inline-flex items-center gap-1 text-xs font-bold text-white hover:text-white self-start sm:self-auto transition-colors"
             >
               <span>← Back to All Islamic Tools</span>
             </Link>
@@ -1578,20 +1578,20 @@ export default function IslamicBabyNamesPage() {
             {/* Tool 1: Islamic Calendar 2026 */}
             <Link
               href="/tools/islamic-calendar-2026"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-neutral-950/50"
             >
               <div className="space-y-2">
                 <div className="w-9 h-9 rounded-lg bg-amber-500/10 border border-amber-500/20 flex items-center justify-center text-amber-400 group-hover:border-amber-500/40 transition-colors">
                   <Calendar className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-sm font-bold text-white group-hover:text-white transition-colors">
                   Islamic Calendar 2026
                 </h3>
                 <p className="text-xs text-slate-400 line-clamp-2">
                   Synchronized Hijri 1447–1448 AH and Gregorian calendar with key Islamic dates.
                 </p>
               </div>
-              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold">
+              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold">
                 <span>View Calendar</span>
                 <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </div>
@@ -1600,20 +1600,20 @@ export default function IslamicBabyNamesPage() {
             {/* Tool 2: Digital Tasbeeh Counter */}
             <Link
               href="/tools/tasbeeh-counter"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-neutral-950/50"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-neutral-800 border border-neutral-800 flex items-center justify-center text-white group-hover:border-neutral-600 transition-colors">
                   <Repeat className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-sm font-bold text-white group-hover:text-white transition-colors">
                   Digital Tasbeeh Counter
                 </h3>
                 <p className="text-xs text-slate-400 line-clamp-2">
                   Real-time dhikr and salawat tracker with haptic tap feedback and saved laps.
                 </p>
               </div>
-              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold">
+              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold">
                 <span>Count Dhikr</span>
                 <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </div>
@@ -1622,20 +1622,20 @@ export default function IslamicBabyNamesPage() {
             {/* Tool 3: Online Qibla Finder */}
             <Link
               href="/tools/qibla-finder"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-neutral-950/50"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400 group-hover:border-teal-500/40 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-neutral-800 border border-neutral-800 flex items-center justify-center text-white group-hover:border-neutral-600 transition-colors">
                   <Compass className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-sm font-bold text-white group-hover:text-white transition-colors">
                   Online Qibla Finder
                 </h3>
                 <p className="text-xs text-slate-400 line-clamp-2">
                   Browser-based GPS compass calculating true azimuth direction to the Kaaba.
                 </p>
               </div>
-              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold">
+              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold">
                 <span>Find Qibla</span>
                 <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </div>
@@ -1644,20 +1644,20 @@ export default function IslamicBabyNamesPage() {
             {/* Tool 4: Universal Zakat Calculator */}
             <Link
               href="/zakat-calculator"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl p-4 transition-all duration-200 flex flex-col justify-between hover:shadow-lg hover:shadow-neutral-950/50"
             >
               <div className="space-y-2">
-                <div className="w-9 h-9 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:border-emerald-500/40 transition-colors">
+                <div className="w-9 h-9 rounded-lg bg-neutral-800 border border-neutral-800 flex items-center justify-center text-white group-hover:border-neutral-600 transition-colors">
                   <ShieldCheck className="w-5 h-5" />
                 </div>
-                <h3 className="text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-sm font-bold text-white group-hover:text-white transition-colors">
                   Universal Zakat Calculator
                 </h3>
                 <p className="text-xs text-slate-400 line-clamp-2">
                   Complete wealth &amp; asset calculator evaluating cash, gold, and investments.
                 </p>
               </div>
-              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold">
+              <div className="pt-3 mt-3 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold">
                 <span>Calculate Zakat</span>
                 <ChevronRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 transition-transform" />
               </div>

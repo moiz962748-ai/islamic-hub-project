@@ -203,25 +203,25 @@ export default function AyatsHubPage({
             </h1>
             
             <p className="text-base sm:text-lg text-slate-300 max-w-4xl leading-relaxed">
-              Explore 100+ meticulously cataloged sacred Quranic verses for spiritual protection, bodily healing (<em className="text-emerald-300 not-italic font-medium">Shifa</em>), debt elimination, and tranquility. Verified against classical exegeses of Ibn Kathir, Al-Qurtubi, and authentic Sahih Hadith literature.
+              Explore 100+ meticulously cataloged sacred Quranic verses for spiritual protection, bodily healing (<em className="text-white not-italic font-medium">Shifa</em>), debt elimination, and tranquility. Verified against classical exegeses of Ibn Kathir, Al-Qurtubi, and authentic Sahih Hadith literature.
             </p>
           </div>
 
           {/* E-E-A-T Badges */}
           <div className="flex flex-wrap items-center gap-4 pt-2 text-xs sm:text-sm text-slate-400">
             <div className="flex items-center space-x-2">
-              <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+              <span className="w-2 h-2 rounded-full bg-white text-black animate-pulse"></span>
               <span className="font-semibold text-slate-200">108 Verses Cataloged</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700"></div>
             <div className="flex items-center">
-              <Sparkles className="w-4 h-4 mr-2 text-emerald-400" />
+              <Sparkles className="w-4 h-4 mr-2 text-white" />
               <span>Arabic • Urdu • English • Classical Tafsir</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700"></div>
-            <div className="flex items-center space-x-1.5 bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3.5 py-1">
-              <ShieldCheck className="w-4 h-4 text-emerald-400" />
-              <span className="text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+            <div className="flex items-center space-x-1.5 bg-neutral-800 border border-neutral-800 rounded-full px-3.5 py-1">
+              <ShieldCheck className="w-4 h-4 text-white" />
+              <span className="text-white text-xs font-semibold tracking-wide uppercase">
                 Reviewed by Scholarly Advisory Board &amp; Certified Huffaz
               </span>
             </div>
@@ -229,11 +229,11 @@ export default function AyatsHubPage({
         </header>
 
         {/* "START HERE" GUIDED PATH BOX */}
-        <section className="bg-gradient-to-r from-emerald-950/40 via-slate-900/60 to-slate-900/60 border border-emerald-500/30 rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-lg">
-          <div className="absolute right-0 top-0 -mt-8 -mr-8 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        <section className="bg-gradient-to-r from-neutral-900 via-slate-900/60 to-slate-900/60 border border-neutral-800 rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-lg">
+          <div className="absolute right-0 top-0 -mt-8 -mr-8 w-48 h-48 bg-neutral-800 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="space-y-2 max-w-3xl">
-              <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider">
                 <Flame className="w-4 h-4" />
                 <span>Foundational Spiritual Roadmap</span>
               </div>
@@ -247,7 +247,7 @@ export default function AyatsHubPage({
             <div className="flex flex-wrap gap-3 shrink-0">
               <Link
                 href="/ayats/ayat-al-kursi"
-                className="px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition-colors flex items-center gap-1.5 shadow-md shadow-emerald-950/30"
+                className="px-4 py-2.5 bg-white text-black hover:bg-neutral-800 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition-colors flex items-center gap-1.5 shadow-md shadow-neutral-950/50"
               >
                 <span>Read Ayat al-Kursi</span>
                 <ArrowRight className="w-4 h-4" />
@@ -275,14 +275,14 @@ export default function AyatsHubPage({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
             <div>
               <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Bookmark className="w-6 h-6 text-emerald-400" />
+                <Bookmark className="w-6 h-6 text-white" />
                 <span>Sacred Ayats Directory &amp; Sub-Topic Silos</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
                 Showing page {safePage} of {totalPages} • Filter by topic or search live across Arabic terms, Urdu phonetic titles, and English translations.
               </p>
             </div>
-            <div className="text-xs font-semibold text-emerald-400/90 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 self-start sm:self-auto">
+            <div className="text-xs font-semibold text-white bg-neutral-800 px-3 py-1 rounded-full border border-neutral-800 self-start sm:self-auto">
               {totalItems} Ayats Total
             </div>
           </div>
@@ -296,11 +296,11 @@ export default function AyatsHubPage({
                 name="q"
                 defaultValue={searchQuery}
                 placeholder="Search by English theme (e.g. 'Shifa', 'Kursi', 'Rizq'), Urdu title, or Surah name..."
-                className="w-full pl-12 pr-24 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-sm sm:text-base"
+                className="w-full pl-12 pr-24 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all text-sm sm:text-base"
               />
               <button 
                 type="submit" 
-                className="absolute right-3 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold rounded-lg transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-white text-black hover:bg-neutral-800 text-slate-950 text-xs font-bold rounded-lg transition-colors"
               >
                 Search
               </button>
@@ -316,7 +316,7 @@ export default function AyatsHubPage({
                     href={createCategoryUrl(tab.id)}
                     className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
                       isActive
-                        ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20 font-bold'
+                        ? 'bg-white text-black shadow-md shadow-neutral-950/50 font-bold'
                         : 'bg-slate-950/70 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800'
                     }`}
                   >
@@ -327,7 +327,7 @@ export default function AyatsHubPage({
             </div>
 
             <div className="flex items-center justify-between text-xs text-slate-400 px-1">
-              <span>Displaying items <strong className="text-emerald-400">{startIndex + 1}</strong> to <strong className="text-emerald-400">{Math.min(startIndex + pageSize, totalItems)}</strong> of {totalItems}</span>
+              <span>Displaying items <strong className="text-white">{startIndex + 1}</strong> to <strong className="text-white">{Math.min(startIndex + pageSize, totalItems)}</strong> of {totalItems}</span>
               {searchQuery && <span>Keyword: "{searchQuery}"</span>}
             </div>
           </div>
@@ -342,7 +342,7 @@ export default function AyatsHubPage({
               </p>
               <Link
                 href="/ayats/"
-                className="inline-block px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg text-sm font-bold transition-colors"
+                className="inline-block px-4 py-2 bg-white text-black hover:bg-neutral-800 text-slate-950 rounded-lg text-sm font-bold transition-colors"
               >
                 Reset All Filters
               </Link>
@@ -353,12 +353,12 @@ export default function AyatsHubPage({
                 <Link
                   key={ayat.id}
                   href={ayat.slug}
-                  className="group bg-slate-900/60 border border-slate-800/90 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20 relative overflow-hidden"
+                  className="group bg-slate-900/60 border border-slate-800/90 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50 relative overflow-hidden"
                 >
                   <div className="space-y-4">
                     {/* Header with category badge & virtue badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-neutral-800 border border-neutral-800 px-2.5 py-0.5 rounded-full">
                         {ayat.categoryLabel}
                       </span>
                       {ayat.badge && (
@@ -370,15 +370,15 @@ export default function AyatsHubPage({
 
                     {/* Multilingual Titles & Surah Details */}
                     <div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors mb-1">
+                      <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors mb-1">
                         {ayat.titleEnglish}
                       </h3>
-                      <div className="text-xs font-semibold text-emerald-400/90 mb-2 flex items-center justify-between">
+                      <div className="text-xs font-semibold text-white mb-2 flex items-center justify-between">
                         <span>{ayat.titleUrdu}</span>
                         <span className="text-slate-400 text-[11px]">Surah {ayat.surahNameEnglish} [{ayat.surahNumber}:{ayat.ayahNumber}]</span>
                       </div>
                       <div 
-                        className="text-right text-xl font-arabic text-emerald-200/90 py-2 border-y border-slate-800/60 my-2 leading-relaxed" 
+                        className="text-right text-xl font-arabic text-white py-2 border-y border-slate-800/60 my-2 leading-relaxed" 
                         dir="rtl"
                       >
                         {ayat.titleArabic}
@@ -394,10 +394,10 @@ export default function AyatsHubPage({
                   {/* Card Footer: Source & Link Indicator */}
                   <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
                     <span className="text-slate-500 flex items-center gap-1.5 truncate max-w-[190px]">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500 shrink-0" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-white shrink-0" />
                       <span className="truncate">{ayat.source}</span>
                     </span>
-                    <span className="text-emerald-400 font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform shrink-0">
+                    <span className="text-white font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform shrink-0">
                       Read Full Ayat <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
@@ -413,7 +413,7 @@ export default function AyatsHubPage({
               {safePage > 1 ? (
                 <Link
                   href={createPageUrl(safePage - 1)}
-                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-emerald-400 text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-white text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
                 >
                   <ChevronLeft className="w-4 h-4" /> Previous
                 </Link>
@@ -426,7 +426,7 @@ export default function AyatsHubPage({
               {/* Page Number Indicators: "Page X of Y" and [1] [2] [3] ... [9] */}
               <div className="flex items-center gap-1.5 flex-wrap justify-center">
                 <span className="text-xs sm:text-sm text-slate-400 font-medium mr-2 hidden md:inline-block">
-                  Page <strong className="text-emerald-400">{safePage}</strong> of <strong className="text-white">{totalPages}</strong>
+                  Page <strong className="text-white">{safePage}</strong> of <strong className="text-white">{totalPages}</strong>
                 </span>
 
                 {pageNumbers.map((num) => {
@@ -437,7 +437,7 @@ export default function AyatsHubPage({
                       href={createPageUrl(num)}
                       className={`w-9 h-9 flex items-center justify-center rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                         isCurrent
-                          ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20 ring-2 ring-emerald-400/50'
+                          ? 'bg-white text-black font-bold shadow-md shadow-neutral-950/50 ring-2 ring-white/40'
                           : 'bg-slate-950/80 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800'
                       }`}
                       aria-label={`Go to page ${num}`}
@@ -453,7 +453,7 @@ export default function AyatsHubPage({
               {safePage < totalPages ? (
                 <Link
                   href={createPageUrl(safePage + 1)}
-                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-emerald-400 text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-white text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
                 >
                   Next <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -469,7 +469,7 @@ export default function AyatsHubPage({
         {/* CURATED THEMATIC COLLECTIONS (SILOS) */}
         <section className="space-y-6">
           <div className="flex items-center gap-2 border-b border-slate-800 pb-3">
-            <Layers className="w-6 h-6 text-emerald-400" />
+            <Layers className="w-6 h-6 text-white" />
             <h2 className="text-2xl font-bold text-white">
               Curated Thematic Collections (Silos)
             </h2>
@@ -479,20 +479,20 @@ export default function AyatsHubPage({
             {/* Silo 1: Greatest & Essential */}
             <Link
               href="/ayats?category=greatest"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/20 text-amber-400 flex items-center justify-center">
                   <Flame className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                   Greatest &amp; Essential Verses
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Ayat al-Kursi, Amanar-Rasool, Surah Al-Fatihah, and foundational revelations of Tawheed and spiritual grandeur.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold group-hover:translate-x-0.5 transition-transform">
                 <span>Explore Silo</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -501,20 +501,20 @@ export default function AyatsHubPage({
             {/* Silo 2: Daily Protection & Bedtime */}
             <Link
               href="/ayats?category=protection"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
-                <div className="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 flex items-center justify-center">
+                <div className="w-12 h-12 rounded-xl bg-neutral-800 border border-neutral-800 text-white flex items-center justify-center">
                   <Sunrise className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                   Daily Protection &amp; Bedtime
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Ayat al-Hifz, the Mu‘awwidhatayn, and nocturnal shields recited before sleeping to secure angelic guardianship.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold group-hover:translate-x-0.5 transition-transform">
                 <span>Fortress of Believer</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -523,20 +523,20 @@ export default function AyatsHubPage({
             {/* Silo 3: Ruqyah & Shifa Healing */}
             <Link
               href="/ayats?category=healing"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-rose-500/10 border border-rose-500/20 text-rose-400 flex items-center justify-center">
                   <Shield className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                   Ruqyah &amp; Shifa Healing
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   The authenticated Six Ayats of Shifa, remedies for envy, evil eye, Sihr, and emotional sorrow from primary texts.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold group-hover:translate-x-0.5 transition-transform">
                 <span>Divine Shield &amp; Cure</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -545,20 +545,20 @@ export default function AyatsHubPage({
             {/* Silo 4: Sovereignty, Tawbah & Rizq */}
             <Link
               href="/ayats?category=sovereignty"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
                 <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/20 text-sky-400 flex items-center justify-center">
                   <Moon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                   Sovereignty, Tawbah &amp; Rizq
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Ayat al-Mulk, Ayat at-Talaq, and Ayat Karima for debt relief, forgiveness, and abundance from unimagined sources.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold group-hover:translate-x-0.5 transition-transform">
                 <span>Blessed Revelations</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -571,7 +571,7 @@ export default function AyatsHubPage({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800 pb-3">
             <div>
               <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Compass className="w-6 h-6 text-emerald-400" />
+                <Compass className="w-6 h-6 text-white" />
                 <span>Explore Connected Islamic Knowledge Hubs</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -587,20 +587,20 @@ export default function AyatsHubPage({
             {/* Knowledge Hub 1: Daily Duas & Adhkar */}
             <Link
               href="/duas/"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full inline-block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-neutral-800 border border-neutral-800 px-2.5 py-0.5 rounded-full inline-block">
                   Daily Duas &amp; Adhkar
                 </span>
-                <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                   Daily Duas &amp; Authentic Supplications Hub
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Browse 100+ authenticated prophetic Duas with Arabic text, Urdu phonetic transliterations, and Sahih Hadith references.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold group-hover:translate-x-0.5 transition-transform">
                 <span>Explore Duas Hub</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -609,7 +609,7 @@ export default function AyatsHubPage({
             {/* Knowledge Hub 2: Interactive Utilities & Calculators */}
             <Link
               href="/zakat-calculator"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2.5 py-0.5 rounded-full inline-block">
@@ -631,7 +631,7 @@ export default function AyatsHubPage({
             {/* Knowledge Hub 3: Prayer & Fasting */}
             <Link
               href="/ramadan/timings"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 bg-amber-500/10 border border-amber-500/20 px-2.5 py-0.5 rounded-full inline-block">
@@ -656,7 +656,7 @@ export default function AyatsHubPage({
         <section className="bg-slate-900/50 border border-slate-800/80 rounded-2xl p-6 sm:p-8 space-y-6">
           <div className="border-b border-slate-800 pb-4">
             <h2 className="text-2xl font-bold text-white flex items-center gap-3">
-              <BookOpen className="w-6 h-6 text-emerald-400" />
+              <BookOpen className="w-6 h-6 text-white" />
               <span>The Etiquettes (Adab) of Reciting Sacred Quranic Ayats</span>
             </h2>
             <p className="text-sm text-slate-300 mt-2 leading-relaxed">
@@ -666,7 +666,7 @@ export default function AyatsHubPage({
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 pt-2">
             <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/90 space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white flex items-center justify-center font-bold text-sm">
                 1
               </div>
               <h3 className="text-base font-semibold text-white">Taharah &amp; Wudu</h3>
@@ -676,7 +676,7 @@ export default function AyatsHubPage({
             </div>
 
             <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/90 space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white flex items-center justify-center font-bold text-sm">
                 2
               </div>
               <h3 className="text-base font-semibold text-white">Tartil &amp; Tajweed</h3>
@@ -686,7 +686,7 @@ export default function AyatsHubPage({
             </div>
 
             <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/90 space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white flex items-center justify-center font-bold text-sm">
                 3
               </div>
               <h3 className="text-base font-semibold text-white">Tadabbur (Contemplation)</h3>
@@ -696,7 +696,7 @@ export default function AyatsHubPage({
             </div>
 
             <div className="bg-slate-950/60 p-4 rounded-xl border border-slate-800/90 space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 flex items-center justify-center font-bold text-sm">
+              <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white flex items-center justify-center font-bold text-sm">
                 4
               </div>
               <h3 className="text-base font-semibold text-white">Yaqeen (Certainty)</h3>
@@ -711,7 +711,7 @@ export default function AyatsHubPage({
         <section className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6">
           <div className="border-b border-slate-800 pb-4">
             <h2 className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-              <HelpCircle className="w-6 h-6 text-emerald-400" />
+              <HelpCircle className="w-6 h-6 text-white" />
               <span>Frequently Asked Questions Regarding Sacred Quranic Ayats</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -721,9 +721,9 @@ export default function AyatsHubPage({
 
           <div className="space-y-4">
             <details className="group bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden transition-all">
-              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-emerald-300 transition-colors">
+              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-white transition-colors">
                 <span>What are the most powerful verses for daily protection in Islam?</span>
-                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-emerald-500/20 text-slate-400 group-open:text-emerald-400 flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
+                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-neutral-800 text-slate-400 group-open:text-white flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
                   ↓
                 </span>
               </summary>
@@ -733,9 +733,9 @@ export default function AyatsHubPage({
             </details>
 
             <details className="group bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden transition-all">
-              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-emerald-300 transition-colors">
+              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-white transition-colors">
                 <span>What is Ruqyah Ash-Shar'iyyah and which Ayats are used for healing?</span>
-                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-emerald-500/20 text-slate-400 group-open:text-emerald-400 flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
+                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-neutral-800 text-slate-400 group-open:text-white flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
                   ↓
                 </span>
               </summary>
@@ -745,9 +745,9 @@ export default function AyatsHubPage({
             </details>
 
             <details className="group bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden transition-all">
-              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-emerald-300 transition-colors">
+              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-white transition-colors">
                 <span>Is it permissible to recite Ayats of the Quran in prayer for relief or guidance?</span>
-                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-emerald-500/20 text-slate-400 group-open:text-emerald-400 flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
+                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-neutral-800 text-slate-400 group-open:text-white flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
                   ↓
                 </span>
               </summary>
@@ -757,9 +757,9 @@ export default function AyatsHubPage({
             </details>
 
             <details className="group bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden transition-all">
-              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-emerald-300 transition-colors">
+              <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-white transition-colors">
                 <span>Which verse is recommended for relief from debts and poverty?</span>
-                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-emerald-500/20 text-slate-400 group-open:text-emerald-400 flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
+                <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-neutral-800 text-slate-400 group-open:text-white flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
                   ↓
                 </span>
               </summary>
@@ -774,7 +774,7 @@ export default function AyatsHubPage({
         <div className="border-t border-slate-800/80 pt-6 flex flex-wrap items-center justify-between gap-4">
           <Link
             href="/duas/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors py-2 px-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700"
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors py-2 px-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700"
           >
             <span>Explore Daily Duas &amp; Azkar Directory</span>
             <ArrowRight className="w-4 h-4" />
@@ -782,7 +782,7 @@ export default function AyatsHubPage({
 
           <Link
             href="/ramadan/"
-            className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
           >
             <span>Ramadan 2026 Portal</span>
             <ArrowRight className="w-4 h-4" />

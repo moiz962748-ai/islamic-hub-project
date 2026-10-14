@@ -482,7 +482,7 @@ export default function TasbeehCounterPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-6 sm:py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <main className="min-h-screen bg-slate-950 text-slate-200 py-6 sm:py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       {/* Schema Injection & Canonical */}
       <script
         type="application/ld+json"
@@ -495,15 +495,15 @@ export default function TasbeehCounterPage() {
         {/* SECTION 1: COMPACT HEADER & BREADCRUMBS */}
         <header className="space-y-3">
           <nav aria-label="Breadcrumbs" className="flex items-center text-xs font-medium text-slate-400 space-x-2 flex-wrap gap-y-1">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-            <Link href="/tools/" className="hover:text-emerald-400 transition-colors">Islamic Tools</Link>
+            <Link href="/tools/" className="hover:text-white transition-colors">Islamic Tools</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
             <span className="text-slate-200 font-semibold">Digital Tasbeeh Counter</span>
           </nav>
 
           <div className="space-y-2">
-            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-semibold tracking-wide uppercase">
+            <div className="inline-flex items-center gap-1.5 px-3 py-0.5 rounded-full bg-neutral-800 border border-neutral-800 text-white text-[11px] font-semibold tracking-wide uppercase">
               <Sparkles className="w-3 h-3" />
               <span>Interactive Islamic Utility • Client-Side Privacy</span>
             </div>
@@ -514,18 +514,18 @@ export default function TasbeehCounterPage() {
 
             {/* E-E-A-T Verification Badge Strip */}
             <div className="flex flex-wrap items-center gap-2 pt-0.5 text-xs text-slate-400">
-              <div className="flex items-center space-x-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-2.5 py-0.5 text-emerald-400 font-semibold text-[11px]">
+              <div className="flex items-center space-x-1.5 bg-neutral-800 border border-neutral-800 rounded-full px-2.5 py-0.5 text-white font-semibold text-[11px]">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Scholarly Verified Adhkar</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
               <div className="flex items-center space-x-1.5 text-slate-300 text-[11px]">
-                <Lock className="w-3 h-3 text-emerald-400" />
+                <Lock className="w-3 h-3 text-white" />
                 <span>Zero Data Tracking • 100% Client-Side</span>
               </div>
               <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
               <div className="flex items-center space-x-1.5 text-slate-400 text-[11px]">
-                <Award className="w-3 h-3 text-emerald-400" />
+                <Award className="w-3 h-3 text-white" />
                 <span>Instant Web Audio API • Zero Asset Lag</span>
               </div>
             </div>
@@ -533,7 +533,7 @@ export default function TasbeehCounterPage() {
 
           {/* 2-Sentence TL;DR Direct Answer Summary Card sitting cleanly above tool */}
           <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-3.5 sm:p-4 backdrop-blur-sm text-xs sm:text-sm text-slate-300 leading-relaxed">
-            <span className="font-semibold text-emerald-400 mr-1.5">Direct Overview:</span>
+            <span className="font-semibold text-white mr-1.5">Direct Overview:</span>
             The online digital tasbeeh counter provides a distraction-free, zero-latency tool for maintaining mindful remembrance of Allah (dhikr) throughout your daily routine. By combining synthesized tactile audio and gentle haptic feedback with automatic browser memory, it facilitates consistent devotion whether reciting the morning and evening adhkar or fulfilling the post-prayer Tasbeeh Fatima.
           </div>
         </header>
@@ -544,7 +544,7 @@ export default function TasbeehCounterPage() {
           className="bg-slate-900/70 border border-slate-800 rounded-2xl p-4 sm:p-5 shadow-2xl backdrop-blur-md relative overflow-hidden max-w-xl mx-auto"
         >
           {/* Subtle Ambient Background Radial Glow */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none" />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-80 h-80 bg-neutral-800 rounded-full blur-2xl pointer-events-none" />
 
           <div className="relative z-10 space-y-4">
 
@@ -552,7 +552,7 @@ export default function TasbeehCounterPage() {
             <div className="space-y-1.5">
               <label htmlFor="dhikr-selector" className="text-[11px] font-bold uppercase tracking-wider text-slate-400 flex items-center justify-between">
                 <span>Select Dhikr to Recite</span>
-                <span className="text-emerald-400 font-mono text-[10px]">Auto-Saves to Device</span>
+                <span className="text-white font-mono text-[10px]">Auto-Saves to Device</span>
               </label>
 
               <div className="relative">
@@ -566,7 +566,7 @@ export default function TasbeehCounterPage() {
                       setTarget(chosen.defaultTarget);
                     }
                   }}
-                  className="w-full appearance-none bg-slate-950/90 border border-slate-800 hover:border-slate-700 text-slate-100 px-3.5 py-2 rounded-xl text-xs font-medium focus:outline-none focus:border-emerald-500 transition-colors pr-9 cursor-pointer shadow-inner"
+                  className="w-full appearance-none bg-slate-950/90 border border-slate-800 hover:border-slate-700 text-slate-100 px-3.5 py-2 rounded-xl text-xs font-medium focus:outline-none focus:border-white transition-colors pr-9 cursor-pointer shadow-inner"
                 >
                   {DHIKR_PRESETS.map((d) => (
                     <option key={d.id} value={d.id} className="bg-slate-900 text-slate-100">
@@ -580,7 +580,7 @@ export default function TasbeehCounterPage() {
 
             {/* Compact Active Dhikr Card: Arabic, Transliteration & English Meaning */}
             <div className="bg-slate-950/80 border border-slate-800/90 rounded-xl p-3 text-center space-y-1 shadow-inner">
-              <p className="text-xl sm:text-2xl font-serif text-emerald-400 tracking-wide leading-tight py-0.5" dir="rtl">
+              <p className="text-xl sm:text-2xl font-serif text-white tracking-wide leading-tight py-0.5" dir="rtl">
                 {activeDhikr.arabic}
               </p>
               <div className="flex flex-wrap items-center justify-center gap-x-2 text-xs">
@@ -592,7 +592,7 @@ export default function TasbeehCounterPage() {
                 </span>
               </div>
               <div className="pt-1 flex items-center justify-center gap-1.5 text-[10px] text-slate-400">
-                <BookOpen className="w-3 h-3 text-emerald-400 shrink-0" />
+                <BookOpen className="w-3 h-3 text-white shrink-0" />
                 <span>{activeDhikr.reference}</span>
               </div>
             </div>
@@ -603,9 +603,9 @@ export default function TasbeehCounterPage() {
                 <span className="font-semibold uppercase tracking-wider">Target Repetitions</span>
                 <span>
                   {target > 0 ? (
-                    <span className="text-emerald-400 font-bold">{target} Count</span>
+                    <span className="text-white font-bold">{target} Count</span>
                   ) : (
-                    <span className="text-teal-400 font-bold">Unlimited Mode</span>
+                    <span className="text-white font-bold">Unlimited Mode</span>
                   )}
                 </span>
               </div>
@@ -620,7 +620,7 @@ export default function TasbeehCounterPage() {
                       onClick={() => setTarget(t)}
                       className={`py-1.5 px-1 rounded-lg text-xs font-bold transition-all ${
                         isSelected
-                          ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20'
+                          ? 'bg-white text-black shadow-md shadow-neutral-950/50'
                           : 'bg-slate-950/80 text-slate-300 hover:bg-slate-800 border border-slate-800/80'
                       }`}
                     >
@@ -651,7 +651,7 @@ export default function TasbeehCounterPage() {
                       cx="100"
                       cy="100"
                       r="90"
-                      className="stroke-emerald-500 transition-all duration-150"
+                      className="stroke-white transition-all duration-150"
                       strokeWidth="10"
                       strokeDasharray="565.48"
                       strokeDashoffset={strokeDashoffset}
@@ -666,11 +666,11 @@ export default function TasbeehCounterPage() {
                   type="button"
                   onClick={handleIncrement}
                   aria-label={`Increment Tasbeeh Count. Current count: ${count}`}
-                  className={`absolute inset-3 rounded-full bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border-2 flex flex-col items-center justify-center p-3 select-none cursor-pointer transition-all duration-100 shadow-2xl focus:outline-none focus:ring-4 focus:ring-emerald-500/30 ${
+                  className={`absolute inset-3 rounded-full bg-gradient-to-b from-slate-900 via-slate-950 to-slate-900 border-2 flex flex-col items-center justify-center p-3 select-none cursor-pointer transition-all duration-100 shadow-2xl focus:outline-none focus:ring-4 focus:ring-white/30 ${
                     isPressed
-                      ? 'scale-95 border-emerald-400 shadow-emerald-500/40 bg-slate-950'
-                      : 'border-slate-800 hover:border-emerald-500/60 shadow-slate-950'
-                  } ${justCompletedTarget ? 'ring-6 ring-emerald-500/30 border-emerald-400' : ''}`}
+                      ? 'scale-95 border-neutral-800 shadow-neutral-950/50 bg-slate-950'
+                      : 'border-slate-800 hover:border-neutral-600 shadow-slate-950'
+                  } ${justCompletedTarget ? 'ring-6 ring-white/40 border-neutral-800' : ''}`}
                 >
                   {/* Lap / Cycle Indicator */}
                   <div className="text-[10px] font-mono uppercase tracking-widest text-slate-400 mb-0.5 flex items-center gap-1">
@@ -686,14 +686,14 @@ export default function TasbeehCounterPage() {
                   {/* Target Comparison */}
                   <div className="text-[11px] font-semibold text-slate-400">
                     {target > 0 ? (
-                      <span>of <strong className="text-emerald-400 font-bold">{target}</strong></span>
+                      <span>of <strong className="text-white font-bold">{target}</strong></span>
                     ) : (
-                      <span className="text-teal-400">Continuous</span>
+                      <span className="text-white">Continuous</span>
                     )}
                   </div>
 
                   {/* Tap cue prompt */}
-                  <span className="text-[9px] text-emerald-400/90 uppercase font-bold tracking-wider mt-1">
+                  <span className="text-[9px] text-white uppercase font-bold tracking-wider mt-1">
                     Tap or Spacebar
                   </span>
                 </button>
@@ -710,7 +710,7 @@ export default function TasbeehCounterPage() {
                   title={soundEnabled ? 'Mute click audio' : 'Enable click audio'}
                   className={`p-2 rounded-lg border text-xs font-semibold transition-colors flex items-center gap-1 ${
                     soundEnabled
-                      ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                      ? 'bg-neutral-800 border-neutral-800 text-white'
                       : 'bg-slate-950 border-slate-800 text-slate-500 hover:text-slate-300'
                   }`}
                 >
@@ -724,7 +724,7 @@ export default function TasbeehCounterPage() {
                   title={vibrateEnabled ? 'Disable haptic vibration' : 'Enable haptic vibration'}
                   className={`p-2 rounded-lg border text-xs font-semibold transition-colors flex items-center gap-1 ${
                     vibrateEnabled
-                      ? 'bg-emerald-500/10 border-emerald-500/30 text-emerald-400'
+                      ? 'bg-neutral-800 border-neutral-800 text-white'
                       : 'bg-slate-950 border-slate-800 text-slate-500 hover:text-slate-300'
                   }`}
                 >
@@ -801,7 +801,7 @@ export default function TasbeehCounterPage() {
           <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-5">
             <div className="space-y-1 border-b border-slate-800 pb-3">
               <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                <Sliders className="w-5 h-5 text-emerald-400" />
+                <Sliders className="w-5 h-5 text-white" />
                 <span>How to Use the Online Tasbeeh Counter for Daily Adhkar</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-400">
@@ -811,8 +811,8 @@ export default function TasbeehCounterPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {/* Step 1 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   1
                 </div>
                 <div className="space-y-1">
@@ -824,8 +824,8 @@ export default function TasbeehCounterPage() {
               </div>
 
               {/* Step 2 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   2
                 </div>
                 <div className="space-y-1">
@@ -837,8 +837,8 @@ export default function TasbeehCounterPage() {
               </div>
 
               {/* Step 3 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   3
                 </div>
                 <div className="space-y-1">
@@ -850,8 +850,8 @@ export default function TasbeehCounterPage() {
               </div>
 
               {/* Step 4 */}
-              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-emerald-500/40 hover:border-emerald-400/80 transition-all duration-200 shadow-md shadow-emerald-950/20">
-                <div className="w-8 h-8 rounded-lg bg-emerald-500/20 border border-emerald-400/50 text-emerald-300 font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
+              <div className="flex items-start gap-3.5 p-4 rounded-xl bg-slate-900/90 border border-neutral-800 hover:border-neutral-600 transition-all duration-200 shadow-md shadow-neutral-950/50">
+                <div className="w-8 h-8 rounded-lg bg-neutral-800 border border-neutral-800 text-white font-mono font-bold flex items-center justify-center shrink-0 text-sm shadow-sm">
                   4
                 </div>
                 <div className="space-y-1">
@@ -868,7 +868,7 @@ export default function TasbeehCounterPage() {
           <div className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-5">
             <div className="space-y-1 border-b border-slate-800 pb-3">
               <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-                <Heart className="w-5 h-5 text-emerald-400" />
+                <Heart className="w-5 h-5 text-white" />
                 <span>Spiritual Significance &amp; Daily Adhkar Virtues</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-400">
@@ -881,14 +881,14 @@ export default function TasbeehCounterPage() {
               {/* Left Column: Tasbeeh Fatima Routine */}
               <div className="space-y-3">
                 <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
                   <span>Tasbeeh Fatima Routine (Post-Prayer)</span>
                 </h3>
 
                 <div className="space-y-2">
                   <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950/70 border border-slate-800">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold text-xs">
+                      <span className="px-2 py-0.5 rounded-md bg-neutral-800 border border-neutral-800 text-white font-mono font-bold text-xs">
                         33x
                       </span>
                       <span className="font-semibold text-white text-xs sm:text-sm">SubhanAllah</span>
@@ -898,7 +898,7 @@ export default function TasbeehCounterPage() {
 
                   <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950/70 border border-slate-800">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold text-xs">
+                      <span className="px-2 py-0.5 rounded-md bg-neutral-800 border border-neutral-800 text-white font-mono font-bold text-xs">
                         33x
                       </span>
                       <span className="font-semibold text-white text-xs sm:text-sm">Alhamdulillah</span>
@@ -908,7 +908,7 @@ export default function TasbeehCounterPage() {
 
                   <div className="flex items-center justify-between p-3 rounded-xl bg-slate-950/70 border border-slate-800">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold text-xs">
+                      <span className="px-2 py-0.5 rounded-md bg-neutral-800 border border-neutral-800 text-white font-mono font-bold text-xs">
                         34x
                       </span>
                       <span className="font-semibold text-white text-xs sm:text-sm">Allahu Akbar</span>
@@ -919,7 +919,7 @@ export default function TasbeehCounterPage() {
 
                 <Link
                   href="/guides/tasbih-fatima-adhkar"
-                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400 hover:text-emerald-300 hover:underline pt-1 transition-colors"
+                  className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-white hover:underline pt-1 transition-colors"
                 >
                   <span>➔ Read Full Step-by-Step Tasbih Fatima &amp; Adhkar Guide</span>
                 </Link>
@@ -928,14 +928,14 @@ export default function TasbeehCounterPage() {
               {/* Right Column: Daily Recommended Practices */}
               <div className="space-y-3">
                 <h3 className="text-sm sm:text-base font-bold text-white flex items-center gap-2">
-                  <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <CheckCircle2 className="w-4 h-4 text-white shrink-0" />
                   <span>Daily Recommended Practices</span>
                 </h3>
 
                 <div className="space-y-2">
                   <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold text-xs">
+                      <span className="px-2 py-0.5 rounded-md bg-neutral-800 border border-neutral-800 text-white font-mono font-bold text-xs">
                         100x
                       </span>
                       <span className="font-semibold text-white text-xs sm:text-sm">Astaghfirullah</span>
@@ -945,7 +945,7 @@ export default function TasbeehCounterPage() {
 
                   <div className="p-3 rounded-xl bg-slate-950/70 border border-slate-800 flex flex-col sm:flex-row sm:items-center justify-between gap-1">
                     <div className="flex items-center gap-2">
-                      <span className="px-2 py-0.5 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 font-mono font-bold text-xs">
+                      <span className="px-2 py-0.5 rounded-md bg-neutral-800 border border-neutral-800 text-white font-mono font-bold text-xs">
                         100x
                       </span>
                       <span className="font-semibold text-white text-xs sm:text-sm">Salawat</span>
@@ -961,14 +961,14 @@ export default function TasbeehCounterPage() {
               {/* Card 1: Sahih Muslim */}
               <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-4 shadow-sm flex flex-col justify-between h-full">
                 <div>
-                  <div className="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-emerald-500/20">
+                  <div className="bg-neutral-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-neutral-800">
                     📖 Sahih Reference
                   </div>
                   <p className="text-slate-300 text-sm italic leading-relaxed">
                     "Whoever glorifies Allah 33 times after every prayer, praises Him 33 times, and declares His greatness 33 times... their sins will be forgiven even if they are like the foam of the sea."
                   </p>
                 </div>
-                <span className="text-emerald-400 font-medium text-xs mt-3 block not-italic">
+                <span className="text-white font-medium text-xs mt-3 block not-italic">
                   — Sahih Muslim 597
                 </span>
               </div>
@@ -976,14 +976,14 @@ export default function TasbeehCounterPage() {
               {/* Card 2: Sahih al-Bukhari */}
               <div className="bg-slate-900/90 border border-slate-800 rounded-xl p-4 shadow-sm flex flex-col justify-between h-full">
                 <div>
-                  <div className="bg-emerald-500/10 text-emerald-400 text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-emerald-500/20">
+                  <div className="bg-neutral-800 text-white text-xs font-semibold px-2.5 py-1 rounded-full w-fit mb-2 border border-neutral-800">
                     📖 Sahih Reference
                   </div>
                   <p className="text-slate-300 text-sm italic leading-relaxed">
                     "The similitude of one who remembers his Lord and one who does not remember his Lord is like that of the living and the dead."
                   </p>
                 </div>
-                <span className="text-emerald-400 font-medium text-xs mt-3 block not-italic">
+                <span className="text-white font-medium text-xs mt-3 block not-italic">
                   — Sahih al-Bukhari 6407
                 </span>
               </div>
@@ -994,7 +994,7 @@ export default function TasbeehCounterPage() {
         {/* SECTION: DEMO VIDEO SECTION (PRIVACY-FOCUSED VIDEO FACADE BEFORE FAQs) */}
         <section aria-label="Demonstration Video" className="bg-slate-900/50 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-4">
           <div className="space-y-1 border-b border-slate-800 pb-3">
-            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-[11px] font-semibold">
+            <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-neutral-800 border border-neutral-800 text-white text-[11px] font-semibold">
               <Video className="w-3 h-3" />
               <span>Interactive Walkthrough</span>
             </div>
@@ -1014,20 +1014,20 @@ export default function TasbeehCounterPage() {
                 className="group relative w-full h-full cursor-pointer select-none flex items-center justify-center bg-gradient-to-tr from-slate-950 via-slate-900 to-slate-950"
               >
                 {/* Background Artwork / Simulated Poster */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-emerald-900/20 via-slate-950/70 to-slate-950" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-neutral-900 via-neutral-950 to-black" />
 
                 {/* Decorative subtle counter graphic preview */}
                 <div className="absolute inset-0 flex items-center justify-center opacity-20 pointer-events-none">
-                  <div className="w-56 h-56 rounded-full border-4 border-dashed border-emerald-500/40 animate-[spin_60s_linear_infinite]" />
+                  <div className="w-56 h-56 rounded-full border-4 border-dashed border-neutral-800 animate-[spin_60s_linear_infinite]" />
                 </div>
 
                 {/* Center Content & Large Play Button */}
                 <div className="relative z-10 flex flex-col items-center justify-center space-y-3 p-4 text-center">
-                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-emerald-500 group-hover:bg-emerald-400 text-slate-950 flex items-center justify-center shadow-lg shadow-emerald-500/30 group-hover:scale-110 transition-all duration-200">
+                  <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white text-black group-hover:bg-neutral-800 text-slate-950 flex items-center justify-center shadow-lg shadow-neutral-950/50 group-hover:scale-110 transition-all duration-200">
                     <Play className="w-7 h-7 sm:w-9 sm:h-9 fill-slate-950 ml-1" />
                   </div>
                   <div className="space-y-1">
-                    <p className="text-sm sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                    <p className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
                       Watch Video Demonstration (1:45 min)
                     </p>
                     <p className="text-[11px] text-slate-400">
@@ -1038,7 +1038,7 @@ export default function TasbeehCounterPage() {
 
                 {/* Bottom badge */}
                 <div className="absolute bottom-3 left-3 right-3 flex items-center justify-between text-[11px] text-slate-400 z-10">
-                  <span className="bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800 text-emerald-400 font-mono">
+                  <span className="bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800 text-white font-mono">
                     HD Walkthrough
                   </span>
                   <span className="bg-slate-900/80 px-2 py-0.5 rounded border border-slate-800 font-mono">
@@ -1062,7 +1062,7 @@ export default function TasbeehCounterPage() {
         <section className="bg-slate-900/40 border border-slate-800 rounded-2xl p-5 sm:p-7 space-y-5">
           <div className="space-y-1 border-b border-slate-800 pb-3">
             <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-              <HelpCircle className="w-5 h-5 text-emerald-400" />
+              <HelpCircle className="w-5 h-5 text-white" />
               <span>Frequently Asked Questions</span>
             </h2>
             <p className="text-xs sm:text-sm text-slate-400">
@@ -1081,11 +1081,11 @@ export default function TasbeehCounterPage() {
                   <button
                     type="button"
                     onClick={() => setOpenFaqIndex(isOpen ? null : idx)}
-                    className="w-full text-left p-3.5 sm:p-4 flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-white hover:text-emerald-300 transition-colors"
+                    className="w-full text-left p-3.5 sm:p-4 flex items-center justify-between gap-4 font-bold text-xs sm:text-sm text-white hover:text-white transition-colors"
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`w-4 h-4 text-emerald-400 shrink-0 transition-transform duration-200 ${
+                      className={`w-4 h-4 text-white shrink-0 transition-transform duration-200 ${
                         isOpen ? 'rotate-180' : ''
                       }`}
                     />
@@ -1106,7 +1106,7 @@ export default function TasbeehCounterPage() {
           <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
             <Link
               href="/tools/"
-              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-emerald-400 hover:text-emerald-300 transition-colors group"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-white hover:text-white transition-colors group"
             >
               <ArrowRight className="w-4 h-4 rotate-180 transition-transform group-hover:-translate-x-1" />
               <span>Back to All Islamic Tools Hub</span>
@@ -1121,47 +1121,47 @@ export default function TasbeehCounterPage() {
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
             <Link
               href="/guides/namaz-guide"
-              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl transition-all flex flex-col justify-between"
+              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl transition-all flex flex-col justify-between"
             >
               <div className="space-y-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-emerald-400">Worship Guide</span>
-                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-white">Worship Guide</span>
+                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-white transition-colors">
                   Complete Namaz Step-by-Step
                 </h3>
                 <p className="text-[11px] text-slate-400 line-clamp-2">
                   Learn proper postures, recitations, and post-prayer adhkar sequences.
                 </p>
               </div>
-              <span className="text-[11px] font-semibold text-emerald-400 mt-2.5 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span className="text-[11px] font-semibold text-white mt-2.5 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                 Read Guide →
               </span>
             </Link>
 
             <Link
               href="/duas/"
-              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl transition-all flex flex-col justify-between"
+              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl transition-all flex flex-col justify-between"
             >
               <div className="space-y-1">
-                <span className="text-[10px] font-bold uppercase tracking-wider text-teal-400">Supplications</span>
-                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <span className="text-[10px] font-bold uppercase tracking-wider text-white">Supplications</span>
+                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-white transition-colors">
                   Daily Masnoon Duas Hub
                 </h3>
                 <p className="text-[11px] text-slate-400 line-clamp-2">
                   Authentic morning, evening, travel, and distress supplications from the Sunnah.
                 </p>
               </div>
-              <span className="text-[11px] font-semibold text-teal-400 mt-2.5 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
+              <span className="text-[11px] font-semibold text-white mt-2.5 inline-flex items-center gap-1 group-hover:translate-x-1 transition-transform">
                 Browse Duas →
               </span>
             </Link>
 
             <Link
               href="/ayats/"
-              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl transition-all flex flex-col justify-between"
+              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl transition-all flex flex-col justify-between"
             >
               <div className="space-y-1">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-purple-400">Quranic Ayats</span>
-                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-white transition-colors">
                   Key Quranic Verses by Topic
                 </h3>
                 <p className="text-[11px] text-slate-400 line-clamp-2">
@@ -1175,11 +1175,11 @@ export default function TasbeehCounterPage() {
 
             <Link
               href="/tools/qibla-finder/"
-              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-xl transition-all flex flex-col justify-between"
+              className="group p-3.5 bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-xl transition-all flex flex-col justify-between"
             >
               <div className="space-y-1">
                 <span className="text-[10px] font-bold uppercase tracking-wider text-amber-400">Companion Tool</span>
-                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-xs sm:text-sm font-bold text-white group-hover:text-white transition-colors">
                   Online Qibla Finder
                 </h3>
                 <p className="text-[11px] text-slate-400 line-clamp-2">

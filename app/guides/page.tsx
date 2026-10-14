@@ -61,8 +61,8 @@ const categoriesData: CategoryGroup[] = [
         category: 'salah',
         categoryLabel: 'Daily Salah',
         badge: 'Daily Fard',
-        badgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-        icon: <Sparkles className="w-4 h-4 text-emerald-400" />,
+        badgeColor: 'text-white bg-neutral-800 border-neutral-800',
+        icon: <Sparkles className="w-4 h-4 text-white" />,
         readTime: '12 min',
         description: 'Complete illustrated manual for 5 daily prayers with Wudu rules, posture breakdowns, and Arabic transliterations.'
       },
@@ -97,8 +97,8 @@ const categoriesData: CategoryGroup[] = [
         category: 'salah',
         categoryLabel: 'Voluntary',
         badge: 'Voluntary',
-        badgeColor: 'text-teal-400 bg-teal-500/10 border-teal-500/20',
-        icon: <Sun className="w-4 h-4 text-teal-400" />,
+        badgeColor: 'text-white bg-neutral-800 border-neutral-800',
+        icon: <Sun className="w-4 h-4 text-white" />,
         readTime: '7 min',
         description: 'Guide to daily voluntary Sunnah prayers including post-sunrise Ishraq, forenoon Duha (Chasht), and post-Maghrib Awwabin.'
       }
@@ -151,8 +151,8 @@ const categoriesData: CategoryGroup[] = [
         category: 'dhikr',
         categoryLabel: 'Theology',
         badge: 'Asma ul Husna',
-        badgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-        icon: <Star className="w-4 h-4 text-emerald-400" />,
+        badgeColor: 'text-white bg-neutral-800 border-neutral-800',
+        icon: <Star className="w-4 h-4 text-white" />,
         readTime: '18 min',
         description: 'Complete collection of the 99 Divine Names with Arabic script, transliterations, meanings, and practical daily reflections.'
       },
@@ -163,8 +163,8 @@ const categoriesData: CategoryGroup[] = [
         category: 'dhikr',
         categoryLabel: 'Foundations',
         badge: 'Core Foundations',
-        badgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-        icon: <Layers className="w-4 h-4 text-emerald-400" />,
+        badgeColor: 'text-white bg-neutral-800 border-neutral-800',
+        icon: <Layers className="w-4 h-4 text-white" />,
         readTime: '16 min',
         description: 'Comprehensive overview of the non-negotiable fundamentals: Shahada, Salah, Zakat, Sawm (Fasting), and Hajj pilgrimage with full SILO links.'
       },
@@ -175,8 +175,8 @@ const categoriesData: CategoryGroup[] = [
         category: 'dhikr',
         categoryLabel: 'Daily Remembrances',
         badge: 'Daily Adhkar & Duas',
-        badgeColor: 'text-emerald-400 bg-emerald-500/10 border-emerald-500/20',
-        icon: <Heart className="w-4 h-4 text-emerald-400" />,
+        badgeColor: 'text-white bg-neutral-800 border-neutral-800',
+        icon: <Heart className="w-4 h-4 text-white" />,
         readTime: '14 min',
         description: 'Post-Salah and bedtime 33-33-34 glorification gifted to Sayyida Fatima (RA), plus morning, evening, and bedtime adhkar with interactive counters.'
       }
@@ -334,23 +334,23 @@ export default function WorshipGuidesPage() {
       {/* SECTION 1: HEADER & E-E-A-T (TRUST ENGINE) */}
       <header className="relative border-b border-neutral-800 bg-black pt-8 pb-10 overflow-hidden">
         {/* Ambient background glow */}
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-emerald-500/5 blur-3xl pointer-events-none -z-10 rounded-full" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-7xl h-64 bg-neutral-800 blur-3xl pointer-events-none -z-10 rounded-full" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-5">
           {/* Visible Breadcrumb Path */}
           <nav aria-label="Breadcrumb" className="flex items-center space-x-2 text-xs font-medium text-slate-400">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">
+            <Link href="/" className="hover:text-white transition-colors">
               Home
             </Link>
             <span className="text-slate-600">/</span>
-            <span className="text-emerald-400 font-semibold" aria-current="page">
+            <span className="text-white font-semibold" aria-current="page">
               Worship Guides
             </span>
           </nav>
 
           {/* E-E-A-T Verified Badge */}
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-medium shadow-sm">
-            <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-800 border border-neutral-800 text-white text-xs font-medium shadow-sm">
+            <ShieldCheck className="w-4 h-4 text-white shrink-0" />
             <span>Verified by Islamic Scholars • Cited with Sahih Hadith &amp; Quranic Sources</span>
           </div>
 
@@ -358,7 +358,7 @@ export default function WorshipGuidesPage() {
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div className="max-w-3xl">
               <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white leading-tight">
-                Islamic Worship Guides — <span className="text-emerald-400">Step-by-Step Practical Instructions</span> &amp; Authentic Sunnah Etiquettes
+                Islamic Worship Guides — <span className="text-white">Step-by-Step Practical Instructions</span> &amp; Authentic Sunnah Etiquettes
               </h1>
             </div>
 
@@ -370,7 +370,7 @@ export default function WorshipGuidesPage() {
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 placeholder="Filter 11 guides in real-time..."
-                className="w-full bg-slate-950/90 border border-slate-800 text-slate-200 placeholder-slate-500 text-xs sm:text-sm rounded-xl pl-9 pr-8 py-3 focus:outline-none focus:border-emerald-500/70 focus:ring-1 focus:ring-emerald-500/50 transition-colors shadow-inner"
+                className="w-full bg-slate-950/90 border border-slate-800 text-slate-200 placeholder-slate-500 text-xs sm:text-sm rounded-xl pl-9 pr-8 py-3 focus:outline-none focus:border-white focus:ring-1 focus:ring-white transition-colors shadow-inner"
                 aria-label="Filter worship guides"
               />
               {searchQuery && (
@@ -387,26 +387,26 @@ export default function WorshipGuidesPage() {
 
           {/* Concise 2-Sentence Overview Card (Optimized for AI Overviews / GEO) */}
           <div className="p-5 sm:p-6 rounded-2xl bg-slate-900/70 border border-slate-800/80 backdrop-blur-md shadow-xl relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-1.5 h-full bg-emerald-500" />
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-white text-black" />
             <p className="text-xs sm:text-sm md:text-base text-slate-300 leading-relaxed">
               The <strong className="text-white font-semibold">Islamic Worship Guides directory</strong> is an authenticated, scholarly verified repository offering comprehensive step-by-step instructions for daily prayers, sacred pilgrimages, Sunnah supplications, and communal rites. Designed for new Muslims and practicing believers alike, every tutorial integrates classical Fiqh rulings with direct citations from Sahih al-Bukhari, Sahih Muslim, and the Holy Quran.
             </p>
 
             <div className="mt-4 pt-3 border-t border-slate-800/80 flex flex-wrap items-center gap-4 text-xs text-slate-400">
               <div className="flex items-center gap-1.5">
-                <CheckCircle2 className="w-3.5 h-3.5 text-emerald-400" />
+                <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                 <span>11 Practical Guides</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <BookOpen className="w-3.5 h-3.5 text-emerald-400" />
+                <BookOpen className="w-3.5 h-3.5 text-white" />
                 <span>Sahih Hadith Citations</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Layers className="w-3.5 h-3.5 text-emerald-400" />
+                <Layers className="w-3.5 h-3.5 text-white" />
                 <span>4 Sub-Topic Silos</span>
               </div>
               <div className="flex items-center gap-1.5">
-                <Printer className="w-3.5 h-3.5 text-emerald-400" />
+                <Printer className="w-3.5 h-3.5 text-white" />
                 <span>Print &amp; PDF Friendly</span>
               </div>
             </div>
@@ -419,9 +419,9 @@ export default function WorshipGuidesPage() {
 
         {/* SECTION 3: INTERNAL LINKING & "START HERE" PATH */}
         <section aria-labelledby="start-here-heading">
-          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-emerald-950/80 via-slate-900/90 to-slate-900 border border-emerald-500/30 p-5 sm:p-6 shadow-xl backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+          <div className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-neutral-900 via-neutral-900 to-neutral-950 border border-neutral-800 p-5 sm:p-6 shadow-xl backdrop-blur-md flex flex-col sm:flex-row sm:items-center justify-between gap-4">
             <div className="flex items-center gap-3.5">
-              <div className="p-3 rounded-xl bg-emerald-500/20 text-emerald-300 shrink-0">
+              <div className="p-3 rounded-xl bg-neutral-800 text-white shrink-0">
                 <Sparkles className="w-5 h-5" />
               </div>
               <div>
@@ -436,7 +436,7 @@ export default function WorshipGuidesPage() {
 
             <Link
               href="/guides/namaz"
-              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs sm:text-sm shrink-0 shadow-lg shadow-emerald-900/30 hover:scale-[1.02] transition-all focus:outline-none focus:ring-2 focus:ring-emerald-400"
+              className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-white hover:bg-neutral-200 text-black font-semibold font-bold text-xs sm:text-sm shrink-0 shadow-lg shadow-neutral-950/50 hover:scale-[1.02] transition-all focus:outline-none focus:ring-2 focus:ring-white"
             >
               <span>Open Namaz Guide</span>
               <ArrowRight className="w-4 h-4" />
@@ -463,7 +463,7 @@ export default function WorshipGuidesPage() {
                       {category.title}
                     </h2>
                   </div>
-                  <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/20">
+                  <span className="text-xs font-semibold text-white bg-neutral-800 px-2.5 py-1 rounded-full border border-neutral-800">
                     {category.badge}
                   </span>
                 </div>
@@ -477,7 +477,7 @@ export default function WorshipGuidesPage() {
                 {category.guides.map((guide) => (
                   <article
                     key={guide.id}
-                    className="flex flex-col p-4 rounded-xl bg-slate-950/70 border border-slate-800/80 hover:border-emerald-500/50 hover:bg-slate-900/90 transition-all duration-150 group justify-between space-y-3"
+                    className="flex flex-col p-4 rounded-xl bg-slate-950/70 border border-slate-800/80 hover:border-neutral-600 hover:bg-slate-900/90 transition-all duration-150 group justify-between space-y-3"
                   >
                     <div>
                       {/* Meta Top: Icon + Badge + Read Time */}
@@ -499,7 +499,7 @@ export default function WorshipGuidesPage() {
                       </div>
 
                       {/* Title */}
-                      <h3 className="text-xs sm:text-sm font-bold text-slate-100 group-hover:text-emerald-300 transition-colors leading-snug">
+                      <h3 className="text-xs sm:text-sm font-bold text-slate-100 group-hover:text-white transition-colors leading-snug">
                         <Link href={guide.href} className="focus:outline-none">
                           {guide.title}
                         </Link>
@@ -515,7 +515,7 @@ export default function WorshipGuidesPage() {
                     <div className="pt-2.5 border-t border-slate-900 flex items-center justify-between">
                       <Link
                         href={guide.href}
-                        className="inline-flex items-center gap-1 text-xs font-bold text-emerald-400 hover:text-emerald-300 group-hover:translate-x-0.5 transition-all"
+                        className="inline-flex items-center gap-1 text-xs font-bold text-white hover:text-white group-hover:translate-x-0.5 transition-all"
                       >
                         <span>Read Guide</span>
                         <ArrowRight className="w-3.5 h-3.5" />
@@ -537,7 +537,7 @@ export default function WorshipGuidesPage() {
               <button
                 type="button"
                 onClick={() => setSearchQuery('')}
-                className="mt-2 text-xs text-emerald-400 hover:underline"
+                className="mt-2 text-xs text-white hover:underline"
               >
                 Clear filter &amp; view all 11 guides
               </button>
@@ -549,7 +549,7 @@ export default function WorshipGuidesPage() {
         <section aria-labelledby="faq-heading" className="mt-12 pt-8 border-t border-slate-800/80 space-y-4">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
             <div className="space-y-1">
-              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-emerald-400">
+              <div className="inline-flex items-center gap-1.5 text-xs font-semibold text-white">
                 <HelpCircle className="w-3.5 h-3.5" />
                 <span>Scholarly Inquiries</span>
               </div>
@@ -573,12 +573,12 @@ export default function WorshipGuidesPage() {
                   <button
                     type="button"
                     onClick={() => toggleFaq(index)}
-                    className="w-full px-4 py-3.5 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-semibold text-slate-200 hover:text-emerald-300 focus:outline-none"
+                    className="w-full px-4 py-3.5 text-left flex items-center justify-between gap-3 text-xs sm:text-sm font-semibold text-slate-200 hover:text-white focus:outline-none"
                     aria-expanded={isOpen}
                   >
                     <span>{faq.q}</span>
                     <ChevronDown
-                      className={`w-4 h-4 text-emerald-400 shrink-0 transition-transform duration-200 ${
+                      className={`w-4 h-4 text-white shrink-0 transition-transform duration-200 ${
                         isOpen ? '-rotate-180' : ''
                       }`}
                     />

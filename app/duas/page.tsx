@@ -375,13 +375,13 @@ export default function DuasHubPage({
         <header className="space-y-6">
           {/* Breadcrumb Navigation (Home > Daily Duas Hub) */}
           <nav className="flex items-center text-sm font-medium text-slate-400 space-x-2 flex-wrap gap-y-2">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-4 h-4 text-slate-600 shrink-0" />
             <span className="text-slate-200 font-semibold">Daily Duas Hub</span>
             {safePage > 1 && (
               <>
                 <ChevronRight className="w-4 h-4 text-slate-600 shrink-0" />
-                <span className="text-emerald-400 font-medium">Page {safePage}</span>
+                <span className="text-white font-medium">Page {safePage}</span>
               </>
             )}
           </nav>
@@ -390,7 +390,7 @@ export default function DuasHubPage({
           <div className="space-y-3">
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight leading-tight">
               Daily Duas & Authentic <br className="hidden sm:block" />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-emerald-200">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-neutral-900 via-neutral-900 to-neutral-950">
                 Supplications Directory Hub
               </span>
             </h1>
@@ -406,21 +406,21 @@ export default function DuasHubPage({
           {/* Visible Expert Author / Scholarly Board Reviewer Badge */}
           <div className="flex flex-wrap items-center gap-4 text-sm text-slate-400 border-y border-slate-800/60 py-4">
             <div className="flex items-center">
-              <BookOpen className="w-4 h-4 mr-2 text-emerald-400" />
+              <BookOpen className="w-4 h-4 mr-2 text-white" />
               <span>Sourced from Hisnul Muslim & Sahihayn</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700"></div>
             <div className="flex items-center">
-              <Sparkles className="w-4 h-4 mr-2 text-emerald-400" />
+              <Sparkles className="w-4 h-4 mr-2 text-white" />
               <span>Arabic • Urdu • English</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700"></div>
             <Link 
               href="/about/scholarly-board/" 
-              className="flex items-center space-x-1.5 bg-emerald-400/10 border border-emerald-400/20 rounded-full px-3.5 py-1 hover:bg-emerald-400/20 transition-colors group"
+              className="flex items-center space-x-1.5 bg-neutral-800 border border-neutral-800 rounded-full px-3.5 py-1 hover:bg-neutral-800 transition-colors group"
             >
-              <ShieldCheck className="w-4 h-4 text-emerald-400 group-hover:scale-110 transition-transform" />
-              <span className="text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+              <ShieldCheck className="w-4 h-4 text-white group-hover:scale-110 transition-transform" />
+              <span className="text-white text-xs font-semibold tracking-wide uppercase">
                 Reviewed by Scholarly Advisory Board
               </span>
             </Link>
@@ -428,11 +428,11 @@ export default function DuasHubPage({
         </header>
 
         {/* SECTION 3: "START HERE" GUIDED PATH BOX */}
-        <section className="bg-gradient-to-r from-emerald-950/40 via-slate-900/60 to-slate-900/60 border border-emerald-500/30 rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-lg">
-          <div className="absolute right-0 top-0 -mt-8 -mr-8 w-48 h-48 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
+        <section className="bg-gradient-to-r from-neutral-900 via-slate-900/60 to-slate-900/60 border border-neutral-800 rounded-2xl p-6 md:p-8 relative overflow-hidden shadow-lg">
+          <div className="absolute right-0 top-0 -mt-8 -mr-8 w-48 h-48 bg-neutral-800 rounded-full blur-3xl pointer-events-none" />
           <div className="relative z-10 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
             <div className="space-y-2 max-w-3xl">
-              <div className="flex items-center gap-2 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+              <div className="flex items-center gap-2 text-white text-xs font-bold uppercase tracking-wider">
                 <Flame className="w-4 h-4" />
                 <span>Beginner's Spiritual Roadmap</span>
               </div>
@@ -446,7 +446,7 @@ export default function DuasHubPage({
             <div className="flex flex-wrap gap-3 shrink-0">
               <Link
                 href="/duas/morning-azkar"
-                className="px-4 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition-colors flex items-center gap-1.5 shadow-md shadow-emerald-950/30"
+                className="px-4 py-2.5 bg-white text-black hover:bg-neutral-800 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition-colors flex items-center gap-1.5 shadow-md shadow-neutral-950/50"
               >
                 Morning Azkar <ArrowRight className="w-3.5 h-3.5" />
               </Link>
@@ -473,14 +473,14 @@ export default function DuasHubPage({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
             <div>
               <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Bookmark className="w-6 h-6 text-emerald-400" />
+                <Bookmark className="w-6 h-6 text-white" />
                 Supplications Directory & Sub-Topic Silos
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
                 Showing page {safePage} of {totalPages} • Filter by topic or search live across Arabic terms, Urdu phonetic titles, and English translations.
               </p>
             </div>
-            <div className="text-xs font-semibold text-emerald-400/90 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 self-start sm:self-auto">
+            <div className="text-xs font-semibold text-white bg-neutral-800 px-3 py-1 rounded-full border border-neutral-800 self-start sm:self-auto">
               {totalItems} Supplications Total
             </div>
           </div>
@@ -494,11 +494,11 @@ export default function DuasHubPage({
                 name="q"
                 defaultValue={searchQuery}
                 placeholder="Search by English topic, Urdu title (e.g. 'Safar', 'Qunoot'), or Arabic keyword..."
-                className="w-full pl-12 pr-24 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-sm sm:text-base"
+                className="w-full pl-12 pr-24 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all text-sm sm:text-base"
               />
               <button 
                 type="submit" 
-                className="absolute right-3 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold rounded-lg transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 px-3 py-1.5 bg-white text-black hover:bg-neutral-800 text-slate-950 text-xs font-bold rounded-lg transition-colors"
               >
                 Search
               </button>
@@ -514,7 +514,7 @@ export default function DuasHubPage({
                     href={createCategoryUrl(tab.id)}
                     className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
                       isActive
-                        ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20 font-bold'
+                        ? 'bg-white text-black shadow-md shadow-neutral-950/50 font-bold'
                         : 'bg-slate-950/70 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800'
                     }`}
                   >
@@ -525,7 +525,7 @@ export default function DuasHubPage({
             </div>
 
             <div className="flex items-center justify-between text-xs text-slate-400 px-1">
-              <span>Displaying items <strong className="text-emerald-400">{startIndex + 1}</strong> to <strong className="text-emerald-400">{Math.min(startIndex + pageSize, totalItems)}</strong> of {totalItems}</span>
+              <span>Displaying items <strong className="text-white">{startIndex + 1}</strong> to <strong className="text-white">{Math.min(startIndex + pageSize, totalItems)}</strong> of {totalItems}</span>
               {searchQuery && <span>Keyword: "{searchQuery}"</span>}
             </div>
           </div>
@@ -540,7 +540,7 @@ export default function DuasHubPage({
               </p>
               <Link
                 href="/duas/"
-                className="inline-block px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg text-sm font-bold transition-colors"
+                className="inline-block px-4 py-2 bg-white text-black hover:bg-neutral-800 text-slate-950 rounded-lg text-sm font-bold transition-colors"
               >
                 Reset All Filters
               </Link>
@@ -551,12 +551,12 @@ export default function DuasHubPage({
                 <Link
                   key={dua.id}
                   href={dua.slug}
-                  className="group bg-slate-900/60 border border-slate-800/90 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20 relative overflow-hidden"
+                  className="group bg-slate-900/60 border border-slate-800/90 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50 relative overflow-hidden"
                 >
                   <div className="space-y-4">
                     {/* Header with category badge */}
                     <div className="flex items-center justify-between gap-2">
-                      <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full">
+                      <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-neutral-800 border border-neutral-800 px-2.5 py-0.5 rounded-full">
                         {dua.categoryLabel}
                       </span>
                       {dua.badge && (
@@ -568,14 +568,14 @@ export default function DuasHubPage({
 
                     {/* Multilingual Titles */}
                     <div>
-                      <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors mb-1">
+                      <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors mb-1">
                         {dua.titleEnglish}
                       </h3>
-                      <div className="text-xs font-semibold text-emerald-400/90 mb-2">
+                      <div className="text-xs font-semibold text-white mb-2">
                         {dua.titleUrdu}
                       </div>
                       <div 
-                        className="text-right text-xl font-arabic text-emerald-200/90 py-2 border-y border-slate-800/60 my-2 leading-relaxed" 
+                        className="text-right text-xl font-arabic text-white py-2 border-y border-slate-800/60 my-2 leading-relaxed" 
                         dir="rtl"
                       >
                         {dua.titleArabic}
@@ -591,10 +591,10 @@ export default function DuasHubPage({
                   {/* Card Footer: Source & Link Indicator */}
                   <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs">
                     <span className="text-slate-500 flex items-center gap-1.5">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-emerald-500" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-white" />
                       {dua.source}
                     </span>
-                    <span className="text-emerald-400 font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
+                    <span className="text-white font-semibold flex items-center gap-1 group-hover:translate-x-0.5 transition-transform">
                       View Dua <ArrowUpRight className="w-3.5 h-3.5" />
                     </span>
                   </div>
@@ -610,7 +610,7 @@ export default function DuasHubPage({
               {safePage > 1 ? (
                 <Link
                   href={createPageUrl(safePage - 1)}
-                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-emerald-400 text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-white text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
                 >
                   <ChevronLeft className="w-4 h-4" /> Previous
                 </Link>
@@ -623,7 +623,7 @@ export default function DuasHubPage({
               {/* Page Number Indicators: "Page X of Y" and [1] [2] [3] ... [9] */}
               <div className="flex items-center gap-1.5 flex-wrap justify-center">
                 <span className="text-xs sm:text-sm text-slate-400 font-medium mr-2 hidden md:inline-block">
-                  Page <strong className="text-emerald-400">{safePage}</strong> of <strong className="text-white">{totalPages}</strong>
+                  Page <strong className="text-white">{safePage}</strong> of <strong className="text-white">{totalPages}</strong>
                 </span>
 
                 {pageNumbers.map((num) => {
@@ -634,7 +634,7 @@ export default function DuasHubPage({
                       href={createPageUrl(num)}
                       className={`w-9 h-9 flex items-center justify-center rounded-xl text-xs sm:text-sm font-semibold transition-all ${
                         isCurrent
-                          ? 'bg-emerald-500 text-slate-950 font-bold shadow-md shadow-emerald-500/20 ring-2 ring-emerald-400/50'
+                          ? 'bg-white text-black font-bold shadow-md shadow-neutral-950/50 ring-2 ring-white/40'
                           : 'bg-slate-950/80 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800'
                       }`}
                       aria-label={`Go to page ${num}`}
@@ -650,7 +650,7 @@ export default function DuasHubPage({
               {safePage < totalPages ? (
                 <Link
                   href={createPageUrl(safePage + 1)}
-                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-emerald-400 text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
+                  className="px-4 py-2 bg-slate-800/80 hover:bg-slate-700 hover:text-white text-slate-200 border border-slate-700/80 rounded-xl text-sm font-semibold transition-all flex items-center gap-1.5 shadow-sm"
                 >
                   Next <ChevronRight className="w-4 h-4" />
                 </Link>
@@ -666,7 +666,7 @@ export default function DuasHubPage({
         {/* SECTION 2: TOPICAL CURATED SILOS OVERVIEW */}
         <section className="bg-slate-900/40 border border-slate-800 rounded-3xl p-6 sm:p-8 space-y-6">
           <h2 className="text-xl sm:text-2xl font-bold text-white flex items-center gap-2">
-            <Layers className="w-6 h-6 text-emerald-400" />
+            <Layers className="w-6 h-6 text-white" />
             Curated Thematic Collections (Silos)
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -674,7 +674,7 @@ export default function DuasHubPage({
             {/* Silo 1: Most Searched */}
             <div className="bg-slate-950/70 border border-slate-800/80 rounded-xl p-5 space-y-3 flex flex-col justify-between">
               <div>
-                <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 mb-3">
+                <div className="w-10 h-10 rounded-lg bg-neutral-800 border border-neutral-800 flex items-center justify-center text-white mb-3">
                   <Flame className="w-5 h-5" />
                 </div>
                 <h3 className="text-base font-bold text-white">Most Searched</h3>
@@ -682,7 +682,7 @@ export default function DuasHubPage({
                   High-frequency daily queries including Dua e Qunoot, Safar Ki Dua, and Istikhara.
                 </p>
               </div>
-              <Link href="/duas?category=most-searched" className="pt-3 border-t border-slate-800/60 text-xs text-emerald-400 font-semibold flex items-center justify-between hover:text-emerald-300">
+              <Link href="/duas?category=most-searched" className="pt-3 border-t border-slate-800/60 text-xs text-white font-semibold flex items-center justify-between hover:text-white">
                 <span>Explore Silo</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </Link>
@@ -699,7 +699,7 @@ export default function DuasHubPage({
                   Morning, evening, post-prayer tasbeeh, and home entrance/exit supplications.
                 </p>
               </div>
-              <Link href="/duas?category=daily-routine" className="pt-3 border-t border-slate-800/60 text-xs text-emerald-400 font-semibold flex items-center justify-between hover:text-emerald-300">
+              <Link href="/duas?category=daily-routine" className="pt-3 border-t border-slate-800/60 text-xs text-white font-semibold flex items-center justify-between hover:text-white">
                 <span>Fortress of Believer</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </Link>
@@ -716,7 +716,7 @@ export default function DuasHubPage({
                   Ruqyah Shariah, relief from depression and debt, and sickness shifa prayers.
                 </p>
               </div>
-              <Link href="/duas?category=protection" className="pt-3 border-t border-slate-800/60 text-xs text-emerald-400 font-semibold flex items-center justify-between hover:text-emerald-300">
+              <Link href="/duas?category=protection" className="pt-3 border-t border-slate-800/60 text-xs text-white font-semibold flex items-center justify-between hover:text-white">
                 <span>Divine Shield & Cure</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </Link>
@@ -733,7 +733,7 @@ export default function DuasHubPage({
                   Ramadan Suhoor & Iftar, Laylatul Qadr, and repentance via Sayyidul Istighfar.
                 </p>
               </div>
-              <Link href="/duas?category=forgiveness" className="pt-3 border-t border-slate-800/60 text-xs text-emerald-400 font-semibold flex items-center justify-between hover:text-emerald-300">
+              <Link href="/duas?category=forgiveness" className="pt-3 border-t border-slate-800/60 text-xs text-white font-semibold flex items-center justify-between hover:text-white">
                 <span>Blessed Seasons</span>
                 <ChevronRight className="w-3.5 h-3.5" />
               </Link>
@@ -746,59 +746,59 @@ export default function DuasHubPage({
         <section className="bg-slate-900/30 border border-slate-800 rounded-2xl p-6 md:p-8 space-y-4">
           <div className="flex items-center justify-between">
             <h3 className="text-lg font-bold text-white">Explore Connected Islamic Knowledge Hubs</h3>
-            <span className="text-xs text-emerald-400 font-semibold uppercase tracking-wider">Related Resources</span>
+            <span className="text-xs text-white font-semibold uppercase tracking-wider">Related Resources</span>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <Link
               href="/ayats/"
-              className="bg-slate-950/80 border border-slate-800/80 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-900 transition-all group flex flex-col justify-between"
+              className="bg-slate-950/80 border border-slate-800/80 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-900 transition-all group flex flex-col justify-between"
             >
               <div>
-                <div className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">Quranic Verses</div>
-                <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <div className="text-white text-xs font-bold uppercase tracking-wider mb-1">Quranic Verses</div>
+                <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
                   Quranic Ayats & Thematic Tafsir Hub
                 </h4>
                 <p className="text-xs text-slate-400 mt-2">
                   Browse significant Quranic Ayats for solace, guidance, and spiritual reflection with authentic explanations.
                 </p>
               </div>
-              <div className="pt-4 text-xs font-semibold text-emerald-400 flex items-center gap-1">
+              <div className="pt-4 text-xs font-semibold text-white flex items-center gap-1">
                 Explore Ayats Hub <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </Link>
 
             <Link
               href="/tools/"
-              className="bg-slate-950/80 border border-slate-800/80 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-900 transition-all group flex flex-col justify-between"
+              className="bg-slate-950/80 border border-slate-800/80 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-900 transition-all group flex flex-col justify-between"
             >
               <div>
-                <div className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">Interactive Utilities</div>
-                <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <div className="text-white text-xs font-bold uppercase tracking-wider mb-1">Interactive Utilities</div>
+                <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
                   Islamic Tools & Smart Calculators
                 </h4>
                 <p className="text-xs text-slate-400 mt-2">
                   Calculate real-time Zakat liabilities, convert Hijri-Gregorian dates, and locate Qiblah coordinates.
                 </p>
               </div>
-              <div className="pt-4 text-xs font-semibold text-emerald-400 flex items-center gap-1">
+              <div className="pt-4 text-xs font-semibold text-white flex items-center gap-1">
                 Open Islamic Tools <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </Link>
 
             <Link
               href="/ramadan/timings/"
-              className="bg-slate-950/80 border border-slate-800/80 rounded-xl p-5 hover:border-emerald-500/50 hover:bg-slate-900 transition-all group flex flex-col justify-between sm:col-span-2 lg:col-span-1"
+              className="bg-slate-950/80 border border-slate-800/80 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-900 transition-all group flex flex-col justify-between sm:col-span-2 lg:col-span-1"
             >
               <div>
-                <div className="text-emerald-400 text-xs font-bold uppercase tracking-wider mb-1">Prayer & Fasting</div>
-                <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <div className="text-white text-xs font-bold uppercase tracking-wider mb-1">Prayer & Fasting</div>
+                <h4 className="text-sm sm:text-base font-bold text-white group-hover:text-white transition-colors">
                   Global Ramadan Timings & Prayer Schedules
                 </h4>
                 <p className="text-xs text-slate-400 mt-2">
                   Accurate, astronomical Suhoor, Fajr, and Maghrib timings for over 50,000 cities worldwide.
                 </p>
               </div>
-              <div className="pt-4 text-xs font-semibold text-emerald-400 flex items-center gap-1">
+              <div className="pt-4 text-xs font-semibold text-white flex items-center gap-1">
                 View Timetables <ChevronRight className="w-3.5 h-3.5" />
               </div>
             </Link>
@@ -808,7 +808,7 @@ export default function DuasHubPage({
         {/* SECTION 5: AEO FAQ ACCORDION (General Dua Guidelines) */}
         <section className="bg-slate-900/30 border border-slate-800 rounded-3xl p-6 sm:p-8 lg:p-10 space-y-6">
           <div className="flex items-center space-x-3">
-            <HelpCircle className="w-6 h-6 text-emerald-400" />
+            <HelpCircle className="w-6 h-6 text-white" />
             <div>
               <h2 className="text-xl sm:text-2xl font-bold text-white">Frequently Asked Questions on Dua & Adhkar</h2>
               <p className="text-xs sm:text-sm text-slate-400">Essential rulings and guidelines on supplicating according to the Sunnah.</p>
@@ -817,9 +817,9 @@ export default function DuasHubPage({
           
           <div className="space-y-3">
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none text-sm sm:text-base">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none text-sm sm:text-base">
                 What are the recommended etiquettes (Adab) of making Dua in Islam?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400 shrink-0 ml-2" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white shrink-0 ml-2" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-xs sm:text-sm border-t border-slate-800/50 pt-4 mt-2 space-y-2">
                 <p>The primary Prophetic etiquettes for making Dua include:</p>
@@ -834,9 +834,9 @@ export default function DuasHubPage({
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none text-sm sm:text-base">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none text-sm sm:text-base">
                 Are all supplications in this directory sourced from authentic Hadith?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400 shrink-0 ml-2" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white shrink-0 ml-2" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-xs sm:text-sm border-t border-slate-800/50 pt-4 mt-2">
                 Yes. Every supplication featured in this directory is rigorously cross-referenced with primary classical Hadith corpora—primarily Sahih Al-Bukhari, Sahih Muslim, Sunan Abi Dawud, Jami` At-Tirmidhi, and authenticated editions of <em>Hisnul Muslim</em> (Fortress of the Muslim).
@@ -844,9 +844,9 @@ export default function DuasHubPage({
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none text-sm sm:text-base">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none text-sm sm:text-base">
                 Can I recite Duas in English or Urdu instead of Arabic?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400 shrink-0 ml-2" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white shrink-0 ml-2" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-xs sm:text-sm border-t border-slate-800/50 pt-4 mt-2">
                 Outside of obligatory ritual prayers (Salah), you may freely supplicate in any tongue you speak. Allah understands every dialect and intention. However, reciting the exact Arabic wording transmitted by the Prophet (peace be upon him) holds special Barakah, follows the Sunnah, and protects the profound meaning of the transmitted words.
@@ -854,9 +854,9 @@ export default function DuasHubPage({
             </details>
 
             <details className="group border border-slate-800/80 bg-slate-900/40 rounded-xl open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none text-sm sm:text-base">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none text-sm sm:text-base">
                 When are the best times for Dua acceptance (Mustajab times)?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400 shrink-0 ml-2" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white shrink-0 ml-2" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-xs sm:text-sm border-t border-slate-800/50 pt-4 mt-2">
                 Prophetic traditions highlight times of special vulnerability and divine mercy, including: the last third of the night (Tahajjud), during Sujood in Salah, between the Adhan and Iqamah, during the final hour of Friday before Maghrib, when breaking the fast (Iftar), during travel, and while rain falls.

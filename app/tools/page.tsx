@@ -55,7 +55,7 @@ const ALL_TOOLS: ToolItem[] = [
     category: 'daily',
     categoryLabel: 'Daily Utilities',
     badge: 'Real-time Tracker',
-    badgeColor: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+    badgeColor: 'bg-neutral-800 text-white border-neutral-800',
     description: 'Interactive real-time dhikr and salawat tracker with customizable loop targets, gentle haptic vibrations, and persistent browser memory.',
     iconName: 'tasbeeh',
     thumbnailUrl: 'https://images.unsplash.com/photo-1590076212458-7521e1026cb1?auto=format&fit=crop&w=600&q=80&fm=webp',
@@ -70,7 +70,7 @@ const ALL_TOOLS: ToolItem[] = [
     category: 'daily',
     categoryLabel: 'Daily Utilities',
     badge: 'GPS Accuracy',
-    badgeColor: 'bg-teal-500/10 text-teal-400 border-teal-500/20',
+    badgeColor: 'bg-neutral-800 text-white border-neutral-800',
     description: 'Instant true-direction Kaaba compass calculating real-time Great Circle azimuth via browser geolocation sensors with 0.1° accuracy.',
     iconName: 'qibla',
     thumbnailUrl: 'https://images.unsplash.com/photo-1564769625905-50e93615e769?auto=format&fit=crop&w=600&q=80&fm=webp',
@@ -115,7 +115,7 @@ const ALL_TOOLS: ToolItem[] = [
     category: 'calculators',
     categoryLabel: 'Calculators & Converters',
     badge: 'Fiqh Compliant',
-    badgeColor: 'bg-emerald-500/10 text-emerald-400 border-emerald-500/20',
+    badgeColor: 'bg-neutral-800 text-white border-neutral-800',
     description: 'End-to-end Zakat liability engine evaluating cash, stocks, 401(k), real estate, and trade inventory against live Nisab threshold benchmarks.',
     iconName: 'zakat',
     thumbnailUrl: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?auto=format&fit=crop&w=600&q=80&fm=webp',
@@ -321,9 +321,9 @@ export default function ToolsHubPage({
   const renderToolIcon = (iconName: ToolItem['iconName']) => {
     switch (iconName) {
       case 'tasbeeh':
-        return <Repeat className="w-6 h-6 text-emerald-400" />;
+        return <Repeat className="w-6 h-6 text-white" />;
       case 'qibla':
-        return <Compass className="w-6 h-6 text-teal-400" />;
+        return <Compass className="w-6 h-6 text-white" />;
       case 'calendar':
         return <Calendar className="w-6 h-6 text-amber-400" />;
       case 'names':
@@ -331,11 +331,11 @@ export default function ToolsHubPage({
       case 'zakat':
       case 'gold':
       case 'fitrana':
-        return <ShieldCheck className="w-6 h-6 text-emerald-400" />;
+        return <ShieldCheck className="w-6 h-6 text-white" />;
       case 'ramadan':
         return <Moon className="w-6 h-6 text-sky-400" />;
       default:
-        return <Sparkles className="w-6 h-6 text-emerald-400" />;
+        return <Sparkles className="w-6 h-6 text-white" />;
     }
   };
 
@@ -354,13 +354,13 @@ export default function ToolsHubPage({
         <header className="space-y-6">
           {/* Breadcrumb Navigation: Home > Interactive Tools Hub */}
           <nav aria-label="Breadcrumbs" className="flex items-center text-sm font-medium text-slate-400 space-x-2 flex-wrap gap-y-2">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-4 h-4 text-slate-600 shrink-0" />
             <span className="text-slate-200 font-semibold">Interactive Tools Hub</span>
             {activeCategory !== 'all' && (
               <>
                 <ChevronRight className="w-4 h-4 text-slate-600 shrink-0" />
-                <span className="text-emerald-400 capitalize">
+                <span className="text-white capitalize">
                   {CATEGORY_TABS.find(t => t.id === activeCategory)?.label || activeCategory}
                 </span>
               </>
@@ -368,7 +368,7 @@ export default function ToolsHubPage({
           </nav>
 
           <div className="space-y-4">
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wide uppercase">
+            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-neutral-800 border border-neutral-800 text-white text-xs font-semibold tracking-wide uppercase">
               <Sparkles className="w-3.5 h-3.5" />
               <span>High-Precision Islamic Web Utilities • Privacy-First &amp; Client-Side</span>
             </div>
@@ -387,18 +387,18 @@ export default function ToolsHubPage({
 
           {/* Visible Expert Author/Reviewer Badge & Byline */}
           <div className="flex flex-wrap items-center gap-4 pt-1 text-xs sm:text-sm text-slate-400">
-            <div className="flex items-center space-x-2 bg-emerald-500/10 border border-emerald-500/20 rounded-full px-3.5 py-1 text-emerald-400 font-semibold">
+            <div className="flex items-center space-x-2 bg-neutral-800 border border-neutral-800 rounded-full px-3.5 py-1 text-white font-semibold">
               <ShieldCheck className="w-4 h-4" />
               <span>Reviewed by Islamic Astronomy &amp; Fiqh Advisory Board</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
             <div className="flex items-center space-x-2 bg-slate-900/80 border border-slate-800 rounded-full px-3.5 py-1 text-slate-300">
-              <Lock className="w-3.5 h-3.5 text-emerald-400" />
+              <Lock className="w-3.5 h-3.5 text-white" />
               <span>100% Client-Side Privacy: No Location Tracking Stored</span>
             </div>
             <div className="hidden sm:block w-1 h-1 rounded-full bg-slate-700" />
             <div className="flex items-center space-x-1.5 text-slate-400">
-              <Award className="w-4 h-4 text-emerald-400" />
+              <Award className="w-4 h-4 text-white" />
               <span>Certified Geodesy &amp; Hijri Algorithm Engine (2026)</span>
             </div>
           </div>
@@ -409,14 +409,14 @@ export default function ToolsHubPage({
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-slate-800/80 pb-3">
             <div>
               <h2 className="text-2xl font-bold text-white flex items-center gap-2">
-                <Layers className="w-6 h-6 text-emerald-400" />
+                <Layers className="w-6 h-6 text-white" />
                 <span>Verified Islamic Digital Utilities</span>
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
                 Select a category below or search across our interactive tools, calculators, and converters.
               </p>
             </div>
-            <span className="text-xs font-semibold text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20 self-start sm:self-auto">
+            <span className="text-xs font-semibold text-white bg-neutral-800 px-3 py-1 rounded-full border border-neutral-800 self-start sm:self-auto">
               {filteredTools.length} Utilities Available
             </span>
           </div>
@@ -430,11 +430,11 @@ export default function ToolsHubPage({
                 name="q"
                 defaultValue={searchQuery}
                 placeholder="Search tools (e.g., 'Tasbeeh', 'Qibla', 'Calendar', 'Baby Names', 'Nisab')..."
-                className="w-full pl-12 pr-24 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent transition-all text-sm sm:text-base"
+                className="w-full pl-12 pr-24 py-3.5 bg-slate-950/80 border border-slate-700/80 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent transition-all text-sm sm:text-base"
               />
               <button 
                 type="submit" 
-                className="absolute right-3 top-1/2 -translate-y-1/2 px-3.5 py-1.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 text-xs font-bold rounded-lg transition-colors"
+                className="absolute right-3 top-1/2 -translate-y-1/2 px-3.5 py-1.5 bg-white text-black hover:bg-neutral-800 text-slate-950 text-xs font-bold rounded-lg transition-colors"
               >
                 Search
               </button>
@@ -450,7 +450,7 @@ export default function ToolsHubPage({
                     href={createCategoryUrl(tab.id)}
                     className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold whitespace-nowrap transition-all ${
                       isActive
-                        ? 'bg-emerald-500 text-slate-950 shadow-md shadow-emerald-500/20 font-bold'
+                        ? 'bg-white text-black shadow-md shadow-neutral-950/50 font-bold'
                         : 'bg-slate-950/70 text-slate-300 hover:bg-slate-800 hover:text-white border border-slate-800'
                     }`}
                   >
@@ -471,7 +471,7 @@ export default function ToolsHubPage({
               </p>
               <Link
                 href="/tools/"
-                className="inline-block px-4 py-2 bg-emerald-500 hover:bg-emerald-400 text-slate-950 rounded-lg text-sm font-bold transition-colors"
+                className="inline-block px-4 py-2 bg-white text-black hover:bg-neutral-800 text-slate-950 rounded-lg text-sm font-bold transition-colors"
               >
                 Reset Filter
               </Link>
@@ -481,12 +481,12 @@ export default function ToolsHubPage({
               {filteredTools.map((tool) => (
                 <div
                   key={tool.id}
-                  className="group bg-slate-900/60 border border-slate-800/90 hover:border-emerald-500/50 rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+                  className="group bg-slate-900/60 border border-slate-800/90 hover:border-neutral-600 rounded-2xl p-5 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
                 >
                   <div className="space-y-3">
                     {/* Top Header: 48x48px Icon Container alongside Badge Pill */}
                     <div className="flex items-start justify-between gap-3">
-                      <div className="w-12 h-12 rounded-xl bg-slate-950/90 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-emerald-500/40 transition-colors shadow-inner">
+                      <div className="w-12 h-12 rounded-xl bg-slate-950/90 border border-slate-800 flex items-center justify-center shrink-0 group-hover:border-neutral-600 transition-colors shadow-inner">
                         {renderToolIcon(tool.iconName)}
                       </div>
                       <div className="flex flex-col items-end gap-1">
@@ -501,7 +501,7 @@ export default function ToolsHubPage({
 
                     {/* Tool Title & Truncated 1-2 sentence description */}
                     <div className="space-y-1.5">
-                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-emerald-300 transition-colors line-clamp-1">
+                      <h3 className="text-base sm:text-lg font-bold text-white group-hover:text-white transition-colors line-clamp-1">
                         {tool.title}
                       </h3>
                       <p className="text-xs sm:text-sm text-slate-300 line-clamp-2 leading-relaxed">
@@ -514,7 +514,7 @@ export default function ToolsHubPage({
                   <div className="pt-3 mt-4 border-t border-slate-800/80">
                     <Link
                       href={tool.slug}
-                      className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md shadow-emerald-950/20 group-hover:translate-x-0.5"
+                      className="w-full inline-flex items-center justify-center gap-1.5 px-3.5 py-2.5 bg-white text-black hover:bg-neutral-800 text-slate-950 font-bold rounded-xl text-xs sm:text-sm transition-all shadow-md shadow-neutral-950/50 group-hover:translate-x-0.5"
                     >
                       <span>Open Interactive Tool</span>
                       <ArrowRight className="w-3.5 h-3.5" />
@@ -529,7 +529,7 @@ export default function ToolsHubPage({
         {/* SECTION 3: TRUST & CALCULATION STANDARDS SUMMARY CARD */}
         <section className="bg-slate-900/60 border border-slate-800 rounded-2xl p-6 sm:p-8 space-y-6 shadow-xl">
           <div className="space-y-3 border-b border-slate-800 pb-5">
-            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 px-3 py-1 rounded-full border border-emerald-500/20">
+            <div className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-white bg-neutral-800 px-3 py-1 rounded-full border border-neutral-800">
               <ShieldCheck className="w-3.5 h-3.5" />
               <span>Trust &amp; Calculation Standards</span>
             </div>
@@ -544,7 +544,7 @@ export default function ToolsHubPage({
           <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
             {/* Card 1: Privacy */}
             <div className="bg-slate-950/70 border border-slate-800/90 rounded-xl p-5 space-y-2.5">
-              <div className="w-10 h-10 rounded-lg bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400">
+              <div className="w-10 h-10 rounded-lg bg-neutral-800 border border-neutral-800 flex items-center justify-center text-white">
                 <Lock className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">100% Client-Side Privacy</h3>
@@ -555,7 +555,7 @@ export default function ToolsHubPage({
 
             {/* Card 2: GPS & Qibla Accuracy */}
             <div className="bg-slate-950/70 border border-slate-800/90 rounded-xl p-5 space-y-2.5">
-              <div className="w-10 h-10 rounded-lg bg-teal-500/10 border border-teal-500/20 flex items-center justify-center text-teal-400">
+              <div className="w-10 h-10 rounded-lg bg-neutral-800 border border-neutral-800 flex items-center justify-center text-white">
                 <Compass className="w-5 h-5" />
               </div>
               <h3 className="text-base font-bold text-white">Geodetic GPS Accuracy</h3>
@@ -578,7 +578,7 @@ export default function ToolsHubPage({
 
           <div className="bg-slate-950/40 border border-slate-800/70 rounded-xl p-4 sm:p-5 text-xs sm:text-sm text-slate-300 space-y-2">
             <h4 className="font-bold text-white flex items-center gap-2">
-              <Smartphone className="w-4 h-4 text-emerald-400" />
+              <Smartphone className="w-4 h-4 text-white" />
               <span>Calibrated for Daily Worship &amp; Family Needs</span>
             </h4>
             <p className="text-slate-400 leading-relaxed text-xs sm:text-sm">
@@ -588,10 +588,10 @@ export default function ToolsHubPage({
 
           <div className="pt-2 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3 text-xs text-slate-400">
             <span className="flex items-center gap-2">
-              <CheckCircle2 className="w-4 h-4 text-emerald-400" />
+              <CheckCircle2 className="w-4 h-4 text-white" />
               <span>Full compliance with W3C Geolocation standards, client-side privacy, and accessibility guidelines.</span>
             </span>
-            <span className="text-emerald-400 font-semibold">Zero Advertising Trackers • Privacy Protected</span>
+            <span className="text-white font-semibold">Zero Advertising Trackers • Privacy Protected</span>
           </div>
         </section>
 
@@ -599,7 +599,7 @@ export default function ToolsHubPage({
         <section className="space-y-6 pt-4">
           <div className="flex items-center justify-between border-b border-slate-800 pb-3">
             <h2 className="text-xl font-bold text-white flex items-center gap-2">
-              <Compass className="w-5 h-5 text-emerald-400" />
+              <Compass className="w-5 h-5 text-white" />
               <span>Explore Related Content &amp; Sibling Silos</span>
             </h2>
             <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold">
@@ -611,20 +611,20 @@ export default function ToolsHubPage({
             {/* Sibling 1: Worship Guides */}
             <Link
               href="/guides/"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-emerald-400 bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-0.5 rounded-full inline-block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-neutral-800 border border-neutral-800 px-2.5 py-0.5 rounded-full inline-block">
                   Worship Guides
                 </span>
-                <h3 className="text-lg font-bold text-white group-hover:text-emerald-300 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                   Islamic Worship &amp; Practice Guides
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Comprehensive illustrated walkthroughs for Step-by-Step Namaz, Wudu purification rules, 99 Names of Allah, and the Five Pillars of Islam.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-emerald-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold group-hover:translate-x-0.5 transition-transform">
                 <span>Browse Guides Hub</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -633,20 +633,20 @@ export default function ToolsHubPage({
             {/* Sibling 2: Sacred Ayats */}
             <Link
               href="/ayats/"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-teal-400 bg-teal-500/10 border border-teal-500/20 px-2.5 py-0.5 rounded-full inline-block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-white bg-neutral-800 border border-neutral-800 px-2.5 py-0.5 rounded-full inline-block">
                   Quranic Ayats
                 </span>
-                <h3 className="text-lg font-bold text-white group-hover:text-teal-300 transition-colors">
+                <h3 className="text-lg font-bold text-white group-hover:text-white transition-colors">
                   Sacred Quranic Ayats Directory Hub
                 </h3>
                 <p className="text-xs sm:text-sm text-slate-400 leading-relaxed">
                   Over 100 authenticated sacred verses including Ayat al-Kursi, Amanar-Rasool, Ayat ash-Shifa, and Ayat Karima with Uthmanic Arabic and classical Tafsir.
                 </p>
               </div>
-              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-teal-400 font-semibold group-hover:translate-x-0.5 transition-transform">
+              <div className="pt-4 mt-4 border-t border-slate-800/60 flex items-center justify-between text-xs text-white font-semibold group-hover:translate-x-0.5 transition-transform">
                 <span>Explore Sacred Ayats</span>
                 <ChevronRight className="w-4 h-4" />
               </div>
@@ -655,7 +655,7 @@ export default function ToolsHubPage({
             {/* Sibling 3: Daily Duas */}
             <Link
               href="/duas/"
-              className="group bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-emerald-950/20"
+              className="group bg-slate-900/60 border border-slate-800 hover:border-neutral-600 rounded-2xl p-6 transition-all duration-300 flex flex-col justify-between hover:shadow-xl hover:shadow-neutral-950/50"
             >
               <div className="space-y-3">
                 <span className="text-[11px] font-bold uppercase tracking-wider text-sky-400 bg-sky-500/10 border border-sky-500/20 px-2.5 py-0.5 rounded-full inline-block">

@@ -30,7 +30,7 @@ export default function RulesEligibilityPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   return (
-    <main className="min-h-screen bg-slate-950 font-sans selection:bg-emerald-500/30 text-slate-300">
+    <main className="min-h-screen bg-slate-950 font-sans selection:bg-white selection:text-black text-slate-300">
       
       {/* Self-referencing Canonical Tag & JSON-LD Schema (Template C Requirement) */}
       <link rel="canonical" href="https://islamhub.com/zakat/rules-eligibility/" />
@@ -123,9 +123,9 @@ export default function RulesEligibilityPage() {
         
         {/* Phase 1: Above-the-Fold (E-E-A-T & High-Density AEO) */}
         <nav className="flex items-center text-xs text-slate-400 mb-4" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+          <Link href="/" className="hover:text-white transition-colors">Home</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
-          <Link href="/zakat" className="hover:text-emerald-400 transition-colors">Zakat</Link>
+          <Link href="/zakat" className="hover:text-white transition-colors">Zakat</Link>
           <ChevronRight className="w-3 h-3 mx-1" />
           <span className="text-slate-300">Rules & Eligibility</span>
         </nav>
@@ -135,9 +135,9 @@ export default function RulesEligibilityPage() {
             Zakat Rules & Eligibility Criteria (2026 Guidance)
           </h1>
           
-          <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-emerald-500 rounded-r-xl p-6 sm:p-8 shadow-lg mb-6">
+          <div className="bg-slate-900/80 backdrop-blur-sm border-l-4 border-white rounded-r-xl p-6 sm:p-8 shadow-lg mb-6">
             <h2 className="text-xl font-bold text-white mb-4 flex items-center gap-2">
-              <Info className="w-6 h-6 text-emerald-400" />
+              <Info className="w-6 h-6 text-white" />
               Direct Answer
             </h2>
             <p className="text-slate-300 leading-relaxed mb-6">
@@ -147,7 +147,7 @@ export default function RulesEligibilityPage() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="bg-slate-950/50 border border-slate-800 rounded-lg p-4 flex flex-col justify-center">
                 <span className="text-xs text-slate-400 uppercase tracking-wider font-semibold mb-1">Obligation Rate</span>
-                <span className="text-xl font-bold text-emerald-400">2.5% (Lunar)</span>
+                <span className="text-xl font-bold text-white">2.5% (Lunar)</span>
                 <span className="text-sm text-slate-500">2.577% (Solar)</span>
               </div>
               <div className="bg-slate-950/50 border border-slate-800 rounded-lg p-4 flex flex-col justify-center">
@@ -164,7 +164,7 @@ export default function RulesEligibilityPage() {
           </div>
 
           <div className="inline-flex items-center gap-3 bg-slate-900/60 border border-slate-800 rounded-full px-4 py-2">
-            <ShieldCheck className="w-5 h-5 text-emerald-400" />
+            <ShieldCheck className="w-5 h-5 text-white" />
             <span className="text-sm font-medium text-slate-300">
               Reviewed by Shariah Compliance & Fiqh Researchers
             </span>
@@ -182,21 +182,21 @@ export default function RulesEligibilityPage() {
               <nav className="bg-slate-900/60 border border-slate-800 rounded-xl p-5">
                 <h3 className="text-white font-bold mb-4 uppercase tracking-wider text-xs">Table of Contents</h3>
                 <ul className="space-y-3 text-sm font-medium">
-                  <li><a href="#conditions-payer" className="text-slate-400 hover:text-emerald-400 transition-colors block">Conditions for Zakat Payer</a></li>
-                  <li><a href="#8-recipients" className="text-slate-400 hover:text-emerald-400 transition-colors block">8 Eligible Recipients</a></li>
-                  <li><a href="#ineligible-groups" className="text-slate-400 hover:text-emerald-400 transition-colors block">Ineligible Groups</a></li>
-                  <li><a href="#hawl-explained" className="text-slate-400 hover:text-emerald-400 transition-colors block">How to Distribute (Hawl)</a></li>
-                  <li><a href="#faqs" className="text-slate-400 hover:text-emerald-400 transition-colors block">Frequently Asked Questions</a></li>
+                  <li><a href="#conditions-payer" className="text-slate-400 hover:text-white transition-colors block">Conditions for Zakat Payer</a></li>
+                  <li><a href="#8-recipients" className="text-slate-400 hover:text-white transition-colors block">8 Eligible Recipients</a></li>
+                  <li><a href="#ineligible-groups" className="text-slate-400 hover:text-white transition-colors block">Ineligible Groups</a></li>
+                  <li><a href="#hawl-explained" className="text-slate-400 hover:text-white transition-colors block">How to Distribute (Hawl)</a></li>
+                  <li><a href="#faqs" className="text-slate-400 hover:text-white transition-colors block">Frequently Asked Questions</a></li>
                 </ul>
               </nav>
 
-              <div className="bg-gradient-to-br from-emerald-900/40 to-slate-900 border border-emerald-500/30 rounded-xl p-5 text-center">
-                <Calculator className="w-10 h-10 text-emerald-400 mx-auto mb-3" />
+              <div className="bg-gradient-to-br from-neutral-900 to-neutral-950 border border-neutral-800 rounded-xl p-5 text-center">
+                <Calculator className="w-10 h-10 text-white mx-auto mb-3" />
                 <h4 className="text-white font-bold mb-2">Ready to Calculate?</h4>
                 <p className="text-xs text-slate-400 mb-4 leading-relaxed">
                   Use our universal Zakat engine to process your assets instantly.
                 </p>
-                <Link href="/zakat-calculator" className="block w-full bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-bold py-2.5 rounded-lg transition-colors">
+                <Link href="/zakat-calculator" className="block w-full bg-white hover:bg-neutral-200 text-black font-semibold text-sm font-bold py-2.5 rounded-lg transition-colors">
                   Quick Calculate
                 </Link>
               </div>
@@ -210,7 +210,7 @@ export default function RulesEligibilityPage() {
             {/* Conditions for Zakat Payer HTML Table */}
             <section id="conditions-payer" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <Scale className="w-6 h-6 text-emerald-400" />
+                <Scale className="w-6 h-6 text-white" />
                 Conditions for the Zakat Payer
               </h2>
               <div className="overflow-x-auto bg-slate-900/60 rounded-xl border border-slate-800 mb-4">
@@ -223,23 +223,23 @@ export default function RulesEligibilityPage() {
                   </thead>
                   <tbody className="divide-y divide-slate-800">
                     <tr className="hover:bg-slate-800/30 transition-colors">
-                      <td className="p-4 text-sm font-bold text-emerald-400">1. Islam</td>
+                      <td className="p-4 text-sm font-bold text-white">1. Islam</td>
                       <td className="p-4 text-sm text-slate-300">The payer must be a Muslim. Zakat is an act of worship and is only obligatory upon Muslims.</td>
                     </tr>
                     <tr className="hover:bg-slate-800/30 transition-colors bg-slate-900/30">
-                      <td className="p-4 text-sm font-bold text-emerald-400">2. Freedom</td>
+                      <td className="p-4 text-sm font-bold text-white">2. Freedom</td>
                       <td className="p-4 text-sm text-slate-300">The individual must be free (not a captive or slave).</td>
                     </tr>
                     <tr className="hover:bg-slate-800/30 transition-colors">
-                      <td className="p-4 text-sm font-bold text-emerald-400">3. Sanity & Maturity</td>
+                      <td className="p-4 text-sm font-bold text-white">3. Sanity & Maturity</td>
                       <td className="p-4 text-sm text-slate-300">Required by Abu Hanifa. However, the majority (Maliki, Shafi'i, Hanbali) state Zakat is due on the wealth of minors/insane, paid by the guardian.</td>
                     </tr>
                     <tr className="hover:bg-slate-800/30 transition-colors bg-slate-900/30">
-                      <td className="p-4 text-sm font-bold text-emerald-400">4. Full Ownership</td>
+                      <td className="p-4 text-sm font-bold text-white">4. Full Ownership</td>
                       <td className="p-4 text-sm text-slate-300">The wealth must be fully owned and accessible. Lost property or bad debts are generally exempt until recovered.</td>
                     </tr>
                     <tr className="hover:bg-slate-800/30 transition-colors">
-                      <td className="p-4 text-sm font-bold text-emerald-400">5. Nisab & Hawl</td>
+                      <td className="p-4 text-sm font-bold text-white">5. Nisab & Hawl</td>
                       <td className="p-4 text-sm text-slate-300">The wealth must exceed the Nisab threshold and be maintained for one complete lunar year (Hawl).</td>
                     </tr>
                   </tbody>
@@ -250,7 +250,7 @@ export default function RulesEligibilityPage() {
             {/* The 8 Eligible Recipient Categories */}
             <section id="8-recipients" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <Users className="w-6 h-6 text-emerald-400" />
+                <Users className="w-6 h-6 text-white" />
                 The 8 Quranic Recipient Categories
               </h2>
               <p className="text-sm text-slate-400 mb-8 leading-relaxed">
@@ -270,9 +270,9 @@ export default function RulesEligibilityPage() {
                 ].map((category, idx) => {
                   const Icon = category.icon;
                   return (
-                    <div key={idx} className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-emerald-500/50 transition-colors flex flex-col items-center text-center">
+                    <div key={idx} className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 transition-colors flex flex-col items-center text-center">
                       <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-3">
-                        <Icon className="w-5 h-5 text-emerald-400" />
+                        <Icon className="w-5 h-5 text-white" />
                       </div>
                       <h3 className="text-sm font-bold text-white mb-1">{category.title}</h3>
                       <p className="text-xs text-slate-400">{category.subtitle}</p>
@@ -282,7 +282,7 @@ export default function RulesEligibilityPage() {
               </div>
 
               {/* Quranic & Hadith Citation Callout */}
-              <div className="bg-slate-900 border-l-4 border-emerald-500 p-5 rounded-r-xl my-8 relative overflow-hidden shadow-inner">
+              <div className="bg-slate-900 border-l-4 border-white p-5 rounded-r-xl my-8 relative overflow-hidden shadow-inner">
                 <BookOpen className="absolute top-4 right-4 w-16 h-16 opacity-10" />
                 <p className="text-xl font-arabic text-white mb-4 text-right leading-loose" dir="rtl">
                   إِنَّمَا الصَّدَقَاتُ لِلْفُقَرَاءِ وَالْمَسَاكِينِ وَالْعَامِلِينَ عَلَيْهَا وَالْمُؤَلَّفَةِ قُلُوبُهُمْ وَفِي الرِّقَابِ وَالْغَارِمِينَ وَفِي سَبِيلِ اللَّهِ وَابْنِ السَّبِيلِ ۖ فَرِيضَةً مِّنَ اللَّهِ ۗ وَاللَّهُ عَلِيمٌ حَكِيمٌ
@@ -294,7 +294,7 @@ export default function RulesEligibilityPage() {
                   "Zakat expenditures are only for the poor and for the needy and for those employed to collect [zakat] and for bringing hearts together [for Islam] and for freeing captives [or slaves] and for those in debt and for the cause of Allah and for the [stranded] traveler - an obligation [imposed] by Allah. And Allah is Knowing and Wise."
                 </p>
                 <div className="flex gap-2">
-                  <span className="bg-slate-950 px-3 py-1.5 rounded text-xs font-semibold text-emerald-400 border border-emerald-500/20">
+                  <span className="bg-slate-950 px-3 py-1.5 rounded text-xs font-semibold text-white border border-neutral-800">
                     Surah At-Tawbah (9:60)
                   </span>
                   <span className="bg-slate-950 px-3 py-1.5 rounded text-xs font-semibold text-slate-400 border border-slate-800">
@@ -358,13 +358,13 @@ export default function RulesEligibilityPage() {
             {/* How to Distribute (3-Step Diagram) */}
             <section id="hawl-explained" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <Globe className="w-6 h-6 text-emerald-400" />
+                <Globe className="w-6 h-6 text-white" />
                 Distribution Flowchart
               </h2>
               
               <div className="flex flex-col md:flex-row items-center gap-4 justify-between bg-slate-900/40 p-6 rounded-2xl border border-slate-800">
                 <div className="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-5 text-center relative z-10 w-full md:w-auto">
-                  <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">1</div>
+                  <div className="w-8 h-8 rounded-full bg-white text-black font-semibold font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">1</div>
                   <h4 className="font-bold text-white mt-2 mb-1">Determine Nisab</h4>
                   <p className="text-xs text-slate-400">Are you eligible to pay?</p>
                 </div>
@@ -372,7 +372,7 @@ export default function RulesEligibilityPage() {
                 <ArrowRight className="w-6 h-6 text-slate-600 hidden md:block shrink-0" />
                 
                 <div className="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-5 text-center relative z-10 w-full md:w-auto">
-                  <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">2</div>
+                  <div className="w-8 h-8 rounded-full bg-white text-black font-semibold font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">2</div>
                   <h4 className="font-bold text-white mt-2 mb-1">Calculate Hawl</h4>
                   <p className="text-xs text-slate-400">Has 1 lunar year passed?</p>
                 </div>
@@ -380,7 +380,7 @@ export default function RulesEligibilityPage() {
                 <ArrowRight className="w-6 h-6 text-slate-600 hidden md:block shrink-0" />
                 
                 <div className="flex-1 bg-slate-900 border border-slate-700 rounded-xl p-5 text-center relative z-10 w-full md:w-auto">
-                  <div className="w-8 h-8 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">3</div>
+                  <div className="w-8 h-8 rounded-full bg-white text-black font-semibold font-bold flex items-center justify-center absolute -top-4 left-1/2 -translate-x-1/2 border-4 border-slate-950">3</div>
                   <h4 className="font-bold text-white mt-2 mb-1">Verify Recipient</h4>
                   <p className="text-xs text-slate-400">Check the 8 categories.</p>
                 </div>
@@ -389,7 +389,7 @@ export default function RulesEligibilityPage() {
               {/* Video Facade */}
               <div className="mt-8 aspect-[21/9] w-full rounded-2xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center">
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-                <button className="z-20 w-16 h-16 rounded-full bg-emerald-500/90 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(16,185,129,0.4)]">
+                <button className="z-20 w-16 h-16 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
                   <PlayCircle className="w-8 h-8 fill-slate-950 text-white" />
                 </button>
                 <div className="absolute top-4 right-4 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
@@ -405,25 +405,25 @@ export default function RulesEligibilityPage() {
             <section>
               <h2 className="text-xl font-bold text-white mb-6">Asset Specific Calculators & Guides</h2>
               <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
-                <Link href="/zakat/nisab-threshold" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
-                  <Scale className="w-8 h-8 text-emerald-500/70 group-hover:text-emerald-400 transition-colors shrink-0" />
+                <Link href="/zakat/nisab-threshold" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+                  <Scale className="w-8 h-8 text-white group-hover:text-white transition-colors shrink-0" />
                   <div>
                     <span className="block text-sm font-bold text-slate-200 group-hover:text-white">Nisab Guide</span>
                   </div>
                 </Link>
-                <Link href="/zakat/gold-silver" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+                <Link href="/zakat/gold-silver" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
                   <Coins className="w-8 h-8 text-amber-500/70 group-hover:text-amber-400 transition-colors shrink-0" />
                   <div>
                     <span className="block text-sm font-bold text-slate-200 group-hover:text-white">Gold Tool</span>
                   </div>
                 </Link>
-                <Link href="/zakat/stocks-investments" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+                <Link href="/zakat/stocks-investments" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
                   <TrendingUp className="w-8 h-8 text-blue-500/70 group-hover:text-blue-400 transition-colors shrink-0" />
                   <div>
                     <span className="block text-sm font-bold text-slate-200 group-hover:text-white">Stocks</span>
                   </div>
                 </Link>
-                <Link href="/zakat/crypto" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-4 rounded-xl flex items-center gap-3 transition-colors group">
+                <Link href="/zakat/crypto" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-4 rounded-xl flex items-center gap-3 transition-colors group">
                   <Globe className="w-8 h-8 text-cyan-500/70 group-hover:text-cyan-400 transition-colors shrink-0" />
                   <div>
                     <span className="block text-sm font-bold text-slate-200 group-hover:text-white">Crypto</span>
@@ -435,7 +435,7 @@ export default function RulesEligibilityPage() {
             {/* Frequently Asked Questions (Accordion) */}
             <section id="faqs" className="scroll-mt-28">
               <h2 className="text-2xl font-bold text-white mb-6 flex items-center gap-2">
-                <FileText className="w-6 h-6 text-emerald-400" />
+                <FileText className="w-6 h-6 text-white" />
                 Frequently Asked Questions
               </h2>
               <div className="space-y-3">
@@ -464,7 +464,7 @@ export default function RulesEligibilityPage() {
                     >
                       <span className="font-semibold text-slate-200">{faq.q}</span>
                       {openFaq === idx ? (
-                        <Minus className="w-5 h-5 text-emerald-400 shrink-0" />
+                        <Minus className="w-5 h-5 text-white shrink-0" />
                       ) : (
                         <Plus className="w-5 h-5 text-slate-500 shrink-0" />
                       )}

@@ -296,7 +296,7 @@ export default function StocksInvestmentsCalculatorPage() {
             {/* Mutual Funds & ETFs Card */}
             <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 sm:p-6">
               <h3 className="text-white font-semibold flex items-center gap-2 border-b border-slate-800 pb-4 mb-4">
-                <PieChart className="w-5 h-5 text-teal-400" /> Mutual Funds & ETFs
+                <PieChart className="w-5 h-5 text-white" /> Mutual Funds & ETFs
               </h3>
               <div>
                 <label className="block text-sm text-slate-300 mb-1 font-medium">Total Current Value</label>
@@ -306,7 +306,7 @@ export default function StocksInvestmentsCalculatorPage() {
                   <input 
                     type="number" min="0" placeholder="0"
                     value={mutualFunds} onChange={e => setMutualFunds(e.target.value ? Number(e.target.value) : '')}
-                    className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-teal-500 focus:border-teal-500 transition-colors" 
+                    className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors" 
                   />
                 </div>
               </div>
@@ -315,7 +315,7 @@ export default function StocksInvestmentsCalculatorPage() {
             {/* Retirement Funds (401k/IRA/Pension) */}
             <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 sm:p-6">
               <h3 className="text-white font-semibold flex items-center gap-2 border-b border-slate-800 pb-4 mb-4">
-                <Landmark className="w-5 h-5 text-emerald-400" /> Retirement Funds (401k / IRA / Pension)
+                <Landmark className="w-5 h-5 text-white" /> Retirement Funds (401k / IRA / Pension)
               </h3>
               <div>
                 <label className="block text-sm text-slate-300 mb-1 font-medium">Accessible Balance (Net of Penalties)</label>
@@ -325,7 +325,7 @@ export default function StocksInvestmentsCalculatorPage() {
                   <input 
                     type="number" min="0" placeholder="0"
                     value={retirementFunds} onChange={e => setRetirementFunds(e.target.value ? Number(e.target.value) : '')}
-                    className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-emerald-500 focus:border-emerald-500 transition-colors" 
+                    className="w-full bg-slate-950 border border-slate-700 rounded-lg pl-8 pr-3 py-2.5 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors" 
                   />
                 </div>
               </div>
@@ -360,7 +360,7 @@ export default function StocksInvestmentsCalculatorPage() {
                   
                   <div className="flex items-center gap-2 mt-5">
                     {isEligible ? (
-                      <div className="px-3 py-1 rounded bg-emerald-500/20 text-emerald-400 text-xs font-bold border border-emerald-500/30">
+                      <div className="px-3 py-1 rounded bg-neutral-800 text-white text-xs font-bold border border-neutral-800">
                         ELIGIBLE FOR ZAKAT
                       </div>
                     ) : (
@@ -401,23 +401,23 @@ export default function StocksInvestmentsCalculatorPage() {
 
         {/* Phase 3 & 5: Horizontal Sibling Silo Links Bar */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-16">
-          <Link href="/zakat-calculator/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
-            <Calculator className="w-6 h-6 text-emerald-500/70 group-hover:text-emerald-400 transition-colors" />
+          <Link href="/zakat-calculator/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
+            <Calculator className="w-6 h-6 text-white group-hover:text-white transition-colors" />
             <span className="text-xs font-medium text-slate-300 group-hover:text-white">Universal</span>
           </Link>
-          <Link href="/zakat/gold-silver/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
+          <Link href="/zakat/gold-silver/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
             <Coins className="w-6 h-6 text-amber-500/70 group-hover:text-amber-400 transition-colors" />
             <span className="text-xs font-medium text-slate-300 group-hover:text-white">Gold Tool</span>
           </Link>
-          <Link href="/zakat/crypto/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
+          <Link href="/zakat/crypto/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
             <Coins className="w-6 h-6 text-cyan-500/70 group-hover:text-cyan-400 transition-colors" />
             <span className="text-xs font-medium text-slate-300 group-hover:text-white">Crypto</span>
           </Link>
-          <Link href="/zakat/business/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
+          <Link href="/zakat/business/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
             <Briefcase className="w-6 h-6 text-indigo-500/70 group-hover:text-indigo-400 transition-colors" />
             <span className="text-xs font-medium text-slate-300 group-hover:text-white">Business</span>
           </Link>
-          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-emerald-500/50 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
+          <Link href="/zakat/fitrana/" className="bg-slate-900/60 border border-slate-800 hover:border-neutral-600 p-3 rounded-xl flex flex-col items-center justify-center gap-2 transition-colors group text-center">
             <Heart className="w-6 h-6 text-rose-500/70 group-hover:text-rose-400 transition-colors" />
             <span className="text-xs font-medium text-slate-300 group-hover:text-white">Fitrana</span>
           </Link>
@@ -452,13 +452,13 @@ export default function StocksInvestmentsCalculatorPage() {
                     <td className="p-4 text-sm text-slate-500">Standard No. 35 (Investment)</td>
                   </tr>
                   <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-teal-300">Mutual Funds / ETFs</td>
+                    <td className="p-4 text-sm font-medium text-white">Mutual Funds / ETFs</td>
                     <td className="p-4 text-sm text-slate-300">2.5% of Market Value</td>
                     <td className="p-4 text-sm text-slate-400">Treated based on fund intent (Trading vs Passive)</td>
                     <td className="p-4 text-sm text-slate-500">Standard No. 35</td>
                   </tr>
                   <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-emerald-300">Retirement / 401(k)</td>
+                    <td className="p-4 text-sm font-medium text-white">Retirement / 401(k)</td>
                     <td className="p-4 text-sm text-slate-300">2.5% of Accessible Funds</td>
                     <td className="p-4 text-sm text-slate-400">Deduct early penalties & taxes</td>
                     <td className="p-4 text-sm text-slate-500">Various Fatawa</td>

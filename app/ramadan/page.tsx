@@ -112,7 +112,7 @@ export default function RamadanHubPage() {
               <Moon className="w-32 h-32 text-white" />
             </div>
             <div className="relative z-10 flex flex-col h-full justify-center">
-              <h2 className="text-sm font-semibold text-emerald-400 uppercase tracking-widest mb-4">Countdown to Ramadan 2026</h2>
+              <h2 className="text-sm font-semibold text-white uppercase tracking-widest mb-4">Countdown to Ramadan 2026</h2>
               <div className="flex items-baseline space-x-4 mb-2">
                 <div className="flex flex-col items-start">
                   <span className="text-5xl md:text-6xl font-black text-white tabular-nums tracking-tighter" suppressHydrationWarning>{days}</span>
@@ -137,8 +137,8 @@ export default function RamadanHubPage() {
           
           <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-3 gap-4">
             <Link href="/ramadan/calendar-2026.pdf" className="group flex flex-col justify-between bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 hover:bg-slate-800/80 hover:border-slate-700 transition-all duration-300">
-              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-emerald-400/20 transition-transform">
-                <Download className="w-5 h-5 text-emerald-400" />
+              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-neutral-800 transition-transform">
+                <Download className="w-5 h-5 text-white" />
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Printable Calendar</h3>
@@ -146,8 +146,8 @@ export default function RamadanHubPage() {
               </div>
             </Link>
             <Link href="/ramadan/timings" className="group flex flex-col justify-between bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 hover:bg-slate-800/80 hover:border-slate-700 transition-all duration-300">
-              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-emerald-400/20 transition-transform">
-                <Clock className="w-5 h-5 text-emerald-400" />
+              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-neutral-800 transition-transform">
+                <Clock className="w-5 h-5 text-white" />
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Suhoor & Iftar</h3>
@@ -155,8 +155,8 @@ export default function RamadanHubPage() {
               </div>
             </Link>
             <Link href="/ramadan/rules" className="group flex flex-col justify-between bg-slate-900/80 backdrop-blur-sm border border-slate-800 rounded-2xl p-6 hover:bg-slate-800/80 hover:border-slate-700 transition-all duration-300">
-              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-emerald-400/20 transition-transform">
-                <BookOpen className="w-5 h-5 text-emerald-400" />
+              <div className="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center mb-4 group-hover:scale-110 group-hover:bg-neutral-800 transition-transform">
+                <BookOpen className="w-5 h-5 text-white" />
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-1">Fasting Rules</h3>
@@ -172,8 +172,8 @@ export default function RamadanHubPage() {
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/50 to-transparent z-10" />
           
           <button className="z-20 relative flex items-center justify-center transform group-hover:scale-105 transition-transform duration-300">
-            <div className="absolute inset-0 bg-emerald-400/20 rounded-full blur-xl animate-pulse" />
-            <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-emerald-400 opacity-90 drop-shadow-2xl" />
+            <div className="absolute inset-0 bg-neutral-800 rounded-full blur-xl animate-pulse" />
+            <PlayCircle className="w-16 h-16 sm:w-20 sm:h-20 text-white opacity-90 drop-shadow-2xl" />
           </button>
           
           <div className="absolute bottom-6 sm:bottom-8 left-6 sm:left-10 z-20">
@@ -183,10 +183,10 @@ export default function RamadanHubPage() {
         </section>
 
         {/* 6. AEO DIRECT ANSWER */}
-        <section className="bg-emerald-950/20 border-l-4 border-emerald-500 rounded-r-xl p-6">
+        <section className="bg-neutral-900 border-l-4 border-white rounded-r-xl p-6">
           <div className="flex items-start gap-4">
-            <div className="mt-1 bg-emerald-500/20 p-2 rounded-lg">
-              <Star className="w-6 h-6 text-emerald-400" />
+            <div className="mt-1 bg-neutral-800 p-2 rounded-lg">
+              <Star className="w-6 h-6 text-white" />
             </div>
             <div>
               <h2 className="text-lg font-bold text-white mb-2">What is the core obligation of Ramadan?</h2>
@@ -202,7 +202,7 @@ export default function RamadanHubPage() {
           <h2 className="text-2xl font-bold text-white mb-6">First Time Fasting? Start Here</h2>
           <div className="flex flex-col md:flex-row items-stretch gap-4">
             <div className="flex-1 bg-slate-950 border border-slate-800 rounded-xl p-5 relative">
-              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center text-sm shadow-lg">1</div>
+              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm shadow-lg">1</div>
               <h3 className="text-white font-semibold mb-2 ml-3">Understand the Intent (Niyyah)</h3>
               <p className="text-sm text-slate-400 ml-3">Learn how and when to make your daily or monthly intention to fast.</p>
             </div>
@@ -210,7 +210,7 @@ export default function RamadanHubPage() {
               <ArrowRight className="w-6 h-6" />
             </div>
             <div className="flex-1 bg-slate-950 border border-slate-800 rounded-xl p-5 relative">
-              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center text-sm shadow-lg">2</div>
+              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm shadow-lg">2</div>
               <h3 className="text-white font-semibold mb-2 ml-3">Know the Boundaries</h3>
               <p className="text-sm text-slate-400 ml-3">Review what strictly breaks the fast and what exemptions apply.</p>
             </div>
@@ -218,7 +218,7 @@ export default function RamadanHubPage() {
               <ArrowRight className="w-6 h-6" />
             </div>
             <div className="flex-1 bg-slate-950 border border-slate-800 rounded-xl p-5 relative">
-              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-emerald-500 text-white font-bold flex items-center justify-center text-sm shadow-lg">3</div>
+              <div className="absolute -top-3 -left-3 w-8 h-8 rounded-full bg-white text-black font-bold flex items-center justify-center text-sm shadow-lg">3</div>
               <h3 className="text-white font-semibold mb-2 ml-3">Pace Your Day</h3>
               <p className="text-sm text-slate-400 ml-3">Optimize Suhoor nutrition and plan your Taraweeh worship schedule.</p>
             </div>
@@ -229,25 +229,25 @@ export default function RamadanHubPage() {
         <section className="space-y-6">
           <div className="flex items-center justify-between border-b border-slate-800 pb-4">
              <h2 className="text-2xl font-bold text-white flex items-center">
-               <Globe className="w-6 h-6 mr-3 text-emerald-400"/> 
+               <Globe className="w-6 h-6 mr-3 text-white"/> 
                Global Suhoor & Iftar Schedules
              </h2>
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-            <Link href="/ramadan/timings/uk/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800/80 rounded-xl transition-all group">
-              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 transition-colors" />
+            <Link href="/ramadan/timings/uk/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-neutral-600 hover:bg-slate-800/80 rounded-xl transition-all group">
+              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 transition-colors" />
               <span className="text-slate-200 font-medium text-sm sm:text-base">United Kingdom</span>
             </Link>
-            <Link href="/ramadan/timings/us/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800/80 rounded-xl transition-all group">
-              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 transition-colors" />
+            <Link href="/ramadan/timings/us/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-neutral-600 hover:bg-slate-800/80 rounded-xl transition-all group">
+              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 transition-colors" />
               <span className="text-slate-200 font-medium text-sm sm:text-base">United States</span>
             </Link>
-            <Link href="/ramadan/timings/uae/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800/80 rounded-xl transition-all group">
-              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 transition-colors" />
+            <Link href="/ramadan/timings/uae/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-neutral-600 hover:bg-slate-800/80 rounded-xl transition-all group">
+              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 transition-colors" />
               <span className="text-slate-200 font-medium text-sm sm:text-base">UAE</span>
             </Link>
-            <Link href="/ramadan/timings/pakistan/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-emerald-500/50 hover:bg-slate-800/80 rounded-xl transition-all group">
-              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 transition-colors" />
+            <Link href="/ramadan/timings/pakistan/" className="flex items-center p-4 bg-slate-900/80 border border-slate-800 hover:border-neutral-600 hover:bg-slate-800/80 rounded-xl transition-all group">
+              <MapPin className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 transition-colors" />
               <span className="text-slate-200 font-medium text-sm sm:text-base">Pakistan</span>
             </Link>
           </div>
@@ -262,34 +262,34 @@ export default function RamadanHubPage() {
             {/* Silo 1: Ramadan Essentials */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3 mb-6">
-                <Calendar className="w-6 h-6 text-emerald-400" />
+                <Calendar className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-bold text-white">Ramadan Essentials</h3>
               </div>
               <Link href="/ramadan/overview" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <Info className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <Info className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Ramadan Overview</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Ramadan Overview</h4>
                   <p className="text-sm text-slate-400">The spiritual significance and history.</p>
                 </div>
               </Link>
               <Link href="/ramadan/prep-checklist" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <CheckSquare className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <CheckSquare className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Prep Checklist</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Prep Checklist</h4>
                   <p className="text-sm text-slate-400">Mental, physical, and home preparation.</p>
                 </div>
               </Link>
               <Link href="/ramadan/taraweeh-guide" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <BookOpen className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <BookOpen className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Taraweeh Guide</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Taraweeh Guide</h4>
                   <p className="text-sm text-slate-400">Night prayers structure and etiquettes.</p>
                 </div>
               </Link>
               <Link href="/ramadan/laylat-al-qadr" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <MoonStar className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <MoonStar className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Laylat al-Qadr</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Laylat al-Qadr</h4>
                   <p className="text-sm text-slate-400">Seeking the Night of Decree.</p>
                 </div>
               </Link>
@@ -298,34 +298,34 @@ export default function RamadanHubPage() {
             {/* Silo 2: Fasting Rules & Fiqh */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3 mb-6">
-                <FileText className="w-6 h-6 text-emerald-400" />
+                <FileText className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-bold text-white">Fasting Rules & Fiqh</h3>
               </div>
               <Link href="/ramadan/rules/nullifiers" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <Ban className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <Ban className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Fasting Nullifiers</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Fasting Nullifiers</h4>
                   <p className="text-sm text-slate-400">Actions that invalidate your fast.</p>
                 </div>
               </Link>
               <Link href="/ramadan/rules/exemptions" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <AlertCircle className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <AlertCircle className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Exemptions</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Exemptions</h4>
                   <p className="text-sm text-slate-400">Travel, illness, and pregnancy rulings.</p>
                 </div>
               </Link>
               <Link href="/ramadan/rules/fidya-kaffarah" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <Coins className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <Coins className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Fidya & Kaffarah</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Fidya & Kaffarah</h4>
                   <p className="text-sm text-slate-400">Penalties for broken or missed fasts.</p>
                 </div>
               </Link>
               <Link href="/ramadan/rules/healthcare" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <Stethoscope className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <Stethoscope className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Healthcare while Fasting</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Healthcare while Fasting</h4>
                   <p className="text-sm text-slate-400">Inhalers, injections, and blood tests.</p>
                 </div>
               </Link>
@@ -334,37 +334,37 @@ export default function RamadanHubPage() {
             {/* Silo 3: Duas & Worship */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3 mb-6">
-                <Heart className="w-6 h-6 text-emerald-400" />
+                <Heart className="w-6 h-6 text-white" />
                 <h3 className="text-xl font-bold text-white">Duas & Worship</h3>
               </div>
               <Link href="/ramadan/duas" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <Coffee className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <Coffee className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Suhoor & Iftar Duas</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Suhoor & Iftar Duas</h4>
                   <p className="text-sm text-slate-400">Supplications for opening and closing fasts.</p>
                 </div>
               </Link>
               <Link href="/ramadan/worship-tracker" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <ScrollText className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <ScrollText className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Nightly Worship Tracker</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Nightly Worship Tracker</h4>
                   <p className="text-sm text-slate-400">Habit tracking for Quran and prayers.</p>
                 </div>
               </Link>
               <Link href="/ramadan/itikaf" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-slate-600 rounded-xl p-4 transition-colors">
-                <Home className="w-5 h-5 text-slate-500 group-hover:text-emerald-400 mr-3 mt-0.5 shrink-0 transition-colors" />
+                <Home className="w-5 h-5 text-slate-500 group-hover:text-white mr-3 mt-0.5 shrink-0 transition-colors" />
                 <div>
-                  <h4 className="text-white font-medium mb-1 group-hover:text-emerald-300 transition-colors">Itikaf Guidelines</h4>
+                  <h4 className="text-white font-medium mb-1 group-hover:text-white transition-colors">Itikaf Guidelines</h4>
                   <p className="text-sm text-slate-400">Seclusion in the masjid rules.</p>
                 </div>
               </Link>
-              <Link href="/zakat" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-emerald-600/50 rounded-xl p-4 transition-colors relative overflow-hidden">
-                <div className="absolute right-0 top-0 w-16 h-16 bg-emerald-500/10 blur-xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
+              <Link href="/zakat" className="flex items-start group bg-slate-900/80 border border-slate-800 hover:border-neutral-600 rounded-xl p-4 transition-colors relative overflow-hidden">
+                <div className="absolute right-0 top-0 w-16 h-16 bg-neutral-800 blur-xl rounded-full translate-x-1/2 -translate-y-1/2"></div>
                 <div className="w-5 h-5 flex items-center justify-center mr-3 mt-0.5 shrink-0">
-                  <ArrowRight className="w-4 h-4 text-emerald-400 group-hover:translate-x-1 transition-transform" />
+                  <ArrowRight className="w-4 h-4 text-white group-hover:translate-x-1 transition-transform" />
                 </div>
                 <div>
-                  <h4 className="text-emerald-400 font-medium mb-1">Pay Zakat</h4>
+                  <h4 className="text-white font-medium mb-1">Pay Zakat</h4>
                   <p className="text-sm text-slate-400">Calculate and pay your annual Zakat.</p>
                 </div>
               </Link>
@@ -379,9 +379,9 @@ export default function RamadanHubPage() {
           <div className="max-w-4xl mx-auto space-y-2">
             
             <details className="group border-b border-slate-800/80 bg-slate-900/40 rounded-lg open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 When does Ramadan 2026 begin?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base">
                 Ramadan 2026 is expected to begin on or around February 17, 2026, depending on the sighting of the new moon. Islamic dates are subject to lunar visibility.
@@ -389,9 +389,9 @@ export default function RamadanHubPage() {
             </details>
 
             <details className="group border-b border-slate-800/80 bg-slate-900/40 rounded-lg open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 What breaks the fast in Ramadan?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base">
                 Intentionally eating, drinking, or engaging in marital relations during daylight hours (from dawn to sunset) breaks the fast. Unintentional actions (like forgetting you are fasting and taking a sip of water) do not break the fast. Certain medical procedures and swallowing medications will also break it.
@@ -399,9 +399,9 @@ export default function RamadanHubPage() {
             </details>
 
             <details className="group border-b border-slate-800/80 bg-slate-900/40 rounded-lg open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Who is exempt from fasting?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base">
                 Exemptions are granted out of mercy. Travelers on a journey, those who are acutely or chronically ill, the elderly who are physically incapable, pregnant or nursing women (if it poses a risk to them or the baby), and women during their menstrual cycle or post-partum bleeding are all exempt. Missed days must be made up later, or in cases of chronic inability, compensated via Fidya.
@@ -409,9 +409,9 @@ export default function RamadanHubPage() {
             </details>
 
             <details className="group border-b border-slate-800/80 bg-slate-900/40 rounded-lg open:bg-slate-800/50 transition-colors">
-              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-emerald-400 transition-colors select-none">
+              <summary className="flex items-center justify-between cursor-pointer p-5 font-medium text-white hover:text-white transition-colors select-none">
                 Can I brush my teeth while fasting?
-                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-emerald-400" />
+                <ChevronRight className="w-5 h-5 transition-transform duration-300 group-open:rotate-90 text-slate-500 group-hover:text-white" />
               </summary>
               <div className="px-5 pb-5 text-slate-400 leading-relaxed text-sm md:text-base">
                 Yes, it is permissible to brush your teeth using toothpaste or a miswak while fasting, provided you are careful not to swallow any water or toothpaste.

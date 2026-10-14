@@ -595,7 +595,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
   ].filter(item => item.slug !== dua.slug);
 
   return (
-    <article className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased pb-20 selection:bg-emerald-500/30 selection:text-emerald-200">
+    <article className="min-h-screen bg-slate-950 text-slate-100 font-sans antialiased pb-20 selection:bg-white selection:text-black selection:text-white">
       
       {/* Schema.org Structured Data Injection */}
       <script
@@ -633,18 +633,18 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
         <nav aria-label="Breadcrumb" className="mb-6">
           <ol className="flex flex-wrap items-center gap-2 text-xs sm:text-sm text-slate-400">
             <li>
-              <Link href="/" className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+              <Link href="/" className="hover:text-white transition-colors flex items-center gap-1">
                 Home
               </Link>
             </li>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
             <li>
-              <Link href="/duas" className="hover:text-emerald-400 transition-colors flex items-center gap-1">
+              <Link href="/duas" className="hover:text-white transition-colors flex items-center gap-1">
                 Daily Duas Hub
               </Link>
             </li>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-            <li className="text-emerald-400 font-medium truncate max-w-[220px] sm:max-w-md">
+            <li className="text-white font-medium truncate max-w-[220px] sm:max-w-md">
               {dua.titleEnglish}
             </li>
           </ol>
@@ -653,7 +653,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
         {/* PHASE 1: ABOVE-THE-FOLD HERO HEADER & TITLE */}
         <header className="space-y-5 border-b border-slate-800/80 pb-8 mb-10">
           <div className="flex flex-wrap items-center gap-3">
-            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+            <span className="px-3 py-1 rounded-full text-xs font-semibold bg-neutral-800 text-white border border-neutral-800">
               {dua.categoryLabel}
             </span>
             {dua.badge && (
@@ -663,7 +663,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
               </span>
             )}
             <span className="px-3 py-1 rounded-full text-xs font-medium bg-slate-900 text-slate-400 border border-slate-800 flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+              <ShieldCheck className="w-3.5 h-3.5 text-white" />
               {dua.authenticity.split('/')[0].trim()}
             </span>
           </div>
@@ -677,14 +677,14 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           </p>
 
           {/* 2-Sentence "Direct Answer / TL;DR" Box for AI Overviews & Featured Snippets */}
-          <section aria-labelledby="tldr-heading" className="bg-slate-900/80 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-emerald-500/30 shadow-lg shadow-emerald-950/20 relative overflow-hidden">
-            <div className="absolute top-0 left-0 w-1.5 h-full bg-emerald-500" />
+          <section aria-labelledby="tldr-heading" className="bg-slate-900/80 backdrop-blur-md rounded-2xl p-5 sm:p-6 border border-neutral-800 shadow-lg shadow-neutral-950/50 relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-1.5 h-full bg-white text-black" />
             <div className="flex items-start gap-3.5">
-              <div className="p-2 rounded-xl bg-emerald-500/10 text-emerald-400 shrink-0 mt-0.5">
+              <div className="p-2 rounded-xl bg-neutral-800 text-white shrink-0 mt-0.5">
                 <Sparkles className="w-5 h-5" />
               </div>
               <div className="space-y-1.5">
-                <h2 id="tldr-heading" className="text-xs font-bold uppercase tracking-widest text-emerald-400">
+                <h2 id="tldr-heading" className="text-xs font-bold uppercase tracking-widest text-white">
                   Quick Direct Answer & Essential Overview
                 </h2>
                 <p className="text-sm sm:text-base text-slate-200 leading-relaxed">
@@ -697,13 +697,13 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           {/* Visible Author & Scholarly Board Reviewer Byline Card */}
           <div className="flex flex-wrap items-center justify-between gap-4 pt-2">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-emerald-950 border border-emerald-500/30 flex items-center justify-center text-emerald-400 font-bold text-sm">
+              <div className="w-10 h-10 rounded-full bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white font-bold text-sm">
                 FS
               </div>
               <div>
                 <div className="flex items-center gap-2">
                   <span className="text-sm font-semibold text-white">Fiqh & Shariah Advisory Council</span>
-                  <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                  <ShieldCheck className="w-4 h-4 text-white" />
                 </div>
                 <p className="text-xs text-slate-400">
                   Reviewed for Authenticity • Classical Hadith Verification Panel
@@ -713,7 +713,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
 
             <Link 
               href="/about/scholarly-board/" 
-              className="inline-flex items-center gap-1 text-xs font-medium text-emerald-400 hover:text-emerald-300 transition-colors py-1.5 px-3 rounded-lg bg-emerald-500/5 border border-emerald-500/20"
+              className="inline-flex items-center gap-1 text-xs font-medium text-white hover:text-white transition-colors py-1.5 px-3 rounded-lg bg-neutral-800 border border-neutral-800"
             >
               <UserCheck className="w-3.5 h-3.5" />
               <span>Verify Scholarly Credentials</span>
@@ -761,7 +761,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
                   className="bg-slate-950/60 p-4 sm:p-5 rounded-xl border border-slate-800/80 transition-colors hover:border-slate-700/80 space-y-2"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center font-bold text-xs shrink-0">
+                    <span className="w-7 h-7 rounded-full bg-neutral-800 text-white border border-neutral-800 flex items-center justify-center font-bold text-xs shrink-0">
                       {sIdx + 1}
                     </span>
                     <h3 className="text-base sm:text-lg font-semibold text-white">
@@ -793,10 +793,10 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
               
               {/* Visual Infographic Overlay Indicator */}
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mb-3 shadow-lg shadow-emerald-950/50 backdrop-blur-md">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-neutral-800 border border-neutral-800 text-white flex items-center justify-center mb-3 shadow-lg shadow-neutral-950/50 backdrop-blur-md">
                   <ImageIcon className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-400 mb-1">
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white mb-1">
                   Visual Infographic &amp; Recitation Etiquette Chart
                 </span>
                 <p className="text-slate-200 text-sm sm:text-base font-medium max-w-lg line-clamp-2">
@@ -806,7 +806,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
 
               {/* Explicit Alt Text Label Badge */}
               <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900/90 backdrop-blur-md border border-slate-700/80 text-[11px] text-slate-300 font-mono shadow-sm">
-                <span className="text-emerald-400 font-bold uppercase text-[10px]">Alt Text:</span>
+                <span className="text-white font-bold uppercase text-[10px]">Alt Text:</span>
                 <span className="truncate max-w-[200px] sm:max-w-md">
                   Illustrated step-by-step recitation guide for {dua.titleEnglish} ({dua.titleUrdu})
                 </span>
@@ -819,7 +819,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
               className="flex items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-slate-400 bg-slate-950/50 px-4 py-2.5 rounded-xl border border-slate-800/70"
             >
               <div className="flex items-start sm:items-center gap-2">
-                <Info className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
+                <Info className="w-4 h-4 text-white shrink-0 mt-0.5 sm:mt-0" />
                 <p className="text-slate-300 leading-normal">
                   <strong className="text-white font-semibold">Caption Text:</strong> Step-by-step visual recitation posture, phonetic alignment, and spiritual etiquettes for {dua.titleEnglish} ({dua.titleUrdu}) according to authentic Sunnah traditions.
                 </p>
@@ -834,7 +834,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           <section aria-labelledby="benefits-heading" className="bg-slate-900/60 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
             <div className="border-b border-slate-800 pb-4">
               <h2 id="benefits-heading" className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-                <Heart className="w-6 h-6 text-emerald-400 shrink-0" />
+                <Heart className="w-6 h-6 text-white shrink-0" />
                 <span>Spiritual Benefits & Virtues</span>
               </h2>
               <p className="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
@@ -854,10 +854,10 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
                     className="bg-slate-950/60 p-4 sm:p-5 rounded-xl border border-slate-800/80 transition-colors hover:border-slate-700/80 space-y-2"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="p-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 shrink-0">
+                      <span className="p-1 rounded-md bg-neutral-800 border border-neutral-800 text-white shrink-0">
                         <CheckCircle2 className="w-4 h-4" />
                       </span>
-                      <h3 className="text-base sm:text-lg font-semibold text-emerald-300">
+                      <h3 className="text-base sm:text-lg font-semibold text-white">
                         {titleText}
                       </h3>
                     </div>
@@ -877,7 +877,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           >
             <div className="border-b border-slate-800 pb-3">
               <h2 id="video-facade-heading" className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-                <Play className="w-6 h-6 text-emerald-400" />
+                <Play className="w-6 h-6 text-white" />
                 Pronunciation Video Tutorial & Tajweed Masterclass
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -907,11 +907,11 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
                     const [title, ...body] = highlight.split(':');
                     return (
                       <li key={hIdx} className="flex items-start gap-2.5 bg-slate-950/50 p-3 rounded-xl border border-slate-800">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-white shrink-0 mt-0.5" />
                         <div>
                           {body.length > 0 ? (
                             <>
-                              <strong className="text-emerald-300 font-semibold">{title}:</strong>
+                              <strong className="text-white font-semibold">{title}:</strong>
                               <span>{body.join(':')}</span>
                             </>
                           ) : (
@@ -930,7 +930,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           {/* AUTHENTIC REFERENCES & SOURCE ATTRIBUTION */}
           <section aria-labelledby="sources-heading" className="bg-slate-900/50 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-4">
             <div className="flex items-center gap-3 border-b border-slate-800 pb-3">
-              <ShieldCheck className="w-6 h-6 text-emerald-400" />
+              <ShieldCheck className="w-6 h-6 text-white" />
               <h2 id="sources-heading" className="text-xl sm:text-2xl font-bold text-white">
                 Authentic Classical Hadith Sources & Cross-References
               </h2>
@@ -944,7 +944,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
 
               <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
                 <span className="text-xs font-semibold uppercase text-slate-400 block mb-1">Hadith Reference / Index</span>
-                <span className="text-emerald-400 font-medium text-sm">{dua.hadithNumber}</span>
+                <span className="text-white font-medium text-sm">{dua.hadithNumber}</span>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
@@ -970,7 +970,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           <section aria-labelledby="faqs-heading" className="bg-slate-900/60 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
             <div className="border-b border-slate-800 pb-3">
               <h2 id="faqs-heading" className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-                <HelpCircle className="w-6 h-6 text-emerald-400" />
+                <HelpCircle className="w-6 h-6 text-white" />
                 Frequently Asked Questions Regarding {dua.titleEnglish}
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -984,9 +984,9 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
                   key={fIdx} 
                   className="group bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden transition-all"
                 >
-                  <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-emerald-300 transition-colors">
+                  <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-white transition-colors">
                     <span>{faq.question}</span>
-                    <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-emerald-500/20 text-slate-400 group-open:text-emerald-400 flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
+                    <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-neutral-800 text-slate-400 group-open:text-white flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
                       ↓
                     </span>
                   </summary>
@@ -1002,10 +1002,10 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           <section aria-labelledby="siblings-heading" className="sibling-nav space-y-4 pt-4">
             <div className="flex items-center justify-between border-b border-slate-800 pb-2">
               <h2 id="siblings-heading" className="text-xl font-bold text-white flex items-center gap-2">
-                <Compass className="w-5 h-5 text-emerald-400" />
+                <Compass className="w-5 h-5 text-white" />
                 Other Frequently Recited Daily Duas
               </h2>
-              <Link href="/duas" className="text-xs text-emerald-400 hover:underline flex items-center gap-1">
+              <Link href="/duas" className="text-xs text-white hover:underline flex items-center gap-1">
                 View All 100+ Duas
                 <ArrowRight className="w-3 h-3" />
               </Link>
@@ -1016,15 +1016,15 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
                 <Link
                   key={idx}
                   href={`/duas/${item.slug}`}
-                  className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all group block hover:bg-slate-900/90"
+                  className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-neutral-600 transition-all group block hover:bg-slate-900/90"
                 >
                   <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                    <span className="text-emerald-400 font-medium">{item.cat}</span>
+                    <span className="text-white font-medium">{item.cat}</span>
                     <span className="font-urdu text-slate-400">{item.urdu}</span>
                   </div>
-                  <h3 className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors flex items-center justify-between">
+                  <h3 className="text-sm font-semibold text-white group-hover:text-white transition-colors flex items-center justify-between">
                     <span>{item.title}</span>
-                    <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
+                    <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-0.5 transition-transform" />
                   </h3>
                 </Link>
               ))}
@@ -1035,7 +1035,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
           <div className="pt-6 border-t border-slate-800/80 flex items-center justify-between">
             <Link
               href="/duas"
-              className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors py-2 px-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700"
+              className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors py-2 px-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700"
             >
               <ArrowRight className="w-4 h-4 rotate-180" />
               <span>Back to Daily Duas & Azkar Directory Hub</span>
@@ -1043,7 +1043,7 @@ export default function SingleDuaPage({ params }: { params: { slug: string } }) 
 
             <Link
               href="/ramadan"
-              className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
             >
               <span>Explore Ramadan Hub</span>
               <ArrowRight className="w-4 h-4" />

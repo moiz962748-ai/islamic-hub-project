@@ -504,7 +504,7 @@ export default function SingleAyatPage({
   };
 
   return (
-    <article className="min-h-screen bg-slate-950 text-slate-100 py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-emerald-500/30">
+    <article className="min-h-screen bg-slate-950 text-slate-100 py-8 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       {/* SECTION 5: TECHNICAL & AI CRAWLABILITY (JSON-LD & Canonical) */}
       <script
         type="application/ld+json"
@@ -518,11 +518,11 @@ export default function SingleAyatPage({
         <header className="space-y-6">
           {/* Breadcrumb Navigation: Home > Sacred Ayats Hub > Specific Ayat */}
           <nav aria-label="Breadcrumb" className="flex items-center text-xs sm:text-sm font-medium text-slate-400 space-x-2 flex-wrap gap-y-2">
-            <Link href="/" className="hover:text-emerald-400 transition-colors">Home</Link>
+            <Link href="/" className="hover:text-white transition-colors">Home</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-            <Link href="/ayats/" className="hover:text-emerald-400 transition-colors">Sacred Ayats Hub</Link>
+            <Link href="/ayats/" className="hover:text-white transition-colors">Sacred Ayats Hub</Link>
             <ChevronRight className="w-3.5 h-3.5 text-slate-600 shrink-0" />
-            <span className="text-emerald-400 font-semibold truncate max-w-[220px] sm:max-w-none">
+            <span className="text-white font-semibold truncate max-w-[220px] sm:max-w-none">
               {ayat.titleEnglish}
             </span>
           </nav>
@@ -530,7 +530,7 @@ export default function SingleAyatPage({
           {/* Heading Architecture with Verified Badges */}
           <div className="space-y-3">
             <div className="flex flex-wrap items-center gap-2.5">
-              <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-emerald-500/15 text-emerald-400 border border-emerald-500/30">
+              <span className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-wider bg-neutral-800 text-white border border-neutral-800">
                 {ayat.categoryLabel}
               </span>
               <span className="px-2.5 py-1 rounded-full text-xs font-semibold bg-slate-900 border border-slate-700 text-slate-300">
@@ -549,7 +549,7 @@ export default function SingleAyatPage({
 
             {/* Urdu Title & Arabic Title Subheadings */}
             <div className="flex flex-wrap items-baseline gap-4 pt-1">
-              <span className="font-urdu text-xl sm:text-2xl text-emerald-300 font-medium" dir="rtl">
+              <span className="font-urdu text-xl sm:text-2xl text-white font-medium" dir="rtl">
                 {ayat.titleUrdu}
               </span>
               <span className="text-xs text-slate-500 font-mono hidden sm:inline-block">•</span>
@@ -568,7 +568,7 @@ export default function SingleAyatPage({
             {/* Visible E-E-A-T Scholarly Review Banner & Quick Action Buttons */}
             <div className="flex flex-wrap items-center justify-between gap-4 border-y border-slate-800/80 py-3 mt-4 text-xs text-slate-400">
               <div className="flex items-center gap-2">
-                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <ShieldCheck className="w-4 h-4 text-white shrink-0" />
                 <span>Verified Quranic Text (King Fahd Complex) & Classical Tafsir Consensus</span>
               </div>
 
@@ -603,7 +603,7 @@ export default function SingleAyatPage({
                   className="bg-slate-950/60 p-4 sm:p-5 rounded-xl border border-slate-800/80 transition-colors hover:border-slate-700/80 space-y-2"
                 >
                   <div className="flex items-center gap-3">
-                    <span className="w-7 h-7 rounded-full bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 flex items-center justify-center font-bold text-xs shrink-0">
+                    <span className="w-7 h-7 rounded-full bg-neutral-800 text-white border border-neutral-800 flex items-center justify-center font-bold text-xs shrink-0">
                       {sIdx + 1}
                     </span>
                     <h3 className="text-base sm:text-lg font-semibold text-white">
@@ -635,10 +635,10 @@ export default function SingleAyatPage({
               
               {/* Visual Infographic Overlay Indicator */}
               <div className="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
-                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-emerald-500/20 border border-emerald-500/40 text-emerald-400 flex items-center justify-center mb-3 shadow-lg shadow-emerald-950/50 backdrop-blur-md">
+                <div className="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-neutral-800 border border-neutral-800 text-white flex items-center justify-center mb-3 shadow-lg shadow-neutral-950/50 backdrop-blur-md">
                   <ImageIcon className="w-6 h-6 sm:w-7 sm:h-7" />
                 </div>
-                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-emerald-400 mb-1">
+                <span className="text-xs sm:text-sm font-bold uppercase tracking-widest text-white mb-1">
                   Visual Infographic &amp; Quranic Recitation Protocol Chart
                 </span>
                 <p className="text-slate-200 text-sm sm:text-base font-medium max-w-lg line-clamp-2">
@@ -648,7 +648,7 @@ export default function SingleAyatPage({
 
               {/* Explicit Alt Text Label Badge */}
               <div className="absolute top-3 left-3 flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-slate-900/90 backdrop-blur-md border border-slate-700/80 text-[11px] text-slate-300 font-mono shadow-sm">
-                <span className="text-emerald-400 font-bold uppercase text-[10px]">Alt Text:</span>
+                <span className="text-white font-bold uppercase text-[10px]">Alt Text:</span>
                 <span className="truncate max-w-[200px] sm:max-w-md">
                   Illustrated step-by-step recitation guide for {ayat.titleEnglish} ({ayat.titleUrdu})
                 </span>
@@ -661,7 +661,7 @@ export default function SingleAyatPage({
               className="flex items-start sm:items-center justify-between gap-3 text-xs sm:text-sm text-slate-400 bg-slate-950/50 px-4 py-2.5 rounded-xl border border-slate-800/70"
             >
               <div className="flex items-start sm:items-center gap-2">
-                <Info className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5 sm:mt-0" />
+                <Info className="w-4 h-4 text-white shrink-0 mt-0.5 sm:mt-0" />
                 <p className="text-slate-300 leading-normal">
                   <strong className="text-white font-semibold">Caption Text:</strong> Step-by-step visual recitation posture, phonetic alignment, and spiritual etiquettes for {ayat.titleEnglish} ({ayat.titleUrdu}) according to authentic Sunnah and classical Quranic exegesis traditions.
                 </p>
@@ -676,7 +676,7 @@ export default function SingleAyatPage({
           <section aria-labelledby="benefits-heading" className="bg-slate-900/60 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
             <div className="border-b border-slate-800 pb-4">
               <h2 id="benefits-heading" className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-                <Heart className="w-6 h-6 text-emerald-400 shrink-0" />
+                <Heart className="w-6 h-6 text-white shrink-0" />
                 <span>Spiritual Benefits & Virtues</span>
               </h2>
               <p className="text-sm sm:text-base text-slate-300 mt-2 leading-relaxed">
@@ -696,10 +696,10 @@ export default function SingleAyatPage({
                     className="bg-slate-950/60 p-4 sm:p-5 rounded-xl border border-slate-800/80 transition-colors hover:border-slate-700/80 space-y-2"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="p-1 rounded-md bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 shrink-0">
+                      <span className="p-1 rounded-md bg-neutral-800 border border-neutral-800 text-white shrink-0">
                         <CheckCircle2 className="w-4 h-4" />
                       </span>
-                      <h3 className="text-base sm:text-lg font-semibold text-emerald-300">
+                      <h3 className="text-base sm:text-lg font-semibold text-white">
                         {titleText}
                       </h3>
                     </div>
@@ -719,7 +719,7 @@ export default function SingleAyatPage({
           >
             <div className="border-b border-slate-800 pb-3">
               <h2 id="video-facade-heading" className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-                <Play className="w-6 h-6 text-emerald-400" />
+                <Play className="w-6 h-6 text-white" />
                 Pronunciation Video Tutorial & Tajweed Masterclass
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -749,11 +749,11 @@ export default function SingleAyatPage({
                     const [title, ...body] = highlight.split(':');
                     return (
                       <li key={hIdx} className="flex items-start gap-2.5 bg-slate-950/50 p-3 rounded-xl border border-slate-800">
-                        <Check className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                        <Check className="w-4 h-4 text-white shrink-0 mt-0.5" />
                         <div>
                           {body.length > 0 ? (
                             <>
-                              <strong className="text-emerald-300 font-semibold">{title}:</strong>
+                              <strong className="text-white font-semibold">{title}:</strong>
                               <span>{body.join(':')}</span>
                             </>
                           ) : (
@@ -772,7 +772,7 @@ export default function SingleAyatPage({
           {/* AUTHENTIC CLASSICAL QURANIC & HADITH SOURCES */}
           <section aria-labelledby="sources-heading" className="bg-slate-900/50 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-4">
             <div className="flex items-center gap-3 border-b border-slate-800 pb-3">
-              <ShieldCheck className="w-6 h-6 text-emerald-400" />
+              <ShieldCheck className="w-6 h-6 text-white" />
               <h2 id="sources-heading" className="text-xl sm:text-2xl font-bold text-white">
                 Authentic Classical Quranic & Hadith Sources
               </h2>
@@ -786,7 +786,7 @@ export default function SingleAyatPage({
 
               <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
                 <span className="text-xs font-semibold uppercase text-slate-400 block mb-1">Primary Hadith Source</span>
-                <span className="text-emerald-400 font-medium text-sm">{ayat.source}</span>
+                <span className="text-white font-medium text-sm">{ayat.source}</span>
               </div>
 
               <div className="p-4 rounded-xl bg-slate-950/60 border border-slate-800/80">
@@ -812,7 +812,7 @@ export default function SingleAyatPage({
           <section aria-labelledby="faqs-heading" className="bg-slate-900/60 rounded-2xl p-6 sm:p-8 border border-slate-800 space-y-6">
             <div className="border-b border-slate-800 pb-3">
               <h2 id="faqs-heading" className="text-2xl sm:text-3xl font-bold text-white flex items-center gap-3">
-                <HelpCircle className="w-6 h-6 text-emerald-400" />
+                <HelpCircle className="w-6 h-6 text-white" />
                 Frequently Asked Questions Regarding {ayat.titleEnglish}
               </h2>
               <p className="text-xs sm:text-sm text-slate-400 mt-1">
@@ -826,9 +826,9 @@ export default function SingleAyatPage({
                   key={fIdx} 
                   className="group bg-slate-950/60 rounded-xl border border-slate-800 overflow-hidden transition-all"
                 >
-                  <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-emerald-300 transition-colors">
+                  <summary className="p-4 sm:p-5 text-sm sm:text-base font-semibold text-white cursor-pointer list-none flex items-center justify-between gap-4 hover:text-white transition-colors">
                     <span>{faq.question}</span>
-                    <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-emerald-500/20 text-slate-400 group-open:text-emerald-400 flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
+                    <span className="w-6 h-6 rounded-full bg-slate-800 group-open:bg-neutral-800 text-slate-400 group-open:text-white flex items-center justify-center text-xs font-bold transition-transform group-open:rotate-180 shrink-0">
                       ↓
                     </span>
                   </summary>
@@ -844,10 +844,10 @@ export default function SingleAyatPage({
           <section aria-labelledby="siblings-heading" className="sibling-nav space-y-4 pt-4">
             <div className="flex items-center justify-between border-b border-slate-800 pb-2">
               <h2 id="siblings-heading" className="text-xl font-bold text-white flex items-center gap-2">
-                <Compass className="w-5 h-5 text-emerald-400" />
+                <Compass className="w-5 h-5 text-white" />
                 Other Frequently Recited Sacred Ayats
               </h2>
-              <Link href="/ayats/" className="text-xs text-emerald-400 hover:underline flex items-center gap-1">
+              <Link href="/ayats/" className="text-xs text-white hover:underline flex items-center gap-1">
                 View All Sacred Ayats
                 <ArrowRight className="w-3 h-3" />
               </Link>
@@ -858,15 +858,15 @@ export default function SingleAyatPage({
                 <Link
                   key={idx}
                   href={`/ayats/${item.slug}`}
-                  className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-emerald-500/40 transition-all group block hover:bg-slate-900/90"
+                  className="p-4 rounded-xl bg-slate-900/60 border border-slate-800 hover:border-neutral-600 transition-all group block hover:bg-slate-900/90"
                 >
                   <div className="flex items-center justify-between text-xs text-slate-400 mb-1">
-                    <span className="text-emerald-400 font-medium">{item.cat}</span>
+                    <span className="text-white font-medium">{item.cat}</span>
                     <span className="font-urdu text-slate-400">{item.urdu}</span>
                   </div>
-                  <h3 className="text-sm font-semibold text-white group-hover:text-emerald-300 transition-colors flex items-center justify-between">
+                  <h3 className="text-sm font-semibold text-white group-hover:text-white transition-colors flex items-center justify-between">
                     <span>{item.title}</span>
-                    <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-emerald-400 group-hover:translate-x-0.5 transition-transform" />
+                    <ChevronRight className="w-4 h-4 text-slate-500 group-hover:text-white group-hover:translate-x-0.5 transition-transform" />
                   </h3>
                 </Link>
               ))}
@@ -877,7 +877,7 @@ export default function SingleAyatPage({
           <div className="pt-6 border-t border-slate-800/80 flex items-center justify-between flex-wrap gap-4">
             <Link
               href="/ayats/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-emerald-400 transition-colors py-2 px-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700"
+              className="inline-flex items-center gap-2 text-sm font-medium text-slate-300 hover:text-white transition-colors py-2 px-4 rounded-xl bg-slate-900/80 border border-slate-800 hover:border-slate-700"
             >
               <ArrowRight className="w-4 h-4 rotate-180" />
               <span>Back to Sacred Ayats Directory Hub</span>
@@ -885,7 +885,7 @@ export default function SingleAyatPage({
 
             <Link
               href="/duas/"
-              className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-emerald-400 transition-colors"
+              className="inline-flex items-center gap-2 text-sm font-medium text-slate-400 hover:text-white transition-colors"
             >
               <span>Explore Daily Duas Hub</span>
               <ArrowRight className="w-4 h-4" />
