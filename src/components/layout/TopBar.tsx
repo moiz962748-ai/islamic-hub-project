@@ -20,7 +20,7 @@ export default function TopBar() {
           </Link>
           
           <Link 
-            href="/prayer-times/qibla/" 
+            href="/tools/qibla-finder/" 
             className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors"
           >
             <Compass className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors" />
@@ -28,7 +28,7 @@ export default function TopBar() {
           </Link>
           
           <Link 
-            href="/resources/duas/" 
+            href="/duas/" 
             className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors"
           >
             <BookOpen className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors" />

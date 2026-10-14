@@ -20,6 +20,7 @@ import { useState, useEffect } from 'react';
 
 import RamadanHubPage from '../app/ramadan/page';
 import RamadanTimingsPage from '../app/ramadan/timings/page';
+import PrayerTimesPage from '../app/prayer-times/page';
 import FastingRulesPage from '../app/ramadan/rules/page';
 import EidAlFitrPage from '../app/eid/fitr/page';
 
@@ -102,10 +103,13 @@ export default function App() {
   } else if (pathname === '/ramadan/overview' || pathname === '/ramadan/overview/') {
     PageComponent = <RamadanOverviewPage />;
   } else if (
-    pathname === '/ramadan/timings' || 
-    pathname === '/ramadan/timings/' ||
     pathname === '/prayer-times' || 
     pathname === '/prayer-times/'
+  ) {
+    PageComponent = <PrayerTimesPage />;
+  } else if (
+    pathname === '/ramadan/timings' || 
+    pathname === '/ramadan/timings/'
   ) {
     PageComponent = <RamadanTimingsPage />;
   } else if (timingsMatch) {

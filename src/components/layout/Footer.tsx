@@ -23,19 +23,19 @@ const footerColumns = [
   {
     title: "GLOBAL PRAYER TIMES",
     links: [
-      { label: "London Prayer Times", href: "/prayer-times/uk/london/" },
-      { label: "New York Prayer Times", href: "/prayer-times/us/new-york/" },
-      { label: "Dubai Prayer Times", href: "/prayer-times/ae/dubai/" },
-      { label: "Qibla Direction Compass", href: "/prayer-times/qibla/" },
+      { label: "London Prayer Times", href: "/ramadan/timings/uk/london/" },
+      { label: "New York Prayer Times", href: "/ramadan/timings/us/new-york/" },
+      { label: "Dubai Prayer Times", href: "/ramadan/timings/ae/dubai/" },
+      { label: "Qibla Direction Compass", href: "/tools/qibla-finder/" },
     ]
   },
   {
     title: "DUAS & RUQYAH",
     links: [
-      { label: "Dua for Anxiety & Stress", href: "/resources/duas/anxiety-stress/" },
-      { label: "Sayyidul Istighfar", href: "/resources/duas/sayyidul-istighfar/" },
-      { label: "Ruqyah for Evil Eye", href: "/resources/duas/ruqyah-evil-eye/" },
-      { label: "Morning & Night Adhkar", href: "/resources/duas/morning-adhkar/" },
+      { label: "Dua for Anxiety & Stress", href: "/duas/anxiety-hardship-dua/" },
+      { label: "Sayyidul Istighfar", href: "/duas/sayyidul-istighfar/" },
+      { label: "Ruqyah for Evil Eye", href: "/duas/nazar-ki-dua/" },
+      { label: "Morning & Night Adhkar", href: "/duas/morning-azkar/" },
     ]
   },
   {
