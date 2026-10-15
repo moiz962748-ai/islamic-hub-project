@@ -24,6 +24,7 @@ import {
   Briefcase,
   FileText
 } from 'lucide-react';
+import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
 export default function NisabThresholdRulesPage() {
   const [currency, setCurrency] = useState('USD');
@@ -422,6 +423,18 @@ export default function NisabThresholdRulesPage() {
                 </Link>
               </div>
             </section>
+
+            {/* YouTube Video Guide (Embedded right above FAQ section) */}
+            <div className="mb-12">
+              <YouTubeEmbed
+                videoId="dQw4w9WgXcQ"
+                title="Understanding Nisab Thresholds: Gold vs Silver Standards"
+                description="Learn the differences between the gold (87.48g) and silver (612.36g) Nisab benchmarks, hawl (one lunar year possession), and which threshold applies to your assets."
+                badgeText="Nisab Video Guide"
+                duration="PT10M30S"
+                uploadDate="2026-10-15T08:00:00+05:00"
+              />
+            </div>
 
             {/* Frequently Asked Questions (Accordion) */}
             <section id="faqs" className="scroll-mt-28">

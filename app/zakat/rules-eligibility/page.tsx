@@ -25,6 +25,7 @@ import {
   AlertTriangle,
   FileText
 } from 'lucide-react';
+import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
 export default function RulesEligibilityPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -431,6 +432,18 @@ export default function RulesEligibilityPage() {
                 </Link>
               </div>
             </section>
+
+            {/* YouTube Video Guide (Embedded right above FAQ section) */}
+            <div className="mb-12">
+              <YouTubeEmbed
+                videoId="dQw4w9WgXcQ"
+                title="Zakat Rules & 8 Eligible Categories: Complete Guide"
+                description="Comprehensive scholarly explanation of the eight Quranic categories of Zakat recipients (Asnaf), non-eligible persons, and essential conditions for valid distribution."
+                badgeText="Eligibility Video Guide"
+                duration="PT10M30S"
+                uploadDate="2026-10-15T08:00:00+05:00"
+              />
+            </div>
 
             {/* Frequently Asked Questions (Accordion) */}
             <section id="faqs" className="scroll-mt-28">

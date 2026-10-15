@@ -349,15 +349,20 @@ export default function QiblaFinderPage() {
         "name": "How to Calibrate Your Phone Compass for Qibla",
         "description": "Step-by-step video demonstration on how to calibrate smartphone sensors, avoid magnetic interference, and find the precise Qibla direction.",
         "thumbnailUrl": [
-          "https://images.unsplash.com/photo-1564769625905-50e93615e769?q=80&w=1200&auto=format&fit=crop"
+          "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+          "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
         ],
-        "uploadDate": "2026-03-01T08:00:00+00:00",
-        "duration": "PT2M10S",
-        "embedUrl": "https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ",
+        "uploadDate": "2026-10-15T08:00:00+05:00",
+        "duration": "PT10M30S",
+        "contentUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
         "publisher": {
           "@type": "Organization",
           "name": "IslamHub",
-          "url": "https://islamhub.com"
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://islamhub.com/logo.png"
+          }
         }
       },
       {

@@ -20,6 +20,7 @@ import {
   Database,
   Image as ImageIcon
 } from 'lucide-react';
+import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
 export default function CryptoZakatCalculatorPage() {
   // --- STATE ---
@@ -413,67 +414,59 @@ export default function CryptoZakatCalculatorPage() {
           </Link>
         </div>
 
-        {/* Phase 2: Crypto Classification HTML Data Table & Video */}
-        <div className="grid lg:grid-cols-12 gap-8 mb-16">
-          
-          <div className="lg:col-span-8">
-            <h2 className="text-xl font-bold text-white mb-6">Web3 Assets Zakat Rules</h2>
-            <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
-              <table className="w-full text-left border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="bg-slate-950/80 border-b border-slate-800">
-                    <th className="p-4 text-sm font-semibold text-slate-300">Token Type</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Zakat Status</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Contemporary Fiqh Basis</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800">
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-bold text-amber-400">Payment Tokens (BTC, ETH)</td>
-                    <td className="p-4 text-sm text-slate-300">Taxable at 2.5%</td>
-                    <td className="p-4 text-sm text-slate-400">Treated as digital currency/wealth</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white">Stablecoins (USDT, USDC)</td>
-                    <td className="p-4 text-sm text-slate-300">Taxable at 2.5%</td>
-                    <td className="p-4 text-sm text-slate-400">1:1 Fiat monetary equivalence</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-purple-400">Staked Assets & Yield</td>
-                    <td className="p-4 text-sm text-slate-300">Taxable (if accessible)</td>
-                    <td className="p-4 text-sm text-slate-400">Wealth accumulation mechanism</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-pink-400">NFTs (Flipping/Trading)</td>
-                    <td className="p-4 text-sm text-slate-300">Taxable at 2.5%</td>
-                    <td className="p-4 text-sm text-slate-400">Urud al-Tijarah (Trade goods)</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-slate-400">NFTs (Personal Utility/Art)</td>
-                    <td className="p-4 text-sm text-slate-500">Exempt</td>
-                    <td className="p-4 text-sm text-slate-500">Personal use / non-liquid asset</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        {/* Phase 2: Crypto Classification HTML Data Table */}
+        <div className="max-w-4xl mb-12">
+          <h2 className="text-xl font-bold text-white mb-6">Web3 Assets Zakat Rules</h2>
+          <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
+            <table className="w-full text-left border-collapse min-w-[700px]">
+              <thead>
+                <tr className="bg-slate-950/80 border-b border-slate-800">
+                  <th className="p-4 text-sm font-semibold text-slate-300">Token Type</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Zakat Status</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Contemporary Fiqh Basis</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800">
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-bold text-amber-400">Payment Tokens (BTC, ETH)</td>
+                  <td className="p-4 text-sm text-slate-300">Taxable at 2.5%</td>
+                  <td className="p-4 text-sm text-slate-400">Treated as digital currency/wealth</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-white">Stablecoins (USDT, USDC)</td>
+                  <td className="p-4 text-sm text-slate-300">Taxable at 2.5%</td>
+                  <td className="p-4 text-sm text-slate-400">1:1 Fiat monetary equivalence</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-purple-400">Staked Assets & Yield</td>
+                  <td className="p-4 text-sm text-slate-300">Taxable (if accessible)</td>
+                  <td className="p-4 text-sm text-slate-400">Wealth accumulation mechanism</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-pink-400">NFTs (Flipping/Trading)</td>
+                  <td className="p-4 text-sm text-slate-300">Taxable at 2.5%</td>
+                  <td className="p-4 text-sm text-slate-400">Urud al-Tijarah (Trade goods)</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-slate-400">NFTs (Personal Utility/Art)</td>
+                  <td className="p-4 text-sm text-slate-500">Exempt</td>
+                  <td className="p-4 text-sm text-slate-500">Personal use / non-liquid asset</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+        </div>
 
-          <div className="lg:col-span-4">
-            <h2 className="text-xl font-bold text-white mb-6">Video Guide</h2>
-            <div className="aspect-[4/3] w-full rounded-xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-              <button className="z-20 w-16 h-16 rounded-full bg-cyan-500/90 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(6,182,212,0.4)]">
-                <PlayCircle className="w-8 h-8 fill-slate-950 text-white" />
-              </button>
-              <div className="absolute top-3 right-3 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
-                3 Min Guide
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 z-20">
-                <h4 className="text-white font-bold text-sm mb-1 line-clamp-2">How to Calculate Zakat on Crypto, DeFi & Staking Rewards</h4>
-              </div>
-            </div>
-          </div>
-
+        {/* YouTube Video Guide (Embedded right above FAQ section) */}
+        <div className="max-w-4xl mb-12">
+          <YouTubeEmbed
+            videoId="dQw4w9WgXcQ"
+            title="How to Calculate Zakat on Crypto, DeFi & Staking Rewards"
+            description="Clear Islamic guidance on calculating Zakat on Bitcoin, Ethereum, stablecoins, DeFi liquidity pools, staking rewards, and NFT holdings."
+            badgeText="Crypto Zakat Video Guide"
+            duration="PT10M30S"
+            uploadDate="2026-10-15T08:00:00+05:00"
+          />
         </div>
 
         {/* Phase 4: Crypto FAQ Accordion */}

@@ -19,6 +19,7 @@ import {
   PieChart,
   Landmark
 } from 'lucide-react';
+import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
 export default function StocksInvestmentsCalculatorPage() {
   // --- STATE ---
@@ -423,68 +424,60 @@ export default function StocksInvestmentsCalculatorPage() {
           </Link>
         </div>
 
-        {/* Phase 2: Stock Classification HTML Data Table & Video */}
-        <div className="grid lg:grid-cols-12 gap-8 mb-16">
-          
-          <div className="lg:col-span-8">
-            <h2 className="text-xl font-bold text-white mb-6">Stock Classification & Zakat Rules</h2>
-            <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
-              <table className="w-full text-left border-collapse min-w-[700px]">
-                <thead>
-                  <tr className="bg-slate-950/80 border-b border-slate-800">
-                    <th className="p-4 text-sm font-semibold text-slate-300">Asset Category</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Zakat Rate</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Deduction Allowance</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">AAOIFI Reference</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800">
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-bold text-blue-400">Active Trading Shares</td>
-                    <td className="p-4 text-sm text-slate-300">2.5% of Full Market Value</td>
-                    <td className="p-4 text-sm text-slate-400">No deductions allowed</td>
-                    <td className="p-4 text-sm text-slate-500">Standard No. 35 (Trading)</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-indigo-300">Passive / Dividend Shares</td>
-                    <td className="p-4 text-sm text-slate-300">2.5% of Liquid Net Assets</td>
-                    <td className="p-4 text-sm text-slate-400">Fixed assets (buildings, machinery) exempt</td>
-                    <td className="p-4 text-sm text-slate-500">Standard No. 35 (Investment)</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white">Mutual Funds / ETFs</td>
-                    <td className="p-4 text-sm text-slate-300">2.5% of Market Value</td>
-                    <td className="p-4 text-sm text-slate-400">Treated based on fund intent (Trading vs Passive)</td>
-                    <td className="p-4 text-sm text-slate-500">Standard No. 35</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white">Retirement / 401(k)</td>
-                    <td className="p-4 text-sm text-slate-300">2.5% of Accessible Funds</td>
-                    <td className="p-4 text-sm text-slate-400">Deduct early penalties & taxes</td>
-                    <td className="p-4 text-sm text-slate-500">Various Fatawa</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-slate-500 mt-3">* Check with your local scholar regarding specific company asset ratios and specific mutual fund rulings.</p>
+        {/* Phase 2: Stock Classification HTML Data Table */}
+        <div className="max-w-4xl mb-12">
+          <h2 className="text-xl font-bold text-white mb-6">Stock Classification & Zakat Rules</h2>
+          <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
+            <table className="w-full text-left border-collapse min-w-[700px]">
+              <thead>
+                <tr className="bg-slate-950/80 border-b border-slate-800">
+                  <th className="p-4 text-sm font-semibold text-slate-300">Asset Category</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Zakat Rate</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Deduction Allowance</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">AAOIFI Reference</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800">
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-bold text-blue-400">Active Trading Shares</td>
+                  <td className="p-4 text-sm text-slate-300">2.5% of Full Market Value</td>
+                  <td className="p-4 text-sm text-slate-400">No deductions allowed</td>
+                  <td className="p-4 text-sm text-slate-500">Standard No. 35 (Trading)</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-indigo-300">Passive / Dividend Shares</td>
+                  <td className="p-4 text-sm text-slate-300">2.5% of Liquid Net Assets</td>
+                  <td className="p-4 text-sm text-slate-400">Fixed assets (buildings, machinery) exempt</td>
+                  <td className="p-4 text-sm text-slate-500">Standard No. 35 (Investment)</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-white">Mutual Funds / ETFs</td>
+                  <td className="p-4 text-sm text-slate-300">2.5% of Market Value</td>
+                  <td className="p-4 text-sm text-slate-400">Treated based on fund intent (Trading vs Passive)</td>
+                  <td className="p-4 text-sm text-slate-500">Standard No. 35</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-white">Retirement / 401(k)</td>
+                  <td className="p-4 text-sm text-slate-300">2.5% of Accessible Funds</td>
+                  <td className="p-4 text-sm text-slate-400">Deduct early penalties & taxes</td>
+                  <td className="p-4 text-sm text-slate-500">Various Fatawa</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+          <p className="text-xs text-slate-500 mt-3">* Check with your local scholar regarding specific company asset ratios and specific mutual fund rulings.</p>
+        </div>
 
-          <div className="lg:col-span-4">
-            <h2 className="text-xl font-bold text-white mb-6">Video Guide</h2>
-            <div className="aspect-[4/3] w-full rounded-xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-              <button className="z-20 w-16 h-16 rounded-full bg-blue-500/90 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(59,130,246,0.4)]">
-                <PlayCircle className="w-8 h-8 fill-slate-950 text-white" />
-              </button>
-              <div className="absolute top-3 right-3 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
-                4 Min Guide
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 z-20">
-                <h4 className="text-white font-bold text-sm mb-1 line-clamp-2">Calculating Zakat on Stock Portfolios, ETFs & 401(k)s</h4>
-              </div>
-            </div>
-          </div>
-
+        {/* YouTube Video Guide (Embedded right above FAQ section) */}
+        <div className="max-w-4xl mb-12">
+          <YouTubeEmbed
+            videoId="dQw4w9WgXcQ"
+            title="Calculating Zakat on Stock Portfolios, ETFs & 401(k)s"
+            description="Understand how to differentiate active day trading vs passive dividend portfolios, how to calculate the 25% or 30% liquid asset proxy, and how to assess retirement funds."
+            badgeText="Investment Video Guide"
+            duration="PT10M30S"
+            uploadDate="2026-10-15T08:00:00+05:00"
+          />
         </div>
 
         {/* Phase 4: Investment FAQ Accordion */}

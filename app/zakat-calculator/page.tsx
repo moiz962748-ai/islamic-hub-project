@@ -16,6 +16,7 @@ import {
   Briefcase,
   Heart
 } from 'lucide-react';
+import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
 export default function ZakatCalculatorPage() {
   // --- STATE ---
@@ -560,62 +561,54 @@ export default function ZakatCalculatorPage() {
           </Link>
         </div>
 
-        {/* Media & Content Architecture (Data Table & Video) */}
-        <div className="grid lg:grid-cols-12 gap-8 mb-16">
-          
-          <div className="lg:col-span-8">
-            <h2 className="text-xl font-bold text-white mb-6">Zakat Asset Classification Rules</h2>
-            <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
-              <table className="w-full text-left border-collapse min-w-[600px]">
-                <thead>
-                  <tr className="bg-slate-950/80 border-b border-slate-800">
-                    <th className="p-4 text-sm font-semibold text-slate-300">Asset Type</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Nisab Eligibility Rule</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Scholarly / Hadith Citation</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800">
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Coins className="w-4 h-4 text-amber-500"/> Gold & Silver</td>
-                    <td className="p-4 text-sm text-slate-400">100% of value if exceeding 87.48g (Gold) or 612.36g (Silver).</td>
-                    <td className="p-4 text-xs text-slate-500">Abu Dawud 1573 (Rate of 2.5% established)</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-blue-500"/> Shares (Trading)</td>
-                    <td className="p-4 text-sm text-slate-400">100% of current market value is Zakat-able.</td>
-                    <td className="p-4 text-xs text-slate-500">AAOIFI Shariah Standard No. 35</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-indigo-500"/> Shares (Passive)</td>
-                    <td className="p-4 text-sm text-slate-400">Only on the Zakatable liquid assets of the underlying company.</td>
-                    <td className="p-4 text-xs text-slate-500">AAOIFI Shariah Standard No. 35</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Briefcase className="w-4 h-4 text-white"/> Business Inventory</td>
-                    <td className="p-4 text-sm text-slate-400">Value of raw materials and finished goods intended for sale.</td>
-                    <td className="p-4 text-xs text-slate-500">Sunan Abi Dawud 1562</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+        {/* Asset Classification Rules */}
+        <div className="max-w-4xl mb-12">
+          <h2 className="text-xl font-bold text-white mb-6">Zakat Asset Classification Rules</h2>
+          <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
+            <table className="w-full text-left border-collapse min-w-[600px]">
+              <thead>
+                <tr className="bg-slate-950/80 border-b border-slate-800">
+                  <th className="p-4 text-sm font-semibold text-slate-300">Asset Type</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Nisab Eligibility Rule</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Scholarly / Hadith Citation</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800">
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Coins className="w-4 h-4 text-amber-500"/> Gold & Silver</td>
+                  <td className="p-4 text-sm text-slate-400">100% of value if exceeding 87.48g (Gold) or 612.36g (Silver).</td>
+                  <td className="p-4 text-xs text-slate-500">Abu Dawud 1573 (Rate of 2.5% established)</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-blue-500"/> Shares (Trading)</td>
+                  <td className="p-4 text-sm text-slate-400">100% of current market value is Zakat-able.</td>
+                  <td className="p-4 text-xs text-slate-500">AAOIFI Shariah Standard No. 35</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-indigo-500"/> Shares (Passive)</td>
+                  <td className="p-4 text-sm text-slate-400">Only on the Zakatable liquid assets of the underlying company.</td>
+                  <td className="p-4 text-xs text-slate-500">AAOIFI Shariah Standard No. 35</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Briefcase className="w-4 h-4 text-white"/> Business Inventory</td>
+                  <td className="p-4 text-sm text-slate-400">Value of raw materials and finished goods intended for sale.</td>
+                  <td className="p-4 text-xs text-slate-500">Sunan Abi Dawud 1562</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+        </div>
 
-          <div className="lg:col-span-4">
-            <h2 className="text-xl font-bold text-white mb-6">Video Guide</h2>
-            <div className="aspect-[4/3] w-full rounded-xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-              <button className="z-20 w-16 h-16 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
-                <PlayCircle className="w-8 h-8 fill-slate-950 text-slate-950" />
-              </button>
-              <div className="absolute top-3 right-3 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
-                3 Min Calculation Guide
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 z-20">
-                <h4 className="text-white font-bold text-sm mb-1">Step-by-Step Calculator Guide</h4>
-              </div>
-            </div>
-          </div>
-
+        {/* YouTube Video Guide (Embedded right above FAQ section) */}
+        <div className="max-w-4xl mb-12">
+          <YouTubeEmbed
+            videoId="dQw4w9WgXcQ"
+            title="How to Calculate Zakat Accurately: Step-by-Step Guide"
+            description="Comprehensive step-by-step guidance on calculating your obligatory Zakat on cash, gold, silver, investments, and business assets using live Nisab thresholds."
+            badgeText="Calculation Video Guide"
+            duration="PT10M30S"
+            uploadDate="2026-10-15T08:00:00+05:00"
+          />
         </div>
 
         {/* Phase 4: Accordion FAQ */}

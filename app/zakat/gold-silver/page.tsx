@@ -17,6 +17,7 @@ import {
   HelpCircle,
   Calculator
 } from 'lucide-react';
+import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
 export default function GoldSilverCalculatorPage() {
   // --- STATE ---
@@ -468,68 +469,60 @@ export default function GoldSilverCalculatorPage() {
           </Link>
         </div>
 
-        {/* Phase 2: Metal Purity HTML Data Table & Video */}
-        <div className="grid lg:grid-cols-12 gap-8 mb-16">
-          
-          <div className="lg:col-span-8">
-            <h2 className="text-xl font-bold text-white mb-6">Gold Purity & Nisab Conversion Table</h2>
-            <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
-              <table className="w-full text-left border-collapse min-w-[600px]">
-                <thead>
-                  <tr className="bg-slate-950/80 border-b border-slate-800">
-                    <th className="p-4 text-sm font-semibold text-slate-300">Gold Karat</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Purity %</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Nisab Equiv (Grams)</th>
-                    <th className="p-4 text-sm font-semibold text-slate-300">Nisab Equiv (Tola)</th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-800">
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-bold text-amber-400">24k (Pure)</td>
-                    <td className="p-4 text-sm text-slate-300">100.0%</td>
-                    <td className="p-4 text-sm text-white font-medium">87.48 g</td>
-                    <td className="p-4 text-sm text-slate-400">~ 7.50 tola</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-amber-300">22k (Standard)</td>
-                    <td className="p-4 text-sm text-slate-300">91.6%</td>
-                    <td className="p-4 text-sm text-slate-300">95.50 g</td>
-                    <td className="p-4 text-sm text-slate-400">~ 8.19 tola</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-amber-200">21k</td>
-                    <td className="p-4 text-sm text-slate-300">87.5%</td>
-                    <td className="p-4 text-sm text-slate-300">99.98 g</td>
-                    <td className="p-4 text-sm text-slate-400">~ 8.57 tola</td>
-                  </tr>
-                  <tr className="hover:bg-slate-800/30 transition-colors">
-                    <td className="p-4 text-sm font-medium text-amber-100">18k</td>
-                    <td className="p-4 text-sm text-slate-300">75.0%</td>
-                    <td className="p-4 text-sm text-slate-300">116.64 g</td>
-                    <td className="p-4 text-sm text-slate-400">~ 10.00 tola</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-slate-500 mt-3">* Purity conversion established by contemporary Fiqh councils to determine pure gold liability.</p>
+        {/* Phase 2: Metal Purity HTML Data Table */}
+        <div className="max-w-4xl mb-12">
+          <h2 className="text-xl font-bold text-white mb-6">Gold Purity & Nisab Conversion Table</h2>
+          <div className="overflow-x-auto bg-slate-900/60 border border-slate-800 rounded-xl">
+            <table className="w-full text-left border-collapse min-w-[600px]">
+              <thead>
+                <tr className="bg-slate-950/80 border-b border-slate-800">
+                  <th className="p-4 text-sm font-semibold text-slate-300">Gold Karat</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Purity %</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Nisab Equiv (Grams)</th>
+                  <th className="p-4 text-sm font-semibold text-slate-300">Nisab Equiv (Tola)</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-800">
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-bold text-amber-400">24k (Pure)</td>
+                  <td className="p-4 text-sm text-slate-300">100.0%</td>
+                  <td className="p-4 text-sm text-white font-medium">87.48 g</td>
+                  <td className="p-4 text-sm text-slate-400">~ 7.50 tola</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-amber-300">22k (Standard)</td>
+                  <td className="p-4 text-sm text-slate-300">91.6%</td>
+                  <td className="p-4 text-sm text-slate-300">95.50 g</td>
+                  <td className="p-4 text-sm text-slate-400">~ 8.19 tola</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-amber-200">21k</td>
+                  <td className="p-4 text-sm text-slate-300">87.5%</td>
+                  <td className="p-4 text-sm text-slate-300">99.98 g</td>
+                  <td className="p-4 text-sm text-slate-400">~ 8.57 tola</td>
+                </tr>
+                <tr className="hover:bg-slate-800/30 transition-colors">
+                  <td className="p-4 text-sm font-medium text-amber-100">18k</td>
+                  <td className="p-4 text-sm text-slate-300">75.0%</td>
+                  <td className="p-4 text-sm text-slate-300">116.64 g</td>
+                  <td className="p-4 text-sm text-slate-400">~ 10.00 tola</td>
+                </tr>
+              </tbody>
+            </table>
           </div>
+          <p className="text-xs text-slate-500 mt-3">* Purity conversion established by contemporary Fiqh councils to determine pure gold liability.</p>
+        </div>
 
-          <div className="lg:col-span-4">
-            <h2 className="text-xl font-bold text-white mb-6">Video Guide</h2>
-            <div className="aspect-[4/3] w-full rounded-xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center">
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-              <button className="z-20 w-16 h-16 rounded-full bg-amber-500/90 text-slate-950 flex items-center justify-center group-hover:scale-110 transition-transform shadow-[0_0_20px_rgba(245,158,11,0.4)]">
-                <PlayCircle className="w-8 h-8 fill-slate-950 text-slate-950" />
-              </button>
-              <div className="absolute top-3 right-3 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
-                3 Min Guide
-              </div>
-              <div className="absolute bottom-4 left-4 right-4 z-20">
-                <h4 className="text-white font-bold text-sm mb-1 line-clamp-2">Calculating Zakat on Gold Jewelry & Bullion</h4>
-              </div>
-            </div>
-          </div>
-
+        {/* YouTube Video Guide (Embedded right above FAQ section) */}
+        <div className="max-w-4xl mb-12">
+          <YouTubeEmbed
+            videoId="dQw4w9WgXcQ"
+            title="How to Calculate Zakat on Gold Jewelry & Silver: Complete Guide"
+            description="Clear step-by-step guidance on calculating Zakat on 24k, 22k, 21k, and 18k gold jewelry, deducting stones/gemstones, and applying the gold and silver Nisab thresholds accurately."
+            badgeText="Gold & Silver Video Guide"
+            duration="PT10M30S"
+            uploadDate="2026-10-15T08:00:00+05:00"
+          />
         </div>
 
         {/* Phase 4: Niche FAQ Accordion */}

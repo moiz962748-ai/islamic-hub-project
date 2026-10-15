@@ -236,15 +236,24 @@ export default function HomePage() {
       {
         "@type": "VideoObject",
         "@id": "https://islam-hub-project.vercel.app/#video",
-        "name": "How to Calculate Zakat Accurately — Visual Video Explainer",
+        "name": "How to Calculate Zakat Accurately: Step-by-Step Guide",
         "description": "A comprehensive visual walkthrough and tutorial demonstrating how to calculate Zakat accurately for cash, gold, silver, investments, and business assets.",
         "thumbnailUrl": [
-          "https://images.unsplash.com/photo-1584286595398-a59f21d313f5?auto=format&fit=crop&q=80"
+          "https://img.youtube.com/vi/dQw4w9WgXcQ/maxresdefault.jpg",
+          "https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg"
         ],
-        "uploadDate": "2026-01-20T10:00:00+00:00",
-        "duration": "PT5M30S",
-        "contentUrl": "https://islam-hub-project.vercel.app/videos/zakat-explainer.mp4",
-        "embedUrl": "https://www.youtube.com/embed/placeholder"
+        "uploadDate": "2026-10-15T08:00:00+05:00",
+        "duration": "PT10M30S",
+        "contentUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "embedUrl": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+        "publisher": {
+          "@type": "Organization",
+          "name": "IslamHub",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://islamhub.com/logo.png"
+          }
+        }
       }
     ]
   };
@@ -619,10 +628,14 @@ export default function HomePage() {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            <div className="aspect-video w-full bg-black flex flex-col items-center justify-center p-6 text-center">
-              <PlayCircle className="w-16 h-16 text-white/80 mb-4 animate-bounce" />
-              <p className="text-neutral-50 font-semibold mb-1">Video Player Stream Placeholder</p>
-              <p className="text-xs text-neutral-400 max-w-md">In your live production build, embed your YouTube or HLS video player component here.</p>
+            <div className="aspect-video w-full bg-black relative">
+              <iframe
+                className="w-full h-full border-0 absolute inset-0"
+                src="https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ?autoplay=1&rel=0"
+                title="How to Calculate Zakat Accurately"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+              />
             </div>
           </div>
         </div>

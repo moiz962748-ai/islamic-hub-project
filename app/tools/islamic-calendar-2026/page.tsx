@@ -23,6 +23,7 @@ import {
   Bookmark,
   ChevronDown
 } from "lucide-react";
+import YouTubeEmbed from "@/src/components/common/YouTubeEmbed";
 
 // --- Types & Theme Definitions ---
 
@@ -895,6 +896,19 @@ export default function IslamicCalendarPage() {
                 <p className="text-[11px] sm:text-xs mt-0.5 sm:mt-1 opacity-80 text-slate-300">
                   Umm al-Qura Astronomical Baseline • Verified 1447–1448 AH • Offset: {hijriOffset > 0 ? `+${hijriOffset}` : hijriOffset} Day(s)
                 </p>
+                {/* Mobile View Date Hierarchy Legend */}
+                <div className="md:hidden mt-2 pt-2 border-t border-white/10 flex items-center justify-between text-[11px]">
+                  <span className="flex items-center gap-1.5 text-slate-200">
+                    <span className="font-bold text-white bg-white/10 px-1.5 py-0.5 rounded">15</span>
+                    <span className="text-slate-300">Gregorian</span>
+                  </span>
+                  <span className="text-white/30">•</span>
+                  <span className="flex items-center gap-1.5 text-slate-200">
+                    <span className="font-mono text-[9px] uppercase px-1 py-0.5 rounded bg-white/10 text-neutral-400">H</span>
+                    <span className={`font-bold ${theme.hijriColor}`}>24</span>
+                    <span className="text-slate-300">Hijri Date</span>
+                  </span>
+                </div>
               </div>
               <div className="text-left sm:text-right">
                 <span className="text-[11px] sm:text-xs font-mono px-2 py-0.5 sm:px-2.5 sm:py-1 rounded bg-black/40 border border-white/10 text-white">
@@ -927,7 +941,7 @@ export default function IslamicCalendarPage() {
                 {Array.from({ length: firstDayOfWeek }).map((_, i) => (
                   <div
                     key={`empty-${i}`}
-                    className="min-h-[58px] sm:min-h-[90px] md:min-h-[115px] p-1 sm:p-2.5 md:p-3 border-b border-r border-white/5 opacity-20 bg-black/10"
+                    className="min-h-[66px] sm:min-h-[82px] md:min-h-[115px] p-1.5 sm:p-2 md:p-3 border-b border-r border-white/5 opacity-20 bg-black/10"
                   />
                 ))}
 
@@ -943,36 +957,38 @@ export default function IslamicCalendarPage() {
                   return (
                     <div
                       key={`day-${day}`}
-                      className={`min-h-[58px] sm:min-h-[90px] md:min-h-[115px] p-1 sm:p-2 md:p-3 border-b border-r border-white/5 transition flex flex-col justify-between relative ${theme.cellHover} ${
+                      className={`min-h-[66px] sm:min-h-[82px] md:min-h-[115px] p-1.5 sm:p-2 md:p-3 border-b border-r border-white/5 transition flex flex-col justify-between relative ${theme.cellHover} ${
                         eventMatch ? "bg-neutral-800/80 ring-1 ring-amber-400/30" : ""
                       }`}
                     >
-                      {/* Top Row: Gregorian & Hijri Number */}
-                      <div className="flex items-start justify-between gap-0.5">
+                      {/* Top Row: Gregorian Date (Clear, bold solar day) */}
+                      <div className="flex items-start justify-between w-full">
                         <span className={`text-xs sm:text-base md:text-xl font-bold leading-none ${theme.gregorianColor}`}>
                           {day}
                         </span>
-                        <div className="text-right leading-none">
-                          <span className={`text-[10px] sm:text-xs md:text-sm ${theme.hijriColor} font-semibold block`}>
+
+                        {/* Tablet & Desktop Hijri Number (>= 768px md) */}
+                        <div className="hidden md:block text-right leading-none">
+                          <span className={`text-xs md:text-sm ${theme.hijriColor} font-semibold block`}>
                             {hDate.hijriDay}
                           </span>
-                          <span className="hidden sm:block text-[9px] md:text-[10px] opacity-70 tracking-tighter truncate max-w-[65px]">
+                          <span className="text-[9px] md:text-[10px] opacity-70 tracking-tighter truncate max-w-[65px] block mt-0.5">
                             {hDate.hijriMonthName.split(" ")[0]}
                           </span>
                         </div>
                       </div>
 
-                      {/* Islamic Event Pill or Dot Marker */}
-                      <div className="mt-0.5 sm:mt-1">
+                      {/* Middle: Islamic Event Pill or Dot Marker */}
+                      <div className="my-auto py-0.5">
                         {eventMatch ? (
                           <>
-                            {/* Mobile Glowing Dot Indicator */}
-                            <div className="sm:hidden flex items-center justify-center my-0.5" title={`${eventMatch.title}: ${eventMatch.significance}`}>
-                              <div className="w-2 h-2 rounded-full bg-amber-400 ring-2 ring-amber-400/40 shadow-sm" />
+                            {/* Mobile Glowing Dot Indicator (< 768px) */}
+                            <div className="md:hidden flex items-center justify-center" title={`${eventMatch.title}: ${eventMatch.significance}`}>
+                              <div className="w-1.5 h-1.5 rounded-full bg-amber-400 ring-2 ring-amber-400/40 shadow-sm" />
                             </div>
-                            {/* Tablet / Desktop Full Badge */}
+                            {/* Tablet / Desktop Full Badge (>= 768px) */}
                             <div
-                              className={`hidden sm:block px-1.5 py-0.5 md:py-1 rounded text-[10px] md:text-xs font-bold border leading-tight ${theme.eventBadgeBg} ${theme.eventBadgeText}`}
+                              className={`hidden md:block px-1.5 py-0.5 md:py-1 rounded text-[10px] md:text-xs font-bold border leading-tight ${theme.eventBadgeBg} ${theme.eventBadgeText}`}
                               title={eventMatch.significance}
                             >
                               <span className="flex items-center gap-1">
@@ -982,10 +998,18 @@ export default function IslamicCalendarPage() {
                             </div>
                           </>
                         ) : isFriday ? (
-                          <span className="hidden sm:inline text-[9px] md:text-[10px] text-white font-medium opacity-80">
+                          <span className="hidden md:inline text-[9px] md:text-[10px] text-white font-medium opacity-80">
                             Jumu&apos;ah
                           </span>
                         ) : null}
+                      </div>
+
+                      {/* Mobile-Only Bottom Row: Separated Hijri Date (< 768px) */}
+                      <div className="md:hidden flex items-center justify-between w-full pt-1 border-t border-white/5 mt-auto">
+                        <span className="text-[8px] font-mono text-neutral-400 font-semibold uppercase tracking-tight">H</span>
+                        <span className={`text-[11px] font-bold ${theme.hijriColor} leading-none tracking-tight`}>
+                          {hDate.hijriDay}
+                        </span>
                       </div>
                     </div>
                   );
@@ -1262,6 +1286,18 @@ export default function IslamicCalendarPage() {
             </div>
           </div>
         </div>
+      </section>
+
+      {/* YOUTUBE VIDEO GUIDE (Above FAQ) */}
+      <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 mt-12 sm:mt-16 no-print">
+        <YouTubeEmbed
+          videoId="dQw4w9WgXcQ"
+          title="How to Use & Customize the 2026 Islamic Dual Calendar"
+          description="A complete visual walkthrough showing how to navigate Gregorian and Hijri months, calibrate regional moon-sighting offsets (+/- 2 days), and export high-resolution printable calendars."
+          badgeText="Interactive Walkthrough"
+          duration="PT10M30S"
+          uploadDate="2026-10-15T08:00:00+05:00"
+        />
       </section>
 
       {/* SECTION 5: FREQUENTLY ASKED QUESTIONS */}

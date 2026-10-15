@@ -21,6 +21,7 @@ import {
   BookOpen,
   FileText
 } from 'lucide-react';
+import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
 export default function FitranaPage() {
   const [currency, setCurrency] = useState('USD');
@@ -412,22 +413,6 @@ export default function FitranaPage() {
           </div>
         </section>
 
-        {/* Phase 3: Media & Video Facade */}
-        <section className="mb-12">
-          <div className="aspect-[21/9] w-full max-w-4xl rounded-2xl overflow-hidden relative group border border-slate-700/80 bg-slate-900 shadow-inner flex items-center justify-center mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/30 to-transparent z-10 pointer-events-none" />
-            <button className="z-20 w-16 h-16 rounded-full bg-white text-black flex items-center justify-center group-hover:scale-110 transition-transform shadow-md">
-              <PlayCircle className="w-8 h-8 fill-slate-950 text-white" />
-            </button>
-            <div className="absolute top-4 right-4 z-20 bg-slate-900/80 backdrop-blur border border-slate-700 text-slate-300 text-[10px] font-bold px-2 py-1 rounded">
-              3 Min Guide
-            </div>
-            <div className="absolute bottom-5 left-5 z-20">
-              <h4 className="text-white font-bold sm:text-lg">Who Must Pay Fitrana and How Is It Calculated?</h4>
-            </div>
-          </div>
-        </section>
-
         {/* Phase 5: Sibling Silo Links */}
         <section className="mb-12">
           <h2 className="text-xl font-bold text-white mb-6">Explore Zakat Calculators & Guides</h2>
@@ -457,6 +442,18 @@ export default function FitranaPage() {
               <span className="text-xs font-bold text-slate-300 group-hover:text-white">Rules Guide</span>
             </Link>
           </div>
+        </section>
+
+        {/* YouTube Video Guide (Embedded right above FAQ section) */}
+        <section className="mb-12 max-w-4xl">
+          <YouTubeEmbed
+            videoId="dQw4w9WgXcQ"
+            title="Who Must Pay Fitrana and How Is It Calculated?"
+            description="Clear explanation of Zakat al-Fitr (Fitrana) regulations, eligible head of household responsibilities, commodity values (wheat, dates, barley), and deadlines before Eid prayer."
+            badgeText="Fitrana Video Guide"
+            duration="PT10M30S"
+            uploadDate="2026-10-15T08:00:00+05:00"
+          />
         </section>
 
         {/* Phase 4: Fitrana FAQ Accordion */}

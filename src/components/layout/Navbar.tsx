@@ -25,7 +25,7 @@ type DropdownItem = {
 };
 
 type DropdownColumn = {
-  title: string;
+  title?: string;
   href?: string;
   links: DropdownItem[];
 };
@@ -154,7 +154,6 @@ const navMenus: DropdownMenu[] = [
     align: "right",
     columns: [
       {
-        title: "Name Directories",
         links: [
           { label: "Islamic Baby Boy Names", href: "/tools/islamic-baby-names/boys/" },
           { label: "Islamic Baby Girl Names", href: "/tools/islamic-baby-names/girls/" },
@@ -348,11 +347,13 @@ export default function Navbar() {
                                   : 'grid-cols-2 min-w-[550px]'
                           }`}
                         >
-                          {menu.columns.map(column => (
-                            <div key={column.title}>
-                              <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-200 mb-3 flex items-center gap-1.5 font-mono">
-                                <span>{column.title}</span>
-                              </h4>
+                          {menu.columns.map((column, colIdx) => (
+                            <div key={column.title || colIdx}>
+                              {column.title && (
+                                <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-200 mb-3 flex items-center gap-1.5 font-mono">
+                                  <span>{column.title}</span>
+                                </h4>
+                              )}
                               <div className="flex flex-col gap-1">
                                 {column.links.map((link) => {
                                   const isLinkActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
@@ -648,10 +649,12 @@ export default function Navbar() {
                   {hasSubmenu && (
                     <div className={`transition-all duration-200 border-t border-neutral-850/80 bg-neutral-950/70 ${isOpen ? 'block p-3.5 space-y-4' : 'hidden'}`}>
                       {menu.columns.map((column, idx) => (
-                        <div key={column.title} className={idx > 0 ? 'pt-3 border-t border-neutral-850' : ''}>
-                          <h4 className="text-[11px] font-semibold text-neutral-300 uppercase tracking-wider mb-2 font-mono flex items-center gap-1.5">
-                            <span>{column.title}</span>
-                          </h4>
+                        <div key={column.title || idx} className={idx > 0 && column.title ? 'pt-3 border-t border-neutral-850' : ''}>
+                          {column.title && (
+                            <h4 className="text-[11px] font-semibold text-neutral-300 uppercase tracking-wider mb-2 font-mono flex items-center gap-1.5">
+                              <span>{column.title}</span>
+                            </h4>
+                          )}
                           <div className="space-y-1">
                             {column.links.map((link) => {
                               const isLinkActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
