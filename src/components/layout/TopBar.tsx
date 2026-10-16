@@ -3,56 +3,51 @@ import { MapPin, Clock, BookOpen, Moon, Compass, Sparkles } from 'lucide-react';
 
 export default function TopBar() {
   return (
-    <div className="bg-neutral-950/90 border-b border-neutral-850 py-1.5 sm:py-2 text-xs font-medium text-neutral-400">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-1.5 sm:gap-4">
-        
-        {/* Location Indicator */}
-        <div className="flex items-center gap-1.5 text-neutral-300 shrink-0 text-[11px] sm:text-xs">
-          <MapPin className="w-3.5 h-3.5 text-neutral-400 shrink-0" />
-          <span className="truncate">
-            Detect Location: <span className="text-white font-medium">London, UK</span>
-          </span>
+    <div className="bg-black border-b border-neutral-800 py-2 text-xs font-medium text-neutral-400">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div className="flex items-center gap-1.5 text-neutral-300">
+          <MapPin className="w-3.5 h-3.5 text-white" />
+          <span>Detect Location: London, UK</span>
         </div>
         
-        {/* Quick Utility Links - Horizontally scrollable on small mobile screens without breaking */}
-        <div className="flex items-center gap-3 sm:gap-5 overflow-x-auto max-w-full no-scrollbar py-0.5 px-1 -mx-1 text-[11px] sm:text-xs">
+        <div className="flex items-center gap-4 sm:gap-6">
           <Link 
             href="/prayer-times/" 
-            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors shrink-0 whitespace-nowrap"
+            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors"
           >
-            <Clock className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors shrink-0" />
+            <Clock className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors" />
             <span>Prayer Times</span>
           </Link>
           
           <Link 
             href="/tools/qibla-finder/" 
-            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors shrink-0 whitespace-nowrap"
+            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors"
           >
-            <Compass className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors shrink-0" />
+            <Compass className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors" />
             <span>Qibla Finder</span>
           </Link>
           
           <Link 
             href="/duas/" 
-            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors shrink-0 whitespace-nowrap"
+            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors"
           >
-            <BookOpen className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors shrink-0" />
-            <span>Duas Hub</span>
+            <BookOpen className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors" />
+            <span>🤲 All Duas</span>
           </Link>
 
           <Link 
             href="/tools/islamic-baby-names/" 
-            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors shrink-0 whitespace-nowrap"
+            className="group flex items-center gap-1.5 text-neutral-400 hover:text-white transition-colors"
           >
-            <Sparkles className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors shrink-0" />
+            <Sparkles className="w-3.5 h-3.5 text-neutral-500 group-hover:text-white transition-colors" />
             <span>Baby Names</span>
           </Link>
           
           <Link 
             href="/ramadan" 
-            className="group flex items-center gap-1.5 text-amber-200 hover:text-amber-100 font-medium transition-colors shrink-0 whitespace-nowrap bg-neutral-900/90 hover:bg-neutral-850 px-2.5 py-0.5 rounded-full border border-neutral-800"
+            className="group flex items-center gap-1.5 text-white hover:text-neutral-200 font-bold transition-colors"
           >
-            <Moon className="w-3.5 h-3.5 text-amber-300 group-hover:rotate-12 transition-transform shrink-0" />
+            <Moon className="w-3.5 h-3.5 text-white group-hover:rotate-12 transition-transform" />
             <span>Ramadan 2026</span>
           </Link>
         </div>
