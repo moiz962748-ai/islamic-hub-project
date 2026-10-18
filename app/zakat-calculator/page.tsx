@@ -18,23 +18,33 @@ import {
 } from 'lucide-react';
 import YouTubeEmbed from '@/src/components/common/YouTubeEmbed';
 
+// Live Market Prices per gram by currency
+const CURRENCY_PRICES: Record<string, { gold: number; silver: number; sym: string }> = {
+  USD: { gold: 75.50, silver: 0.85, sym: '$' },
+  GBP: { gold: 59.30, silver: 0.67, sym: '£' },
+  PKR: { gold: 21000, silver: 235, sym: 'Rs' },
+  SAR: { gold: 283.15, silver: 3.19, sym: 'SAR' },
+  AED: { gold: 277.30, silver: 3.12, sym: 'AED' }
+};
+
 export default function ZakatCalculatorPage() {
   // --- STATE ---
   const [currency, setCurrency] = useState('USD');
   
-  // Cash
+  // Cash & Bank
   const [cashOnHand, setCashOnHand] = useState<number | ''>('');
   const [bankBalance, setBankBalance] = useState<number | ''>('');
   
-  // Gold & Silver
-  const [goldWeight, setGoldWeight] = useState<number | ''>('');
-  const [goldUnit, setGoldUnit] = useState('grams');
-  const [goldPurity, setGoldPurity] = useState('24k');
-  const [goldPricePerGram, setGoldPricePerGram] = useState<number | ''>(75.50); // example
+  // Gold (3 inputs: tola, grams, ounces)
+  const [goldTola, setGoldTola] = useState<number | ''>('');
+  const [goldGrams, setGoldGrams] = useState<number | ''>('');
+  const [goldOunces, setGoldOunces] = useState<number | ''>('');
+  const [goldPurity, setGoldPurity] = useState<'24k' | '22k' | '21k' | '18k'>('24k');
   
-  const [silverWeight, setSilverWeight] = useState<number | ''>('');
-  const [silverUnit, setSilverUnit] = useState('grams');
-  const [silverPricePerGram, setSilverPricePerGram] = useState<number | ''>(0.85); // example
+  // Silver (3 inputs: tola, grams, ounces)
+  const [silverTola, setSilverTola] = useState<number | ''>('');
+  const [silverGrams, setSilverGrams] = useState<number | ''>('');
+  const [silverOunces, setSilverOunces] = useState<number | ''>('');
 
   // Stocks
   const [activeTrading, setActiveTrading] = useState<number | ''>('');
@@ -52,39 +62,42 @@ export default function ZakatCalculatorPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
 
   // --- LOGIC ---
-  // Simple unit conversions to grams
-  const getWeightInGrams = (weight: number | '', unit: string) => {
-    if (weight === '') return 0;
-    if (unit === 'tola') return weight * 11.66;
-    if (unit === 'ounce') return weight * 28.3495;
-    return weight;
-  };
+  const currentRates = CURRENCY_PRICES[currency] || CURRENCY_PRICES['USD'];
+  const sym = currentRates.sym;
 
   const getPurityMultiplier = (purity: string) => {
     switch(purity) {
-      case '18k': return 18/24;
-      case '21k': return 21/24;
-      case '22k': return 22/24;
+      case '18k': return 18 / 24;
+      case '21k': return 21 / 24;
+      case '22k': return 22 / 24;
       case '24k': default: return 1;
     }
   };
 
-  const calculateGoldValue = () => {
-    const grams = getWeightInGrams(goldWeight, goldUnit);
-    const purityMult = getPurityMultiplier(goldPurity);
-    const price = (typeof goldPricePerGram === 'number') ? goldPricePerGram : 0;
-    return grams * purityMult * price;
-  };
+  // Base 24k gold price and current effective gold price based on purity
+  const baseGoldPrice = currentRates.gold;
+  const effectiveGoldPricePerGram = baseGoldPrice * getPurityMultiplier(goldPurity);
+  const effectiveSilverPricePerGram = currentRates.silver;
 
-  const calculateSilverValue = () => {
-    const grams = getWeightInGrams(silverWeight, silverUnit);
-    const price = (typeof silverPricePerGram === 'number') ? silverPricePerGram : 0;
-    return grams * price;
-  };
+  // Total weights in grams (1 tola = 11.66g, 1 ounce = 28.3495g)
+  const totalGoldGrams = 
+    ((Number(goldTola) || 0) * 11.66) + 
+    (Number(goldGrams) || 0) + 
+    ((Number(goldOunces) || 0) * 28.3495);
+
+  const calculateGoldValue = () => totalGoldGrams * effectiveGoldPricePerGram;
+
+  const totalSilverGrams = 
+    ((Number(silverTola) || 0) * 11.66) + 
+    (Number(silverGrams) || 0) + 
+    ((Number(silverOunces) || 0) * 28.3495);
+
+  const calculateSilverValue = () => totalSilverGrams * effectiveSilverPricePerGram;
+
+  const totalCashAndBank = (Number(cashOnHand) || 0) + (Number(bankBalance) || 0);
 
   const totalAssets = 
-    (Number(cashOnHand) || 0) + 
-    (Number(bankBalance) || 0) + 
+    totalCashAndBank + 
     calculateGoldValue() + 
     calculateSilverValue() +
     (Number(activeTrading) || 0) + 
@@ -94,29 +107,33 @@ export default function ZakatCalculatorPage() {
     (Number(finishedInventory) || 0);
 
   const totalLiabilities = (Number(shortTermDebts) || 0);
-  const netAssets = totalAssets - totalLiabilities;
+  const netAssets = Math.max(0, totalAssets - totalLiabilities);
   
-  // Live Nisab Values (Assuming USD base for example, approx)
-  const nisabGoldValue = 87.48 * (Number(goldPricePerGram) || 75.50);
-  const nisabSilverValue = 612.36 * (Number(silverPricePerGram) || 0.85);
-  // In Hanafi fiqh, typically the lower of the two is used, which is silver.
+  // Live Nisab Values (Calculated in local currency)
+  const nisabGoldValue = 87.48 * baseGoldPrice;
+  const nisabSilverValue = 612.36 * effectiveSilverPricePerGram;
+  // In Hanafi fiqh, typically the silver threshold is followed to benefit the poor
   const currentNisabThreshold = Math.min(nisabGoldValue, nisabSilverValue);
 
   const isEligible = netAssets >= currentNisabThreshold;
   const zakatPayable = isEligible ? netAssets * 0.025 : 0;
 
   const resetCalculator = () => {
-    setCashOnHand(''); setBankBalance('');
-    setGoldWeight(''); setSilverWeight('');
-    setActiveTrading(''); setPassiveDividend('');
-    setBusinessCash(''); setRawMaterials(''); setFinishedInventory('');
+    setCashOnHand(''); 
+    setBankBalance('');
+    setGoldTola(''); 
+    setGoldGrams(''); 
+    setGoldOunces('');
+    setSilverTola(''); 
+    setSilverGrams(''); 
+    setSilverOunces('');
+    setActiveTrading(''); 
+    setPassiveDividend('');
+    setBusinessCash(''); 
+    setRawMaterials(''); 
+    setFinishedInventory('');
     setShortTermDebts('');
   };
-
-  const currencySymbols: Record<string, string> = {
-    USD: '$', PKR: 'Rs', SAR: 'SAR', AED: 'AED', GBP: '£'
-  };
-  const sym = currencySymbols[currency] || '$';
 
   return (
     <main className="min-h-screen bg-black font-sans text-neutral-50 selection:bg-white selection:text-black">
@@ -246,11 +263,12 @@ export default function ZakatCalculatorPage() {
                 {['USD', 'GBP', 'PKR', 'SAR', 'AED'].map(curr => (
                   <button
                     key={curr}
+                    type="button"
                     onClick={() => setCurrency(curr)}
-                    className={`px-4 py-2 rounded-lg text-sm font-medium transition-colors border ${
+                    className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all border ${
                       currency === curr 
-                        ? 'bg-white text-black border-neutral-800 text-white' 
-                        : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700'
+                        ? 'bg-white text-black border-white shadow-md' 
+                        : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white'
                     }`}
                   >
                     {curr}
@@ -267,25 +285,42 @@ export default function ZakatCalculatorPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs text-slate-400 mb-1">Cash on Hand</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">{sym}</span>
+                  <div className="flex rounded-lg border border-slate-800 bg-slate-950 focus-within:ring-1 focus-within:ring-white focus-within:border-white transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={cashOnHand} onChange={e => setCashOnHand(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors placeholder:text-slate-700" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs text-slate-400 mb-1">Bank Balances</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">{sym}</span>
+                  <div className="flex rounded-lg border border-slate-800 bg-slate-950 focus-within:ring-1 focus-within:ring-white focus-within:border-white transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={bankBalance} onChange={e => setBankBalance(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-white focus:border-white transition-colors placeholder:text-slate-700" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
                     />
                   </div>
+                </div>
+              </div>
+
+              {/* Hawl Note (Requirement: Amount held for a full lunar year) */}
+              <div className="flex items-start gap-2.5 pt-3 border-t border-slate-800/80 bg-slate-950/40 p-3 rounded-lg border border-slate-800/60">
+                <Info className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
+                <div className="space-y-1">
+                  <p className="text-xs text-slate-300 font-medium leading-relaxed">
+                    Note: Only enter the wealth/savings that have remained in your possession continuously for a full lunar year (Hawl).
+                  </p>
+                  <p className="text-xs text-slate-400 font-normal leading-relaxed" dir="rtl">
+                    نوٹ: صرف وہی رقم درج کریں جو مکمل ایک قمری سال (حول) تک آپ کے پاس محفوظ رہی ہو۔
+                  </p>
                 </div>
               </div>
             </div>
@@ -296,88 +331,167 @@ export default function ZakatCalculatorPage() {
                 <Coins className="w-5 h-5 text-amber-400" /> Precious Metals (Gold & Silver)
               </h3>
               
-              {/* Gold */}
-              <div className="space-y-3 p-4 rounded-lg bg-slate-950/50 border border-slate-800/50">
-                <h4 className="text-sm font-medium text-amber-400">Gold</h4>
-                <div className="grid sm:grid-cols-12 gap-3 items-end">
-                  <div className="sm:col-span-4">
-                    <label className="block text-xs text-slate-400 mb-1">Weight</label>
-                    <input 
-                      type="number" min="0" placeholder="0"
-                      value={goldWeight} onChange={e => setGoldWeight(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors" 
-                    />
+              {/* Gold Section */}
+              <div className="space-y-4 p-4 sm:p-5 rounded-xl bg-slate-950/60 border border-slate-800/70">
+                <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800/60">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-amber-400 inline-block"></span>
+                    <h4 className="text-sm font-semibold text-amber-400 tracking-wide uppercase">Gold</h4>
                   </div>
-                  <div className="sm:col-span-3">
-                    <label className="block text-xs text-slate-400 mb-1">Unit</label>
-                    <select 
-                      value={goldUnit} onChange={e => setGoldUnit(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 outline-none"
-                    >
-                      <option value="grams">Grams</option>
-                      <option value="tola">Tola</option>
-                      <option value="ounce">Ounce</option>
-                    </select>
+
+                  <div className="flex flex-wrap items-center gap-3">
+                    {/* Purity Selection */}
+                    <div className="flex items-center gap-2">
+                      <label className="text-xs text-slate-400 font-medium">Purity:</label>
+                      <select 
+                        value={goldPurity} 
+                        onChange={e => setGoldPurity(e.target.value as any)}
+                        className="bg-slate-900 border border-slate-700 text-amber-300 text-xs font-semibold rounded-lg px-2.5 py-1.5 focus:ring-1 focus:ring-amber-500 outline-none cursor-pointer"
+                      >
+                        <option value="24k">24K (99.9%)</option>
+                        <option value="22k">22K (91.6%)</option>
+                        <option value="21k">21K (87.5%)</option>
+                        <option value="18k">18K (75.0%)</option>
+                      </select>
+                    </div>
+
+                    {/* Auto Live Rate Display */}
+                    <div className="bg-amber-950/40 border border-amber-800/40 rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5">
+                      <span className="text-slate-400">Rate:</span>
+                      <span className="text-amber-300 font-semibold">
+                        {sym} {effectiveGoldPricePerGram.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/g
+                      </span>
+                      <span className="text-[10px] text-amber-400/80 font-medium">(Auto)</span>
+                    </div>
                   </div>
-                  <div className="sm:col-span-2">
-                    <label className="block text-xs text-slate-400 mb-1">Purity</label>
-                    <select 
-                      value={goldPurity} onChange={e => setGoldPurity(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg px-2 py-2 text-white focus:ring-1 focus:ring-amber-500 outline-none"
-                    >
-                      <option value="24k">24K</option>
-                      <option value="22k">22K</option>
-                      <option value="21k">21K</option>
-                      <option value="18k">18K</option>
-                    </select>
-                  </div>
-                  <div className="sm:col-span-3">
-                    <label className="block text-xs text-slate-400 mb-1">Price / Gram</label>
-                    <div className="relative">
-                      <span className="absolute left-2 top-1/2 -translate-y-1/2 text-slate-500 text-xs">{sym}</span>
+                </div>
+
+                {/* 3 Weight Inputs: Tola, Gram, Ounce */}
+                <div>
+                  <label className="block text-xs text-slate-400 mb-2 font-medium">
+                    Enter Weight in any or multiple units:
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                      <label className="block text-xs text-slate-300 mb-1">
+                        Tola <span className="text-[11px] text-slate-500">(1 tola = 11.66g)</span>
+                      </label>
                       <input 
-                        type="number" min="0" placeholder="75.50"
-                        value={goldPricePerGram} onChange={e => setGoldPricePerGram(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-6 pr-2 py-2 text-white text-sm focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors" 
+                        type="number" min="0" step="any" placeholder="0"
+                        value={goldTola} 
+                        onChange={e => setGoldTola(e.target.value ? Number(e.target.value) : '')}
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700" 
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-slate-300 mb-1">
+                        Gram <span className="text-[11px] text-slate-500">(Grams)</span>
+                      </label>
+                      <input 
+                        type="number" min="0" step="any" placeholder="0"
+                        value={goldGrams} 
+                        onChange={e => setGoldGrams(e.target.value ? Number(e.target.value) : '')}
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700" 
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-slate-300 mb-1">
+                        Ounce <span className="text-[11px] text-slate-500">(1 oz = 28.35g)</span>
+                      </label>
+                      <input 
+                        type="number" min="0" step="any" placeholder="0"
+                        value={goldOunces} 
+                        onChange={e => setGoldOunces(e.target.value ? Number(e.target.value) : '')}
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700" 
                       />
                     </div>
                   </div>
                 </div>
+
+                {/* Total Gold Summary in Grams & Value */}
+                <div className="flex flex-wrap items-center justify-between gap-2 p-3 bg-slate-900/90 border border-slate-800 rounded-lg text-xs">
+                  <div className="flex items-center gap-1.5 text-slate-300">
+                    <span>Total Gold:</span>
+                    <span className="text-amber-400 font-bold text-sm">
+                      {totalGoldGrams > 0 ? totalGoldGrams.toFixed(2) : '0.00'} grams
+                    </span>
+                  </div>
+                  <div className="text-slate-400">
+                    Estimated Value: <span className="text-white font-semibold">{sym} {calculateGoldValue().toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                  </div>
+                </div>
               </div>
 
-              {/* Silver */}
-              <div className="space-y-3 p-4 rounded-lg bg-slate-950/50 border border-slate-800/50">
-                <h4 className="text-sm font-medium text-slate-300">Silver</h4>
-                <div className="grid sm:grid-cols-12 gap-3 items-end">
-                  <div className="sm:col-span-5">
-                    <label className="block text-xs text-slate-400 mb-1">Weight</label>
-                    <input 
-                      type="number" min="0" placeholder="0"
-                      value={silverWeight} onChange={e => setSilverWeight(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-500 focus:border-slate-500 transition-colors" 
-                    />
+              {/* Silver Section */}
+              <div className="space-y-4 p-4 sm:p-5 rounded-xl bg-slate-950/60 border border-slate-800/70">
+                <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800/60">
+                  <div className="flex items-center gap-2">
+                    <span className="w-2.5 h-2.5 rounded-full bg-slate-300 inline-block"></span>
+                    <h4 className="text-sm font-semibold text-slate-300 tracking-wide uppercase">Silver</h4>
                   </div>
-                  <div className="sm:col-span-4">
-                    <label className="block text-xs text-slate-400 mb-1">Unit</label>
-                    <select 
-                      value={silverUnit} onChange={e => setSilverUnit(e.target.value)}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-500 outline-none"
-                    >
-                      <option value="grams">Grams</option>
-                      <option value="tola">Tola</option>
-                      <option value="ounce">Ounce</option>
-                    </select>
+
+                  {/* Auto Live Rate Display */}
+                  <div className="bg-slate-900/90 border border-slate-700/60 rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5">
+                    <span className="text-slate-400">Live Rate:</span>
+                    <span className="text-slate-200 font-semibold">
+                      {sym} {effectiveSilverPricePerGram.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/g
+                    </span>
+                    <span className="text-[10px] text-slate-400/80 font-medium">(Auto)</span>
                   </div>
-                  <div className="sm:col-span-3">
-                    <label className="block text-xs text-slate-400 mb-1">Price / Gram</label>
-                    <div className="relative">
-                      <span className="absolute left-2 top-1/2 -translate-y-1/2 text-slate-500 text-xs">{sym}</span>
+                </div>
+
+                {/* 3 Weight Inputs: Tola, Gram, Ounce */}
+                <div>
+                  <label className="block text-xs text-slate-400 mb-2 font-medium">
+                    Enter Weight in any or multiple units:
+                  </label>
+                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                    <div>
+                      <label className="block text-xs text-slate-300 mb-1">
+                        Tola <span className="text-[11px] text-slate-500">(1 tola = 11.66g)</span>
+                      </label>
                       <input 
-                        type="number" min="0" placeholder="0.85"
-                        value={silverPricePerGram} onChange={e => setSilverPricePerGram(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-6 pr-2 py-2 text-white text-sm focus:ring-1 focus:ring-slate-500 focus:border-slate-500 transition-colors" 
+                        type="number" min="0" step="any" placeholder="0"
+                        value={silverTola} 
+                        onChange={e => setSilverTola(e.target.value ? Number(e.target.value) : '')}
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700" 
                       />
                     </div>
+                    <div>
+                      <label className="block text-xs text-slate-300 mb-1">
+                        Gram <span className="text-[11px] text-slate-500">(Grams)</span>
+                      </label>
+                      <input 
+                        type="number" min="0" step="any" placeholder="0"
+                        value={silverGrams} 
+                        onChange={e => setSilverGrams(e.target.value ? Number(e.target.value) : '')}
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700" 
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-xs text-slate-300 mb-1">
+                        Ounce <span className="text-[11px] text-slate-500">(1 oz = 28.35g)</span>
+                      </label>
+                      <input 
+                        type="number" min="0" step="any" placeholder="0"
+                        value={silverOunces} 
+                        onChange={e => setSilverOunces(e.target.value ? Number(e.target.value) : '')}
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700" 
+                      />
+                    </div>
+                  </div>
+                </div>
+
+                {/* Total Silver Summary in Grams & Value */}
+                <div className="flex flex-wrap items-center justify-between gap-2 p-3 bg-slate-900/90 border border-slate-800 rounded-lg text-xs">
+                  <div className="flex items-center gap-1.5 text-slate-300">
+                    <span>Total Silver:</span>
+                    <span className="text-slate-200 font-bold text-sm">
+                      {totalSilverGrams > 0 ? totalSilverGrams.toFixed(2) : '0.00'} grams
+                    </span>
+                  </div>
+                  <div className="text-slate-400">
+                    Estimated Value: <span className="text-white font-semibold">{sym} {calculateSilverValue().toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                   </div>
                 </div>
               </div>
@@ -392,23 +506,27 @@ export default function ZakatCalculatorPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs text-slate-400 mb-1">Active Trading Shares (Market Value)</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">{sym}</span>
+                  <div className="flex rounded-lg border border-slate-800 bg-slate-950 focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={activeTrading} onChange={e => setActiveTrading(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs text-slate-400 mb-1">Passive Portfolios (Zakat-able Portion)</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">{sym}</span>
+                  <div className="flex rounded-lg border border-slate-800 bg-slate-950 focus-within:ring-1 focus-within:ring-blue-500 focus-within:border-blue-500 transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={passiveDividend} onChange={e => setPassiveDividend(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-blue-500 focus:border-blue-500 transition-colors" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
                     />
                   </div>
                 </div>
@@ -423,34 +541,40 @@ export default function ZakatCalculatorPage() {
               <div className="grid sm:grid-cols-3 gap-4">
                 <div>
                   <label className="block text-xs text-slate-400 mb-1">Business Cash</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">{sym}</span>
+                  <div className="flex rounded-lg border border-slate-800 bg-slate-950 focus-within:ring-1 focus-within:ring-indigo-500 focus-within:border-indigo-500 transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-2.5 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={businessCash} onChange={e => setBusinessCash(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-2 py-2 text-sm text-white focus:ring-1 focus:ring-indigo-500" 
+                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700" 
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs text-slate-400 mb-1">Raw Materials</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">{sym}</span>
+                  <div className="flex rounded-lg border border-slate-800 bg-slate-950 focus-within:ring-1 focus-within:ring-indigo-500 focus-within:border-indigo-500 transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-2.5 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={rawMaterials} onChange={e => setRawMaterials(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-2 py-2 text-sm text-white focus:ring-1 focus:ring-indigo-500" 
+                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700" 
                     />
                   </div>
                 </div>
                 <div>
                   <label className="block text-xs text-slate-400 mb-1">Finished Inventory</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-500">{sym}</span>
+                  <div className="flex rounded-lg border border-slate-800 bg-slate-950 focus-within:ring-1 focus-within:ring-indigo-500 focus-within:border-indigo-500 transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-2.5 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={finishedInventory} onChange={e => setFinishedInventory(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-slate-800 rounded-lg pl-8 pr-2 py-2 text-sm text-white focus:ring-1 focus:ring-indigo-500" 
+                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700" 
                     />
                   </div>
                 </div>
@@ -465,12 +589,14 @@ export default function ZakatCalculatorPage() {
               <div className="grid sm:grid-cols-2 gap-4">
                 <div>
                   <label className="block text-xs text-rose-300/70 mb-1">Short-Term Debts & Expenses</label>
-                  <div className="relative">
-                    <span className="absolute left-3 top-1/2 -translate-y-1/2 text-rose-500">{sym}</span>
+                  <div className="flex rounded-lg border border-rose-900/50 bg-slate-950 focus-within:ring-1 focus-within:ring-rose-500 focus-within:border-rose-500 transition-colors overflow-hidden">
+                    <span className="inline-flex items-center px-3 text-xs font-semibold text-rose-400 bg-rose-950/40 border-r border-rose-900/50 select-none">
+                      {sym}
+                    </span>
                     <input 
-                      type="number" min="0" placeholder="0.00"
+                      type="number" min="0" step="any" placeholder="0.00"
                       value={shortTermDebts} onChange={e => setShortTermDebts(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-slate-950 border border-rose-900/50 rounded-lg pl-8 pr-3 py-2 text-white focus:ring-1 focus:ring-rose-500 focus:border-rose-500 transition-colors" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
                     />
                   </div>
                 </div>
@@ -492,10 +618,23 @@ export default function ZakatCalculatorPage() {
                 
                 <div className="p-6 border-b border-slate-800 bg-slate-950/50">
                   <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Live Net Assets</h3>
-                  <div className="text-3xl font-bold text-white mb-4">
+                  <div className="text-3xl font-bold text-white mb-3">
                     {sym} {netAssets.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </div>
                   
+                  {totalLiabilities > 0 && (
+                    <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-2.5 mb-3 text-xs space-y-1">
+                      <div className="flex justify-between text-slate-400">
+                        <span>Gross Assets:</span>
+                        <span className="text-slate-200 font-medium">{sym} {totalAssets.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                      </div>
+                      <div className="flex justify-between text-rose-400">
+                        <span>Deductible Debts:</span>
+                        <span className="font-medium">- {sym} {totalLiabilities.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
+                      </div>
+                    </div>
+                  )}
+
                   <div className="flex justify-between items-center text-sm py-2 border-t border-slate-800 border-dashed">
                     <span className="text-slate-400">Current Nisab (Silver):</span>
                     <span className="text-slate-200 font-medium">{sym} {currentNisabThreshold.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
