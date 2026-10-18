@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import FastingVirtuesBlock from '@/src/components/FastingVirtuesBlock';
 import { 
   ChevronRight, ShieldCheck, CheckCircle2, 
   XCircle, AlertCircle, PlayCircle, 
   Ban, Baby, Scale, Stethoscope, 
-  HelpCircle, Info, Globe, Compass
+  HelpCircle, Info, Globe, Compass,
+  BookOpen, Users, Clock, Sparkles
 } from 'lucide-react';
 
 export const metadata = {
@@ -75,7 +77,7 @@ const jsonLd = {
 
 export default function FastingRulesPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
+    <main className="min-h-screen bg-black text-slate-200 py-12 px-4 sm:px-6 lg:px-8 font-sans selection:bg-white selection:text-black">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -100,7 +102,7 @@ export default function FastingRulesPage() {
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white tracking-tight">
             Fasting Rules & Guidelines: <br className="hidden md:block" />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-400">
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-300">
               Fiqh Rulings, Exemptions & Medical Advice
             </span>
           </h1>
@@ -112,8 +114,203 @@ export default function FastingRulesPage() {
           </div>
         </header>
 
+        {/* FASTING ESSENTIALS & OVERVIEW */}
+        <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 sm:p-8 my-8 font-sans">
+          <div className="border-b border-neutral-800 pb-4 mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-50 tracking-tight">
+              Fasting Essentials &amp; Overview
+            </h2>
+            <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+              Foundational principles, obligations, and daily rhythms of Sawm in Islamic tradition.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {/* Card 1 - What is Sawm? */}
+            <article className="bg-neutral-950 border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition-colors">
+              <div>
+                <div className="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-4">
+                  <BookOpen className="w-5 h-5 text-neutral-200" />
+                </div>
+                <h3 className="text-base font-semibold text-neutral-100 mb-2">
+                  What is Sawm?
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  Islamic fasting (<span className="text-neutral-200 font-medium">Sawm</span>) is the intentional abstinence from food, drink, and intimate relations from the break of dawn (<span className="text-neutral-200">Fajr</span>) until sunset (<span className="text-neutral-200">Maghrib</span>), undertaken solely for Allah&apos;s sake with sincere devotion.
+                </p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-neutral-900 text-[11px] font-mono text-neutral-400">
+                Pillar of Sincerity • Imsak
+              </div>
+            </article>
+
+            {/* Card 2 - Age & Obligation */}
+            <article className="bg-neutral-950 border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition-colors">
+              <div>
+                <div className="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-4">
+                  <Users className="w-5 h-5 text-neutral-200" />
+                </div>
+                <h3 className="text-base font-semibold text-neutral-100 mb-2">
+                  Age &amp; Obligation
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  Fasting is an obligatory duty upon every adult, sane, and physically capable Muslim upon reaching puberty (<span className="text-neutral-200 font-medium">Baligh</span>). Children prior to puberty are encouraged to practice half-day or intermittent fasts gradually to nurture stamina.
+                </p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-neutral-900 text-[11px] font-mono text-neutral-400">
+                Adulthood • Gradual Training
+              </div>
+            </article>
+
+            {/* Card 3 - Daily Timings */}
+            <article className="bg-neutral-950 border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition-colors">
+              <div>
+                <div className="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-4">
+                  <Clock className="w-5 h-5 text-neutral-200" />
+                </div>
+                <h3 className="text-base font-semibold text-neutral-100 mb-2">
+                  Daily Timings
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  Each fasting day centers around two key meals: <span className="text-neutral-200 font-medium">Suhoor</span>, the blessed pre-dawn meal consumed before the Fajr adhan, and <span className="text-neutral-200 font-medium">Iftar</span>, the celebratory fast-breaking meal taken immediately at sunset with Maghrib.
+                </p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-neutral-900 text-[11px] font-mono text-neutral-400">
+                Suhoor (Fajr) → Iftar (Maghrib)
+              </div>
+            </article>
+
+            {/* Card 4 - Key Significance */}
+            <article className="bg-neutral-950 border border-neutral-800 rounded-xl p-5 flex flex-col justify-between hover:border-neutral-700 transition-colors">
+              <div>
+                <div className="w-10 h-10 rounded-lg bg-neutral-900 border border-neutral-800 flex items-center justify-center text-white mb-4">
+                  <Sparkles className="w-5 h-5 text-neutral-200" />
+                </div>
+                <h3 className="text-base font-semibold text-neutral-100 mb-2">
+                  Key Significance
+                </h3>
+                <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                  Ramadan is the <span className="text-neutral-200 font-medium">4th Pillar of Islam</span> and the sacred month wherein the Holy Qur&apos;an was first revealed upon the Night of Decree (<span className="text-neutral-200">Laylat al-Qadr</span>), serving as an annual spiritual renewal and moral reset.
+                </p>
+              </div>
+              <div className="pt-4 mt-4 border-t border-neutral-900 text-[11px] font-mono text-neutral-400">
+                4th Pillar • Qur&apos;anic Revelation
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* ESSENTIAL FASTING DUAS (SUHOOR & IFTAR) */}
+        <section className="bg-neutral-900 border border-neutral-800 rounded-2xl p-6 sm:p-8 my-8 font-sans">
+          <div className="border-b border-neutral-800 pb-4 mb-6">
+            <h2 className="text-xl sm:text-2xl font-bold text-neutral-50 tracking-tight">
+              Essential Fasting Duas
+            </h2>
+            <p className="text-xs sm:text-sm text-neutral-400 mt-1">
+              Authentic supplications for starting and breaking your fast.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* Card 1: Suhoor / Intention Dua */}
+            <article className="bg-neutral-950 border border-neutral-800 rounded-xl p-5 sm:p-6 flex flex-col justify-between hover:border-neutral-700 transition-colors">
+              <div>
+                <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-900">
+                  <span className="text-xs sm:text-sm font-semibold text-neutral-200">
+                    Dua for Suhoor (Intention)
+                  </span>
+                  <span className="text-[11px] font-mono text-neutral-400 bg-neutral-900 border border-neutral-800 px-2 py-0.5 rounded">
+                    Pre-Dawn / Fajr
+                  </span>
+                </div>
+
+                {/* Arabic */}
+                <div className="my-4 text-right" dir="rtl">
+                  <p className="text-xl sm:text-2xl font-serif text-neutral-100 leading-loose tracking-wide">
+                    وَبِصَوْمِ غَدٍ نَّوَيْتُ مِنْ شَهْرِ رَمَضَانَ
+                  </p>
+                </div>
+
+                {/* Transliteration */}
+                <div className="mb-3">
+                  <span className="text-[11px] uppercase tracking-wider text-neutral-400 block mb-1 font-mono">
+                    Transliteration
+                  </span>
+                  <p className="text-sm sm:text-base text-neutral-300 font-medium italic">
+                    &ldquo;Wa bi-sawmi ghadin nawaytu min shahri Ramadan.&rdquo;
+                  </p>
+                </div>
+
+                {/* Translation */}
+                <div className="pt-3 border-t border-neutral-900">
+                  <span className="text-[11px] uppercase tracking-wider text-neutral-400 block mb-1 font-mono">
+                    Translation
+                  </span>
+                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                    &ldquo;I intend to keep the fast tomorrow for the month of Ramadan.&rdquo;
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 mt-5 border-t border-neutral-900 flex items-center justify-between text-[11px] font-mono text-neutral-400">
+                <span>Niyyah (Heart Intention)</span>
+                <span>Before Dawn</span>
+              </div>
+            </article>
+
+            {/* Card 2: Iftar / Fast Breaking Dua */}
+            <article className="bg-neutral-950 border border-neutral-800 rounded-xl p-5 sm:p-6 flex flex-col justify-between hover:border-neutral-700 transition-colors">
+              <div>
+                <div className="flex items-center justify-between mb-4 pb-3 border-b border-neutral-900">
+                  <span className="text-xs sm:text-sm font-semibold text-neutral-200">
+                    Dua for Iftar (Breaking Fast)
+                  </span>
+                  <span className="text-[11px] font-mono text-neutral-400 bg-neutral-900 border border-neutral-800 px-2 py-0.5 rounded">
+                    Sunset / Maghrib
+                  </span>
+                </div>
+
+                {/* Arabic */}
+                <div className="my-4 text-right" dir="rtl">
+                  <p className="text-xl sm:text-2xl font-serif text-neutral-100 leading-loose tracking-wide">
+                    ذَهَبَ الظَّمَأُ وَابْتَلَّتِ الْعُرُوقُ وَثَبَتَ الأَجْرُ إِنْ شَاءَ اللَّهُ
+                  </p>
+                </div>
+
+                {/* Transliteration */}
+                <div className="mb-3">
+                  <span className="text-[11px] uppercase tracking-wider text-neutral-400 block mb-1 font-mono">
+                    Transliteration
+                  </span>
+                  <p className="text-sm sm:text-base text-neutral-300 font-medium italic">
+                    &ldquo;Dhahaba adh-dhama&#39;u wabtallati-l-&#39;urooqu wa thabata-l-ajru in sha&#39; Allah.&rdquo;
+                  </p>
+                </div>
+
+                {/* Translation */}
+                <div className="pt-3 border-t border-neutral-900">
+                  <span className="text-[11px] uppercase tracking-wider text-neutral-400 block mb-1 font-mono">
+                    Translation
+                  </span>
+                  <p className="text-xs sm:text-sm text-neutral-400 leading-relaxed">
+                    &ldquo;The thirst has gone, the veins are moistened, and the reward is confirmed, if Allah wills.&rdquo;
+                  </p>
+                </div>
+              </div>
+
+              <div className="pt-4 mt-5 border-t border-neutral-900 flex items-center justify-between text-[11px] font-mono text-neutral-400">
+                <span>Sunan Abi Dawud (2357)</span>
+                <span>Authentic (Sahih)</span>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        {/* CORE VIRTUES & HEALTH BENEFITS OF FASTING */}
+        <FastingVirtuesBlock />
+
         {/* 2. AEO DIRECT ANSWER BOX */}
-        <section className="w-full bg-neutral-900 border-2 border-neutral-800 rounded-2xl p-6 md:p-8 shadow-lg relative overflow-hidden">
+        <section className="w-full bg-neutral-800 border-2 border-neutral-800 rounded-2xl p-6 md:p-8 shadow-lg relative overflow-hidden">
           <div className="absolute top-0 right-0 p-4 opacity-10 pointer-events-none">
             <CheckCircle2 className="w-48 h-48 text-white" />
           </div>
@@ -165,7 +362,7 @@ export default function FastingRulesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
             
             {/* Left Column: Video */}
-            <div className="relative w-full aspect-video bg-slate-950 rounded-xl overflow-hidden flex flex-col items-center justify-center border border-slate-800/80 group hover:border-slate-700 transition-colors cursor-pointer shadow-md">
+            <div className="relative w-full aspect-video bg-black rounded-xl overflow-hidden flex flex-col items-center justify-center border border-slate-800/80 group hover:border-slate-700 transition-colors cursor-pointer shadow-md">
               <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1584551246679-0daf3d275d0f?auto=format&fit=crop&q=80')] bg-cover bg-center opacity-30 mix-blend-overlay group-hover:opacity-40 transition-opacity" />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent z-10" />
               
@@ -216,15 +413,15 @@ export default function FastingRulesPage() {
               <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Ban className="w-4 h-4 mr-2 text-rose-400" /> Invalidators & Nullifiers
               </h3>
-              <Link href="/ramadan/rules/nullifiers/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/nullifiers/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Actions That Nullify Fasting (Mufattirat)</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/accidental-nullification/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/accidental-nullification/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Unintentional vs. Deliberate Fast Breaking</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/kaffarah-qadha/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/kaffarah-qadha/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Kaffarah & Qadha: Major Expiation Rules</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
@@ -235,15 +432,15 @@ export default function FastingRulesPage() {
               <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Stethoscope className="w-4 h-4 mr-2 text-white" /> Medical & Healthcare
               </h3>
-              <Link href="/ramadan/rules/medical-inhalers-drops/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/medical-inhalers-drops/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Inhalers, Eye/Ear Drops & Nasal Sprays</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/injections-iv/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/injections-iv/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Injections, Vaccines & IV Fluids Rulings</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/blood-tests-cupping/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/blood-tests-cupping/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Blood Tests, Cupping & Donating Blood</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
@@ -254,15 +451,15 @@ export default function FastingRulesPage() {
               <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Baby className="w-4 h-4 mr-2 text-sky-400" /> Exemptions & Cases
               </h3>
-              <Link href="/ramadan/rules/pregnancy-breastfeeding/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/pregnancy-breastfeeding/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Fasting Rules for Pregnant & Breastfeeding Women</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/travelers-safar/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/travelers-safar/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Travelers' Exemption & Distance Rules (Safar)</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/elderly-chronic-illness/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/elderly-chronic-illness/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Elderly, Chronic Illness & Fidya Calculations</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
@@ -273,15 +470,15 @@ export default function FastingRulesPage() {
               <h3 className="text-white font-bold uppercase tracking-wider text-xs flex items-center mb-2">
                 <Info className="w-4 h-4 mr-2 text-indigo-400" /> Daily Hygiene
               </h3>
-              <Link href="/ramadan/rules/toothpaste-miswak/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/toothpaste-miswak/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Using Toothpaste, Miswak & Mouthwash</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/swallowing-saliva/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/swallowing-saliva/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Swallowing Saliva, Phlegm & Mucus</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
-              <Link href="/ramadan/rules/cosmetics-perfume/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-600 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
+              <Link href="/ramadan/rules/cosmetics-perfume/" className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 hover:border-neutral-700 hover:bg-slate-800/80 transition-all group shadow-sm flex flex-col h-full">
                 <h4 className="text-slate-200 font-semibold mb-3 group-hover:text-white transition-colors text-sm flex-1">Cosmetics, Perfume & Personal Care Rulings</h4>
                 <div className="text-white text-xs font-semibold flex items-center mt-auto">Read Guide <ChevronRight className="w-3 h-3 ml-1" /></div>
               </Link>
@@ -295,7 +492,7 @@ export default function FastingRulesPage() {
           <h2 className="text-2xl font-bold text-white mb-6">Rules by Demographic</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             
-            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-600 transition-colors relative overflow-hidden group">
+            <div className="bg-black border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-700 transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
                 <Globe className="w-24 h-24 text-white" />
               </div>
@@ -309,7 +506,7 @@ export default function FastingRulesPage() {
               </ul>
             </div>
 
-            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-600 transition-colors relative overflow-hidden group">
+            <div className="bg-black border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-700 transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
                 <Stethoscope className="w-24 h-24 text-white" />
               </div>
@@ -323,7 +520,7 @@ export default function FastingRulesPage() {
               </ul>
             </div>
 
-            <div className="bg-slate-950 border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-600 transition-colors relative overflow-hidden group">
+            <div className="bg-black border border-slate-800/80 rounded-2xl p-6 hover:border-neutral-700 transition-colors relative overflow-hidden group">
               <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none group-hover:opacity-10 transition-opacity">
                 <Baby className="w-24 h-24 text-white" />
               </div>
