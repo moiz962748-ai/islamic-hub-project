@@ -2,8 +2,8 @@
 
 import React, { useState, useMemo } from 'react';
 import Link from 'next/link';
-import { 
-  CheckCircle2, 
+import {
+  CheckCircle2,
   ChevronRight,
   Info,
   PlayCircle,
@@ -30,17 +30,17 @@ const CURRENCY_PRICES: Record<string, { gold: number; silver: number; sym: strin
 export default function ZakatCalculatorPage() {
   // --- STATE ---
   const [currency, setCurrency] = useState('USD');
-  
+
   // Cash & Bank
   const [cashOnHand, setCashOnHand] = useState<number | ''>('');
   const [bankBalance, setBankBalance] = useState<number | ''>('');
-  
+
   // Gold (3 inputs: tola, grams, ounces)
   const [goldTola, setGoldTola] = useState<number | ''>('');
   const [goldGrams, setGoldGrams] = useState<number | ''>('');
   const [goldOunces, setGoldOunces] = useState<number | ''>('');
   const [goldPurity, setGoldPurity] = useState<'24k' | '22k' | '21k' | '18k'>('24k');
-  
+
   // Silver (3 inputs: tola, grams, ounces)
   const [silverTola, setSilverTola] = useState<number | ''>('');
   const [silverGrams, setSilverGrams] = useState<number | ''>('');
@@ -49,12 +49,12 @@ export default function ZakatCalculatorPage() {
   // Stocks
   const [activeTrading, setActiveTrading] = useState<number | ''>('');
   const [passiveDividend, setPassiveDividend] = useState<number | ''>('');
-  
+
   // Business
   const [businessCash, setBusinessCash] = useState<number | ''>('');
   const [rawMaterials, setRawMaterials] = useState<number | ''>('');
   const [finishedInventory, setFinishedInventory] = useState<number | ''>('');
-  
+
   // Liabilities
   const [shortTermDebts, setShortTermDebts] = useState<number | ''>('');
 
@@ -66,7 +66,7 @@ export default function ZakatCalculatorPage() {
   const sym = currentRates.sym;
 
   const getPurityMultiplier = (purity: string) => {
-    switch(purity) {
+    switch (purity) {
       case '18k': return 18 / 24;
       case '21k': return 21 / 24;
       case '22k': return 22 / 24;
@@ -80,35 +80,35 @@ export default function ZakatCalculatorPage() {
   const effectiveSilverPricePerGram = currentRates.silver;
 
   // Total weights in grams (1 tola = 11.66g, 1 ounce = 28.3495g)
-  const totalGoldGrams = 
-    ((Number(goldTola) || 0) * 11.66) + 
-    (Number(goldGrams) || 0) + 
+  const totalGoldGrams =
+    ((Number(goldTola) || 0) * 11.66) +
+    (Number(goldGrams) || 0) +
     ((Number(goldOunces) || 0) * 28.3495);
 
   const calculateGoldValue = () => totalGoldGrams * effectiveGoldPricePerGram;
 
-  const totalSilverGrams = 
-    ((Number(silverTola) || 0) * 11.66) + 
-    (Number(silverGrams) || 0) + 
+  const totalSilverGrams =
+    ((Number(silverTola) || 0) * 11.66) +
+    (Number(silverGrams) || 0) +
     ((Number(silverOunces) || 0) * 28.3495);
 
   const calculateSilverValue = () => totalSilverGrams * effectiveSilverPricePerGram;
 
   const totalCashAndBank = (Number(cashOnHand) || 0) + (Number(bankBalance) || 0);
 
-  const totalAssets = 
-    totalCashAndBank + 
-    calculateGoldValue() + 
+  const totalAssets =
+    totalCashAndBank +
+    calculateGoldValue() +
     calculateSilverValue() +
-    (Number(activeTrading) || 0) + 
-    (Number(passiveDividend) || 0) + 
-    (Number(businessCash) || 0) + 
-    (Number(rawMaterials) || 0) + 
+    (Number(activeTrading) || 0) +
+    (Number(passiveDividend) || 0) +
+    (Number(businessCash) || 0) +
+    (Number(rawMaterials) || 0) +
     (Number(finishedInventory) || 0);
 
   const totalLiabilities = (Number(shortTermDebts) || 0);
   const netAssets = Math.max(0, totalAssets - totalLiabilities);
-  
+
   // Live Nisab Values (Calculated in local currency)
   const nisabGoldValue = 87.48 * baseGoldPrice;
   const nisabSilverValue = 612.36 * effectiveSilverPricePerGram;
@@ -119,18 +119,18 @@ export default function ZakatCalculatorPage() {
   const zakatPayable = isEligible ? netAssets * 0.025 : 0;
 
   const resetCalculator = () => {
-    setCashOnHand(''); 
+    setCashOnHand('');
     setBankBalance('');
-    setGoldTola(''); 
-    setGoldGrams(''); 
+    setGoldTola('');
+    setGoldGrams('');
     setGoldOunces('');
-    setSilverTola(''); 
-    setSilverGrams(''); 
+    setSilverTola('');
+    setSilverGrams('');
     setSilverOunces('');
-    setActiveTrading(''); 
+    setActiveTrading('');
     setPassiveDividend('');
-    setBusinessCash(''); 
-    setRawMaterials(''); 
+    setBusinessCash('');
+    setRawMaterials('');
     setFinishedInventory('');
     setShortTermDebts('');
   };
@@ -231,7 +231,7 @@ export default function ZakatCalculatorPage() {
           <h1 className="text-3xl sm:text-4xl font-extrabold text-white mb-3">
             Universal Zakat Calculator (2026)
           </h1>
-          
+
           <div className="inline-flex items-center gap-2 bg-neutral-900 border border-neutral-800 rounded-full px-3 py-1.5 mb-6">
             <CheckCircle2 className="w-4 h-4 text-white" />
             <span className="text-xs font-medium text-white">
@@ -252,10 +252,10 @@ export default function ZakatCalculatorPage() {
 
         {/* Phase 2: Interactive Utility Calculator Wizard */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
-          
+
           {/* Left Column (Asset Inputs) */}
           <div className="lg:col-span-8 space-y-6">
-            
+
             {/* Currency Selector */}
             <div className="bg-slate-900/60 border border-slate-800 rounded-xl p-5 sm:p-6">
               <h3 className="text-white font-semibold mb-4 text-sm uppercase tracking-wider">Local Currency</h3>
@@ -265,11 +265,10 @@ export default function ZakatCalculatorPage() {
                     key={curr}
                     type="button"
                     onClick={() => setCurrency(curr)}
-                    className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all border ${
-                      currency === curr 
-                        ? 'bg-white text-black border-white shadow-md' 
-                        : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white'
-                    }`}
+                    className={`px-4 py-2 rounded-lg text-sm font-semibold transition-all border ${currency === curr
+                      ? 'bg-white text-black border-white shadow-md'
+                      : 'bg-slate-800 border-slate-700 text-slate-300 hover:bg-slate-700 hover:text-white'
+                      }`}
                   >
                     {curr}
                   </button>
@@ -289,10 +288,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={cashOnHand} onChange={e => setCashOnHand(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm"
                     />
                   </div>
                 </div>
@@ -302,10 +301,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={bankBalance} onChange={e => setBankBalance(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm"
                     />
                   </div>
                 </div>
@@ -330,7 +329,7 @@ export default function ZakatCalculatorPage() {
               <h3 className="text-white font-semibold flex items-center gap-2 border-b border-slate-800 pb-3">
                 <Coins className="w-5 h-5 text-amber-400" /> Precious Metals (Gold & Silver)
               </h3>
-              
+
               {/* Gold Section */}
               <div className="space-y-4 p-4 sm:p-5 rounded-xl bg-slate-950/60 border border-slate-800/70">
                 <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b border-slate-800/60">
@@ -343,25 +342,27 @@ export default function ZakatCalculatorPage() {
                     {/* Purity Selection */}
                     <div className="flex items-center gap-2">
                       <label className="text-xs text-slate-400 font-medium">Purity:</label>
-                      <select 
-                        value={goldPurity} 
+                      <select
+                        value={goldPurity}
                         onChange={e => setGoldPurity(e.target.value as any)}
                         className="bg-slate-900 border border-slate-700 text-amber-300 text-xs font-semibold rounded-lg px-2.5 py-1.5 focus:ring-1 focus:ring-amber-500 outline-none cursor-pointer"
                       >
-                        <option value="24k">24K (99.9%)</option>
-                        <option value="22k">22K (91.6%)</option>
-                        <option value="21k">21K (87.5%)</option>
-                        <option value="18k">18K (75.0%)</option>
+                        <option value="24k">24K</option>
+                        <option value="22k">22K</option>
+                        <option value="21k">21K</option>
+                        <option value="18k">18K</option>
                       </select>
                     </div>
 
-                    {/* Auto Live Rate Display */}
-                    <div className="bg-amber-950/40 border border-amber-800/40 rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5">
-                      <span className="text-slate-400">Rate:</span>
-                      <span className="text-amber-300 font-semibold">
-                        {sym} {effectiveGoldPricePerGram.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/g
-                      </span>
-                      <span className="text-[10px] text-amber-400/80 font-medium">(Auto)</span>
+                    {/* Live Rate Display */}
+                    <div className="flex flex-col items-start sm:items-end">
+                      <div className="bg-amber-950/40 border border-amber-800/40 rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5">
+                        <span className="text-slate-400">Rate:</span>
+                        <span className="text-amber-300 font-semibold">
+                          {sym} {effectiveGoldPricePerGram.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/g
+                        </span>
+                      </div>
+                      <span className="text-[10px] text-slate-400 mt-1">Verified rate from [website]</span>
                     </div>
                   </div>
                 </div>
@@ -376,33 +377,33 @@ export default function ZakatCalculatorPage() {
                       <label className="block text-xs text-slate-300 mb-1">
                         Tola <span className="text-[11px] text-slate-500">(1 tola = 11.66g)</span>
                       </label>
-                      <input 
+                      <input
                         type="number" min="0" step="any" placeholder="0"
-                        value={goldTola} 
+                        value={goldTola}
                         onChange={e => setGoldTola(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700" 
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700"
                       />
                     </div>
                     <div>
                       <label className="block text-xs text-slate-300 mb-1">
                         Gram <span className="text-[11px] text-slate-500">(Grams)</span>
                       </label>
-                      <input 
+                      <input
                         type="number" min="0" step="any" placeholder="0"
-                        value={goldGrams} 
+                        value={goldGrams}
                         onChange={e => setGoldGrams(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700" 
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700"
                       />
                     </div>
                     <div>
                       <label className="block text-xs text-slate-300 mb-1">
                         Ounce <span className="text-[11px] text-slate-500">(1 oz = 28.35g)</span>
                       </label>
-                      <input 
+                      <input
                         type="number" min="0" step="any" placeholder="0"
-                        value={goldOunces} 
+                        value={goldOunces}
                         onChange={e => setGoldOunces(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700" 
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-amber-500 focus:border-amber-500 transition-colors placeholder:text-slate-700"
                       />
                     </div>
                   </div>
@@ -430,13 +431,15 @@ export default function ZakatCalculatorPage() {
                     <h4 className="text-sm font-semibold text-slate-300 tracking-wide uppercase">Silver</h4>
                   </div>
 
-                  {/* Auto Live Rate Display */}
-                  <div className="bg-slate-900/90 border border-slate-700/60 rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5">
-                    <span className="text-slate-400">Live Rate:</span>
-                    <span className="text-slate-200 font-semibold">
-                      {sym} {effectiveSilverPricePerGram.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/g
-                    </span>
-                    <span className="text-[10px] text-slate-400/80 font-medium">(Auto)</span>
+                  {/* Live Rate Display */}
+                  <div className="flex flex-col items-start sm:items-end">
+                    <div className="bg-slate-900/90 border border-slate-700/60 rounded-lg px-3 py-1.5 text-xs flex items-center gap-1.5">
+                      <span className="text-slate-400">Live Rate:</span>
+                      <span className="text-slate-200 font-semibold">
+                        {sym} {effectiveSilverPricePerGram.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}/g
+                      </span>
+                    </div>
+                    <span className="text-[10px] text-slate-400 mt-1">Verified rate from [website]</span>
                   </div>
                 </div>
 
@@ -450,33 +453,33 @@ export default function ZakatCalculatorPage() {
                       <label className="block text-xs text-slate-300 mb-1">
                         Tola <span className="text-[11px] text-slate-500">(1 tola = 11.66g)</span>
                       </label>
-                      <input 
+                      <input
                         type="number" min="0" step="any" placeholder="0"
-                        value={silverTola} 
+                        value={silverTola}
                         onChange={e => setSilverTola(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700" 
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700"
                       />
                     </div>
                     <div>
                       <label className="block text-xs text-slate-300 mb-1">
                         Gram <span className="text-[11px] text-slate-500">(Grams)</span>
                       </label>
-                      <input 
+                      <input
                         type="number" min="0" step="any" placeholder="0"
-                        value={silverGrams} 
+                        value={silverGrams}
                         onChange={e => setSilverGrams(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700" 
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700"
                       />
                     </div>
                     <div>
                       <label className="block text-xs text-slate-300 mb-1">
                         Ounce <span className="text-[11px] text-slate-500">(1 oz = 28.35g)</span>
                       </label>
-                      <input 
+                      <input
                         type="number" min="0" step="any" placeholder="0"
-                        value={silverOunces} 
+                        value={silverOunces}
                         onChange={e => setSilverOunces(e.target.value ? Number(e.target.value) : '')}
-                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700" 
+                        className="w-full bg-slate-900 border border-slate-800 rounded-lg px-3 py-2 text-white focus:ring-1 focus:ring-slate-400 focus:border-slate-400 transition-colors placeholder:text-slate-700"
                       />
                     </div>
                   </div>
@@ -510,10 +513,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={activeTrading} onChange={e => setActiveTrading(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm"
                     />
                   </div>
                 </div>
@@ -523,10 +526,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-3 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={passiveDividend} onChange={e => setPassiveDividend(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm"
                     />
                   </div>
                 </div>
@@ -545,10 +548,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-2.5 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={businessCash} onChange={e => setBusinessCash(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700" 
+                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700"
                     />
                   </div>
                 </div>
@@ -558,10 +561,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-2.5 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={rawMaterials} onChange={e => setRawMaterials(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700" 
+                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700"
                     />
                   </div>
                 </div>
@@ -571,10 +574,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-2.5 text-xs font-semibold text-slate-400 bg-slate-900/80 border-r border-slate-800 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={finishedInventory} onChange={e => setFinishedInventory(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700" 
+                      className="w-full bg-transparent px-2.5 py-2 text-sm text-white outline-none placeholder:text-slate-700"
                     />
                   </div>
                 </div>
@@ -593,10 +596,10 @@ export default function ZakatCalculatorPage() {
                     <span className="inline-flex items-center px-3 text-xs font-semibold text-rose-400 bg-rose-950/40 border-r border-rose-900/50 select-none">
                       {sym}
                     </span>
-                    <input 
+                    <input
                       type="number" min="0" step="any" placeholder="0.00"
                       value={shortTermDebts} onChange={e => setShortTermDebts(e.target.value ? Number(e.target.value) : '')}
-                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm" 
+                      className="w-full bg-transparent px-3 py-2 text-white outline-none placeholder:text-slate-700 text-sm"
                     />
                   </div>
                 </div>
@@ -613,15 +616,15 @@ export default function ZakatCalculatorPage() {
           {/* Right Column (Sticky Result Engine) */}
           <div className="lg:col-span-4">
             <div className="sticky top-28 space-y-6">
-              
+
               <div className="bg-slate-900/80 backdrop-blur-xl border border-slate-700 rounded-2xl overflow-hidden shadow-2xl">
-                
+
                 <div className="p-6 border-b border-slate-800 bg-slate-950/50">
                   <h3 className="text-sm font-semibold text-slate-400 uppercase tracking-wider mb-2">Live Net Assets</h3>
                   <div className="text-3xl font-bold text-white mb-3">
                     {sym} {netAssets.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                   </div>
-                  
+
                   {totalLiabilities > 0 && (
                     <div className="bg-slate-900/90 border border-slate-800 rounded-lg p-2.5 mb-3 text-xs space-y-1">
                       <div className="flex justify-between text-slate-400">
@@ -639,7 +642,7 @@ export default function ZakatCalculatorPage() {
                     <span className="text-slate-400">Current Nisab (Silver):</span>
                     <span className="text-slate-200 font-medium">{sym} {currentNisabThreshold.toLocaleString(undefined, { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</span>
                   </div>
-                  
+
                   <div className="flex items-center gap-2 mt-4">
                     {isEligible ? (
                       <div className="px-3 py-1 rounded bg-neutral-800 text-white text-xs font-bold border border-neutral-800">
@@ -667,7 +670,7 @@ export default function ZakatCalculatorPage() {
 
               </div>
 
-              <button 
+              <button
                 onClick={resetCalculator}
                 className="w-full py-4 px-6 rounded-xl border border-slate-700 bg-slate-900 hover:bg-slate-800 text-white font-semibold transition-all flex items-center justify-center gap-2"
               >
@@ -714,22 +717,22 @@ export default function ZakatCalculatorPage() {
               </thead>
               <tbody className="divide-y divide-slate-800">
                 <tr className="hover:bg-slate-800/30 transition-colors">
-                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Coins className="w-4 h-4 text-amber-500"/> Gold & Silver</td>
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Coins className="w-4 h-4 text-amber-500" /> Gold & Silver</td>
                   <td className="p-4 text-sm text-slate-400">100% of value if exceeding 87.48g (Gold) or 612.36g (Silver).</td>
                   <td className="p-4 text-xs text-slate-500">Abu Dawud 1573 (Rate of 2.5% established)</td>
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors">
-                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-blue-500"/> Shares (Trading)</td>
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-blue-500" /> Shares (Trading)</td>
                   <td className="p-4 text-sm text-slate-400">100% of current market value is Zakat-able.</td>
                   <td className="p-4 text-xs text-slate-500">AAOIFI Shariah Standard No. 35</td>
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors">
-                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-indigo-500"/> Shares (Passive)</td>
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><TrendingUp className="w-4 h-4 text-indigo-500" /> Shares (Passive)</td>
                   <td className="p-4 text-sm text-slate-400">Only on the Zakatable liquid assets of the underlying company.</td>
                   <td className="p-4 text-xs text-slate-500">AAOIFI Shariah Standard No. 35</td>
                 </tr>
                 <tr className="hover:bg-slate-800/30 transition-colors">
-                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Briefcase className="w-4 h-4 text-white"/> Business Inventory</td>
+                  <td className="p-4 text-sm font-medium text-white flex items-center gap-2"><Briefcase className="w-4 h-4 text-white" /> Business Inventory</td>
                   <td className="p-4 text-sm text-slate-400">Value of raw materials and finished goods intended for sale.</td>
                   <td className="p-4 text-xs text-slate-500">Sunan Abi Dawud 1562</td>
                 </tr>
@@ -773,7 +776,7 @@ export default function ZakatCalculatorPage() {
               }
             ].map((faq, idx) => (
               <div key={idx} className="bg-slate-900/60 border border-slate-800 rounded-xl overflow-hidden transition-colors hover:border-slate-700">
-                <button 
+                <button
                   onClick={() => setOpenFaq(openFaq === idx ? null : idx)}
                   className="w-full flex items-center justify-between p-5 text-left focus:outline-none"
                 >
