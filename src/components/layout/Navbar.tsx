@@ -74,21 +74,43 @@ const navMenus: DropdownMenu[] = [
   },
   {
     title: "Ramadan & Eid",
+    href: "/ramadan",
     align: "left",
     columns: [
       {
-        title: "Timings & Rules",
+        title: "WHAT BREAKS THE FAST",
         links: [
-          { label: "Fasting Rules & Guidelines", href: "/ramadan/rules/" },
-          { label: "Suhoor & Iftar Timings", href: "/ramadan/timings/" },
+          { label: "Actions that break the fast", href: "/ramadan/rules/breaking-fast" },
+          { label: "Eating by mistake", href: "/ramadan/rules#accidental-nullification" },
+          { label: "Qadha and Kaffarah", href: "/ramadan/rules#kaffarah-qadha" },
+          { label: "Saliva, toothpaste, miswak", href: "/ramadan/rules#toothpaste-miswak" },
         ]
       },
       {
-        title: "Seasonal Guides",
+        title: "MEDICAL",
         links: [
-          { label: "Ramadan 2026 Overview", href: "/ramadan" },
-          { label: "Eid Al-Fitr Guide", href: "/eid/fitr/" },
-          { label: "Eid Al-Adha & Qurbani", href: "/eid/eid-al-adha/" },
+          { label: "Inhalers and drops", href: "/ramadan/rules#medical-inhalers-drops" },
+          { label: "Injections, vaccines, IV", href: "/ramadan/rules#injections-iv" },
+          { label: "Blood tests and cupping", href: "/ramadan/rules#blood-tests-cupping" },
+          { label: "Fasting with diabetes", href: "/ramadan/rules#elderly-chronic-illness" },
+        ]
+      },
+      {
+        title: "EXEMPTIONS",
+        links: [
+          { label: "Pregnancy and nursing", href: "/ramadan/rules#pregnancy-breastfeeding" },
+          { label: "Travellers", href: "/ramadan/rules#travelers-safar" },
+          { label: "Elderly and Fidya", href: "/ramadan/rules#elderly-chronic-illness" },
+          { label: "Menstruation", href: "/ramadan/rules#demographics" },
+        ]
+      },
+      {
+        title: "TIMES AND EXTRAS",
+        links: [
+          { label: "Suhoor and iftar timings", href: "/ramadan/timings" },
+          { label: "Ramadan 2027 dates", href: "/ramadan/overview" },
+          { label: "Laylatul Qadr", href: "/ramadan#laylatul-qadr" },
+          { label: "Duas for fasting", href: "/resources/duas/ramadan/roza-dua/" },
         ]
       }
     ]
@@ -313,6 +335,74 @@ export default function Navbar() {
                     {/* Dropdown Mega Menu */}
                     {menu.columns.length > 0 && (
                       <div className={`absolute top-full pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 transform origin-top -translate-y-2 group-hover:translate-y-0 z-50 ${menu.align === 'right' ? 'right-0' : 'left-0'}`}>
+
+                        {/* Custom Ramadan & Eid Mega Dropdown */}
+                        {menu.title === "Ramadan & Eid" ? (
+                          <div className="p-5 bg-neutral-900/98 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.85)] border border-neutral-800 backdrop-blur-xl min-w-[680px]">
+                            <div className="flex gap-5">
+                              {/* Featured Card - START HERE */}
+                              <div className="w-[180px] shrink-0 bg-neutral-950 border border-neutral-800 rounded-xl p-4 flex flex-col justify-between">
+                                <div>
+                                  <span className="text-[11px] font-bold uppercase tracking-wider text-amber-400 mb-1.5 block">Start Here</span>
+                                  <h3 className="text-base font-bold text-white leading-snug mb-2">Fasting Rules in Ramadan</h3>
+                                  <p className="text-[11px] text-neutral-400 leading-relaxed">The complete guide: what breaks the fast, exemptions and make-up.</p>
+                                </div>
+                                <Link href="/ramadan/rules" className="text-amber-400 hover:text-amber-300 text-sm font-semibold mt-4 transition-colors">
+                                  Open the hub
+                                </Link>
+                              </div>
+
+                              {/* 2 Stacked Content Columns */}
+                              <div className="grid grid-cols-2 gap-x-8 gap-y-5 flex-1">
+                                {menu.columns.map((column, colIdx) => (
+                                  <div key={column.title || colIdx}>
+                                    {column.title && (
+                                      <h4 className="text-[10px] font-semibold uppercase tracking-[0.1em] text-neutral-500 mb-2 font-mono">
+                                        {column.title}
+                                      </h4>
+                                    )}
+                                    <div className="flex flex-col gap-0.5">
+                                      {column.links.map((link) => {
+                                        const isLinkActive = pathname === link.href || (link.href !== '/' && pathname.startsWith(link.href));
+                                        return (
+                                          <Link
+                                            key={link.label}
+                                            href={link.href}
+                                            className={`block px-1.5 py-1.5 rounded-md text-[13px] transition-all duration-150 ${
+                                              isLinkActive
+                                                ? 'text-white font-semibold bg-neutral-800'
+                                                : 'text-neutral-300 hover:text-white hover:bg-neutral-800/70'
+                                            }`}
+                                          >
+                                            {link.label}
+                                          </Link>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                ))}
+                              </div>
+                            </div>
+
+                            {/* Bottom Quick Action Pills */}
+                            <div className="flex items-center gap-2 mt-4 pt-3 border-t border-neutral-800">
+                              {[
+                                { label: "Does it break my fast?", href: "/ramadan/rules/nullifiers" },
+                                { label: "Fidya calculator", href: "/zakat/fitrana" },
+                                { label: "Qadha tracker", href: "/ramadan/rules#kaffarah-qadha" },
+                                { label: "Ramadan timetable", href: "/ramadan/timings" },
+                              ].map((pill) => (
+                                <Link
+                                  key={pill.label}
+                                  href={pill.href}
+                                  className="text-[11px] text-neutral-400 hover:text-white bg-neutral-800/80 hover:bg-neutral-700 border border-neutral-700/50 px-3 py-1.5 rounded-full transition-all duration-150 whitespace-nowrap"
+                                >
+                                  {pill.label}
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        ) : (
                         <div 
                           className={`grid gap-5 p-5 bg-neutral-900/98 rounded-2xl shadow-[0_20px_50px_rgba(0,0,0,0.85)] border border-neutral-800 backdrop-blur-xl ${
                             menu.columns.length === 1
@@ -384,6 +474,7 @@ export default function Navbar() {
                             </div>
                           )}
                         </div>
+                        )}
                       </div>
                     )}
                   </div>
@@ -518,6 +609,17 @@ export default function Navbar() {
                           </div>
                         </div>
                       ))}
+                      {menu.title === "Ramadan & Eid" && (
+                        <div className="pt-2 border-t border-neutral-800 mt-2">
+                          <Link
+                            href="/ramadan/rules"
+                            onClick={() => setIsMobileMenuOpen(false)}
+                            className="block px-3 py-2.5 rounded-lg text-sm font-semibold text-amber-400 bg-neutral-900 hover:bg-neutral-850 transition-colors"
+                          >
+                            ➔ Open the Fasting Rules Hub
+                          </Link>
+                        </div>
+                      )}
                       {(menu.title === "Ibadat" || menu.title === "Worship Guides") && (
                         <div className="pt-2 border-t border-neutral-800 mt-2">
                           <Link
